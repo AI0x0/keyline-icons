@@ -1,0 +1,61 @@
+# Publishes @ai0x0/keyline-icons to npm when a v* tag lands.
+#
+# The react package is the only one this repo publishes under the @ai0x0 scope;
+# the cli / mcp / figma-plugin packages keep their upstream names and are not
+# touched here. `prepublishOnly` in packages/react runs the tsc build, so no
+# separate build step is needed -- but the icons pipeline must have produced the
+# tracked src/ files already, which CI (icons:ci) proves on every push to main.
+#
+# Tag must match the package version: a tag that drifts from package.json names
+# a release that npm never shipped. Checked before anything is published.
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Publish @ai0x0/keyline-icons
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: https://registry.npmjs.org
+
+      - name: Tag must match the package version
+        run: |
+          version="v$(node -p "require('./packages/react/package.json').version")"
+          if [ "$version" != "${GITHUB_REF_NAME}" ]; then
+            echo "::error::Tag ${GITHUB_REF_NAME} does not match packages/react version ${version}."
+            exit 1
+          fi
+
+      - run: pnpm install --frozen-lockfile
+
+      - name: Publish to npm
+        run: pnpm --dir packages/react publish --access public --no-git-checks
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

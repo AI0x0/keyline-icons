@@ -17,7 +17,7 @@
  * only describe what is there, and the answers below are the page's own prose
  * compressed rather than new claims.
  *
- * One fact used to constrain them: neither `@keyline-icons/react` nor
+ * One fact used to constrain them: neither `@ai0x0/keyline-icons` nor
  * `@keyline-icons/cli` was on npm, `/install` said so in a callout, and every
  * answer mentioning the package had to repeat it or the page and its own FAQ
  * would disagree. All three packages published at v0.1.0, the callout came out

@@ -184,6 +184,19 @@ const NARROW = new Set([
  *   whose whole job is to look grippable, and the density is what does that.
  *   Both are listed, because the pair are exact transposes and one of them
  *   passing while the other warns would be the rule disagreeing with itself.
+ *
+ * - **`cube`, which is `octagon-alert`'s case with six sides.** The classifier
+ *   reads the hexagon as a disc because its box corners are equally empty, and
+ *   asks for 22. Drawn 20 wide it already covers ~330 units against a disc's
+ *   ~380 at 22, and it reads as a box in perspective beside `package` and the
+ *   `square-*` family, not as a round form. (2026-09-04.)
+ *
+ * - **`x-logo`, a letterform, not a disc.** Two thick bars crossing on the
+ *   diagonals leave the four box corners equally empty, and the sharp fill's
+ *   square bar ends land the emptiness inside the disc band, so the classifier
+ *   asks for 22. It is the X letterform of the brand, sized 20 like `x` and the
+ *   other square-footprint glyphs, and its arms already reach the 20 box on
+ *   both diagonals. (2026-09-04.)
  */
 const SIZE_KNOWN = new Set([
   'caret-down', 'caret-left', 'caret-right', 'caret-up', 'check', 'double-check',
@@ -192,7 +205,7 @@ const SIZE_KNOWN = new Set([
   'pause', 'skip-back', 'skip-forward', 'stop',
   'git-commit-horizontal', 'git-commit-vertical',
   'terminal', 'terminal-asterisk',
-  'credit-card', 'octagon-alert', 'octagon-x', 'package', 'settings', 'user', 'x',
+  'credit-card', 'octagon-alert', 'octagon-x', 'package', 'settings', 'user', 'x', 'cube', 'x-logo',
   'bell', 'paperclip', 'wifi', 'wifi-info', 'wifi-exclamation',
   'repeat', 'repeat-1',
   'arrow-down-left', 'arrow-down-right', 'arrow-up-left', 'arrow-up-right',

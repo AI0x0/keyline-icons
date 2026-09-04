@@ -18,7 +18,7 @@ export const FORMATS = [
 export type Format = (typeof FORMATS)[number]["value"]
 
 /** The published packages, named once. */
-export const REACT_PACKAGE = "@keyline-icons/react"
+export const REACT_PACKAGE = "@ai0x0/keyline-icons"
 export const CLI_PACKAGE = "@keyline-icons/cli"
 
 /**
@@ -67,7 +67,7 @@ const manager = (pm: PackageManager) =>
  * The whole set as a dependency.
  *
  * The package is a parameter because it is not always this project's: React
- * installs `@keyline-icons/react`, Vue and Svelte install Iconify's component
+ * installs `@ai0x0/keyline-icons`, Vue and Svelte install Iconify's component
  * for their framework. It defaults to the React package, so `reactSnippet`
  * below and every existing caller keep the line they already had.
  */
@@ -252,7 +252,7 @@ export const MISSING_STYLE =
  * One icon as a standalone component file, for the shadcn registry.
  *
  * Deliberately not the `reactSnippet` above, which imports from
- * `@keyline-icons/react`. A registry item is source that lands in your project
+ * `@ai0x0/keyline-icons`. A registry item is source that lands in your project
  * and has to compile there on its own, so this owes nothing to the package and
  * adds no dependency: a consumer running `shadcn add` gets a file, not a
  * package reference, which is the whole reason to offer the registry alongside

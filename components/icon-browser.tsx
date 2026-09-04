@@ -16,6 +16,7 @@ import {
   File,
   GitBranch,
   Globe,
+  Lock,
   Mail,
   MapPin,
   Menu,
@@ -303,6 +304,7 @@ export function IconBrowser({
   initialSettings,
   initialStyle = "stroke",
   initialShape = "all",
+  initialPrivate = false,
   initialIcon,
   initialIconStyle,
   initialIconCorners,
@@ -319,6 +321,11 @@ export function IconBrowser({
   initialStyle?: Style
   /** Seeded from `?shape=`, on the same terms as the style above. */
   initialShape?: ShapeFilter
+  /**
+   * Seeded from `?private=1`, on the same terms again: the Private switch
+   * starts pressed, so a link can open on the private list alone.
+   */
+  initialPrivate?: boolean
   /**
    * Seeded from `?icon=`, so a link opens with the dock already on one drawing.
    *
@@ -364,6 +371,12 @@ export function IconBrowser({
   const [category, setCategory] = React.useState("all")
   const [style, setStyle] = React.useState<Style>(initialStyle)
   const [shape, setShape] = React.useState<ShapeFilter>(initialShape)
+  /**
+   * Only the drawings on `lib/icon-private.json`. Component state like the
+   * three above, for the reason they are: it narrows the set, and a narrowed
+   * set on arrival reads as a missing one.
+   */
+  const [onlyPrivate, setOnlyPrivate] = React.useState(initialPrivate)
   const [browseOpen, setBrowseOpen] = React.useState(false)
   const [page, setPage] = React.useState(1)
   const [lastSignature, setLastSignature] = React.useState("")
@@ -421,6 +434,7 @@ export function IconBrowser({
     query === "" &&
     style === "stroke" &&
     shape === "all" &&
+    !onlyPrivate &&
     category === "all" &&
     (
       Object.keys(SETTINGS_DEFAULTS) as (keyof typeof SETTINGS_DEFAULTS)[]
@@ -430,6 +444,7 @@ export function IconBrowser({
     onQueryChange("")
     setStyle("stroke")
     setShape("all")
+    setOnlyPrivate(false)
     setCategory("all")
     update(SETTINGS_DEFAULTS)
   }
@@ -600,8 +615,8 @@ export function IconBrowser({
   }, [icons, style, corners])
 
   // Everything the style, the search and the category allow, before the shape
-  // filter — the shape menu counts read off this, so they stay honest about
-  // what picking a shape would actually show.
+  // and private filters. Each of those two counts off this with the other one
+  // applied, so its number stays honest about what pressing it would show.
   const matches = React.useMemo(() => {
     const words = terms(query)
     return icons.filter((i) => {
@@ -676,15 +691,39 @@ export function IconBrowser({
     return haystacks.some((h) => answers(h, fixed)) ? fixed.join(" ") : null
   }, [matches, query, searchable])
 
+  /*
+    The shape menu counts off the private-filtered matches and the Private
+    switch off the shape-filtered ones, so every number in the row is what
+    pressing that control would show with everything else left as it is.
+  */
+  const visible = React.useMemo(
+    () => (onlyPrivate ? matches.filter((i) => i.isPrivate) : matches),
+    [matches, onlyPrivate]
+  )
+
   const perShape = React.useMemo(() => {
     const c = { regular: 0, square: 0, circle: 0 } as Record<Shape, number>
-    for (const i of matches) c[i.container] += 1
+    for (const i of visible) c[i.container] += 1
     return c
-  }, [matches])
+  }, [visible])
 
   const shown = React.useMemo(
     () =>
-      shape === "all" ? matches : matches.filter((i) => i.container === shape),
+      shape === "all" ? visible : visible.filter((i) => i.container === shape),
+    [visible, shape]
+  )
+
+  /** Whether the set has a private list to switch to at all. */
+  const hasPrivate = React.useMemo(
+    () => icons.some((i) => i.isPrivate),
+    [icons]
+  )
+
+  const privateCount = React.useMemo(
+    () =>
+      matches.filter(
+        (i) => i.isPrivate && (shape === "all" || i.container === shape)
+      ).length,
     [matches, shape]
   )
 
@@ -715,10 +754,10 @@ export function IconBrowser({
    *
    * One string, read twice: the pager resets on it, because filtering changes
    * what a page number means, and the miss report keys on it, because two
-   * searches that differ in any of these four are two searches. Kept as one
+   * searches that differ in any of these five are two searches. Kept as one
    * const so those two can never disagree about what "the same search" means.
    */
-  const searchSignature = `${query}|${style}|${shape}|${category}`
+  const searchSignature = `${query}|${style}|${shape}|${onlyPrivate}|${category}`
 
   const emptySearch =
     shown.length === 0 && query.trim().length >= SEARCH_MIN_LENGTH
@@ -733,6 +772,7 @@ export function IconBrowser({
         query: query.trim(),
         style,
         shape,
+        private: onlyPrivate,
         category,
         elsewhere: matchesElsewhere,
         suggestion,
@@ -746,6 +786,7 @@ export function IconBrowser({
     query,
     style,
     shape,
+    onlyPrivate,
     category,
     matchesElsewhere,
     suggestion,
@@ -958,6 +999,7 @@ export function IconBrowser({
       carry("icon", openIcon, "")
       carry("style", style, "stroke")
       carry("shape", shape, "all")
+      carry("private", onlyPrivate ? "1" : null, "")
       carry("corners", corners, SETTINGS_DEFAULTS.corners)
 
       /*
@@ -985,6 +1027,7 @@ export function IconBrowser({
     openIcon,
     style,
     shape,
+    onlyPrivate,
     corners,
     preview.picked,
     preview.pickedCorners,
@@ -1186,7 +1229,7 @@ export function IconBrowser({
               </span>
               All shapes
               <span className="ml-auto text-xs text-muted-foreground tabular-nums">
-                {matches.length}
+                {visible.length}
               </span>
             </DropdownMenuRadioItem>
             {SHAPES.map((s) => (
@@ -1213,6 +1256,39 @@ export function IconBrowser({
           </DropdownMenuRadioGroup>
         </DropdownMenuContent>
       </DropdownMenu>
+    )
+
+    /**
+     * The private list, `lib/icon-private.json`, as a switch.
+     *
+     * One question with two answers, the whole set or only that list, so it is
+     * a pressed button in the shape menu's pill rather than a third menu.
+     * Pressed, it takes the raised treatment the segmented groups give their
+     * chosen chip, so "this one is on" is said one way across the row. The
+     * count is what pressing it would show under the other filters, which is
+     * what the shape menu's counts are too.
+     *
+     * Not rendered while the list is empty. A switch that can only show an
+     * empty grid is a dead end, and the category rail drops a zero-count row
+     * for the same reason. The glyph is the set's own `lock`, as every icon in
+     * the chrome is.
+     */
+    const privateToggle = hasPrivate && (
+      <button
+        type="button"
+        aria-pressed={onlyPrivate}
+        onClick={() => setOnlyPrivate((on) => !on)}
+        className={cn(
+          pill,
+          "transition-[background-color,box-shadow] aria-pressed:bg-background aria-pressed:shadow-sm"
+        )}
+      >
+        <Lock className="size-4 text-muted-foreground" />
+        Private
+        <span className="text-xs text-muted-foreground tabular-nums">
+          {privateCount}
+        </span>
+      </button>
     )
 
     {
@@ -1353,6 +1429,7 @@ export function IconBrowser({
         {sizeSlider}
         {strokeSlider}
         {shapeMenu}
+        {privateToggle}
         {colorPicker}
         {settingsMenu}
         {resetButton}

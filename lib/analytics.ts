@@ -75,6 +75,8 @@ export type Events = {
     query: string
     style: Style
     shape: string
+    /** Whether the Private switch was on, which hides the rest of the set. */
+    private: boolean
     category: string
     elsewhere: number
     suggestion: string | null

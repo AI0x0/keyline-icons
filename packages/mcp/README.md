@@ -34,7 +34,7 @@ No API key, no network. The whole set ships inside the package.
 | `describe_set` | Counts, styles, and the rule deciding which icons have which style. Worth calling first. |
 | `search_icons` | Find icons by name. Returns which styles each has. |
 | `get_icon` | Full SVG source for one name and style. |
-| `get_react_usage` | The import line and JSX from `@keyline-icons/react`. |
+| `get_react_usage` | The import line and JSX from `@ai0x0/keyline-icons`. |
 
 ## Why the tools are shaped this way
 

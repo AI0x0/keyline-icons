@@ -33,6 +33,18 @@
       ]
     },
     {
+      "match": "^apple-logo$",
+      "note": "A platform mark, not the fruit: it sits on the download button that hands a Mac its own build.",
+      "terms": [
+        "mac",
+        "macos",
+        "osx",
+        "ios",
+        "iphone",
+        "ipad"
+      ]
+    },
+    {
       "match": "^arrow",
       "terms": [
         "direction",
@@ -79,6 +91,40 @@
       ]
     },
     {
+      "match": "^clapperboard$",
+      "terms": [
+        "project",
+        "slate",
+        "movie",
+        "production",
+        "scene",
+        "take",
+        "shoot"
+      ]
+    },
+    {
+      "match": "^columns$",
+      "terms": [
+        "arrange",
+        "layout",
+        "vertical",
+        "panels",
+        "side"
+      ]
+    },
+    {
+      "match": "^columns-2$",
+      "terms": [
+        "split",
+        "pane",
+        "panes",
+        "two",
+        "side-by-side",
+        "halves",
+        "divide"
+      ]
+    },
+    {
       "match": "^copy-plus$",
       "note": "Named for its base, but it is also the add-to-queue mark.",
       "terms": [
@@ -98,6 +144,18 @@
         "boundary",
         "edge",
         "snap"
+      ]
+    },
+    {
+      "match": "^article$",
+      "terms": [
+        "screenplay",
+        "text",
+        "document",
+        "news",
+        "story",
+        "page",
+        "post"
       ]
     },
     {
@@ -121,6 +179,18 @@
         "honour",
         "honor",
         "winner"
+      ]
+    },
+    {
+      "match": "^badge-check$",
+      "terms": [
+        "verified",
+        "review",
+        "approved",
+        "certified",
+        "trusted",
+        "seal",
+        "official"
       ]
     },
     {
@@ -157,6 +227,31 @@
       ]
     },
     {
+      "match": "^bold$",
+      "terms": [
+        "strong",
+        "weight",
+        "heavy",
+        "emphasis"
+      ]
+    },
+    {
+      "match": "^book-open$",
+      "note": "Drawn for the reference surface behind a feature: the manual, the guide, the legend beside a diagram. `book` is on the name already.",
+      "terms": [
+        "read",
+        "reading",
+        "manual",
+        "guide",
+        "documentation",
+        "docs",
+        "legend",
+        "glossary",
+        "handbook",
+        "library"
+      ]
+    },
+    {
       "match": "^bookmark$",
       "terms": [
         "save",
@@ -173,6 +268,61 @@
         "connect",
         "device",
         "radio"
+      ]
+    },
+    {
+      "match": "^bot$",
+      "terms": [
+        "robot",
+        "agent",
+        "assistant",
+        "ai",
+        "automation",
+        "chatbot"
+      ]
+    },
+    {
+      "match": "^bounding-box$",
+      "terms": [
+        "canvas",
+        "selection",
+        "handles",
+        "frame",
+        "transform",
+        "artboard"
+      ]
+    },
+    {
+      "match": "^broom$",
+      "terms": [
+        "sweep",
+        "clean",
+        "clear",
+        "tidy",
+        "reset",
+        "wipe"
+      ]
+    },
+    {
+      "match": "^browsers$",
+      "terms": [
+        "tabs",
+        "tab",
+        "windows",
+        "pages",
+        "browser"
+      ]
+    },
+    {
+      "match": "^bug$",
+      "terms": [
+        "issue",
+        "defect",
+        "problem",
+        "error",
+        "report",
+        "debug",
+        "insect"
       ]
     },
     {
@@ -326,6 +476,52 @@
       ]
     },
     {
+      "match": "^crop$",
+      "terms": [
+        "trim",
+        "cut",
+        "frame",
+        "clip",
+        "resize",
+        "bounds"
+      ]
+    },
+    {
+      "match": "^crosshair$",
+      "terms": [
+        "locate",
+        "target",
+        "aim",
+        "center",
+        "focus",
+        "pick",
+        "reticle"
+      ]
+    },
+    {
+      "match": "^crown$",
+      "terms": [
+        "vip",
+        "premium",
+        "member",
+        "subscription",
+        "king",
+        "royal",
+        "pro"
+      ]
+    },
+    {
+      "match": "^cube$",
+      "terms": [
+        "model",
+        "3d",
+        "box",
+        "object",
+        "block",
+        "solid"
+      ]
+    },
+    {
       "match": "^cursor",
       "terms": [
         "pointer",
@@ -382,6 +578,17 @@
       ]
     },
     {
+      "match": "^eraser$",
+      "terms": [
+        "erase",
+        "rubber",
+        "clear",
+        "remove",
+        "delete",
+        "undo"
+      ]
+    },
+    {
       "match": "^expand-dashed",
       "terms": [
         "resize",
@@ -389,6 +596,15 @@
         "crop",
         "corner",
         "scale"
+      ]
+    },
+    {
+      "match": "^facebook-logo$",
+      "terms": [
+        "facebook",
+        "meta",
+        "share",
+        "social"
       ]
     },
     {
@@ -409,6 +625,17 @@
       ]
     },
     {
+      "match": "^file-search$",
+      "terms": [
+        "parse",
+        "analyse",
+        "inspect",
+        "find",
+        "read",
+        "extract"
+      ]
+    },
+    {
       "match": "^file-text$",
       "terms": [
         "note",
@@ -425,6 +652,57 @@
         "table",
         "sheet",
         "numbers"
+      ]
+    },
+    {
+      "match": "^film$",
+      "terms": [
+        "video",
+        "movie",
+        "footage",
+        "clip",
+        "strip",
+        "cinema"
+      ]
+    },
+    {
+      "match": "^film-reel$",
+      "terms": [
+        "study",
+        "analysis",
+        "archive",
+        "movie",
+        "footage",
+        "reel",
+        "cinema"
+      ]
+    },
+    {
+      "match": "^film-script$",
+      "terms": [
+        "script",
+        "screenplay",
+        "storyboard",
+        "scenario",
+        "shots"
+      ]
+    },
+    {
+      "match": "^flip-horizontal$",
+      "terms": [
+        "mirror",
+        "reflect",
+        "horizontal",
+        "flip x"
+      ]
+    },
+    {
+      "match": "^flip-vertical$",
+      "terms": [
+        "mirror",
+        "reflect",
+        "vertical",
+        "flip y"
       ]
     },
     {
@@ -464,6 +742,28 @@
       ]
     },
     {
+      "match": "^footprints$",
+      "terms": [
+        "blocking",
+        "steps",
+        "walk",
+        "path",
+        "movement",
+        "tracks"
+      ]
+    },
+    {
+      "match": "^frame-corners$",
+      "terms": [
+        "aspect",
+        "ratio",
+        "viewfinder",
+        "format",
+        "dimensions",
+        "proportion"
+      ]
+    },
+    {
       "match": "^fullscreen$",
       "terms": [
         "expand",
@@ -493,6 +793,17 @@
         "album",
         "photos",
         "frames"
+      ]
+    },
+    {
+      "match": "^gauge$",
+      "terms": [
+        "speed",
+        "speedometer",
+        "dial",
+        "meter",
+        "rate",
+        "performance"
       ]
     },
     {
@@ -540,6 +851,15 @@
       ]
     },
     {
+      "match": "^google-logo$",
+      "terms": [
+        "google",
+        "sign in",
+        "oauth",
+        "login"
+      ]
+    },
+    {
       "match": "^grid-",
       "terms": [
         "grid",
@@ -553,6 +873,18 @@
         "rows"
       ],
       "note": "Named columns x rows. There is no bare `grid`: the word said nothing about which one, and it reaches the family through the name anyway."
+    },
+    {
+      "match": "^hand$",
+      "terms": [
+        "pan",
+        "grab",
+        "drag",
+        "palm",
+        "move",
+        "stop",
+        "raise"
+      ]
     },
     {
       "match": "^handbag$",
@@ -574,6 +906,18 @@
       ]
     },
     {
+      "match": "^hash$",
+      "terms": [
+        "guides",
+        "grid lines",
+        "thirds",
+        "rule of thirds",
+        "number",
+        "pound",
+        "hashtag"
+      ]
+    },
+    {
       "match": "^heart-hand$",
       "terms": [
         "hand heart",
@@ -592,6 +936,30 @@
       "note": "Base-first like every compound here, and `heart` is the base that actually exists. `hand heart` is the word order people arrive with."
     },
     {
+      "match": "^high-definition$",
+      "terms": [
+        "hd",
+        "upscale",
+        "resolution",
+        "quality",
+        "sharpen",
+        "enhance",
+        "1080p",
+        "4k"
+      ]
+    },
+    {
+      "match": "^highlighter$",
+      "terms": [
+        "annotate",
+        "marker",
+        "mark",
+        "note",
+        "emphasis",
+        "draw"
+      ]
+    },
+    {
       "match": "^home$",
       "terms": [
         "house",
@@ -601,12 +969,75 @@
       ]
     },
     {
+      "match": "^id-card$",
+      "terms": [
+        "members",
+        "identity",
+        "badge",
+        "roster",
+        "identification",
+        "profile"
+      ]
+    },
+    {
       "match": "^info$",
       "terms": [
         "information",
         "help",
         "about",
         "details"
+      ]
+    },
+    {
+      "match": "^italic$",
+      "terms": [
+        "oblique",
+        "slant",
+        "emphasis",
+        "cursive"
+      ]
+    },
+    {
+      "match": "^keyboard$",
+      "note": "Drawn for the shortcut hint, which is what most interfaces reach for a keyboard to say. The words for the device itself are on the name.",
+      "terms": [
+        "shortcut",
+        "hotkey",
+        "keybinding",
+        "typing",
+        "input"
+      ]
+    },
+    {
+      "match": "^lamp$",
+      "terms": [
+        "light",
+        "lighting",
+        "lantern",
+        "bulb",
+        "illuminate"
+      ]
+    },
+    {
+      "match": "^languages$",
+      "terms": [
+        "translate",
+        "language",
+        "locale",
+        "i18n",
+        "chinese",
+        "english"
+      ]
+    },
+    {
+      "match": "^layers$",
+      "terms": [
+        "stack",
+        "separate",
+        "split layers",
+        "depth",
+        "sheets",
+        "planes"
       ]
     },
     {
@@ -632,6 +1063,15 @@
       ]
     },
     {
+      "match": "^linkedin-logo$",
+      "terms": [
+        "linkedin",
+        "share",
+        "social",
+        "professional"
+      ]
+    },
+    {
       "match": "^list",
       "terms": [
         "items",
@@ -641,11 +1081,32 @@
       ]
     },
     {
+      "match": "^list$",
+      "terms": [
+        "bullets",
+        "bulleted",
+        "unordered",
+        "items",
+        "points"
+      ]
+    },
+    {
       "match": "^list-music$",
       "terms": [
         "playlist",
         "queue",
         "tracks"
+      ]
+    },
+    {
+      "match": "^list-ordered$",
+      "terms": [
+        "numbered",
+        "numbers",
+        "ordered",
+        "steps",
+        "sequence",
+        "ranking"
       ]
     },
     {
@@ -677,6 +1138,17 @@
         "password",
         "protected",
         "access"
+      ]
+    },
+    {
+      "match": "^magnet$",
+      "terms": [
+        "snap",
+        "snapping",
+        "attract",
+        "stick",
+        "align",
+        "guide"
       ]
     },
     {
@@ -796,6 +1268,17 @@
       ]
     },
     {
+      "match": "^move$",
+      "terms": [
+        "drag",
+        "pan",
+        "translate",
+        "position",
+        "reposition",
+        "arrows"
+      ]
+    },
+    {
       "match": "^music-note$",
       "terms": [
         "song",
@@ -834,6 +1317,29 @@
       ]
     },
     {
+      "match": "^paintbrush$",
+      "terms": [
+        "brush",
+        "repaint",
+        "inpaint",
+        "paint",
+        "mask",
+        "retouch"
+      ]
+    },
+    {
+      "match": "^palette$",
+      "terms": [
+        "style",
+        "colour",
+        "color",
+        "paint",
+        "theme",
+        "swatch",
+        "art"
+      ]
+    },
+    {
       "match": "^panel",
       "terms": [
         "sidebar",
@@ -841,6 +1347,17 @@
         "drawer",
         "dock",
         "split"
+      ]
+    },
+    {
+      "match": "^panorama$",
+      "terms": [
+        "360",
+        "wide",
+        "landscape",
+        "spherical",
+        "vr",
+        "environment"
       ]
     },
     {
@@ -861,6 +1378,29 @@
       ]
     },
     {
+      "match": "^person-arms-spread$",
+      "terms": [
+        "character",
+        "figure",
+        "pose",
+        "t-pose",
+        "body",
+        "avatar",
+        "sheet"
+      ]
+    },
+    {
+      "match": "^perspective$",
+      "terms": [
+        "director",
+        "stage",
+        "3d",
+        "plane",
+        "horizon",
+        "scene"
+      ]
+    },
+    {
       "match": "^picture-in-picture$",
       "terms": [
         "pip",
@@ -868,6 +1408,18 @@
         "mini player",
         "floating window",
         "overlay"
+      ]
+    },
+    {
+      "match": "^pin$",
+      "note": "The verb: pinned in place, kept at the top. `map-pin` is the place marker and has its own row.",
+      "terms": [
+        "pushpin",
+        "thumbtack",
+        "tack",
+        "pinned",
+        "sticky",
+        "keep"
       ]
     },
     {
@@ -900,6 +1452,15 @@
       ]
     },
     {
+      "match": "^reddit-logo$",
+      "terms": [
+        "reddit",
+        "share",
+        "social",
+        "snoo"
+      ]
+    },
+    {
       "match": "^repeat",
       "note": "The family, so repeat-1 answers to these too.",
       "terms": [
@@ -916,6 +1477,149 @@
         "repeat one",
         "repeat single",
         "loop track"
+      ]
+    },
+    {
+      "match": "^save$",
+      "terms": [
+        "floppy",
+        "disk",
+        "diskette",
+        "store",
+        "persist",
+        "write"
+      ]
+    },
+    {
+      "match": "^scaling$",
+      "terms": [
+        "scale",
+        "resize",
+        "enlarge",
+        "shrink",
+        "size",
+        "transform"
+      ]
+    },
+    {
+      "match": "^scan-cube$",
+      "terms": [
+        "depth",
+        "3d",
+        "capture",
+        "angles",
+        "focus",
+        "volume",
+        "model"
+      ]
+    },
+    {
+      "match": "^scissors$",
+      "terms": [
+        "cut",
+        "trim",
+        "snip",
+        "split",
+        "clip",
+        "edit"
+      ]
+    },
+    {
+      "match": "^send$",
+      "terms": [
+        "submit",
+        "message",
+        "plane",
+        "paper",
+        "airplane",
+        "dispatch",
+        "deliver"
+      ]
+    },
+    {
+      "match": "^shield-star$",
+      "terms": [
+        "admin",
+        "administrator",
+        "moderator",
+        "platform",
+        "superuser"
+      ]
+    },
+    {
+      "match": "^smile$",
+      "terms": [
+        "emotion",
+        "face",
+        "expression",
+        "happy",
+        "mood",
+        "smiley"
+      ]
+    },
+    {
+      "match": "^sparkle$",
+      "terms": [
+        "magic",
+        "ai",
+        "enhance",
+        "shine",
+        "new",
+        "brand",
+        "star"
+      ]
+    },
+    {
+      "match": "^split-vertical$",
+      "terms": [
+        "divide",
+        "playhead",
+        "cut",
+        "separate",
+        "halves"
+      ]
+    },
+    {
+      "match": "^square-dashed-plus$",
+      "terms": [
+        "group",
+        "ungroup",
+        "selection",
+        "select",
+        "add",
+        "new group"
+      ]
+    },
+    {
+      "match": "^square-dashed-slash$",
+      "terms": [
+        "ungroup",
+        "deselect",
+        "remove",
+        "exclude",
+        "subject"
+      ]
+    },
+    {
+      "match": "^square-dashed-square$",
+      "terms": [
+        "matte",
+        "cutout",
+        "foreground",
+        "subject",
+        "background removal",
+        "keying"
+      ]
+    },
+    {
+      "match": "^squares-unite$",
+      "terms": [
+        "stitch",
+        "merge",
+        "union",
+        "combine",
+        "join",
+        "boolean"
       ]
     },
     {
@@ -1006,6 +1710,16 @@
         "directions",
         "journey",
         "trip"
+      ]
+    },
+    {
+      "match": "^rows$",
+      "terms": [
+        "arrange",
+        "layout",
+        "horizontal",
+        "panels",
+        "stack"
       ]
     },
     {
@@ -1167,6 +1881,26 @@
       ]
     },
     {
+      "match": "^log-out$",
+      "terms": [
+        "sign out",
+        "signout",
+        "logout",
+        "exit",
+        "leave",
+        "quit"
+      ]
+    },
+    {
+      "match": "^telegram-logo$",
+      "terms": [
+        "telegram",
+        "share",
+        "social",
+        "messenger"
+      ]
+    },
+    {
       "match": "^terminal",
       "terms": [
         "console",
@@ -1184,6 +1918,26 @@
         "remove",
         "trash",
         "discard"
+      ]
+    },
+    {
+      "match": "^threads-logo$",
+      "terms": [
+        "threads",
+        "share",
+        "social",
+        "meta"
+      ]
+    },
+    {
+      "match": "^thumbs-down$",
+      "terms": [
+        "dislike",
+        "downvote",
+        "negative",
+        "disapprove",
+        "feedback",
+        "unhelpful"
       ]
     },
     {
@@ -1248,6 +2002,38 @@
       ]
     },
     {
+      "match": "^user-arrow-up$",
+      "terms": [
+        "promote",
+        "admin",
+        "upgrade",
+        "elevate",
+        "role"
+      ]
+    },
+    {
+      "match": "^user-list$",
+      "terms": [
+        "users",
+        "members",
+        "roster",
+        "accounts",
+        "directory",
+        "people"
+      ]
+    },
+    {
+      "match": "^user-sound$",
+      "terms": [
+        "voice",
+        "speaker",
+        "audio",
+        "narrator",
+        "speech",
+        "timbre"
+      ]
+    },
+    {
       "match": "^users$",
       "terms": [
         "people",
@@ -1258,6 +2044,27 @@
       ]
     },
     {
+      "match": "^video$",
+      "terms": [
+        "camera",
+        "camcorder",
+        "record",
+        "shot",
+        "film",
+        "capture"
+      ]
+    },
+    {
+      "match": "^video-plus$",
+      "terms": [
+        "add camera",
+        "new camera",
+        "add shot",
+        "record",
+        "capture"
+      ]
+    },
+    {
       "match": "^volume",
       "terms": [
         "sound",
@@ -1265,6 +2072,37 @@
         "speaker",
         "mute",
         "loudness"
+      ]
+    },
+    {
+      "match": "^wand-sparkles$",
+      "terms": [
+        "magic",
+        "effects",
+        "auto",
+        "enhance",
+        "generate",
+        "fx",
+        "use"
+      ]
+    },
+    {
+      "match": "^wechat-logo$",
+      "terms": [
+        "wechat",
+        "weixin",
+        "share",
+        "social",
+        "chat"
+      ]
+    },
+    {
+      "match": "^whatsapp-logo$",
+      "terms": [
+        "whatsapp",
+        "share",
+        "social",
+        "messenger"
       ]
     },
     {
@@ -1295,6 +2133,16 @@
         "exit",
         "times",
         "cross"
+      ]
+    },
+    {
+      "match": "^x-logo$",
+      "terms": [
+        "twitter",
+        "tweet",
+        "share",
+        "social",
+        "post"
       ]
     },
     {
@@ -1443,6 +2291,27 @@
         "build",
         "repair",
         "maintenance"
+      ]
+    },
+    {
+      "match": "^type$",
+      "terms": [
+        "text",
+        "font",
+        "typography",
+        "letter",
+        "label",
+        "caption"
+      ]
+    },
+    {
+      "match": "^windows-logo$",
+      "note": "The other half of the download pair.",
+      "terms": [
+        "microsoft",
+        "pc",
+        "win",
+        "exe"
       ]
     },
     {
@@ -1631,6 +2500,18 @@
       ]
     },
     {
+      "match": "^puzzle$",
+      "terms": [
+        "skill",
+        "plugin",
+        "extension",
+        "addon",
+        "piece",
+        "jigsaw",
+        "integration"
+      ]
+    },
+    {
       "match": "^shield",
       "note": "The family, so the signs inherit it.",
       "terms": [
@@ -1645,119 +2526,67 @@
         "antivirus",
         "insurance"
       ]
+    },
+    {
+      "match": "^subtitles-off$",
+      "terms": [
+        "remove",
+        "captions",
+        "hide",
+        "strip",
+        "erase"
+      ]
+    },
+    {
+      "match": "^sun-dim$",
+      "terms": [
+        "brightness",
+        "exposure",
+        "dim",
+        "luminance",
+        "light level"
+      ]
+    },
+    {
+      "match": "^zap$",
+      "terms": [
+        "lightning",
+        "bolt",
+        "credits",
+        "energy",
+        "power",
+        "flash",
+        "fast",
+        "boost"
+      ]
+    },
+    {
+      "match": "^zoom-in$",
+      "terms": [
+        "zoom",
+        "magnify",
+        "enlarge",
+        "bigger",
+        "closer"
+      ]
+    },
+    {
+      "match": "^zoom-out$",
+      "terms": [
+        "zoom",
+        "shrink",
+        "smaller",
+        "further",
+        "reduce"
+      ]
     }
   ],
   "names": {
     "activity": [
       "heart-pulse"
     ],
-    "captions": [
-      "captions-off",
-      "closed-caption"
-    ],
-    "audio-lines": [
-      "audio-lines-off",
-      "audio-lines-x"
-    ],
-    "bookmark": [
-      "bookmark-check",
-      "bookmark-minus",
-      "bookmark-off",
-      "bookmark-plus",
-      "bookmark-x"
-    ],
-    "bluetooth": [
-      "bluetooth-connected",
-      "bluetooth-off",
-      "bluetooth-searching"
-    ],
-    "building": [
-      "building-2"
-    ],
-    "check": [
-      "check-line",
-      "circle-check-big",
-      "square-check-big"
-    ],
-    "copy": [
-      "copy-check",
-      "copy-minus",
-      "copy-slash",
-      "copy-x"
-    ],
-    "flower": [
-      "flower-2"
-    ],
-    "link": [
-      "link-2"
-    ],
-    "loader": [
-      "loader-2",
-      "loader-circle",
-      "loader-pinwheel"
-    ],
-    "maximize": [
-      "maximize-2"
-    ],
-    "megaphone": [
-      "megaphone-off"
-    ],
-    "mic": [
-      "mic-audio-lines",
-      "mic-signal",
-      "mic-vocal"
-    ],
-    "minimize": [
-      "minimize-2"
-    ],
-    "navigation": [
-      "navigation-2",
-      "navigation-2-off"
-    ],
-    "package": [
-      "package-2",
-      "package-check",
-      "package-minus",
-      "package-open",
-      "package-plus",
-      "package-search",
-      "package-x"
-    ],
-    "picture-in-picture": [
-      "picture-in-picture-2"
-    ],
-    "question": [
-      "circle-question-mark"
-    ],
-    "receipt": [
-      "receipt-cent",
-      "receipt-euro",
-      "receipt-indian-rupee",
-      "receipt-japanese-yen",
-      "receipt-pound-sterling",
-      "receipt-russian-ruble",
-      "receipt-swiss-franc",
-      "receipt-text",
-      "receipt-turkish-lira"
-    ],
-    "search": [
-      "search-alert",
-      "search-check",
-      "search-code",
-      "search-slash",
-      "search-x"
-    ],
-    "settings": [
-      "settings-2"
-    ],
-    "share": [
-      "share-2"
-    ],
-    "truck": [
-      "truck-electric"
-    ],
-    "x": [
-      "x-line-top"
+    "apple-logo": [
+      "apple"
     ],
     "archive": [
       "archive-restore",
@@ -1774,6 +2603,14 @@
       "arrow-down-to-dot",
       "arrow-down-to-line",
       "arrow-down-z-a"
+    ],
+    "arrow-down-left": [
+      "circle-arrow-out-down-left",
+      "square-arrow-out-down-left"
+    ],
+    "arrow-down-right": [
+      "circle-arrow-out-down-right",
+      "square-arrow-out-down-right"
     ],
     "arrow-left": [
       "arrow-big-left",
@@ -1802,6 +2639,27 @@
       "arrow-up-z-a",
       "arrows-up-from-line"
     ],
+    "arrow-up-left": [
+      "circle-arrow-out-up-left",
+      "square-arrow-out-up-left"
+    ],
+    "arrow-up-right": [
+      "circle-arrow-out-up-right",
+      "square-arrow-out-up-right"
+    ],
+    "article": [
+      "newspaper"
+    ],
+    "at": [
+      "at-sign"
+    ],
+    "audio-lines": [
+      "audio-lines-off",
+      "audio-lines-x"
+    ],
+    "badge-check": [
+      "seal-check"
+    ],
     "bar-chart": [
       "chart-bar-big",
       "chart-bar-decreasing",
@@ -1817,6 +2675,27 @@
     ],
     "bell": [
       "bell-electric"
+    ],
+    "bluetooth": [
+      "bluetooth-connected",
+      "bluetooth-off",
+      "bluetooth-searching"
+    ],
+    "bold": [
+      "text-b"
+    ],
+    "bookmark": [
+      "bookmark-check",
+      "bookmark-minus",
+      "bookmark-off",
+      "bookmark-plus",
+      "bookmark-x"
+    ],
+    "bot": [
+      "robot"
+    ],
+    "building": [
+      "building-2"
     ],
     "calendar": [
       "calendar-1",
@@ -1841,6 +2720,15 @@
     "calendar-x": [
       "calendar-x-2"
     ],
+    "captions": [
+      "captions-off",
+      "closed-caption"
+    ],
+    "check": [
+      "check-line",
+      "circle-check-big",
+      "square-check-big"
+    ],
     "chevrons-left": [
       "chevron-first"
     ],
@@ -1849,6 +2737,9 @@
     ],
     "chevrons-right": [
       "chevron-last"
+    ],
+    "clapperboard": [
+      "film-slate"
     ],
     "clock": [
       "clock-alert",
@@ -1872,6 +2763,22 @@
       "cloud-rain-wind",
       "cloud-sun-rain"
     ],
+    "columns-2": [
+      "square-split-horizontal",
+      "split-pane"
+    ],
+    "copy": [
+      "copy-check",
+      "copy-minus",
+      "copy-slash",
+      "copy-x"
+    ],
+    "crosshair": [
+      "locate-fixed"
+    ],
+    "crown": [
+      "crown-simple"
+    ],
     "database": [
       "database-arrow-down",
       "database-arrow-up",
@@ -1886,6 +2793,9 @@
     "eye": [
       "eye-closed",
       "eye-dashed"
+    ],
+    "facebook-logo": [
+      "facebook"
     ],
     "file": [
       "file-archive",
@@ -1939,8 +2849,17 @@
     "file-plus": [
       "file-plus-corner"
     ],
+    "file-search": [
+      "file-magnifying-glass"
+    ],
     "file-x": [
       "file-x-corner"
+    ],
+    "film": [
+      "film-strip"
+    ],
+    "flower": [
+      "flower-2"
     ],
     "folder": [
       "folder-archive",
@@ -1969,10 +2888,25 @@
     "folder-open": [
       "folder-open-dot"
     ],
+    "frame-corners": [
+      "aspect-ratio"
+    ],
+    "gauge": [
+      "speedometer"
+    ],
+    "globe": [
+      "globe-lock"
+    ],
+    "google-logo": [
+      "google"
+    ],
     "grid-2x2": [
       "grid-2x2-check",
       "grid-2x2-plus",
       "grid-2x2-x"
+    ],
+    "hash": [
+      "hash-straight"
     ],
     "headphones-off": [
       "headphone-off"
@@ -1984,16 +2918,44 @@
       "heart-plus",
       "heart-x"
     ],
+    "high-definition": [
+      "hd"
+    ],
+    "id-card": [
+      "identification-card"
+    ],
     "image": [
       "image-off",
       "image-play",
       "image-upscale"
     ],
+    "italic": [
+      "text-italic"
+    ],
+    "languages": [
+      "translate"
+    ],
+    "layers": [
+      "stack-simple",
+      "stack"
+    ],
+    "link": [
+      "link-2"
+    ],
     "link-off": [
       "link-2-off"
     ],
+    "linkedin-logo": [
+      "linkedin"
+    ],
+    "list": [
+      "list-bullets"
+    ],
     "list-check": [
       "list-checks"
+    ],
+    "list-ordered": [
+      "list-numbers"
     ],
     "list-plus": [
       "list-filter-plus"
@@ -2002,9 +2964,17 @@
       "list-sort-ascending",
       "list-sort-descending"
     ],
+    "loader": [
+      "loader-2",
+      "loader-circle",
+      "loader-pinwheel"
+    ],
     "lock": [
       "lock-keyhole",
       "lock-keyhole-open"
+    ],
+    "log-out": [
+      "sign-out"
     ],
     "mail": [
       "mail-question-mark",
@@ -2029,6 +2999,12 @@
     ],
     "map-pin-x": [
       "map-pin-x-inside"
+    ],
+    "maximize": [
+      "maximize-2"
+    ],
+    "megaphone": [
+      "megaphone-off"
     ],
     "message": [
       "message-circle",
@@ -2074,6 +3050,14 @@
     "messages": [
       "messages-square"
     ],
+    "mic": [
+      "mic-audio-lines",
+      "mic-signal",
+      "mic-vocal"
+    ],
+    "minimize": [
+      "minimize-2"
+    ],
     "monitor": [
       "monitor-check",
       "monitor-cloud",
@@ -2086,6 +3070,25 @@
       "monitor-speaker",
       "monitor-up",
       "monitor-x"
+    ],
+    "move": [
+      "arrows-out-cardinal"
+    ],
+    "navigation": [
+      "navigation-2",
+      "navigation-2-off"
+    ],
+    "package": [
+      "package-2",
+      "package-check",
+      "package-minus",
+      "package-open",
+      "package-plus",
+      "package-search",
+      "package-x"
+    ],
+    "paintbrush": [
+      "paint-brush"
     ],
     "panel-bottom": [
       "panel-bottom-open"
@@ -2106,6 +3109,26 @@
     "pen": [
       "pen-tool"
     ],
+    "picture-in-picture": [
+      "picture-in-picture-2"
+    ],
+    "question": [
+      "circle-question-mark"
+    ],
+    "receipt": [
+      "receipt-cent",
+      "receipt-euro",
+      "receipt-indian-rupee",
+      "receipt-japanese-yen",
+      "receipt-pound-sterling",
+      "receipt-russian-ruble",
+      "receipt-swiss-franc",
+      "receipt-text",
+      "receipt-turkish-lira"
+    ],
+    "reddit-logo": [
+      "reddit"
+    ],
     "refresh-ccw": [
       "refresh-ccw-dot"
     ],
@@ -2125,11 +3148,38 @@
       "rotate-cw-fading-clock",
       "rotate-cw-square"
     ],
+    "save": [
+      "floppy-disk"
+    ],
+    "scaling": [
+      "resize"
+    ],
+    "scan-cube": [
+      "cube-focus"
+    ],
+    "search": [
+      "search-alert",
+      "search-check",
+      "search-code",
+      "search-slash",
+      "search-x"
+    ],
+    "send": [
+      "paper-plane-right",
+      "paper-plane",
+      "send-horizontal"
+    ],
     "server": [
       "server-cog",
       "server-crash",
       "server-off",
       "server-plus"
+    ],
+    "settings": [
+      "settings-2"
+    ],
+    "share": [
+      "share-2"
     ],
     "signal": [
       "signal-zero"
@@ -2137,6 +3187,9 @@
     "smartphone": [
       "smartphone-charging",
       "smartphone-nfc"
+    ],
+    "smile": [
+      "smiley"
     ],
     "square-dashed": [
       "square-dashed-bottom",
@@ -2146,6 +3199,18 @@
       "square-dashed-text",
       "square-dashed-top-solid"
     ],
+    "square-dashed-plus": [
+      "selection-plus"
+    ],
+    "square-dashed-slash": [
+      "selection-slash"
+    ],
+    "square-dashed-square": [
+      "selection-foreground"
+    ],
+    "squares-unite": [
+      "unite-square"
+    ],
     "star": [
       "star-check",
       "star-half",
@@ -2153,6 +3218,10 @@
       "star-off",
       "star-plus",
       "star-x"
+    ],
+    "subtitles-off": [
+      "subtitles-slash",
+      "captions-off"
     ],
     "sun": [
       "sun-dim",
@@ -2163,6 +3232,18 @@
     "tag": [
       "tag-plus",
       "tag-x"
+    ],
+    "telegram-logo": [
+      "telegram"
+    ],
+    "threads-logo": [
+      "threads"
+    ],
+    "truck": [
+      "truck-electric"
+    ],
+    "type": [
+      "text-t"
     ],
     "unlock": [
       "lock-open"
@@ -2186,6 +3267,9 @@
       "user-star",
       "users-round"
     ],
+    "user-arrow-up": [
+      "user-gear"
+    ],
     "user-check": [
       "user-round-check"
     ],
@@ -2198,9 +3282,25 @@
     "user-x": [
       "user-round-x"
     ],
+    "video": [
+      "video-camera"
+    ],
+    "video-plus": [
+      "camera-plus"
+    ],
     "volume": [
       "volume-1",
       "volume-2"
+    ],
+    "wand-sparkles": [
+      "magic-wand",
+      "wand"
+    ],
+    "wechat-logo": [
+      "wechat"
+    ],
+    "whatsapp-logo": [
+      "whatsapp"
     ],
     "wifi": [
       "wifi-cog",
@@ -2208,27 +3308,26 @@
       "wifi-sync",
       "wifi-zero"
     ],
-    "at": [
-      "at-sign"
+    "windows-logo": [
+      "windows"
     ],
-    "globe": [
-      "globe-lock"
+    "x": [
+      "x-line-top"
     ],
-    "arrow-up-left": [
-      "circle-arrow-out-up-left",
-      "square-arrow-out-up-left"
+    "x-logo": [
+      "twitter"
     ],
-    "arrow-down-left": [
-      "circle-arrow-out-down-left",
-      "square-arrow-out-down-left"
+    "zap": [
+      "lightning",
+      "bolt"
     ],
-    "arrow-down-right": [
-      "circle-arrow-out-down-right",
-      "square-arrow-out-down-right"
+    "zoom-in": [
+      "magnifying-glass-plus",
+      "search-plus"
     ],
-    "arrow-up-right": [
-      "circle-arrow-out-up-right",
-      "square-arrow-out-up-right"
+    "zoom-out": [
+      "magnifying-glass-minus",
+      "search-minus"
     ]
   },
   "$names": "Names other sets use for a drawing here, keyed by the drawing. Matched against the whole query, never split into words: these are names, not keywords, and folding `message-square` into a keyword list makes a search for `square` return every message icon."

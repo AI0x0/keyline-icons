@@ -30,7 +30,7 @@ import { SET_TITLE } from "@/lib/site-chrome"
  * A catch-all rather than `[name]`, because the style lives in the path. The
  * stroke drawing is the bare name, since it is the only style every icon has
  * and the one anyone means by "the icon"; the other two are prefixed, matching
- * the package's own subpath exports (`@keyline-icons/react/fill`).
+ * the package's own subpath exports (`@ai0x0/keyline-icons/fill`).
  *
  * `.json` is optional on the way in. The convention is `/r/{name}.json` and
  * that is what the install line above uses, but shadcn's config also accepts a
@@ -62,7 +62,7 @@ const AUTHOR = `${SET_TITLE} <${absoluteUrl("/")}>`
  * `bell` for stroke, `fill/bell` for a style, `sharp/fill/bell` for a treatment.
  *
  * The install name, the URL and the React entry point all agree, which is the
- * property worth having: someone who has read `@keyline-icons/react/sharp/fill`
+ * property worth having: someone who has read `@ai0x0/keyline-icons/sharp/fill`
  * can guess `@keyline/sharp/fill/bell` and be right.
  */
 const itemName = (name: string, style: Style, corners: Corners) =>
@@ -108,7 +108,7 @@ function item(icon: Icon, style: Style, corners: Corners): RegistryItem {
     ...summary(icon, style, corners),
     // No npm dependencies on purpose. The emitted file imports a type from
     // react and nothing else, so it compiles in any React project without
-    // pulling `@keyline-icons/react` in behind the consumer's back.
+    // pulling `@ai0x0/keyline-icons` in behind the consumer's back.
     dependencies: [],
     files: [
       {

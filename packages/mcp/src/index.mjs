@@ -334,9 +334,9 @@ const TOOLS = [
   {
     name: "get_react_usage",
     description:
-      "The import line and JSX for one icon from `@keyline-icons/react`. Each " +
+      "The import line and JSX for one icon from `@ai0x0/keyline-icons`. Each " +
       "style is its own entry point because they do not cover the same icons, " +
-      "and sharp is one segment further along: `@keyline-icons/react/sharp` " +
+      "and sharp is one segment further along: `@ai0x0/keyline-icons/sharp` " +
       "and `/sharp/duotone`. The export is called the same thing either way.",
     inputSchema: {
       type: "object",
@@ -537,7 +537,7 @@ function callTool(name, args) {
       // A treatment is a path segment rather than a suffix on the export name,
       // so the component is called the same thing at whichever entry point.
       const base =
-        k === "sharp" ? "@keyline-icons/react/sharp" : "@keyline-icons/react"
+        k === "sharp" ? "@ai0x0/keyline-icons/sharp" : "@ai0x0/keyline-icons"
       const entry = style === "stroke" ? base : `${base}/${style}`
       const C = pascal(icon)
       return text(

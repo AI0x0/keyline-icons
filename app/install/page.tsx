@@ -195,8 +195,8 @@ export default async function Page() {
               Every icon is also a React component, generated from the same
               SVGs, so the two can never disagree.
             </p>
-            <Code>{`npm i @keyline-icons/react`}</Code>
-            <Code>{`import { Check, Plus, Settings } from "@keyline-icons/react"
+            <Code>{`npm i @ai0x0/keyline-icons`}</Code>
+            <Code>{`import { Check, Plus, Settings } from "@ai0x0/keyline-icons"
 
 <Check className="size-4" />
 <Plus size={16} />
@@ -208,7 +208,7 @@ export default async function Page() {
             never did: the registry is served by this site, from
             `app/r/[...slug]/route.ts`, so it has always worked for anyone who
             can read this page. The React section above carried one until
-            `@keyline-icons/react` went to npm, and it came out with the publish
+            `@ai0x0/keyline-icons` went to npm, and it came out with the publish
             rather than later, because a caveat that outlives its reason sends
             people to copy files they could have installed.
           */}
@@ -243,7 +243,7 @@ npx shadcn search @keyline                # browse the whole set`}</Code>
             <p>
               This is the path that gives you <strong>source</strong> rather
               than a dependency. Each icon arrives as a self-contained component
-              that imports nothing from <code>@keyline-icons/react</code>, so
+              that imports nothing from <code>@ai0x0/keyline-icons</code>, so
               you can rename it, edit the drawing, or fold it into whatever
               conventions your project already has.
             </p>
@@ -427,7 +427,7 @@ npm i -D @iconify/tailwind4
               to end.
             </p>
             <Code>{`- import { Check, Menu } from "lucide-react"
-+ import { Check, Menu } from "@keyline-icons/react"`}</Code>
++ import { Check, Menu } from "@ai0x0/keyline-icons"`}</Code>
             <p>
               Names mostly match, since both follow the same convention. Where
               they differ, the difference is usually a compound reading

@@ -1,6 +1,6 @@
 {
-  "name": "@keyline-icons/react",
-  "version": "0.3.0",
+  "name": "@ai0x0/keyline-icons",
+  "version": "0.4.0",
   "description": "Icons on one 24\u00d724 grid, as React components in three weights: stroke, duotone and fill, each in rounded or sharp corners. Built for shadcn/ui.",
   "license": "MIT",
   "publishConfig": {
@@ -10,10 +10,10 @@
   "homepage": "https://keylineicons.com",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/keyline-icons/keyline-icons.git",
+    "url": "git+https://github.com/AI0x0/keyline-icons.git",
     "directory": "packages/react"
   },
-  "bugs": "https://github.com/keyline-icons/keyline-icons/issues",
+  "bugs": "https://github.com/AI0x0/keyline-icons/issues",
   "keywords": [
     "icons",
     "react",

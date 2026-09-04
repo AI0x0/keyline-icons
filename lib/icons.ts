@@ -5,6 +5,7 @@ import { join } from "node:path"
 import history from "@/lib/icon-history.json"
 import notContainers from "@/lib/icon-not-containers.json"
 import badges from "@/lib/icon-badges.json"
+import privateNames from "@/lib/icon-private.json"
 
 export const STYLES = ["stroke", "duotone", "fill"] as const
 export type Style = (typeof STYLES)[number]
@@ -311,6 +312,19 @@ export const isNewSince = (icon: Icon) =>
       at(icon.history.added) >
         Math.max(CLEARED_AT, Date.now() - NEW_FOR_DAYS * 86_400_000)
   )
+
+/**
+ * Whether a drawing is on the private list, `lib/icon-private.json`.
+ *
+ * Keyed by base name, so `square-keyboard` is private whenever `keyboard` is:
+ * one component set covers all three containers, and the list should not have
+ * to say so three times. Decided here beside `isNewSince` and carried to the
+ * browser on the same terms, because this module reads the disk and the client
+ * component that draws the tiles cannot import it to ask.
+ */
+const PRIVATE = new Set<string>(privateNames.names)
+
+export const isPrivate = (icon: Icon) => PRIVATE.has(icon.base)
 
 /**
  * A `square-`/`circle-` prefix alone does not make a container variant. Twenty-

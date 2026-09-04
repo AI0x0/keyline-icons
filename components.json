@@ -10,7 +10,7 @@
     "cssVariables": true,
     "prefix": ""
   },
-  "iconLibrary": "@keyline-icons/react",
+  "iconLibrary": "@ai0x0/keyline-icons",
   "rtl": false,
   "aliases": {
     "components": "@/components",

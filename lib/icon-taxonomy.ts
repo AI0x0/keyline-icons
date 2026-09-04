@@ -63,7 +63,10 @@ export const CATEGORIES = [
     label: "Files",
     // `pen` carries a lookahead so `pencil-*` falls through to Tools below:
     // a pencil-and-ruler is a drawing instrument, not a document.
-    match: /^(file|folder|copy|paperclip|bin|archive|pen(?!cil)|(square|circle)-pen)/,
+    // `book` carries a lookahead too: `bookmark` is a web-scoped action and
+    // belongs in Web below, and an unguarded `book` here would claim it first.
+    match:
+      /^(file|folder|copy|paperclip|bin|archive|pen(?!cil)|(square|circle)-pen|book(?!mark)|save|article)/,
     blurb: "Documents, folders, copies, the paperclip and the bin.",
   },
   {
@@ -77,7 +80,7 @@ export const CATEGORIES = [
   // compounds each is being drawn towards land here too.
   {
     label: "Mail",
-    match: /^(mail|message|bell|inbox|reply|forward|at$)/,
+    match: /^(mail|message|bell|inbox|reply|forward|send|at$)/,
     blurb: "Envelopes, messages, bells and the marks that badge them.",
   },
   {
@@ -92,7 +95,9 @@ export const CATEGORIES = [
   },
   {
     label: "Maps",
-    match: /^(map|compass|building|route)/,
+    // `crosshair` is a locating mark, and the person looking for one is looking
+    // where `map-pin` and `compass` are.
+    match: /^(map|compass|building|route|crosshair)/,
     blurb: "Pins, maps, compasses and routes.",
   },
   {
@@ -111,7 +116,7 @@ export const CATEGORIES = [
     // wherever the two disagree — the same call the taxonomy makes for `wifi`.
     label: "Media",
     match:
-      /^(play|pause|stop|record|skip-|fast-forward|rewind|repeat|volume|audio-lines|mic|megaphone|headphones|headset|shuffle|music-note|list-music|list-video|camera|image|cast|subtitles|captions|picture-in-picture|gallery-|podcast|queue)/,
+      /^(play|pause|stop|record|skip-|fast-forward|rewind|repeat|volume|audio-lines|mic|megaphone|headphones|headset|shuffle|music-note|list-music|list-video|camera|image|cast|subtitles|captions|picture-in-picture|gallery-|podcast|queue|high-definition|clapperboard|film|perspective|video|panorama)/,
     blurb:
       "Playback, volume, capture, casting and the sound and image marks.",
   },
@@ -119,19 +124,24 @@ export const CATEGORIES = [
   // bar charts and the signal bars, which is where the design file files it too.
   {
     label: "Charts",
-    match: /^(bar-chart|trending|signal|progress|loader|activity)/,
+    match: /^(bar-chart|trending|signal|progress|loader|activity|gauge)/,
     blurb: "Trends, bar charts, signal strength and activity markers.",
   },
   // `code` sits with `terminal` rather than on a shelf of its own: the label is
   // the developer surface, and two names do not earn a row in a rail of 18.
   {
     label: "Devices",
-    match: /^(smartphone|monitor|terminal|database|server|battery|bluetooth|code|plug)/,
+    // `keyboard` is hardware too, and files beside `monitor`: the shelf is
+    // what plugs into the machine, not only the machine.
+    match:
+      /^(smartphone|monitor|terminal|database|server|battery|bluetooth|code|plug|keyboard|apple-logo|windows-logo)/,
     blurb: "Phones, servers, databases, terminals, code and what plugs into them.",
   },
   {
     label: "Pointers",
-    match: /^cursor/,
+    // `hand$` is anchored so `handbag` stays in Commerce, which is asked first
+    // anyway; the anchor is there for whatever `hand-` compound comes next.
+    match: /^(cursor|hand$)/,
     blurb: "Cursors and the states they carry.",
   },
   {
@@ -139,12 +149,15 @@ export const CATEGORIES = [
     // `fullscreen` and `fullscreen-exit` sit here with `maximize` and
     // `minimize` for the reason given under Media: brackets and diagonals
     // framing a viewport read as layout, whatever they are used to resize.
-    match: /^(panel|layout|grid|list|align|menu|maximize|minimize|fullscreen)/,
+    // Text marks sit with alignment: bold, italic, the type tool and the two
+    // list styles are all ways of laying text out, and the shelf already holds
+    // `align-*` for the same reason.
+    match: /^(panel|layout|grid|list|align|menu|maximize|minimize|fullscreen|columns|rows|browsers|bounding-box|split|type|bold|italic|languages|crop|frame-corners)/,
     blurb: "Panels, lists, alignment, the menu marks and the fullscreen corners.",
   },
   {
     label: "Users",
-    match: /^(user|scan-face)/,
+    match: /^(user|scan-face|id-card|badge-check|person|smile|bot$|footprints)/,
     blurb: "People, accounts and the signs that badge them.",
   },
   {
@@ -154,7 +167,7 @@ export const CATEGORIES = [
     // outlines they happen to be. `eye` is the show/hide operation, next to lock.
     label: "Actions",
     match:
-      /^(check|double-check|plus|minus|x|more|lock|unlock|shield|download|upload|filter|eye|star|heart|alert|octagon|triangle-alert|info|question|lightbulb|ban)/,
+      /^(check|double-check|plus|minus|x|more|lock|unlock|shield|download|upload|filter|eye|star|heart|alert|octagon|triangle-alert|info|question|lightbulb|ban|pin|thumbs|zap|move|scaling|log-out|bug|flip|sparkle|hash)/,
     blurb: "Checks, crosses, pluses, the everyday verbs and the marks that guard a thing.",
   },
   {
@@ -168,7 +181,7 @@ export const CATEGORIES = [
   },
   {
     label: "Sport",
-    match: /^(trophy|award|podium|medal)/,
+    match: /^(trophy|award|podium|medal|crown)/,
     blurb: "Trophies, awards and the places on the podium.",
   },
   {
@@ -178,13 +191,13 @@ export const CATEGORIES = [
     // Prefixes, so the family this is being drawn towards lands here too: a
     // `screwdriver`, a `wrench-plus`.
     label: "Tools",
-    match: /^(toolbox|wrench|hammer|pencil-ruler|screwdriver|pliers|saw|ruler)/,
+    match: /^(toolbox|wrench|hammer|pencil-ruler|screwdriver|pliers|saw|ruler|eraser|broom|magnet|scissors|palette|wand|paintbrush|highlighter|lamp)/,
     blurb: "The toolbox and what comes out of it.",
   },
   {
     label: "Shapes",
     match:
-      /^(circle|square|triangle|shapes|dashed|dice|flower|full|half|quarter|three-quarter)/,
+      /^(circle|square|triangle|shapes|dashed|dice|flower|full|half|quarter|three-quarter|puzzle|cube|scan-cube|squares-unite|layers)/,
     blurb: "Squares, circles, dashes and the progress states drawn from them.",
   },
   {
@@ -194,7 +207,9 @@ export const CATEGORIES = [
     // signal's bars read as a chart. Same reasoning that keeps `activity` out of
     // Media.
     label: "Web",
-    match: /^(globe|link|share|navigation|home|search|settings|bookmark|wifi)/,
+    // The brand marks file here: every one of them is a place to sign in with
+    // or share to, which is the web-scoped action this shelf holds.
+    match: /^(globe|link|share|navigation|home|search|settings|bookmark|wifi|zoom|google-logo|facebook-logo|linkedin-logo|reddit-logo|telegram-logo|threads-logo|wechat-logo|whatsapp-logo|x-logo)/,
     blurb: "Globes, links, connectivity and web-scoped actions.",
   },
   {

@@ -21,6 +21,7 @@ export function IconLibrary({
   initialQuery = "",
   initialStyle,
   initialShape,
+  initialPrivate,
   initialIcon,
   initialIconStyle,
   initialIconCorners,
@@ -33,6 +34,8 @@ export function IconLibrary({
   initialStyle?: Style
   /** Seeded from `?shape=`, so a link can open on one container form. */
   initialShape?: Container
+  /** Seeded from `?private=1`, so a link can open on the private list alone. */
+  initialPrivate?: boolean
   /** Seeded from `?icon=`, so a link can open with the dock on one drawing. */
   initialIcon?: string
   /** Seeded from `?icon-style=` / `?icon-corners=`: how the dock shows it. */
@@ -92,6 +95,7 @@ export function IconLibrary({
           initialSettings={initialSettings}
           initialStyle={initialStyle}
           initialShape={initialShape}
+          initialPrivate={initialPrivate}
           initialIcon={initialIcon}
           initialIconStyle={initialIconStyle}
           initialIconCorners={initialIconCorners}

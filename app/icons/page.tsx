@@ -3,7 +3,7 @@ import { cookies } from "next/headers"
 
 import { parseSettings, SETTINGS_COOKIE } from "@/lib/browser-settings"
 import { CONTAINERS } from "@/components/glyph"
-import { isNewSince, loadIcons, STYLES } from "@/lib/icons"
+import { isNewSince, isPrivate, loadIcons, STYLES } from "@/lib/icons"
 import { CORNERS } from "@/components/glyph"
 import { pageMetadata } from "@/lib/seo"
 import { IconLibrary } from "@/components/icon-library"
@@ -87,6 +87,7 @@ export default async function Page({
     search?: string | string[]
     style?: string | string[]
     shape?: string | string[]
+    private?: string | string[]
     corners?: string | string[]
   }>
 }) {
@@ -94,11 +95,14 @@ export default async function Page({
    * Badged here rather than in the grid. The comparison needs the tag date out
    * of `lib/icon-history.json`, and `lib/icons.ts` reads the icon directories
    * off disk, so the client component that draws the tiles cannot import it to
-   * ask. It carries the answer instead.
+   * ask. It carries the answer instead. The private flag rides along on the
+   * same terms, read off `lib/icon-private.json` beside it.
    */
-  const icons = (await loadIcons()).map((icon) =>
-    isNewSince(icon) ? { ...icon, isNew: true } : icon
-  )
+  const icons = (await loadIcons()).map((icon) => ({
+    ...icon,
+    ...(isNewSince(icon) && { isNew: true }),
+    ...(isPrivate(icon) && { isPrivate: true }),
+  }))
 
   // Reading the cookie is what lets the first paint already be your grid, at
   // the cost of rendering per request rather than once at build.
@@ -165,6 +169,16 @@ export default async function Page({
   const initialShape = CONTAINERS.find((known) => known === shape)
 
   /*
+   * `?private=1` presses the Private switch, so the private list has an
+   * address. A lone "1" and nothing else: the switch is a boolean, and there is
+   * no list of values to validate against. Dropped while the list is empty,
+   * or the grid would open on a switch nothing can show and only Reset can
+   * release.
+   */
+  const initialPrivate =
+    params.private === "1" && icons.some((known) => known.isPrivate)
+
+  /*
    * How the dock is showing the drawing `?icon=` names.
    *
    * Their own keys rather than a second meaning for `?style=` and `?corners=`,
@@ -225,6 +239,7 @@ export default async function Page({
           initialQuery={initialQuery}
           initialStyle={initialStyle}
           initialShape={initialShape}
+          initialPrivate={initialPrivate}
           initialIcon={initialIcon}
           initialIconStyle={initialIconStyle}
           initialIconCorners={initialIconCorners}

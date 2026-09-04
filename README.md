@@ -3,19 +3,19 @@
 [![CI](https://github.com/keyline-icons/keyline-icons/actions/workflows/ci.yml/badge.svg)](https://github.com/keyline-icons/keyline-icons/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-black.svg)](LICENSE)
 
-**585 icons, drawn on one 24×24 grid, in three weights.** Built for shadcn/ui,
+**672 icons, drawn on one 24×24 grid, in three weights.** Built for shadcn/ui,
 crafted with AI, free under MIT.
 
 [**keylineicons.com**](https://keylineicons.com) to browse and copy.
 
 | Style | Icons | What it is |
 | --- | --- | --- |
-| `stroke` | 585 | The full set. 2px keylines on a 24 grid. |
-| `duotone` | 480 | The stroke drawing over a flat plate at reduced opacity. |
-| `fill` | 432 | Solid, with the detail knocked back out of the shape. |
+| `stroke` | 672 | The full set. 2px keylines on a 24 grid. |
+| `duotone` | 550 | The stroke drawing over a flat plate at reduced opacity. |
+| `fill` | 500 | Solid, with the detail knocked back out of the shape. |
 
 The table is one corner treatment. Every drawing is also cut with sharp corners,
-so 2,994 SVGs in total.
+so 3,444 SVGs in total.
 
 `stroke` is complete by definition: it is the drawing every other style is
 derived from. `duotone` and `fill` need a region to fill, and not every glyph
@@ -36,17 +36,17 @@ That is the fastest path and needs no install.
 no wrapper, no `id`s and no classes. They are generated, so treat them as build
 output: to change one, change the drawing in `raw/` and rebuild.
 
-**Import them in React.** `@keyline-icons/react` exports one component per
+**Import them in React.** `@ai0x0/keyline-icons` exports one component per
 icon, one entry point per style:
 
 ```bash
-npm i @keyline-icons/react
+npm i @ai0x0/keyline-icons
 ```
 
 ```tsx
-import { ArrowUpRight, Check, Menu } from "@keyline-icons/react"
-import { Folder as FolderDuotone } from "@keyline-icons/react/duotone"
-import { Folder as FolderFill } from "@keyline-icons/react/fill"
+import { ArrowUpRight, Check, Menu } from "@ai0x0/keyline-icons"
+import { Folder as FolderDuotone } from "@ai0x0/keyline-icons/duotone"
+import { Folder as FolderFill } from "@ai0x0/keyline-icons/fill"
 
 <Check className="size-4" />
 <ArrowUpRight size={16} />
@@ -57,7 +57,7 @@ Every component takes the usual `SVGProps` plus `size`, and colours from
 
 The two style entry points are smaller than the stroke one and deliberately so.
 `Check` is three open strokes with nothing to fill, so it exists in
-`@keyline-icons/react` and in neither of the others; `Folder` has an interior
+`@ai0x0/keyline-icons` and in neither of the others; `Folder` has an interior
 and exists in all three. The counts at the top of this file are the same fact.
 
 `components/icons/index.tsx` is the same set generated for this repo's own
@@ -92,7 +92,7 @@ is the whole set as components.
 
 ## Containers
 
-55 icons come in a `square-` form and 54 in a `circle-` form, which wrap the
+56 icons come in a `square-` form and 54 in a `circle-` form, which wrap the
 base drawing rather than replacing it:
 
 ```

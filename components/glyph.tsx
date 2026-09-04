@@ -95,6 +95,13 @@ export type BrowserIcon = IconArt & {
    * component cannot import it to ask.
    */
   isNew?: boolean
+  /**
+   * On the private list, so the filter row's Private switch can find it.
+   *
+   * Decided on the server for the reason `isNew` is: the list is read beside
+   * the icon reader in `lib/icons.ts`, which a client component cannot import.
+   */
+  isPrivate?: boolean
 }
 
 /**
