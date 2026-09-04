@@ -48,8 +48,14 @@ jobs:
 
       - run: pnpm install --frozen-lockfile
 
+      # pnpm publish shells out to npm with flags npm rejects (EUSAGE on the
+      # runner), so publish through npm directly, like ai0x0-utils does.
+      # prepublishOnly already ran tsc in the step above.
+      - name: Build
+        run: pnpm --dir packages/react build
+
       - name: Publish to npm
-        run: pnpm --dir packages/react publish --access public --no-git-checks
+        run: cd packages/react && npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
