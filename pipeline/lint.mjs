@@ -197,6 +197,19 @@ const NARROW = new Set([
  *   asks for 22. It is the X letterform of the brand, sized 20 like `x` and the
  *   other square-footprint glyphs, and its arms already reach the 20 box on
  *   both diagonals. (2026-09-04.)
+ *
+ * - **`apple-logo`, a body and a leaf that read at their source's size.** The
+ *   round body alone reads as a disc and the classifier asks for 22, but the
+ *   mark is the body *with* the leaf floating over the notch, and drawn that
+ *   way it covers ~20 × 20 like Phosphor's. Stretching the body to 22 makes a
+ *   tall, narrow apple nobody recognises. (2026-09-04.)
+ *
+ * - **`reddit-logo`, a head with ears and an antenna, not a disc.** The wide
+ *   head alone reads as a disc and the classifier asks for 22, but the mark's
+ *   22 is made up of the head, the two ear rings at ten and two o'clock and the
+ *   antenna's ball; stretching the head itself to 22 leaves no room for the ears
+ *   to stand off the face, and a ring pressed into the face's own stroke reads
+ *   as a solid lump. (2026-09-05.)
  */
 const SIZE_KNOWN = new Set([
   'caret-down', 'caret-left', 'caret-right', 'caret-up', 'check', 'double-check',
@@ -205,7 +218,7 @@ const SIZE_KNOWN = new Set([
   'pause', 'skip-back', 'skip-forward', 'stop',
   'git-commit-horizontal', 'git-commit-vertical',
   'terminal', 'terminal-asterisk',
-  'credit-card', 'octagon-alert', 'octagon-x', 'package', 'settings', 'user', 'x', 'cube', 'x-logo',
+  'credit-card', 'octagon-alert', 'octagon-x', 'package', 'settings', 'user', 'x', 'cube', 'x-logo', 'apple-logo', 'reddit-logo',
   'bell', 'paperclip', 'wifi', 'wifi-info', 'wifi-exclamation',
   'repeat', 'repeat-1',
   'arrow-down-left', 'arrow-down-right', 'arrow-up-left', 'arrow-up-right',
