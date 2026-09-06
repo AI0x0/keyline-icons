@@ -625,7 +625,7 @@ export function BracketArrowUp(props: IconProps) {
 export function Broom(props: IconProps) {
   return (
     <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="butt" strokeLinejoin="round" {...props}>
-      <path d="M10.8183 10.3532L13.6468 13.1817L10.1112 20.9598L3.0402 13.8888L10.8183 10.3532ZM20.9397 3.0603L12.2326 11.7674M6.9293 12.121L11.879 17.0707" />
+      <path d="M6.4828 8L18.0828 11.7L19.0828 18.3L20.9532 20.2951L20.4312 21.5L6.2828 21.5L5.0828 20.1L3.0828 15.5L3.8828 10.7ZM12.7828 10L15.376 1.5439M3.6428 12.14L18.8862 17.0021M10.2828 21.5L8.257 17.1952" />
     </Icon>
   )
 }
@@ -3085,6 +3085,14 @@ export function Keyboard(props: IconProps) {
   )
 }
 
+export function LampStudio(props: IconProps) {
+  return (
+    <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="butt" strokeLinejoin="round" {...props}>
+      <path d="M3.8073 15.1427L8.05 10.9L8.4217 9.7848L9.507 9.5286L12.2498 12.2715L11.9936 13.3567L10.8784 13.7285L6.6358 17.9711ZM10.8784 6.2L10.8784 1M14.616 7.1624L17.4645 4.3139M15.5784 10.9L20.7784 10.9M9.1106 15.4962L9.1106 22M4.1106 22L14.1106 22" />
+    </Icon>
+  )
+}
+
 export function Lamp(props: IconProps) {
   return (
     <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="butt" strokeLinejoin="round" {...props}>
@@ -3113,6 +3121,14 @@ export function LayoutDashboard(props: IconProps) {
   return (
     <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="butt" strokeLinejoin="round" {...props}>
       <path d="M3 3L10 3L10 12L3 12L3 3ZM3 16L10 16L10 21L3 21L3 16ZM14 3L21 3L21 8L14 8L14 3ZM14 12L21 12L21 21L14 21L14 12Z" />
+    </Icon>
+  )
+}
+
+export function LayoutTidy(props: IconProps) {
+  return (
+    <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="butt" strokeLinejoin="round" {...props}>
+      <path d="M3 3L13 3L13 10L3 10ZM17 3L21 3L21 10L17 10ZM3 14L7 14L7 21L3 21ZM11 14L21 14L21 21L11 21Z" />
     </Icon>
   )
 }
@@ -4809,6 +4825,14 @@ export function SquareDashedHalf(props: IconProps) {
   )
 }
 
+export function SquareDashedPen(props: IconProps) {
+  return (
+    <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="butt" strokeLinejoin="round" {...props}>
+      <path d="M3 7L3 3L7 3M9 3L13.5 3M21 10.5L21 15M21 17L21 21L17 21M14.5 21L9.5 21M7 21L3 21L3 17M3 14.5L3 9.5M10.23 13.77L14.3548 12.1201L20.2174 6.2574C20.9009 5.574 20.9009 4.466 20.2174 3.7826C19.534 3.0991 18.426 3.0991 17.7426 3.7826L11.8799 9.6452L10.23 13.77Z" />
+    </Icon>
+  )
+}
+
 export function SquareDashedPlus(props: IconProps) {
   return (
     <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="butt" strokeLinejoin="round" {...props}>
@@ -5090,6 +5114,14 @@ export function Stop(props: IconProps) {
   return (
     <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="butt" strokeLinejoin="round" {...props}>
       <path d="M5 5L19 5L19 19L5 19L5 5Z" />
+    </Icon>
+  )
+}
+
+export function Storyboard(props: IconProps) {
+  return (
+    <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="butt" strokeLinejoin="round" {...props}>
+      <path d="M14 3L21 3L21 10L14 10ZM14 14L21 14L21 21L14 21ZM2 4.5L11 4.5M5 8.5L11 8.5M2 15.5L11 15.5M5 19.5L11 19.5" />
     </Icon>
   )
 }
@@ -5549,6 +5581,22 @@ export function WindowsLogo(props: IconProps) {
   return (
     <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="butt" strokeLinejoin="round" {...props}>
       <path d="M3 5L21 3L21 21L3 19L3 5ZM11 4.1111L11 19.8889M3 12L21 12" />
+    </Icon>
+  )
+}
+
+export function WorkflowOff(props: IconProps) {
+  return (
+    <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="butt" strokeLinejoin="round" {...props}>
+      <path d="M15 3L21 3L21 9L15 9ZM3 15L9 15L9 21L3 21ZM18 9V13M9 18H13M1.2929 1.2929L22.7071 22.7071" />
+    </Icon>
+  )
+}
+
+export function Workflow(props: IconProps) {
+  return (
+    <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="butt" strokeLinejoin="round" {...props}>
+      <path d="M3 3L10.5 3L10.5 10.5L3 10.5ZM13.5 13.5L21 13.5L21 21L13.5 21ZM6.5 10.5L6.5 18L13.5 18" />
     </Icon>
   )
 }

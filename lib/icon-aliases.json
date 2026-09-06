@@ -2579,6 +2579,77 @@
         "further",
         "reduce"
       ]
+    },
+    {
+      "match": "^layout-tidy$",
+      "terms": [
+        "tidy",
+        "tidy up",
+        "arrange",
+        "auto layout",
+        "clean up",
+        "organize",
+        "reflow",
+        "rows",
+        "pack"
+      ]
+    },
+    {
+      "match": "^lamp-studio$",
+      "terms": [
+        "spotlight",
+        "studio light",
+        "stage light",
+        "relight",
+        "lighting",
+        "light source",
+        "softbox"
+      ]
+    },
+    {
+      "match": "^square-dashed-pen$",
+      "terms": [
+        "element edit",
+        "edit selection",
+        "edit region",
+        "inpaint",
+        "retouch",
+        "annotate area"
+      ]
+    },
+    {
+      "match": "^workflow$",
+      "terms": [
+        "edges",
+        "connections",
+        "connectors",
+        "node link",
+        "wires",
+        "graph",
+        "flow",
+        "hide edges"
+      ]
+    },
+    {
+      "match": "^storyboard$",
+      "terms": [
+        "shots",
+        "shot list",
+        "panels",
+        "frames",
+        "scene board",
+        "分镜"
+      ]
+    },
+    {
+      "match": "^workflow-off$",
+      "terms": [
+        "hide edges",
+        "hide connections",
+        "edges off",
+        "connections hidden",
+        "no wires"
+      ]
     }
   ],
   "names": {

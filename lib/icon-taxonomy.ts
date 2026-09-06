@@ -53,7 +53,9 @@ export const CATEGORIES = [
   },
   {
     label: "Git",
-    match: /^git-/,
+    // `workflow` files here rather than in Layout: two boxes on a connector read as a graph, the
+    // family git-fork and git-graph belong to, not as a panel arrangement.
+    match: /^(git-|workflow)/,
     blurb: "Branches, commits, merges and pull requests.",
   },
   {
@@ -116,7 +118,7 @@ export const CATEGORIES = [
     // wherever the two disagree — the same call the taxonomy makes for `wifi`.
     label: "Media",
     match:
-      /^(play|pause|stop|record|skip-|fast-forward|rewind|repeat|volume|audio-lines|mic|megaphone|headphones|headset|shuffle|music-note|list-music|list-video|camera|image|cast|subtitles|captions|picture-in-picture|gallery-|podcast|queue|high-definition|clapperboard|film|perspective|video|panorama)/,
+      /^(storyboard|play|pause|stop|record|skip-|fast-forward|rewind|repeat|volume|audio-lines|mic|megaphone|headphones|headset|shuffle|music-note|list-music|list-video|camera|image|cast|subtitles|captions|picture-in-picture|gallery-|podcast|queue|high-definition|clapperboard|film|perspective|video|panorama)/,
     blurb:
       "Playback, volume, capture, casting and the sound and image marks.",
   },
