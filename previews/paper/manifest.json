@@ -15,7 +15,7 @@
   ],
   "icons": 611,
   "names": 721,
-  "variants": 3682,
+  "variants": 3678,
   "sheets": [
     {
       "file": "actions-1.html",
@@ -106,7 +106,7 @@
       "artboard": "Arrows",
       "category": "Arrows",
       "part": 1,
-      "parts": 5,
+      "parts": 6,
       "into": "artboard",
       "width": 742,
       "icons": 54,
@@ -118,19 +118,19 @@
       "artboard": "Arrows",
       "category": "Arrows",
       "part": 2,
-      "parts": 5,
+      "parts": 6,
       "into": "rows",
       "width": 742,
       "icons": 0,
       "variants": 56,
-      "bytes": 38957
+      "bytes": 39095
     },
     {
       "file": "arrows-3.html",
       "artboard": "Arrows",
       "category": "Arrows",
       "part": 3,
-      "parts": 5,
+      "parts": 6,
       "into": "rows",
       "width": 742,
       "icons": 0,
@@ -142,24 +142,36 @@
       "artboard": "Arrows",
       "category": "Arrows",
       "part": 4,
-      "parts": 5,
+      "parts": 6,
       "into": "rows",
       "width": 742,
       "icons": 0,
       "variants": 60,
-      "bytes": 39873
+      "bytes": 40003
     },
     {
       "file": "arrows-5.html",
       "artboard": "Arrows",
       "category": "Arrows",
       "part": 5,
-      "parts": 5,
+      "parts": 6,
       "into": "rows",
       "width": 742,
       "icons": 0,
-      "variants": 46,
-      "bytes": 40768
+      "variants": 44,
+      "bytes": 39214
+    },
+    {
+      "file": "arrows-6.html",
+      "artboard": "Arrows",
+      "category": "Arrows",
+      "part": 6,
+      "parts": 6,
+      "into": "rows",
+      "width": 742,
+      "icons": 0,
+      "variants": 2,
+      "bytes": 1866
     },
     {
       "file": "charts-1.html",
@@ -194,8 +206,8 @@
       "into": "rows",
       "width": 742,
       "icons": 0,
-      "variants": 54,
-      "bytes": 36970
+      "variants": 56,
+      "bytes": 39273
     },
     {
       "file": "charts-4.html",
@@ -206,8 +218,8 @@
       "into": "rows",
       "width": 742,
       "icons": 0,
-      "variants": 12,
-      "bytes": 8842
+      "variants": 6,
+      "bytes": 4434
     },
     {
       "file": "chevrons-carets-1.html",
@@ -327,7 +339,7 @@
       "width": 742,
       "icons": 0,
       "variants": 48,
-      "bytes": 39748
+      "bytes": 39724
     },
     {
       "file": "devices-3.html",
@@ -639,7 +651,7 @@
       "width": 742,
       "icons": 0,
       "variants": 48,
-      "bytes": 38387
+      "bytes": 38059
     },
     {
       "file": "media-3.html",
@@ -663,7 +675,7 @@
       "width": 742,
       "icons": 0,
       "variants": 42,
-      "bytes": 38457
+      "bytes": 38454
     },
     {
       "file": "media-5.html",
@@ -711,7 +723,7 @@
       "width": 742,
       "icons": 0,
       "variants": 56,
-      "bytes": 39156
+      "bytes": 38832
     },
     {
       "file": "media-9.html",
@@ -723,7 +735,7 @@
       "width": 742,
       "icons": 0,
       "variants": 56,
-      "bytes": 39658
+      "bytes": 39700
     },
     {
       "file": "media-10.html",
@@ -735,7 +747,7 @@
       "width": 742,
       "icons": 0,
       "variants": 42,
-      "bytes": 32958
+      "bytes": 33008
     },
     {
       "file": "pointers-1.html",
@@ -915,7 +927,7 @@
       "width": 742,
       "icons": 18,
       "variants": 36,
-      "bytes": 40427
+      "bytes": 40328
     },
     {
       "file": "tools-2.html",
@@ -939,7 +951,7 @@
       "width": 742,
       "icons": 0,
       "variants": 24,
-      "bytes": 39113
+      "bytes": 38735
     },
     {
       "file": "tools-4.html",
@@ -951,7 +963,7 @@
       "width": 742,
       "icons": 0,
       "variants": 24,
-      "bytes": 26558
+      "bytes": 26246
     },
     {
       "file": "users-1.html",
@@ -975,7 +987,7 @@
       "width": 742,
       "icons": 0,
       "variants": 44,
-      "bytes": 40330
+      "bytes": 40335
     },
     {
       "file": "users-3.html",
@@ -1115,7 +1127,7 @@
       "parts": 1,
       "icons": 0,
       "variants": 0,
-      "bytes": 398275
+      "bytes": 398171
     }
   ]
 }
