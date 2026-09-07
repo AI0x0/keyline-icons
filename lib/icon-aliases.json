@@ -2650,6 +2650,53 @@
         "connections hidden",
         "no wires"
       ]
+    },
+    {
+      "match": "^clipboard$",
+      "terms": [
+        "paste",
+        "board",
+        "notes",
+        "clip",
+        "剪贴板",
+        "粘贴"
+      ]
+    },
+    {
+      "match": "^arrow-right-left$",
+      "terms": [
+        "swap",
+        "exchange",
+        "transfer",
+        "bidirectional",
+        "two-way",
+        "both ways",
+        "互换",
+        "交换"
+      ]
+    },
+    {
+      "match": "^scissors-line-dashed$",
+      "terms": [
+        "cut here",
+        "cut along the line",
+        "split",
+        "custom split",
+        "manual split",
+        "自定义切分",
+        "切分"
+      ]
+    },
+    {
+      "match": "^scissors-sparkle$",
+      "terms": [
+        "smart cut",
+        "auto split",
+        "smart split",
+        "magic cut",
+        "ai cut",
+        "智能切分"
+      ]
     }
   ],
   "names": {
@@ -2696,6 +2743,12 @@
       "arrow-right-to-line",
       "square-arrow-right-enter",
       "square-arrow-right-exit"
+    ],
+    "arrow-right-left": [
+      "arrows-left-right",
+      "arrows-right-left",
+      "switch-horizontal",
+      "swap-horizontal"
     ],
     "arrow-up": [
       "a-arrow-up",
@@ -2811,6 +2864,9 @@
     ],
     "clapperboard": [
       "film-slate"
+    ],
+    "clipboard": [
+      "clipboard-text"
     ],
     "clock": [
       "clock-alert",
@@ -3227,6 +3283,10 @@
     ],
     "scan-cube": [
       "cube-focus"
+    ],
+    "scissors-sparkle": [
+      "scissors-magic",
+      "scissors-ai"
     ],
     "search": [
       "search-alert",

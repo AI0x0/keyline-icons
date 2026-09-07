@@ -245,6 +245,14 @@ export function ArrowRightDashedPanel(props: IconProps) {
   )
 }
 
+export function ArrowRightLeft(props: IconProps) {
+  return (
+    <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <path d="M2 8L21.0587 8M18.2071 4L21.8536 7.6464C22.0488 7.8417 22.0488 8.1583 21.8536 8.3536L18.2071 12M22 16L2.9413 16M5.7929 12L2.1464 15.6464C1.9512 15.8417 1.9512 16.1583 2.1464 16.3536L5.7929 20" />
+    </Icon>
+  )
+}
+
 export function ArrowRight(props: IconProps) {
   return (
     <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" {...props}>
@@ -1559,6 +1567,14 @@ export function Clapperboard(props: IconProps) {
   return (
     <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" {...props}>
       <path d="M4.381 11.0275L20.381 11.0275C20.9332 11.0275 21.381 11.4752 21.381 12.0275L21.381 19.0275C21.381 20.132 20.4855 21.0275 19.381 21.0275L5.381 21.0275C4.2764 21.0275 3.381 20.132 3.381 19.0275L3.381 12.0275C3.381 11.4752 3.8287 11.0275 4.381 11.0275ZM3.3754 6.9044L18.8925 3.0029C19.4281 2.8683 19.9715 3.1933 20.1061 3.7289L20.5938 5.6685C20.7285 6.2042 20.4034 6.7475 19.8678 6.8822L4.3508 10.7836C3.8152 10.9183 3.2718 10.5933 3.1371 10.0577L2.6494 8.118C2.5148 7.5824 2.8398 7.039 3.3754 6.9044Z" />
+    </Icon>
+  )
+}
+
+export function Clipboard(props: IconProps) {
+  return (
+    <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <path d="M16 4H17C18.6569 4 20 5.3431 20 7V19C20 20.6569 18.6569 22 17 22H7C5.3431 22 4 20.6569 4 19V7C4 5.3431 5.3431 4 7 4H8M9 2H15C15.5523 2 16 2.4477 16 3V5C16 5.5523 15.5523 6 15 6H9C8.4477 6 8 5.5523 8 5V3C8 2.4477 8.4477 2 9 2Z" />
     </Icon>
   )
 }
@@ -4088,6 +4104,23 @@ export function ScanFace(props: IconProps) {
   return (
     <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" {...props}>
       <path d="M3 8V6C3 4.34315 4.34315 3 6 3H8M16 3H18C19.6569 3 21 4.34315 21 6V8M21 16V18C21 19.6569 19.6569 21 18 21H16M8 21H6C4.34315 21 3 19.6569 3 18V16M9 10V11M15 10V11M9 15C10 16 11 16.5 12 16.5C13 16.5 14 16 15 15" />
+    </Icon>
+  )
+}
+
+export function ScissorsLineDashed(props: IconProps) {
+  return (
+    <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <path d="M6 7.5C6 8.6046 5.1046 9.5 4 9.5C2.8954 9.5 2 8.6046 2 7.5C2 6.3954 2.8954 5.5 4 5.5C5.1046 5.5 6 6.3954 6 7.5ZM6 16.5C6 17.6046 5.1046 18.5 4 18.5C2.8954 18.5 2 17.6046 2 16.5C2 15.3954 2.8954 14.5 4 14.5C5.1046 14.5 6 15.3954 6 16.5ZM5.4142 8.9142L14 17.5M5.4142 15.0858L14 6.5M14.25 12L16.125 12M20.125 12L22 12" />
+    </Icon>
+  )
+}
+
+export function ScissorsSparkle(props: IconProps) {
+  return (
+    <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <path d="M6 7.5C6 8.6046 5.1046 9.5 4 9.5C2.8954 9.5 2 8.6046 2 7.5C2 6.3954 2.8954 5.5 4 5.5C5.1046 5.5 6 6.3954 6 7.5ZM6 16.5C6 17.6046 5.1046 18.5 4 18.5C2.8954 18.5 2 17.6046 2 16.5C2 15.3954 2.8954 14.5 4 14.5C5.1046 14.5 6 15.3954 6 16.5ZM5.4142 8.9142L14 17.5M5.4142 15.0858L14 6.5" />
+      <path d="M17.8006 7.5308C17.9832 7.1564 18.5168 7.1564 18.6994 7.5308C21.3296 12.9236 17.3264 8.9204 22.7192 11.5506C23.0936 11.7332 23.0936 12.2668 22.7192 12.4494C17.3264 15.0796 21.3296 11.0764 18.6994 16.4692C18.5168 16.8436 17.9832 16.8436 17.8006 16.4692C15.1704 11.0764 19.1736 15.0796 13.7808 12.4494C13.4064 12.2668 13.4064 11.7332 13.7808 11.5506C19.1736 8.9204 15.1704 12.9236 17.8006 7.5308Z" fill="currentColor" stroke="none" />
     </Icon>
   )
 }

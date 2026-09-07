@@ -245,6 +245,14 @@ export function ArrowRightDashedPanel(props: IconProps) {
   )
 }
 
+export function ArrowRightLeft(props: IconProps) {
+  return (
+    <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="butt" strokeLinejoin="round" {...props}>
+      <path d="M1 8L21.7302 8M17.2929 3.2929L22 8L17.2929 12.7071M23 16L2.2698 16M6.7071 11.2929L2 16L6.7071 20.7071" />
+    </Icon>
+  )
+}
+
 export function ArrowRight(props: IconProps) {
   return (
     <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="butt" strokeLinejoin="round" {...props}>
@@ -1559,6 +1567,14 @@ export function Clapperboard(props: IconProps) {
   return (
     <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="butt" strokeLinejoin="round" {...props}>
       <path d="M3.381 11.0275L21.381 11.0275L21.381 21.0275L3.381 21.0275L3.381 11.0275ZM2.4056 7.1482L19.8623 2.7591L20.8376 6.6384L3.381 11.0275L2.4056 7.1482Z" />
+    </Icon>
+  )
+}
+
+export function Clipboard(props: IconProps) {
+  return (
+    <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="butt" strokeLinejoin="round" {...props}>
+      <path d="M16 4L20 4L20 22L4 22L4 4L8 4M8 2L16 2L16 6L8 6Z" />
     </Icon>
   )
 }
@@ -4091,6 +4107,23 @@ export function ScanFace(props: IconProps) {
   return (
     <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="butt" strokeLinejoin="round" {...props}>
       <path d="M3 9L3 3L9 3M15 3L21 3L21 9M21 15L21 21L15 21M9 21L3 21L3 15M9 9L9 12M15 9L15 12M8.2929 14.2929C10 16 11 16.5 12 16.5C13 16.5 14 16 15.7071 14.2929" />
+    </Icon>
+  )
+}
+
+export function ScissorsLineDashed(props: IconProps) {
+  return (
+    <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="butt" strokeLinejoin="round" {...props}>
+      <path d="M6 7.5C6 8.6046 5.1046 9.5 4 9.5C2.8954 9.5 2 8.6046 2 7.5C2 6.3954 2.8954 5.5 4 5.5C5.1046 5.5 6 6.3954 6 7.5ZM6 16.5C6 17.6046 5.1046 18.5 4 18.5C2.8954 18.5 2 17.6046 2 16.5C2 15.3954 2.8954 14.5 4 14.5C5.1046 14.5 6 15.3954 6 16.5ZM5.4142 8.9142L14.7071 18.2071M5.4142 15.0858L14.7071 5.7929M13.25 12L17.125 12M19.125 12L23 12" />
+    </Icon>
+  )
+}
+
+export function ScissorsSparkle(props: IconProps) {
+  return (
+    <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="butt" strokeLinejoin="round" {...props}>
+      <path d="M6 7.5C6 8.6046 5.1046 9.5 4 9.5C2.8954 9.5 2 8.6046 2 7.5C2 6.3954 2.8954 5.5 4 5.5C5.1046 5.5 6 6.3954 6 7.5ZM6 16.5C6 17.6046 5.1046 18.5 4 18.5C2.8954 18.5 2 17.6046 2 16.5C2 15.3954 2.8954 14.5 4 14.5C5.1046 14.5 6 15.3954 6 16.5ZM5.4142 8.9142L14.7071 18.2071M5.4142 15.0858L14.7071 5.7929" />
+      <path d="M17.9376 7.25L18.5624 7.25C21.1927 12.6428 17.6072 9.0573 23 11.6876L23 12.3124C17.6072 14.9427 21.1927 11.3572 18.5624 16.75L17.9376 16.75C15.3073 11.3572 18.8928 14.9427 13.5 12.3124L13.5 11.6876C18.8928 9.0573 15.3073 12.6428 17.9376 7.25Z" fill="currentColor" stroke="none" />
     </Icon>
   )
 }

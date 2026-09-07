@@ -68,8 +68,8 @@ export const CATEGORIES = [
     // `book` carries a lookahead too: `bookmark` is a web-scoped action and
     // belongs in Web below, and an unguarded `book` here would claim it first.
     match:
-      /^(file|folder|copy|paperclip|bin|archive|pen(?!cil)|(square|circle)-pen|book(?!mark)|save|article)/,
-    blurb: "Documents, folders, copies, the paperclip and the bin.",
+      /^(file|folder|copy|clipboard|paperclip|bin|archive|pen(?!cil)|(square|circle)-pen|book(?!mark)|save|article)/,
+    blurb: "Documents, folders, copies, the clipboard, the paperclip and the bin.",
   },
   {
     label: "Time",
