@@ -2,6 +2,144 @@
   "$comment": "Hand-curated search aliases. Source, not generated: edit this file. Read by lib/icon-taxonomy.ts for the site and by pipeline/build-data.mjs for the packages, which is why it is JSON rather than a TypeScript literal.",
   "aliases": [
     {
+      "match": "-arrow-down$",
+      "terms": [
+        "download",
+        "receive",
+        "incoming"
+      ]
+    },
+    {
+      "match": "-arrow-up$",
+      "terms": [
+        "upload",
+        "send",
+        "outgoing"
+      ]
+    },
+    {
+      "match": "-check$",
+      "terms": [
+        "done",
+        "verified",
+        "approved",
+        "success"
+      ]
+    },
+    {
+      "match": "-dot$",
+      "terms": [
+        "unread",
+        "badge",
+        "new",
+        "notification"
+      ]
+    },
+    {
+      "match": "-exclamation$",
+      "terms": [
+        "warning",
+        "overdue",
+        "attention"
+      ]
+    },
+    {
+      "match": "-info$",
+      "terms": [
+        "details",
+        "about",
+        "status",
+        "learn more"
+      ]
+    },
+    {
+      "match": "-minus$",
+      "terms": [
+        "remove",
+        "subtract"
+      ]
+    },
+    {
+      "match": "-open$",
+      "terms": [
+        "browse",
+        "expanded"
+      ]
+    },
+    {
+      "match": "-plus$",
+      "note": "Modifiers, which compose with whatever they hang off.",
+      "terms": [
+        "add",
+        "new",
+        "create"
+      ]
+    },
+    {
+      "match": "-search$",
+      "terms": [
+        "find",
+        "lookup"
+      ]
+    },
+    {
+      "match": "-x$",
+      "terms": [
+        "remove",
+        "delete",
+        "cancel",
+        "failed"
+      ]
+    },
+    {
+      "match": "^(chevrons-|expand-dashed-|fullscreen$|fullscreen-exit$|git-compare-arrows$|list-collapse|list-sort|refresh-(ccw|cw)$|repeat|reply-all$|shuffle$)",
+      "note": "The plural as a concept: every drawing carrying more than one arrowhead, which is the question `arrows` is asking and the one word the name of each of these does not answer. Counted off the drawings rather than the names: `maximize` and `minimize` are corner brackets with no arrow in them, `fast-forward`, `rewind` and `skip-*` are play heads, and `rotate-ccw` and `rotate-cw` carry exactly one. `arrows` is held apart from `arrow` by the singular rule, which leaves it alone, so the two words stay two questions.",
+      "terms": [
+        "arrows"
+      ]
+    },
+    {
+      "match": "^(full|half|quarter|three-quarter)$",
+      "terms": [
+        "portion",
+        "fraction",
+        "pie",
+        "percentage",
+        "share"
+      ]
+    },
+    {
+      "match": "^(headphones|headset)",
+      "terms": [
+        "audio",
+        "listen",
+        "support",
+        "call",
+        "music"
+      ]
+    },
+    {
+      "match": "^(lock|unlock)$",
+      "terms": [
+        "secure",
+        "private",
+        "password",
+        "protected",
+        "access"
+      ]
+    },
+    {
+      "match": "^(sun|moon)$",
+      "note": "The theme toggle is why anyone reaches for either of these in an app, and neither drawing is named after it.",
+      "terms": [
+        "theme",
+        "dark mode",
+        "light mode",
+        "appearance",
+        "brightness"
+      ]
+    },
+    {
       "match": "^activity$",
       "note": "Families.",
       "terms": [
@@ -33,6 +171,16 @@
       ]
     },
     {
+      "match": "^angle$",
+      "terms": [
+        "angle",
+        "degrees",
+        "rotation angle",
+        "角度",
+        "旋转角度"
+      ]
+    },
+    {
       "match": "^apple-logo$",
       "note": "A platform mark, not the fruit: it sits on the download button that hands a Mac its own build.",
       "terms": [
@@ -53,10 +201,16 @@
       ]
     },
     {
-      "match": "^(chevrons-|expand-dashed-|fullscreen$|fullscreen-exit$|git-compare-arrows$|list-collapse|list-sort|refresh-(ccw|cw)$|repeat|reply-all$|shuffle$)",
-      "note": "The plural as a concept: every drawing carrying more than one arrowhead, which is the question `arrows` is asking and the one word the name of each of these does not answer. Counted off the drawings rather than the names: `maximize` and `minimize` are corner brackets with no arrow in them, `fast-forward`, `rewind` and `skip-*` are play heads, and `rotate-ccw` and `rotate-cw` carry exactly one. `arrows` is held apart from `arrow` by the singular rule, which leaves it alone, so the two words stay two questions.",
+      "match": "^arrow-right-left$",
       "terms": [
-        "arrows"
+        "swap",
+        "exchange",
+        "transfer",
+        "bidirectional",
+        "two-way",
+        "both ways",
+        "互换",
+        "交换"
       ]
     },
     {
@@ -66,84 +220,6 @@
         "redo",
         "back",
         "return"
-      ]
-    },
-    {
-      "match": "^captions$",
-      "note": "The CC form. `subtitles` is the same idea drawn as caption lines.",
-      "terms": [
-        "cc",
-        "closed captions",
-        "subtitles",
-        "text track",
-        "srt"
-      ]
-    },
-    {
-      "match": "^cast$",
-      "terms": [
-        "chromecast",
-        "airplay",
-        "screen mirror",
-        "stream",
-        "broadcast",
-        "tv"
-      ]
-    },
-    {
-      "match": "^clapperboard$",
-      "terms": [
-        "project",
-        "slate",
-        "movie",
-        "production",
-        "scene",
-        "take",
-        "shoot"
-      ]
-    },
-    {
-      "match": "^columns$",
-      "terms": [
-        "arrange",
-        "layout",
-        "vertical",
-        "panels",
-        "side"
-      ]
-    },
-    {
-      "match": "^columns-2$",
-      "terms": [
-        "split",
-        "pane",
-        "panes",
-        "two",
-        "side-by-side",
-        "halves",
-        "divide"
-      ]
-    },
-    {
-      "match": "^copy-plus$",
-      "note": "Named for its base, but it is also the add-to-queue mark.",
-      "terms": [
-        "queue",
-        "add to queue",
-        "library add",
-        "duplicate",
-        "stack",
-        "add copy"
-      ]
-    },
-    {
-      "match": "dashed-panel$",
-      "terms": [
-        "move to",
-        "drop",
-        "boundary",
-        "edge",
-        "snap"
       ]
     },
     {
@@ -194,6 +270,21 @@
       ]
     },
     {
+      "match": "^ban$",
+      "note": "Nobody types `ban` for the sign; they type what it means.",
+      "terms": [
+        "no",
+        "block",
+        "blocked",
+        "forbidden",
+        "prohibited",
+        "denied",
+        "cancel",
+        "not allowed",
+        "restricted"
+      ]
+    },
+    {
       "match": "^bar-chart",
       "terms": [
         "analytics",
@@ -224,6 +315,25 @@
         "alert",
         "reminder",
         "ring"
+      ]
+    },
+    {
+      "match": "^bin$",
+      "terms": [
+        "delete",
+        "remove",
+        "trash",
+        "discard"
+      ]
+    },
+    {
+      "match": "^bluetooth$",
+      "terms": [
+        "wireless",
+        "pair",
+        "connect",
+        "device",
+        "radio"
       ]
     },
     {
@@ -261,16 +371,6 @@
       ]
     },
     {
-      "match": "^bluetooth$",
-      "terms": [
-        "wireless",
-        "pair",
-        "connect",
-        "device",
-        "radio"
-      ]
-    },
-    {
       "match": "^bot$",
       "terms": [
         "robot",
@@ -290,6 +390,34 @@
         "frame",
         "transform",
         "artboard"
+      ]
+    },
+    {
+      "match": "^bracket-arrow",
+      "terms": [
+        "collapse",
+        "expand",
+        "resize",
+        "fit",
+        "inset"
+      ]
+    },
+    {
+      "match": "^bracket-arrow-left$",
+      "note": "Figma's description spells these `log out` and `log in`, which reaches `LogOut` because the identifier splits into two words, and misses `logout` typed as one. The closed-up forms are what people type.",
+      "terms": [
+        "logout",
+        "signout",
+        "log out"
+      ]
+    },
+    {
+      "match": "^bracket-arrow-right$",
+      "note": "Figma's description spells these `log out` and `log in`, which reaches `LogOut` because the identifier splits into two words, and misses `logout` typed as one. The closed-up forms are what people type.",
+      "terms": [
+        "login",
+        "signin",
+        "log in"
       ]
     },
     {
@@ -338,34 +466,6 @@
       ]
     },
     {
-      "match": "^bracket-arrow",
-      "terms": [
-        "collapse",
-        "expand",
-        "resize",
-        "fit",
-        "inset"
-      ]
-    },
-    {
-      "match": "^bracket-arrow-left$",
-      "note": "Figma's description spells these `log out` and `log in`, which reaches `LogOut` because the identifier splits into two words, and misses `logout` typed as one. The closed-up forms are what people type.",
-      "terms": [
-        "logout",
-        "signout",
-        "log out"
-      ]
-    },
-    {
-      "match": "^bracket-arrow-right$",
-      "note": "Figma's description spells these `log out` and `log in`, which reaches `LogOut` because the identifier splits into two words, and misses `logout` typed as one. The closed-up forms are what people type.",
-      "terms": [
-        "login",
-        "signin",
-        "log in"
-      ]
-    },
-    {
       "match": "^calendar",
       "terms": [
         "date",
@@ -376,12 +476,60 @@
       ]
     },
     {
+      "match": "^calendar$",
+      "terms": [
+        "calendars"
+      ]
+    },
+    {
+      "match": "^camera-end$",
+      "terms": [
+        "last frame",
+        "capture last frame",
+        "frame at end",
+        "截取尾帧",
+        "尾帧"
+      ]
+    },
+    {
+      "match": "^camera-start$",
+      "terms": [
+        "first frame",
+        "capture first frame",
+        "frame at start",
+        "截取首帧",
+        "首帧"
+      ]
+    },
+    {
+      "match": "^captions$",
+      "note": "The CC form. `subtitles` is the same idea drawn as caption lines.",
+      "terms": [
+        "cc",
+        "closed captions",
+        "subtitles",
+        "text track",
+        "srt"
+      ]
+    },
+    {
       "match": "^caret",
       "terms": [
         "triangle",
         "dropdown",
         "sort",
         "select"
+      ]
+    },
+    {
+      "match": "^cast$",
+      "terms": [
+        "chromecast",
+        "airplay",
+        "screen mirror",
+        "stream",
+        "broadcast",
+        "tv"
       ]
     },
     {
@@ -416,6 +564,156 @@
       ]
     },
     {
+      "match": "^circle-question-mark$",
+      "terms": [
+        "help",
+        "faq",
+        "support",
+        "circled question",
+        "帮助",
+        "问号"
+      ]
+    },
+    {
+      "match": "^circle-square$",
+      "note": "Not a square in a circle: a ring and a rounded square crossing. Listed in lib/icon-not-containers.json for that reason.",
+      "terms": [
+        "ring",
+        "shapes",
+        "overlap",
+        "intersect",
+        "combine",
+        "merge",
+        "union",
+        "group",
+        "mixed selection",
+        "diagram"
+      ]
+    },
+    {
+      "match": "^circle-square-dashed$",
+      "note": "Same pair as circle-square with the square left dashed.",
+      "terms": [
+        "ring",
+        "shapes",
+        "overlap",
+        "intersect",
+        "placeholder",
+        "pending",
+        "draft",
+        "group",
+        "mixed selection"
+      ]
+    },
+    {
+      "match": "^circles$",
+      "note": "Two rings that cross: the drawing is the overlap, so the words are about the overlap. \"ring\" lives here rather than in the filename, which says circle like the other 73.",
+      "terms": [
+        "ring",
+        "rings",
+        "overlap",
+        "intersect",
+        "venn",
+        "union",
+        "combine",
+        "merge",
+        "group",
+        "diagram"
+      ]
+    },
+    {
+      "match": "^circles-dashed$",
+      "note": "The dashed ring is the one that is not there yet, so the words are about the pending half.",
+      "terms": [
+        "ring",
+        "rings",
+        "overlap",
+        "intersect",
+        "venn",
+        "placeholder",
+        "pending",
+        "draft",
+        "group",
+        "optional"
+      ]
+    },
+    {
+      "match": "^clapperboard$",
+      "terms": [
+        "project",
+        "slate",
+        "movie",
+        "production",
+        "scene",
+        "take",
+        "shoot"
+      ]
+    },
+    {
+      "match": "^clip-continue$",
+      "terms": [
+        "continue video",
+        "extend clip",
+        "next segment",
+        "continuation",
+        "智能续写",
+        "续写",
+        "视频延长"
+      ]
+    },
+    {
+      "match": "^clip-refresh$",
+      "terms": [
+        "reshoot",
+        "retake",
+        "regenerate clip",
+        "redo segment",
+        "片段重拍",
+        "重拍"
+      ]
+    },
+    {
+      "match": "^clip-split$",
+      "terms": [
+        "split clip",
+        "split at playhead",
+        "cut clip",
+        "在播放头处分割",
+        "分割"
+      ]
+    },
+    {
+      "match": "^clip-trim-left$",
+      "terms": [
+        "trim start",
+        "trim left",
+        "delete before playhead",
+        "裁掉左侧",
+        "裁剪左边"
+      ]
+    },
+    {
+      "match": "^clip-trim-right$",
+      "terms": [
+        "trim end",
+        "trim right",
+        "delete after playhead",
+        "裁掉右侧",
+        "裁剪右边"
+      ]
+    },
+    {
+      "match": "^clipboard$",
+      "terms": [
+        "paste",
+        "board",
+        "notes",
+        "clip",
+        "剪贴板",
+        "粘贴"
+      ]
+    },
+    {
       "match": "^clock",
       "terms": [
         "time",
@@ -447,6 +745,28 @@
       ]
     },
     {
+      "match": "^columns$",
+      "terms": [
+        "arrange",
+        "layout",
+        "vertical",
+        "panels",
+        "side"
+      ]
+    },
+    {
+      "match": "^columns-2$",
+      "terms": [
+        "split",
+        "pane",
+        "panes",
+        "two",
+        "side-by-side",
+        "halves",
+        "divide"
+      ]
+    },
+    {
       "match": "^compass$",
       "terms": [
         "direction",
@@ -463,6 +783,28 @@
         "clipboard",
         "clone",
         "paste"
+      ]
+    },
+    {
+      "match": "^copy-check$",
+      "terms": [
+        "copied",
+        "copy success",
+        "copied to clipboard",
+        "已复制",
+        "复制成功"
+      ]
+    },
+    {
+      "match": "^copy-plus$",
+      "note": "Named for its base, but it is also the add-to-queue mark.",
+      "terms": [
+        "queue",
+        "add to queue",
+        "library add",
+        "duplicate",
+        "stack",
+        "add copy"
       ]
     },
     {
@@ -549,6 +891,16 @@
       ]
     },
     {
+      "match": "^diamond-plus$",
+      "terms": [
+        "add keyframe",
+        "keyframe",
+        "insert frame",
+        "在播放头处加一帧",
+        "加关键帧"
+      ]
+    },
+    {
       "match": "^dice",
       "terms": [
         "random",
@@ -589,6 +941,19 @@
       ]
     },
     {
+      "match": "^eraser-sparkle$",
+      "terms": [
+        "magic eraser",
+        "ai erase",
+        "remove object",
+        "object removal",
+        "subject removal",
+        "inpaint",
+        "主体消除",
+        "智能擦除"
+      ]
+    },
+    {
       "match": "^expand-dashed",
       "terms": [
         "resize",
@@ -596,6 +961,19 @@
         "crop",
         "corner",
         "scale"
+      ]
+    },
+    {
+      "match": "^face$",
+      "terms": [
+        "portrait",
+        "face shape",
+        "head outline",
+        "facial",
+        "人像",
+        "人脸",
+        "人像调节",
+        "脸型"
       ]
     },
     {
@@ -636,15 +1014,6 @@
       ]
     },
     {
-      "match": "^file-text$",
-      "terms": [
-        "note",
-        "article",
-        "txt",
-        "readme"
-      ]
-    },
-    {
       "match": "^file-spreadsheet$",
       "terms": [
         "excel",
@@ -652,6 +1021,15 @@
         "table",
         "sheet",
         "numbers"
+      ]
+    },
+    {
+      "match": "^file-text$",
+      "terms": [
+        "note",
+        "article",
+        "txt",
+        "readme"
       ]
     },
     {
@@ -685,6 +1063,14 @@
         "storyboard",
         "scenario",
         "shots"
+      ]
+    },
+    {
+      "match": "^fingers-move$",
+      "terms": [
+        "trackpad pan",
+        "two finger drag",
+        "触控板移动"
       ]
     },
     {
@@ -729,16 +1115,6 @@
         "directories",
         "library",
         "workspace"
-      ]
-    },
-    {
-      "match": "^(full|half|quarter|three-quarter)$",
-      "terms": [
-        "portion",
-        "fraction",
-        "pie",
-        "percentage",
-        "share"
       ]
     },
     {
@@ -825,19 +1201,19 @@
       ]
     },
     {
-      "match": "^git-pull-request",
-      "terms": [
-        "pr",
-        "review",
-        "merge request"
-      ]
-    },
-    {
       "match": "^git-graph$",
       "terms": [
         "history",
         "log",
         "timeline"
+      ]
+    },
+    {
+      "match": "^git-pull-request",
+      "terms": [
+        "pr",
+        "review",
+        "merge request"
       ]
     },
     {
@@ -875,6 +1251,46 @@
       "note": "Named columns x rows. There is no bare `grid`: the word said nothing about which one, and it reaches the family through the name anyway."
     },
     {
+      "match": "^grid-(circles|squares)(-x|-check)?$",
+      "note": "A grid of shapes reads as a group or a selection long before anyone types its drawing.",
+      "terms": [
+        "group",
+        "select",
+        "selection",
+        "multiple",
+        "batch",
+        "items",
+        "grid",
+        "all"
+      ]
+    },
+    {
+      "match": "^grip-",
+      "note": "The words for what it does. Nobody types `grip` first.",
+      "terms": [
+        "drag",
+        "drag handle",
+        "handle",
+        "grab",
+        "reorder",
+        "resize",
+        "dots"
+      ]
+    },
+    {
+      "match": "^hammer$",
+      "terms": [
+        "mallet",
+        "claw hammer",
+        "tool",
+        "build",
+        "construct",
+        "nail",
+        "hit",
+        "repair"
+      ]
+    },
+    {
       "match": "^hand$",
       "terms": [
         "pan",
@@ -893,16 +1309,6 @@
         "bag",
         "shopping",
         "store"
-      ]
-    },
-    {
-      "match": "^(headphones|headset)",
-      "terms": [
-        "audio",
-        "listen",
-        "support",
-        "call",
-        "music"
       ]
     },
     {
@@ -980,6 +1386,16 @@
       ]
     },
     {
+      "match": "^image-pen$",
+      "terms": [
+        "edit image",
+        "edit frame",
+        "retouch",
+        "picture edit",
+        "画面编辑"
+      ]
+    },
+    {
       "match": "^info$",
       "terms": [
         "information",
@@ -1009,6 +1425,19 @@
       ]
     },
     {
+      "match": "^keyframes$",
+      "terms": [
+        "animation timeline",
+        "timeline",
+        "keyframe",
+        "playhead",
+        "motion",
+        "动画时间轴",
+        "时间轴",
+        "关键帧"
+      ]
+    },
+    {
       "match": "^lamp$",
       "terms": [
         "light",
@@ -1016,6 +1445,21 @@
         "lantern",
         "bulb",
         "illuminate"
+      ]
+    },
+    {
+      "match": "^lamp-studio$",
+      "terms": [
+        "studio light",
+        "relight",
+        "lighting",
+        "light source",
+        "softbox",
+        "light stand",
+        "photo studio",
+        "柔光箱",
+        "摄影棚灯光",
+        "打光"
       ]
     },
     {
@@ -1050,6 +1494,44 @@
         "overview",
         "panels",
         "admin"
+      ]
+    },
+    {
+      "match": "^layout-tidy$",
+      "terms": [
+        "tidy",
+        "tidy up",
+        "arrange",
+        "auto layout",
+        "clean up",
+        "organize",
+        "reflow",
+        "rows",
+        "pack"
+      ]
+    },
+    {
+      "match": "^lightbulb",
+      "note": "The bulb is reached for as an idea, not as a lamp.",
+      "terms": [
+        "idea",
+        "tip",
+        "hint",
+        "insight",
+        "suggestion",
+        "learn",
+        "light",
+        "inspiration"
+      ]
+    },
+    {
+      "match": "^lightbulb-on$",
+      "terms": [
+        "bright",
+        "eureka",
+        "shine",
+        "lit",
+        "on"
       ]
     },
     {
@@ -1131,13 +1613,14 @@
       ]
     },
     {
-      "match": "^(lock|unlock)$",
+      "match": "^log-out$",
       "terms": [
-        "secure",
-        "private",
-        "password",
-        "protected",
-        "access"
+        "sign out",
+        "signout",
+        "logout",
+        "exit",
+        "leave",
+        "quit"
       ]
     },
     {
@@ -1159,6 +1642,12 @@
         "message",
         "inbox",
         "letter"
+      ]
+    },
+    {
+      "match": "^mail$",
+      "terms": [
+        "mails"
       ]
     },
     {
@@ -1268,6 +1757,41 @@
       ]
     },
     {
+      "match": "^mouse$",
+      "terms": [
+        "scroll wheel",
+        "pointer device",
+        "鼠标",
+        "滚轮"
+      ]
+    },
+    {
+      "match": "^mouse-drag$",
+      "terms": [
+        "drag with mouse",
+        "mouse drag",
+        "鼠标拖动"
+      ]
+    },
+    {
+      "match": "^mouse-left$",
+      "terms": [
+        "left button",
+        "left click",
+        "click and drag",
+        "鼠标左键"
+      ]
+    },
+    {
+      "match": "^mouse-move$",
+      "terms": [
+        "drag with mouse",
+        "pan with mouse",
+        "鼠标移动",
+        "鼠标拖动"
+      ]
+    },
+    {
       "match": "^move$",
       "terms": [
         "drag",
@@ -1307,6 +1831,19 @@
       ]
     },
     {
+      "match": "^octagon-x$",
+      "note": "The error mark, which is what a toast reaches for. `stop` is the sign the shape comes from.",
+      "terms": [
+        "error",
+        "failed",
+        "failure",
+        "stop",
+        "cancel",
+        "abort",
+        "destructive"
+      ]
+    },
+    {
       "match": "^package$",
       "terms": [
         "box",
@@ -1325,6 +1862,16 @@
         "paint",
         "mask",
         "retouch"
+      ]
+    },
+    {
+      "match": "^paintbrush-sparkle$",
+      "terms": [
+        "generative fill",
+        "inpaint",
+        "magic brush",
+        "repaint",
+        "局部重绘"
       ]
     },
     {
@@ -1378,6 +1925,32 @@
       ]
     },
     {
+      "match": "^pencil-ruler$",
+      "note": "Nobody types the compound name; they type what they are doing with it.",
+      "terms": [
+        "design",
+        "draw",
+        "drafting",
+        "measure",
+        "edit",
+        "tools",
+        "ruler",
+        "pencil",
+        "sketch"
+      ]
+    },
+    {
+      "match": "^percent$",
+      "terms": [
+        "percentage",
+        "discount",
+        "sale",
+        "rate",
+        "interest",
+        "tax"
+      ]
+    },
+    {
       "match": "^person-arms-spread$",
       "terms": [
         "character",
@@ -1398,6 +1971,19 @@
         "plane",
         "horizon",
         "scene"
+      ]
+    },
+    {
+      "match": "^perspective-video$",
+      "terms": [
+        "director desk",
+        "rehearsal stage",
+        "3d stage",
+        "previz",
+        "stage camera",
+        "预演台",
+        "导演台",
+        "摄影机"
       ]
     },
     {
@@ -1423,6 +2009,15 @@
       ]
     },
     {
+      "match": "^pinch$",
+      "terms": [
+        "trackpad zoom",
+        "pinch zoom",
+        "two finger zoom",
+        "触控板缩放"
+      ]
+    },
+    {
       "match": "^play$",
       "terms": [
         "media",
@@ -1430,6 +2025,30 @@
         "start",
         "resume",
         "video"
+      ]
+    },
+    {
+      "match": "^plug$",
+      "note": "The software sense outweighs the wall socket: this is what an integration is drawn with.",
+      "terms": [
+        "plugin",
+        "integration",
+        "connect",
+        "connection",
+        "socket",
+        "adapter",
+        "extension",
+        "power"
+      ]
+    },
+    {
+      "match": "^plus$",
+      "terms": [
+        "add",
+        "new",
+        "create",
+        "increase",
+        "more"
       ]
     },
     {
@@ -1443,12 +2062,97 @@
       ]
     },
     {
+      "match": "^podium",
+      "terms": [
+        "ranking",
+        "leaderboard",
+        "places",
+        "standings",
+        "results",
+        "winner",
+        "first second third"
+      ]
+    },
+    {
+      "match": "^power(-off)?$",
+      "terms": [
+        "on",
+        "off",
+        "shutdown",
+        "restart",
+        "standby",
+        "boot",
+        "switch"
+      ]
+    },
+    {
+      "match": "^progress",
+      "terms": [
+        "loading",
+        "status",
+        "completion",
+        "percent",
+        "ring",
+        "spinner",
+        "loader"
+      ]
+    },
+    {
+      "match": "^puzzle$",
+      "terms": [
+        "skill",
+        "plugin",
+        "extension",
+        "addon",
+        "piece",
+        "jigsaw",
+        "integration"
+      ]
+    },
+    {
+      "match": "^question$",
+      "terms": [
+        "help",
+        "ask",
+        "faq",
+        "support",
+        "unknown",
+        "what"
+      ]
+    },
+    {
       "match": "^queue$",
       "terms": [
         "up next",
         "playlist",
         "play queue",
         "now playing"
+      ]
+    },
+    {
+      "match": "^receipt$",
+      "terms": [
+        "invoice",
+        "bill",
+        "order",
+        "payment"
+      ]
+    },
+    {
+      "match": "^record$",
+      "terms": [
+        "media",
+        "capture",
+        "rec",
+        "live"
+      ]
+    },
+    {
+      "match": "^rectangle-horizontal$",
+      "terms": [
+        "rectangle",
+        "rect",
+        "矩形"
       ]
     },
     {
@@ -1480,6 +2184,74 @@
       ]
     },
     {
+      "match": "^rewind$",
+      "terms": [
+        "back",
+        "replay",
+        "seek",
+        "slower"
+      ]
+    },
+    {
+      "match": "^rotate-ccw-square$",
+      "terms": [
+        "rotate left",
+        "rotate counter-clockwise",
+        "turn left 90",
+        "向左转",
+        "逆时针旋转"
+      ]
+    },
+    {
+      "match": "^rotate-corner-",
+      "terms": [
+        "rotate cursor",
+        "corner rotate",
+        "rotate handle",
+        "角旋转",
+        "旋转光标"
+      ]
+    },
+    {
+      "match": "^rotate-cw-square$",
+      "terms": [
+        "rotate right",
+        "rotate clockwise",
+        "turn right 90",
+        "向右转",
+        "顺时针旋转"
+      ]
+    },
+    {
+      "match": "^rotate-mirror$",
+      "terms": [
+        "rotate and mirror",
+        "rotate and flip",
+        "transform",
+        "旋转与镜像",
+        "旋转镜像"
+      ]
+    },
+    {
+      "match": "^route$",
+      "terms": [
+        "path",
+        "directions",
+        "journey",
+        "trip"
+      ]
+    },
+    {
+      "match": "^rows$",
+      "terms": [
+        "arrange",
+        "layout",
+        "horizontal",
+        "panels",
+        "stack"
+      ]
+    },
+    {
       "match": "^save$",
       "terms": [
         "floppy",
@@ -1488,6 +2260,15 @@
         "store",
         "persist",
         "write"
+      ]
+    },
+    {
+      "match": "^scale-frame$",
+      "terms": [
+        "scale",
+        "resize",
+        "proportional scale",
+        "缩放"
       ]
     },
     {
@@ -1514,6 +2295,26 @@
       ]
     },
     {
+      "match": "^scan-face$",
+      "terms": [
+        "face id",
+        "biometric",
+        "recognition",
+        "identity"
+      ]
+    },
+    {
+      "match": "^scan-text$",
+      "terms": [
+        "ocr",
+        "detect text",
+        "text recognition",
+        "read text",
+        "subtitle detection",
+        "识别文字"
+      ]
+    },
+    {
       "match": "^scissors$",
       "terms": [
         "cut",
@@ -1522,6 +2323,50 @@
         "split",
         "clip",
         "edit"
+      ]
+    },
+    {
+      "match": "^scissors-line-dashed$",
+      "terms": [
+        "cut here",
+        "cut along the line",
+        "split",
+        "custom split",
+        "manual split",
+        "自定义切分",
+        "切分"
+      ]
+    },
+    {
+      "match": "^scissors-sparkle$",
+      "terms": [
+        "smart cut",
+        "auto split",
+        "smart split",
+        "magic cut",
+        "ai cut",
+        "智能切分"
+      ]
+    },
+    {
+      "match": "^scribble$",
+      "terms": [
+        "freehand",
+        "free draw",
+        "doodle",
+        "squiggle",
+        "自由绘制",
+        "涂鸦"
+      ]
+    },
+    {
+      "match": "^search$",
+      "terms": [
+        "find",
+        "magnifier",
+        "lookup",
+        "query",
+        "zoom"
       ]
     },
     {
@@ -1537,6 +2382,50 @@
       ]
     },
     {
+      "match": "^settings$",
+      "terms": [
+        "gear",
+        "cog",
+        "preferences",
+        "config",
+        "options"
+      ]
+    },
+    {
+      "match": "^shapes",
+      "terms": [
+        "geometry",
+        "objects",
+        "elements",
+        "design"
+      ]
+    },
+    {
+      "match": "^share$",
+      "terms": [
+        "send",
+        "export",
+        "social",
+        "forward"
+      ]
+    },
+    {
+      "match": "^shield",
+      "note": "The family, so the signs inherit it.",
+      "terms": [
+        "security",
+        "secure",
+        "protected",
+        "protection",
+        "safe",
+        "trust",
+        "privacy",
+        "guard",
+        "antivirus",
+        "insurance"
+      ]
+    },
+    {
       "match": "^shield-star$",
       "terms": [
         "admin",
@@ -1544,6 +2433,78 @@
         "moderator",
         "platform",
         "superuser"
+      ]
+    },
+    {
+      "match": "^shopping-",
+      "terms": [
+        "buy",
+        "checkout",
+        "ecommerce",
+        "basket",
+        "store",
+        "purchase"
+      ]
+    },
+    {
+      "match": "^shuffle$",
+      "terms": [
+        "random",
+        "mix",
+        "swap",
+        "cross"
+      ]
+    },
+    {
+      "match": "^signal",
+      "terms": [
+        "wifi",
+        "network",
+        "reception",
+        "strength",
+        "cellular"
+      ]
+    },
+    {
+      "match": "^skip-",
+      "terms": [
+        "next",
+        "previous",
+        "track",
+        "media"
+      ]
+    },
+    {
+      "match": "^slash$",
+      "terms": [
+        "line",
+        "straight line",
+        "diagonal",
+        "直线"
+      ]
+    },
+    {
+      "match": "^sliders-2-(horizontal|vertical)$",
+      "note": "The knob form, against the plain `sliders-*` equaliser: the thumb is what people are looking for.",
+      "terms": [
+        "range",
+        "knob",
+        "thumb",
+        "adjust",
+        "volume",
+        "settings",
+        "control",
+        "level"
+      ]
+    },
+    {
+      "match": "^smartphone",
+      "terms": [
+        "phone",
+        "mobile",
+        "device",
+        "app",
+        "iphone"
       ]
     },
     {
@@ -1577,6 +2538,25 @@
         "cut",
         "separate",
         "halves"
+      ]
+    },
+    {
+      "match": "^square$",
+      "terms": [
+        "shape",
+        "box",
+        "rectangle"
+      ]
+    },
+    {
+      "match": "^square-dashed-pen$",
+      "terms": [
+        "element edit",
+        "edit selection",
+        "edit region",
+        "inpaint",
+        "retouch",
+        "annotate area"
       ]
     },
     {
@@ -1632,209 +2612,14 @@
       ]
     },
     {
-      "match": "^record$",
+      "match": "^storyboard$",
       "terms": [
-        "media",
-        "capture",
-        "rec",
-        "live"
-      ]
-    },
-    {
-      "match": "^plus$",
-      "terms": [
-        "add",
-        "new",
-        "create",
-        "increase",
-        "more"
-      ]
-    },
-    {
-      "match": "^podium",
-      "terms": [
-        "ranking",
-        "leaderboard",
-        "places",
-        "standings",
-        "results",
-        "winner",
-        "first second third"
-      ]
-    },
-    {
-      "match": "^progress",
-      "terms": [
-        "loading",
-        "status",
-        "completion",
-        "percent",
-        "ring",
-        "spinner",
-        "loader"
-      ]
-    },
-    {
-      "match": "^question$",
-      "terms": [
-        "help",
-        "ask",
-        "faq",
-        "support",
-        "unknown",
-        "what"
-      ]
-    },
-    {
-      "match": "^receipt$",
-      "terms": [
-        "invoice",
-        "bill",
-        "order",
-        "payment"
-      ]
-    },
-    {
-      "match": "^rewind$",
-      "terms": [
-        "back",
-        "replay",
-        "seek",
-        "slower"
-      ]
-    },
-    {
-      "match": "^route$",
-      "terms": [
-        "path",
-        "directions",
-        "journey",
-        "trip"
-      ]
-    },
-    {
-      "match": "^rows$",
-      "terms": [
-        "arrange",
-        "layout",
-        "horizontal",
+        "shots",
+        "shot list",
         "panels",
-        "stack"
-      ]
-    },
-    {
-      "match": "^scan-face$",
-      "terms": [
-        "face id",
-        "biometric",
-        "recognition",
-        "identity"
-      ]
-    },
-    {
-      "match": "^search$",
-      "terms": [
-        "find",
-        "magnifier",
-        "lookup",
-        "query",
-        "zoom"
-      ]
-    },
-    {
-      "match": "^settings$",
-      "terms": [
-        "gear",
-        "cog",
-        "preferences",
-        "config",
-        "options"
-      ]
-    },
-    {
-      "match": "^shapes",
-      "terms": [
-        "geometry",
-        "objects",
-        "elements",
-        "design"
-      ]
-    },
-    {
-      "match": "^share$",
-      "terms": [
-        "send",
-        "export",
-        "social",
-        "forward"
-      ]
-    },
-    {
-      "match": "^shopping-",
-      "terms": [
-        "buy",
-        "checkout",
-        "ecommerce",
-        "basket",
-        "store",
-        "purchase"
-      ]
-    },
-    {
-      "match": "^shuffle$",
-      "terms": [
-        "random",
-        "mix",
-        "swap",
-        "cross"
-      ]
-    },
-    {
-      "match": "^signal",
-      "terms": [
-        "wifi",
-        "network",
-        "reception",
-        "strength",
-        "cellular"
-      ]
-    },
-    {
-      "match": "^skip-",
-      "terms": [
-        "next",
-        "previous",
-        "track",
-        "media"
-      ]
-    },
-    {
-      "match": "^smartphone",
-      "terms": [
-        "phone",
-        "mobile",
-        "device",
-        "app",
-        "iphone"
-      ]
-    },
-    {
-      "match": "^square$",
-      "terms": [
-        "shape",
-        "box",
-        "rectangle"
-      ]
-    },
-    {
-      "match": "^(sun|moon)$",
-      "note": "The theme toggle is why anyone reaches for either of these in an app, and neither drawing is named after it.",
-      "terms": [
-        "theme",
-        "dark mode",
-        "light mode",
-        "appearance",
-        "brightness"
+        "frames",
+        "scene board",
+        "分镜"
       ]
     },
     {
@@ -1848,6 +2633,26 @@
       ]
     },
     {
+      "match": "^subtitles-off$",
+      "terms": [
+        "remove",
+        "captions",
+        "hide",
+        "strip",
+        "erase"
+      ]
+    },
+    {
+      "match": "^sun-dim$",
+      "terms": [
+        "brightness",
+        "exposure",
+        "dim",
+        "luminance",
+        "light level"
+      ]
+    },
+    {
       "match": "^tag",
       "terms": [
         "label",
@@ -1857,38 +2662,9 @@
       ]
     },
     {
-      "match": "^lightbulb",
-      "note": "The bulb is reached for as an idea, not as a lamp.",
+      "match": "^tag$",
       "terms": [
-        "idea",
-        "tip",
-        "hint",
-        "insight",
-        "suggestion",
-        "learn",
-        "light",
-        "inspiration"
-      ]
-    },
-    {
-      "match": "^lightbulb-on$",
-      "terms": [
-        "bright",
-        "eureka",
-        "shine",
-        "lit",
-        "on"
-      ]
-    },
-    {
-      "match": "^log-out$",
-      "terms": [
-        "sign out",
-        "signout",
-        "logout",
-        "exit",
-        "leave",
-        "quit"
+        "tags"
       ]
     },
     {
@@ -1912,15 +2688,6 @@
       ]
     },
     {
-      "match": "^bin$",
-      "terms": [
-        "delete",
-        "remove",
-        "trash",
-        "discard"
-      ]
-    },
-    {
       "match": "^threads-logo$",
       "terms": [
         "threads",
@@ -1941,6 +2708,29 @@
       ]
     },
     {
+      "match": "^toolbox$",
+      "note": "The words for what it holds, and the two names other sets use.",
+      "terms": [
+        "tools",
+        "toolkit",
+        "tool box",
+        "kit",
+        "hardware",
+        "build",
+        "repair",
+        "maintenance"
+      ]
+    },
+    {
+      "match": "^transition$",
+      "terms": [
+        "transition",
+        "cross dissolve",
+        "overlap clips",
+        "转场"
+      ]
+    },
+    {
       "match": "^trending",
       "terms": [
         "growth",
@@ -1948,6 +2738,16 @@
         "analytics",
         "stocks",
         "arrow"
+      ]
+    },
+    {
+      "match": "^triangle-alert$",
+      "terms": [
+        "warning",
+        "caution",
+        "attention",
+        "error",
+        "danger"
       ]
     },
     {
@@ -1964,22 +2764,23 @@
       ]
     },
     {
-      "match": "^triangle-alert$",
-      "terms": [
-        "warning",
-        "caution",
-        "attention",
-        "error",
-        "danger"
-      ]
-    },
-    {
       "match": "^truck$",
       "terms": [
         "delivery",
         "shipping",
         "transport",
         "logistics"
+      ]
+    },
+    {
+      "match": "^type$",
+      "terms": [
+        "text",
+        "font",
+        "typography",
+        "letter",
+        "label",
+        "caption"
       ]
     },
     {
@@ -2023,6 +2824,15 @@
       ]
     },
     {
+      "match": "^user-pen$",
+      "terms": [
+        "edit user",
+        "modify subject",
+        "edit character",
+        "主体修改"
+      ]
+    },
+    {
       "match": "^user-sound$",
       "terms": [
         "voice",
@@ -2031,6 +2841,16 @@
         "narrator",
         "speech",
         "timbre"
+      ]
+    },
+    {
+      "match": "^user-switch$",
+      "terms": [
+        "switch user",
+        "replace subject",
+        "swap person",
+        "change character",
+        "主体替换"
       ]
     },
     {
@@ -2052,6 +2872,16 @@
         "shot",
         "film",
         "capture"
+      ]
+    },
+    {
+      "match": "^video-audio-lines$",
+      "terms": [
+        "extract audio",
+        "separate audio",
+        "audio from video",
+        "soundtrack",
+        "音视频分离"
       ]
     },
     {
@@ -2125,6 +2955,53 @@
       ]
     },
     {
+      "match": "^windows-logo$",
+      "note": "The other half of the download pair.",
+      "terms": [
+        "microsoft",
+        "pc",
+        "win",
+        "exe"
+      ]
+    },
+    {
+      "match": "^workflow$",
+      "terms": [
+        "edges",
+        "connections",
+        "connectors",
+        "node link",
+        "wires",
+        "graph",
+        "flow",
+        "hide edges"
+      ]
+    },
+    {
+      "match": "^workflow-off$",
+      "terms": [
+        "hide edges",
+        "hide connections",
+        "edges off",
+        "connections hidden",
+        "no wires"
+      ]
+    },
+    {
+      "match": "^wrench$",
+      "note": "`spanner` is what half the world calls it, and nobody types `wrench` looking for settings.",
+      "terms": [
+        "spanner",
+        "tool",
+        "fix",
+        "repair",
+        "adjust",
+        "configure",
+        "maintenance",
+        "service"
+      ]
+    },
+    {
       "match": "^x$",
       "terms": [
         "close",
@@ -2143,408 +3020,6 @@
         "share",
         "social",
         "post"
-      ]
-    },
-    {
-      "match": "-plus$",
-      "note": "Modifiers, which compose with whatever they hang off.",
-      "terms": [
-        "add",
-        "new",
-        "create"
-      ]
-    },
-    {
-      "match": "-minus$",
-      "terms": [
-        "remove",
-        "subtract"
-      ]
-    },
-    {
-      "match": "-check$",
-      "terms": [
-        "done",
-        "verified",
-        "approved",
-        "success"
-      ]
-    },
-    {
-      "match": "-x$",
-      "terms": [
-        "remove",
-        "delete",
-        "cancel",
-        "failed"
-      ]
-    },
-    {
-      "match": "-dot$",
-      "terms": [
-        "unread",
-        "badge",
-        "new",
-        "notification"
-      ]
-    },
-    {
-      "match": "-search$",
-      "terms": [
-        "find",
-        "lookup"
-      ]
-    },
-    {
-      "match": "-info$",
-      "terms": [
-        "details",
-        "about",
-        "status",
-        "learn more"
-      ]
-    },
-    {
-      "match": "-exclamation$",
-      "terms": [
-        "warning",
-        "overdue",
-        "attention"
-      ]
-    },
-    {
-      "match": "-arrow-down$",
-      "terms": [
-        "download",
-        "receive",
-        "incoming"
-      ]
-    },
-    {
-      "match": "-arrow-up$",
-      "terms": [
-        "upload",
-        "send",
-        "outgoing"
-      ]
-    },
-    {
-      "match": "-open$",
-      "terms": [
-        "browse",
-        "expanded"
-      ]
-    },
-    {
-      "match": "^calendar$",
-      "terms": [
-        "calendars"
-      ]
-    },
-    {
-      "match": "^mail$",
-      "terms": [
-        "mails"
-      ]
-    },
-    {
-      "match": "^tag$",
-      "terms": [
-        "tags"
-      ]
-    },
-    {
-      "match": "^octagon-x$",
-      "note": "The error mark, which is what a toast reaches for. `stop` is the sign the shape comes from.",
-      "terms": [
-        "error",
-        "failed",
-        "failure",
-        "stop",
-        "cancel",
-        "abort",
-        "destructive"
-      ]
-    },
-    {
-      "match": "^grip-",
-      "note": "The words for what it does. Nobody types `grip` first.",
-      "terms": [
-        "drag",
-        "drag handle",
-        "handle",
-        "grab",
-        "reorder",
-        "resize",
-        "dots"
-      ]
-    },
-    {
-      "match": "^toolbox$",
-      "note": "The words for what it holds, and the two names other sets use.",
-      "terms": [
-        "tools",
-        "toolkit",
-        "tool box",
-        "kit",
-        "hardware",
-        "build",
-        "repair",
-        "maintenance"
-      ]
-    },
-    {
-      "match": "^type$",
-      "terms": [
-        "text",
-        "font",
-        "typography",
-        "letter",
-        "label",
-        "caption"
-      ]
-    },
-    {
-      "match": "^windows-logo$",
-      "note": "The other half of the download pair.",
-      "terms": [
-        "microsoft",
-        "pc",
-        "win",
-        "exe"
-      ]
-    },
-    {
-      "match": "^wrench$",
-      "note": "`spanner` is what half the world calls it, and nobody types `wrench` looking for settings.",
-      "terms": [
-        "spanner",
-        "tool",
-        "fix",
-        "repair",
-        "adjust",
-        "configure",
-        "maintenance",
-        "service"
-      ]
-    },
-    {
-      "match": "^grid-(circles|squares)(-x|-check)?$",
-      "note": "A grid of shapes reads as a group or a selection long before anyone types its drawing.",
-      "terms": [
-        "group",
-        "select",
-        "selection",
-        "multiple",
-        "batch",
-        "items",
-        "grid",
-        "all"
-      ]
-    },
-    {
-      "match": "^sliders-2-(horizontal|vertical)$",
-      "note": "The knob form, against the plain `sliders-*` equaliser: the thumb is what people are looking for.",
-      "terms": [
-        "range",
-        "knob",
-        "thumb",
-        "adjust",
-        "volume",
-        "settings",
-        "control",
-        "level"
-      ]
-    },
-    {
-      "match": "^power(-off)?$",
-      "terms": [
-        "on",
-        "off",
-        "shutdown",
-        "restart",
-        "standby",
-        "boot",
-        "switch"
-      ]
-    },
-    {
-      "match": "^percent$",
-      "terms": [
-        "percentage",
-        "discount",
-        "sale",
-        "rate",
-        "interest",
-        "tax"
-      ]
-    },
-    {
-      "match": "^ban$",
-      "note": "Nobody types `ban` for the sign; they type what it means.",
-      "terms": [
-        "no",
-        "block",
-        "blocked",
-        "forbidden",
-        "prohibited",
-        "denied",
-        "cancel",
-        "not allowed",
-        "restricted"
-      ]
-    },
-    {
-      "match": "^pencil-ruler$",
-      "note": "Nobody types the compound name; they type what they are doing with it.",
-      "terms": [
-        "design",
-        "draw",
-        "drafting",
-        "measure",
-        "edit",
-        "tools",
-        "ruler",
-        "pencil",
-        "sketch"
-      ]
-    },
-    {
-      "match": "^hammer$",
-      "terms": [
-        "mallet",
-        "claw hammer",
-        "tool",
-        "build",
-        "construct",
-        "nail",
-        "hit",
-        "repair"
-      ]
-    },
-    {
-      "match": "^circles$",
-      "note": "Two rings that cross: the drawing is the overlap, so the words are about the overlap. \"ring\" lives here rather than in the filename, which says circle like the other 73.",
-      "terms": [
-        "ring",
-        "rings",
-        "overlap",
-        "intersect",
-        "venn",
-        "union",
-        "combine",
-        "merge",
-        "group",
-        "diagram"
-      ]
-    },
-    {
-      "match": "^circles-dashed$",
-      "note": "The dashed ring is the one that is not there yet, so the words are about the pending half.",
-      "terms": [
-        "ring",
-        "rings",
-        "overlap",
-        "intersect",
-        "venn",
-        "placeholder",
-        "pending",
-        "draft",
-        "group",
-        "optional"
-      ]
-    },
-    {
-      "match": "^circle-square$",
-      "note": "Not a square in a circle: a ring and a rounded square crossing. Listed in lib/icon-not-containers.json for that reason.",
-      "terms": [
-        "ring",
-        "shapes",
-        "overlap",
-        "intersect",
-        "combine",
-        "merge",
-        "union",
-        "group",
-        "mixed selection",
-        "diagram"
-      ]
-    },
-    {
-      "match": "^circle-square-dashed$",
-      "note": "Same pair as circle-square with the square left dashed.",
-      "terms": [
-        "ring",
-        "shapes",
-        "overlap",
-        "intersect",
-        "placeholder",
-        "pending",
-        "draft",
-        "group",
-        "mixed selection"
-      ]
-    },
-    {
-      "match": "^plug$",
-      "note": "The software sense outweighs the wall socket: this is what an integration is drawn with.",
-      "terms": [
-        "plugin",
-        "integration",
-        "connect",
-        "connection",
-        "socket",
-        "adapter",
-        "extension",
-        "power"
-      ]
-    },
-    {
-      "match": "^puzzle$",
-      "terms": [
-        "skill",
-        "plugin",
-        "extension",
-        "addon",
-        "piece",
-        "jigsaw",
-        "integration"
-      ]
-    },
-    {
-      "match": "^shield",
-      "note": "The family, so the signs inherit it.",
-      "terms": [
-        "security",
-        "secure",
-        "protected",
-        "protection",
-        "safe",
-        "trust",
-        "privacy",
-        "guard",
-        "antivirus",
-        "insurance"
-      ]
-    },
-    {
-      "match": "^subtitles-off$",
-      "terms": [
-        "remove",
-        "captions",
-        "hide",
-        "strip",
-        "erase"
-      ]
-    },
-    {
-      "match": "^sun-dim$",
-      "terms": [
-        "brightness",
-        "exposure",
-        "dim",
-        "luminance",
-        "light level"
       ]
     },
     {
@@ -2581,127 +3056,22 @@
       ]
     },
     {
-      "match": "^layout-tidy$",
+      "match": "dashed-panel$",
       "terms": [
-        "tidy",
-        "tidy up",
-        "arrange",
-        "auto layout",
-        "clean up",
-        "organize",
-        "reflow",
-        "rows",
-        "pack"
-      ]
-    },
-    {
-      "match": "^lamp-studio$",
-      "terms": [
-        "spotlight",
-        "studio light",
-        "stage light",
-        "relight",
-        "lighting",
-        "light source",
-        "softbox"
-      ]
-    },
-    {
-      "match": "^square-dashed-pen$",
-      "terms": [
-        "element edit",
-        "edit selection",
-        "edit region",
-        "inpaint",
-        "retouch",
-        "annotate area"
-      ]
-    },
-    {
-      "match": "^workflow$",
-      "terms": [
-        "edges",
-        "connections",
-        "connectors",
-        "node link",
-        "wires",
-        "graph",
-        "flow",
-        "hide edges"
-      ]
-    },
-    {
-      "match": "^storyboard$",
-      "terms": [
-        "shots",
-        "shot list",
-        "panels",
-        "frames",
-        "scene board",
-        "分镜"
-      ]
-    },
-    {
-      "match": "^workflow-off$",
-      "terms": [
-        "hide edges",
-        "hide connections",
-        "edges off",
-        "connections hidden",
-        "no wires"
-      ]
-    },
-    {
-      "match": "^clipboard$",
-      "terms": [
-        "paste",
-        "board",
-        "notes",
-        "clip",
-        "剪贴板",
-        "粘贴"
-      ]
-    },
-    {
-      "match": "^arrow-right-left$",
-      "terms": [
-        "swap",
-        "exchange",
-        "transfer",
-        "bidirectional",
-        "two-way",
-        "both ways",
-        "互换",
-        "交换"
-      ]
-    },
-    {
-      "match": "^scissors-line-dashed$",
-      "terms": [
-        "cut here",
-        "cut along the line",
-        "split",
-        "custom split",
-        "manual split",
-        "自定义切分",
-        "切分"
-      ]
-    },
-    {
-      "match": "^scissors-sparkle$",
-      "terms": [
-        "smart cut",
-        "auto split",
-        "smart split",
-        "magic cut",
-        "ai cut",
-        "智能切分"
+        "move to",
+        "drop",
+        "boundary",
+        "edge",
+        "snap"
       ]
     }
   ],
   "names": {
     "activity": [
       "heart-pulse"
+    ],
+    "angle": [
+      "angle-degrees"
     ],
     "apple-logo": [
       "apple"
@@ -2844,6 +3214,14 @@
     "calendar-x": [
       "calendar-x-2"
     ],
+    "camera-end": [
+      "camera-last",
+      "camera-last-frame"
+    ],
+    "camera-start": [
+      "camera-first",
+      "camera-first-frame"
+    ],
     "captions": [
       "captions-off",
       "closed-caption"
@@ -2862,8 +3240,24 @@
     "chevrons-right": [
       "chevron-last"
     ],
+    "circle-question-mark": [
+      "circle-help",
+      "help-circle",
+      "question-circle",
+      "circle-question",
+      "question"
+    ],
     "clapperboard": [
       "film-slate"
+    ],
+    "clip-continue": [
+      "video-extend",
+      "clip-extend"
+    ],
+    "clip-refresh": [
+      "clip-regenerate",
+      "video-refresh",
+      "retake"
     ],
     "clipboard": [
       "clipboard-text"
@@ -2900,6 +3294,10 @@
       "copy-slash",
       "copy-x"
     ],
+    "copy-check": [
+      "copy-success",
+      "copy-done"
+    ],
     "crosshair": [
       "locate-fixed"
     ],
@@ -2917,9 +3315,21 @@
       "database-x",
       "database-zap"
     ],
+    "diamond-plus": [
+      "keyframe-plus"
+    ],
+    "eraser-sparkle": [
+      "magic-eraser",
+      "eraser-magic"
+    ],
     "eye": [
       "eye-closed",
       "eye-dashed"
+    ],
+    "face": [
+      "face-outline",
+      "head",
+      "portrait"
     ],
     "facebook-logo": [
       "facebook"
@@ -2984,6 +3394,10 @@
     ],
     "film": [
       "film-strip"
+    ],
+    "fingers-move": [
+      "trackpad-pan",
+      "two-finger-move"
     ],
     "flower": [
       "flower-2"
@@ -3056,8 +3470,17 @@
       "image-play",
       "image-upscale"
     ],
+    "image-pen": [
+      "image-edit",
+      "photo-edit"
+    ],
     "italic": [
       "text-italic"
+    ],
+    "keyframes": [
+      "timeline-keyframes",
+      "animation-timeline",
+      "keyframe"
     ],
     "languages": [
       "translate"
@@ -3198,6 +3621,19 @@
       "monitor-up",
       "monitor-x"
     ],
+    "mouse": [
+      "mouse-scroll",
+      "mouse-wheel"
+    ],
+    "mouse-drag": [
+      "mouse-pan"
+    ],
+    "mouse-left": [
+      "mouse-left-click"
+    ],
+    "mouse-move": [
+      "mouse-drag"
+    ],
     "move": [
       "arrows-out-cardinal"
     ],
@@ -3216,6 +3652,10 @@
     ],
     "paintbrush": [
       "paint-brush"
+    ],
+    "paintbrush-sparkle": [
+      "paintbrush-magic",
+      "magic-brush"
     ],
     "panel-bottom": [
       "panel-bottom-open"
@@ -3236,8 +3676,16 @@
     "pen": [
       "pen-tool"
     ],
+    "perspective-video": [
+      "stage-camera",
+      "director-desk"
+    ],
     "picture-in-picture": [
       "picture-in-picture-2"
+    ],
+    "pinch": [
+      "trackpad-zoom",
+      "pinch-zoom"
     ],
     "question": [
       "circle-question-mark"
@@ -3271,12 +3719,38 @@
       "rotate-ccw-key",
       "rotate-ccw-square"
     ],
+    "rotate-ccw-square": [
+      "rotate-square-left"
+    ],
+    "rotate-corner-bottom-left": [
+      "rotate-cursor-bottom-left"
+    ],
+    "rotate-corner-bottom-right": [
+      "rotate-cursor-bottom-right"
+    ],
+    "rotate-corner-top-left": [
+      "rotate-cursor-top-left"
+    ],
+    "rotate-corner-top-right": [
+      "rotate-cursor-top-right"
+    ],
     "rotate-cw": [
       "rotate-cw-fading-clock",
       "rotate-cw-square"
     ],
+    "rotate-cw-square": [
+      "rotate-square-right"
+    ],
+    "rotate-mirror": [
+      "rotate-flip",
+      "transform"
+    ],
     "save": [
       "floppy-disk"
+    ],
+    "scale-frame": [
+      "scale",
+      "resize-corner"
     ],
     "scaling": [
       "resize"
@@ -3284,9 +3758,17 @@
     "scan-cube": [
       "cube-focus"
     ],
+    "scan-text": [
+      "text-scan",
+      "ocr"
+    ],
     "scissors-sparkle": [
       "scissors-magic",
       "scissors-ai"
+    ],
+    "scribble": [
+      "squiggle",
+      "pencil-line"
     ],
     "search": [
       "search-alert",
@@ -3370,6 +3852,10 @@
     "threads-logo": [
       "threads"
     ],
+    "transition": [
+      "clips-overlap",
+      "cross-dissolve"
+    ],
     "truck": [
       "truck-electric"
     ],
@@ -3407,14 +3893,26 @@
     "user-minus": [
       "user-round-minus"
     ],
+    "user-pen": [
+      "user-edit",
+      "user-round-pen"
+    ],
     "user-plus": [
       "user-round-plus"
+    ],
+    "user-switch": [
+      "user-swap",
+      "user-arrow-right-left"
     ],
     "user-x": [
       "user-round-x"
     ],
     "video": [
       "video-camera"
+    ],
+    "video-audio-lines": [
+      "video-audio",
+      "film-audio-lines"
     ],
     "video-plus": [
       "camera-plus"

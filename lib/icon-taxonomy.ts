@@ -118,7 +118,7 @@ export const CATEGORIES = [
     // wherever the two disagree — the same call the taxonomy makes for `wifi`.
     label: "Media",
     match:
-      /^(storyboard|play|pause|stop|record|skip-|fast-forward|rewind|repeat|volume|audio-lines|mic|megaphone|headphones|headset|shuffle|music-note|list-music|list-video|camera|image|cast|subtitles|captions|picture-in-picture|gallery-|podcast|queue|high-definition|clapperboard|film|perspective|video|panorama)/,
+      /^(storyboard|clip-continue|clip-refresh|keyframes|clip-split|clip-trim|transition|play|pause|stop|record|skip-|fast-forward|rewind|repeat|volume|audio-lines|mic|megaphone|headphones|headset|shuffle|music-note|list-music|list-video|camera|image|cast|subtitles|captions|picture-in-picture|gallery-|podcast|queue|high-definition|clapperboard|film|perspective|video|panorama)/,
     blurb:
       "Playback, volume, capture, casting and the sound and image marks.",
   },
@@ -143,7 +143,7 @@ export const CATEGORIES = [
     label: "Pointers",
     // `hand$` is anchored so `handbag` stays in Commerce, which is asked first
     // anyway; the anchor is there for whatever `hand-` compound comes next.
-    match: /^(cursor|hand$)/,
+    match: /^(cursor|hand$|mouse|pinch|fingers-move)/,
     blurb: "Cursors and the states they carry.",
   },
   {
@@ -154,12 +154,12 @@ export const CATEGORIES = [
     // Text marks sit with alignment: bold, italic, the type tool and the two
     // list styles are all ways of laying text out, and the shelf already holds
     // `align-*` for the same reason.
-    match: /^(panel|layout|grid|list|align|menu|maximize|minimize|fullscreen|columns|rows|browsers|bounding-box|split|type|bold|italic|languages|crop|frame-corners)/,
+    match: /^(panel|layout|grid|list|align|menu|maximize|minimize|fullscreen|columns|rows|browsers|bounding-box|split|type|scan-text|bold|italic|languages|crop|frame-corners)/,
     blurb: "Panels, lists, alignment, the menu marks and the fullscreen corners.",
   },
   {
     label: "Users",
-    match: /^(user|scan-face|id-card|badge-check|person|smile|bot$|footprints)/,
+    match: /^(user|face$|scan-face|id-card|badge-check|person|smile|bot$|footprints)/,
     blurb: "People, accounts and the signs that badge them.",
   },
   {
@@ -169,7 +169,7 @@ export const CATEGORIES = [
     // outlines they happen to be. `eye` is the show/hide operation, next to lock.
     label: "Actions",
     match:
-      /^(check|double-check|plus|minus|x|more|lock|unlock|shield|download|upload|filter|eye|star|heart|alert|octagon|triangle-alert|info|question|lightbulb|ban|pin|thumbs|zap|move|scaling|log-out|bug|flip|sparkle|hash)/,
+      /^(check|double-check|plus|minus|x|more|lock|unlock|shield|download|upload|filter|eye|star|heart|alert|octagon|triangle-alert|info|question|circle-question-mark|lightbulb|ban|pin|thumbs|zap|move|scaling|scale-frame|angle|log-out|bug|flip|sparkle|hash)/,
     blurb: "Checks, crosses, pluses, the everyday verbs and the marks that guard a thing.",
   },
   {
@@ -199,7 +199,7 @@ export const CATEGORIES = [
   {
     label: "Shapes",
     match:
-      /^(circle|square|triangle|shapes|dashed|dice|flower|full|half|quarter|three-quarter|puzzle|cube|scan-cube|squares-unite|layers)/,
+      /^(circle|square|rectangle|slash$|scribble|diamond|triangle|shapes|dashed|dice|flower|full|half|quarter|three-quarter|puzzle|cube|scan-cube|squares-unite|layers)/,
     blurb: "Squares, circles, dashes and the progress states drawn from them.",
   },
   {
