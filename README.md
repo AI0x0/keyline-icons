@@ -11,11 +11,11 @@ crafted with AI, free under MIT.
 | Style | Icons | What it is |
 | --- | --- | --- |
 | `stroke` | 721 | The full set. 2px keylines on a 24 grid. |
-| `duotone` | 585 | The stroke drawing over a flat plate at reduced opacity. |
-| `fill` | 533 | Solid, with the detail knocked back out of the shape. |
+| `duotone` | 586 | The stroke drawing over a flat plate at reduced opacity. |
+| `fill` | 534 | Solid, with the detail knocked back out of the shape. |
 
 The table is one corner treatment. Every drawing is also cut with sharp corners,
-so 3,678 SVGs in total.
+so 3,682 SVGs in total.
 
 `stroke` is complete by definition: it is the drawing every other style is
 derived from. `duotone` and `fill` need a region to fill, and not every glyph

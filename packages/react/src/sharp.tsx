@@ -4350,7 +4350,7 @@ export function Save(props: IconProps) {
 export function ScaleFrame(props: IconProps) {
   return (
     <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="butt" strokeLinejoin="round" {...props}>
-      <path d="M12 21L3 21L3 3L21 3L21 12M15 21L21 21L21 15" />
+      <path d="M3 3L21 3L21 21L3 21L3 3ZM17 11L17 17L11 17" />
     </Icon>
   )
 }

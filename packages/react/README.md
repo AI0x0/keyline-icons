@@ -42,8 +42,8 @@ scope. There is no provider, no context and no theme object.
 
 ```tsx
 import { Bell } from "@ai0x0/keyline-icons"          // stroke,  721 icons
-import { Bell } from "@ai0x0/keyline-icons/duotone"  // duotone, 585 icons
-import { Bell } from "@ai0x0/keyline-icons/fill"     // fill,    533 icons
+import { Bell } from "@ai0x0/keyline-icons/duotone"  // duotone, 586 icons
+import { Bell } from "@ai0x0/keyline-icons/fill"     // fill,    534 icons
 ```
 
 Separate imports rather than one component with a `weight` prop, because the

@@ -3781,6 +3781,15 @@ export function Save(props: IconProps) {
   )
 }
 
+export function ScaleFrame(props: IconProps) {
+  return (
+    <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <path d="M6 2L18 2C20.2091 2 22 3.7909 22 6L22 18C22 20.2091 20.2091 22 18 22L6 22C3.7909 22 2 20.2091 2 18L2 6C2 3.7909 3.7909 2 6 2Z" fill="currentColor" fillOpacity={0.4} stroke="none" />
+      <path d="M6 3L18 3C19.6569 3 21 4.3431 21 6L21 18C21 19.6569 20.6569 21 19 21L5 21C3.3431 21 3 19.6569 3 18L3 6C3 4.3431 3.3431 3 6 3ZM17 11L17 17L11 17" />
+    </Icon>
+  )
+}
+
 export function ScanCube(props: IconProps) {
   return (
     <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" {...props}>
