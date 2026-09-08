@@ -1627,7 +1627,7 @@ export function ClipRefresh(props: IconProps) {
 export function ClipSplit(props: IconProps) {
   return (
     <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="butt" strokeLinejoin="round" {...props}>
-      <path d="M2 8L8 8L8 16L2 16ZM16 8L22 8L22 16L16 16ZM12 3L12 21" />
+      <path d="M2 6L8 6L8 18L2 18ZM16 6L22 6L22 18L16 18ZM12 3L12 21" />
     </Icon>
   )
 }
@@ -1635,7 +1635,7 @@ export function ClipSplit(props: IconProps) {
 export function ClipTrimLeft(props: IconProps) {
   return (
     <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="butt" strokeLinejoin="round" {...props}>
-      <path d="M1.7071 8.7071L8.2929 15.2929M8.2929 8.7071L1.7071 15.2929M16 8L22 8L22 16L16 16ZM12 3L12 21" />
+      <path d="M2.8944 7.7888L7.1056 16.2112M7.1056 7.7888L2.8944 16.2112M16 6L22 6L22 18L16 18ZM12 3L12 21" />
     </Icon>
   )
 }
@@ -1643,7 +1643,7 @@ export function ClipTrimLeft(props: IconProps) {
 export function ClipTrimRight(props: IconProps) {
   return (
     <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="butt" strokeLinejoin="round" {...props}>
-      <path d="M2 8L8 8L8 16L2 16ZM15.7071 8.7071L22.2929 15.2929M22.2929 8.7071L15.7071 15.2929M12 3L12 21" />
+      <path d="M2 6L8 6L8 18L2 18ZM21.1056 7.7888L16.8944 16.2112M16.8944 7.7888L21.1056 16.2112M12 3L12 21" />
     </Icon>
   )
 }

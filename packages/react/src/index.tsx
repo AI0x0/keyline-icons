@@ -1627,7 +1627,7 @@ export function ClipRefresh(props: IconProps) {
 export function ClipSplit(props: IconProps) {
   return (
     <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" {...props}>
-      <path d="M4 8L6 8C7.1046 8 8 8.8954 8 10L8 14C8 15.1046 7.1046 16 6 16L4 16C2.8954 16 2 15.1046 2 14L2 10C2 8.8954 2.8954 8 4 8ZM18 8L20 8C21.1046 8 22 8.8954 22 10L22 14C22 15.1046 21.1046 16 20 16L18 16C16.8954 16 16 15.1046 16 14L16 10C16 8.8954 16.8954 8 18 8ZM12 4L12 20" />
+      <path d="M4 6L6 6C7.1046 6 8 6.8954 8 8L8 16C8 17.1046 7.1046 18 6 18L4 18C2.8954 18 2 17.1046 2 16L2 8C2 6.8954 2.8954 6 4 6ZM18 6L20 6C21.1046 6 22 6.8954 22 8L22 16C22 17.1046 21.1046 18 20 18L18 18C16.8954 18 16 17.1046 16 16L16 8C16 6.8954 16.8954 6 18 6ZM12 4L12 20" />
     </Icon>
   )
 }
@@ -1635,7 +1635,7 @@ export function ClipSplit(props: IconProps) {
 export function ClipTrimLeft(props: IconProps) {
   return (
     <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" {...props}>
-      <path d="M2 9L8 15M8 9L2 15M18 8L20 8C21.1046 8 22 8.8954 22 10L22 14C22 15.1046 21.1046 16 20 16L18 16C16.8954 16 16 15.1046 16 14L16 10C16 8.8954 16.8954 8 18 8ZM12 4L12 20" />
+      <path d="M2 7L8 17M8 7L2 17M18 6L20 6C21.1046 6 22 6.8954 22 8L22 16C22 17.1046 21.1046 18 20 18L18 18C16.8954 18 16 17.1046 16 16L16 8C16 6.8954 16.8954 6 18 6ZM12 4L12 20" />
     </Icon>
   )
 }
@@ -1643,7 +1643,7 @@ export function ClipTrimLeft(props: IconProps) {
 export function ClipTrimRight(props: IconProps) {
   return (
     <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" {...props}>
-      <path d="M4 8L6 8C7.1046 8 8 8.8954 8 10L8 14C8 15.1046 7.1046 16 6 16L4 16C2.8954 16 2 15.1046 2 14L2 10C2 8.8954 2.8954 8 4 8ZM16 9L22 15M22 9L16 15M12 4L12 20" />
+      <path d="M4 6L6 6C7.1046 6 8 6.8954 8 8L8 16C8 17.1046 7.1046 18 6 18L4 18C2.8954 18 2 17.1046 2 16L2 8C2 6.8954 2.8954 6 4 6ZM16 7L22 17M22 7L16 17M12 4L12 20" />
     </Icon>
   )
 }

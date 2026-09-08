@@ -651,7 +651,7 @@
       "width": 742,
       "icons": 0,
       "variants": 48,
-      "bytes": 39012
+      "bytes": 39273
     },
     {
       "file": "media-3.html",
@@ -771,7 +771,7 @@
       "width": 742,
       "icons": 0,
       "variants": 48,
-      "bytes": 38387
+      "bytes": 38185
     },
     {
       "file": "pointers-3.html",
@@ -1139,7 +1139,7 @@
       "parts": 1,
       "icons": 0,
       "variants": 0,
-      "bytes": 653943
+      "bytes": 661199
     }
   ]
 }
