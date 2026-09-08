@@ -268,11 +268,15 @@ for (const line of log.split("\n")) {
   if (!name || !at) continue
 
   const entry = dates.get(name)
-  if (!entry) dates.set(name, { added: at, updated: at, by: new Set([who]) })
+  if (!entry) dates.set(name, { added: at, updated: at, by: new Set([who]), touches: new Set([at]) })
   else {
     // Newest first, so anything later in the stream is older.
     entry.added = at
     entry.by.add(who)
+    // Every commit that touched the drawing, not only the newest. A release
+    // window is nominated off these below, so redrawing an icon a second time
+    // cannot lift it out of the release that first corrected it.
+    entry.touches.add(at)
   }
 }
 
@@ -405,6 +409,7 @@ for (const [name, was] of Object.entries(prior.icons ?? {})) {
       now.updated > rootDate && now.updated > was.updated
         ? now.updated
         : was.updated
+    now.touches.add(was.updated)
   }
 
   for (const i of was.by ?? []) {
@@ -535,17 +540,27 @@ const out =
            * be 1,600 subprocesses to answer what two dates rule out in one
            * pass.
            */
+          /*
+           * Nominated off every commit that touched the drawing, not off its
+           * newest date alone. With the newest date only, redrawing an icon a
+           * second time moved its one date past the window that first
+           * corrected it, and that release lost the redraw it had published:
+           * the do-tv legibility round redrew thirteen drawings that 0.2.0,
+           * 0.3.0 and 0.4.1 had already corrected once, and the guard below
+           * reported all three entries thinned. The pair shown is still read
+           * off the two tags, so what the entry announced does not move.
+           */
           const updated = redraws(
-            Object.entries(icons)
+            Object.keys(icons)
               .filter(
-                ([name, h]) =>
+                (name) =>
                   before &&
                   was.has(name) &&
                   now.has(name) &&
-                  h.updated > before.date &&
-                  h.updated <= r.date
-              )
-              .map(([name]) => name),
+                  [...(dates.get(name)?.touches ?? [])].some(
+                    (d) => d > before.date && d <= r.date
+                  )
+              ),
             before?.tag,
             r.tag
           )
