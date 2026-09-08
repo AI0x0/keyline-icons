@@ -27,7 +27,7 @@
       "width": 742,
       "icons": 48,
       "variants": 54,
-      "bytes": 41919
+      "bytes": 42341
     },
     {
       "file": "actions-2.html",
@@ -75,7 +75,7 @@
       "width": 742,
       "icons": 0,
       "variants": 36,
-      "bytes": 35932
+      "bytes": 36143
     },
     {
       "file": "actions-6.html",
@@ -159,7 +159,7 @@
       "width": 742,
       "icons": 0,
       "variants": 44,
-      "bytes": 39214
+      "bytes": 40480
     },
     {
       "file": "arrows-6.html",
@@ -171,7 +171,7 @@
       "width": 742,
       "icons": 0,
       "variants": 2,
-      "bytes": 1866
+      "bytes": 2077
     },
     {
       "file": "charts-1.html",
@@ -387,7 +387,7 @@
       "width": 742,
       "icons": 40,
       "variants": 54,
-      "bytes": 40221
+      "bytes": 40432
     },
     {
       "file": "files-2.html",
@@ -555,7 +555,7 @@
       "width": 742,
       "icons": 0,
       "variants": 12,
-      "bytes": 9414
+      "bytes": 9625
     },
     {
       "file": "mail-1.html",
@@ -639,7 +639,7 @@
       "width": 742,
       "icons": 77,
       "variants": 40,
-      "bytes": 38518
+      "bytes": 38940
     },
     {
       "file": "media-2.html",
@@ -651,7 +651,7 @@
       "width": 742,
       "icons": 0,
       "variants": 48,
-      "bytes": 37957
+      "bytes": 39012
     },
     {
       "file": "media-3.html",
@@ -687,7 +687,7 @@
       "width": 742,
       "icons": 0,
       "variants": 42,
-      "bytes": 40207
+      "bytes": 40418
     },
     {
       "file": "media-6.html",
@@ -699,7 +699,7 @@
       "width": 742,
       "icons": 0,
       "variants": 48,
-      "bytes": 40331
+      "bytes": 40542
     },
     {
       "file": "media-7.html",
@@ -711,7 +711,7 @@
       "width": 742,
       "icons": 0,
       "variants": 54,
-      "bytes": 40418
+      "bytes": 40629
     },
     {
       "file": "media-8.html",
@@ -735,7 +735,7 @@
       "width": 742,
       "icons": 0,
       "variants": 56,
-      "bytes": 39700
+      "bytes": 40122
     },
     {
       "file": "media-10.html",
@@ -754,7 +754,7 @@
       "artboard": "Pointers",
       "category": "Pointers",
       "part": 1,
-      "parts": 2,
+      "parts": 3,
       "into": "artboard",
       "width": 742,
       "icons": 15,
@@ -766,12 +766,24 @@
       "artboard": "Pointers",
       "category": "Pointers",
       "part": 2,
-      "parts": 2,
+      "parts": 3,
       "into": "rows",
       "width": 742,
       "icons": 0,
-      "variants": 52,
-      "bytes": 40907
+      "variants": 48,
+      "bytes": 38387
+    },
+    {
+      "file": "pointers-3.html",
+      "artboard": "Pointers",
+      "category": "Pointers",
+      "part": 3,
+      "parts": 3,
+      "into": "rows",
+      "width": 742,
+      "icons": 0,
+      "variants": 4,
+      "bytes": 3787
     },
     {
       "file": "shapes-1.html",
@@ -807,7 +819,7 @@
       "width": 742,
       "icons": 0,
       "variants": 42,
-      "bytes": 35600
+      "bytes": 35811
     },
     {
       "file": "shapes-4.html",
@@ -831,7 +843,7 @@
       "width": 742,
       "icons": 0,
       "variants": 38,
-      "bytes": 38517
+      "bytes": 38939
     },
     {
       "file": "shapes-6.html",
@@ -843,7 +855,7 @@
       "width": 742,
       "icons": 0,
       "variants": 52,
-      "bytes": 38994
+      "bytes": 39205
     },
     {
       "file": "shapes-7.html",
@@ -927,7 +939,7 @@
       "width": 742,
       "icons": 18,
       "variants": 36,
-      "bytes": 40328
+      "bytes": 40539
     },
     {
       "file": "tools-2.html",
@@ -939,7 +951,7 @@
       "width": 742,
       "icons": 0,
       "variants": 24,
-      "bytes": 29032
+      "bytes": 29243
     },
     {
       "file": "tools-3.html",
@@ -975,7 +987,7 @@
       "width": 742,
       "icons": 19,
       "variants": 18,
-      "bytes": 38574
+      "bytes": 38785
     },
     {
       "file": "users-2.html",
@@ -999,7 +1011,7 @@
       "width": 742,
       "icons": 0,
       "variants": 48,
-      "bytes": 40484
+      "bytes": 40906
     },
     {
       "file": "users-4.html",
@@ -1127,7 +1139,7 @@
       "parts": 1,
       "icons": 0,
       "variants": 0,
-      "bytes": 398281
+      "bytes": 651406
     }
   ]
 }
