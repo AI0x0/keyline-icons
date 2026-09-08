@@ -44,23 +44,15 @@ next-env.d.ts
 # local, machine-specific agent settings
 .claude/settings.local.json
 
-# Agent skills. All of them. Private, permanently.
+# Agent skills are tracked. The drawing workflow under `.claude/skills/` is
+# what AGENTS.md sends every agent to read before it touches `raw/`, and a
+# gitignored path cannot back that instruction: every other checkout would
+# find a dead reference. The directory used to be ignored on the theory that
+# the method stays private while the icons ship; reversed on 8 Sept 2026, and
+# the skills are repository content now.
 #
-# These are the working knowledge behind the set: how an icon is constructed,
-# how the site's components and tokens fit together, how search sees it. They
-# are not part of what this project gives away, and that is a decision rather
-# than an oversight. Open-sourcing the icons does not mean open-sourcing the
-# method that draws them.
-#
-# The whole directory rather than a list of names, so a skill added tomorrow is
-# private by default and cannot be published by forgetting a line here. If one
-# is ever meant to ship, it moves out of `.claude/skills/` into the repository
-# proper as an ordinary document, deliberately. Nothing gets un-ignored in
-# place.
-#
-# `.claude/launch.json` stays tracked on purpose: it is a dev-server config,
-# not knowledge.
-.claude/skills/
+# `.claude/settings.local.json` above stays ignored: machine-specific state.
+# `.claude/launch.json` stays tracked: a dev-server config, not knowledge.
 
 # The carousel sheets for the Figma Community listing, rasterised by
 # `build-community.mjs` from `icons/` at 1920x1080.
@@ -80,15 +72,15 @@ previews/community/
 # documents, the one-shot scripts, the staged geometry and the drawings handed
 # over by hand.
 #
-# Ignored for the reason `.claude/skills/` is: this is how the work was done,
+# Ignored because this is how the work was done,
 # not what the work produced. A handover is written from one session to the
 # next and reads like it, and a public repository is not where an internal note
 # about what is unfinished and who has to decide it belongs. The drawings it
 # was staging now live in `raw/`, which is the source this project does give
 # away, so nothing here is load-bearing for anyone outside it.
 #
-# The whole directory rather than a list of names, for the reason the two
-# blocks below give: a document written tomorrow is private by default and
+# The whole directory rather than a list of names, for the reason the
+# block below gives: a document written tomorrow is private by default and
 # cannot be published by forgetting a line here.
 previews/sharp-history/
 
@@ -100,9 +92,9 @@ previews/sharp-history/
 # draft posts and the rendered PNGs are working material, and a public repo is
 # a strange place to leave a half-written tweet.
 #
-# The whole directory rather than a list of names, for the reason
-# `.claude/skills/` gives above: something added tomorrow is private by default
-# and cannot be published by forgetting a line here.
+# The whole directory rather than a list of names, for the reason the
+# sharp-history block above gives: something added tomorrow is private by
+# default and cannot be published by forgetting a line here.
 #
 # The generator in there reads `icons/` and `lib/icon-history.json` out of this
 # repository, so a banner cannot claim a version or a drawing the set does not

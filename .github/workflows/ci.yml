@@ -46,21 +46,6 @@ jobs:
 
       # --frozen-lockfile so a lockfile that disagrees with package.json fails
       # here rather than being silently resolved into something no one tested.
-      # The skills under `.claude/skills/` are private and are not published
-      # with this repository. `.gitignore` states that and a comment cannot
-      # enforce it: an `--force` add, a merge, or a rewrite that predates the
-      # rule would all put them back silently. This turns the policy into a
-      # failing build. It runs before anything slow, so the answer arrives in
-      # seconds rather than after a full install and build.
-      - name: Skills must never be committed
-        run: |
-          if git ls-files --error-unmatch .claude/skills > /dev/null 2>&1; then
-            echo "::error::Private skills are tracked. See the .claude/skills rule in .gitignore."
-            git ls-files .claude/skills
-            exit 1
-          fi
-          echo "No skills tracked."
-
       - run: pnpm install --frozen-lockfile
 
       # `icons:ci` runs `next typegen` itself, and has to. `next-env.d.ts` is

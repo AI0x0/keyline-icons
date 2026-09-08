@@ -82,9 +82,17 @@ Long-form reasoning lives next to the thing it explains, not here.
 | Site components and tokens | `components/ui/`, `app/globals.css` |
 | Contributing | `CONTRIBUTING.md` |
 
-Anything under `.claude/skills/` is private and is not published with this
-repository. Do not add it, quote it into a tracked file, or cite it as a path a
-reader can open. Everything a contributor needs is in the table above.
+## Drawing an icon? Load the skill first
+
+Agents working in this checkout must read
+`.claude/skills/keyline-drawing/SKILL.md` before touching `raw/`. It is the
+complete drawing workflow: the lint numbers behind `pipeline/README.md`, the
+sharp-corner rules, the `scripts/` toolkit, the four `lib/` registration
+tables, and the ship and release order.
+
+The skill is tracked with the repository, so a fresh clone has it too. The
+table above stays the contributor-facing index, and the acceptance scan's
+public copy lives at `skills/icon-size-acceptance/`.
 
 ## Traps that have already cost time
 
