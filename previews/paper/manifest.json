@@ -111,7 +111,7 @@
       "width": 742,
       "icons": 54,
       "variants": 58,
-      "bytes": 41222
+      "bytes": 41126
     },
     {
       "file": "arrows-2.html",
@@ -123,7 +123,7 @@
       "width": 742,
       "icons": 0,
       "variants": 56,
-      "bytes": 39095
+      "bytes": 38807
     },
     {
       "file": "arrows-3.html",
@@ -135,7 +135,7 @@
       "width": 742,
       "icons": 0,
       "variants": 48,
-      "bytes": 37330
+      "bytes": 37296
     },
     {
       "file": "arrows-4.html",
@@ -147,7 +147,7 @@
       "width": 742,
       "icons": 0,
       "variants": 60,
-      "bytes": 40003
+      "bytes": 39907
     },
     {
       "file": "arrows-5.html",
@@ -507,7 +507,7 @@
       "width": 742,
       "icons": 0,
       "variants": 54,
-      "bytes": 38962
+      "bytes": 38003
     },
     {
       "file": "layout-3.html",
@@ -543,7 +543,7 @@
       "width": 742,
       "icons": 0,
       "variants": 62,
-      "bytes": 38088
+      "bytes": 37992
     },
     {
       "file": "layout-6.html",
@@ -651,7 +651,7 @@
       "width": 742,
       "icons": 0,
       "variants": 48,
-      "bytes": 38059
+      "bytes": 37957
     },
     {
       "file": "media-3.html",
@@ -711,7 +711,7 @@
       "width": 742,
       "icons": 0,
       "variants": 54,
-      "bytes": 40292
+      "bytes": 40418
     },
     {
       "file": "media-8.html",
@@ -782,8 +782,8 @@
       "into": "artboard",
       "width": 742,
       "icons": 54,
-      "variants": 46,
-      "bytes": 41894
+      "variants": 40,
+      "bytes": 39430
     },
     {
       "file": "shapes-2.html",
@@ -795,7 +795,7 @@
       "width": 742,
       "icons": 0,
       "variants": 50,
-      "bytes": 36899
+      "bytes": 37704
     },
     {
       "file": "shapes-3.html",
@@ -807,7 +807,7 @@
       "width": 742,
       "icons": 0,
       "variants": 42,
-      "bytes": 38465
+      "bytes": 35600
     },
     {
       "file": "shapes-4.html",
@@ -819,7 +819,7 @@
       "width": 742,
       "icons": 0,
       "variants": 24,
-      "bytes": 37444
+      "bytes": 34724
     },
     {
       "file": "shapes-5.html",
@@ -830,8 +830,8 @@
       "into": "rows",
       "width": 742,
       "icons": 0,
-      "variants": 48,
-      "bytes": 40111
+      "variants": 38,
+      "bytes": 38517
     },
     {
       "file": "shapes-6.html",
@@ -842,8 +842,8 @@
       "into": "rows",
       "width": 742,
       "icons": 0,
-      "variants": 54,
-      "bytes": 38429
+      "variants": 52,
+      "bytes": 38994
     },
     {
       "file": "shapes-7.html",
@@ -854,8 +854,8 @@
       "into": "rows",
       "width": 742,
       "icons": 0,
-      "variants": 12,
-      "bytes": 7823
+      "variants": 30,
+      "bytes": 18416
     },
     {
       "file": "sport.html",
@@ -1071,7 +1071,7 @@
       "width": 742,
       "icons": 0,
       "variants": 30,
-      "bytes": 39932
+      "bytes": 39980
     },
     {
       "file": "web-4.html",
@@ -1127,7 +1127,7 @@
       "parts": 1,
       "icons": 0,
       "variants": 0,
-      "bytes": 398171
+      "bytes": 398281
     }
   ]
 }
