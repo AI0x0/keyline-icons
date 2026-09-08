@@ -82,6 +82,7 @@ const OWNED = [
   "lib/icon-history.json",
   "README.md",
   "packages/react/README.md",
+  "packages/figma-plugin/LISTING.md",
 ]
 
 /* ------------------------------------------------------------ preflight */
