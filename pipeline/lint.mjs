@@ -219,6 +219,8 @@ const SIZE_KNOWN = new Set([
   'git-commit-horizontal', 'git-commit-vertical',
   'terminal', 'terminal-asterisk',
   'credit-card', 'octagon-alert', 'octagon-x', 'package', 'settings', 'user', 'x', 'cube', 'x-logo', 'apple-logo', 'reddit-logo',
+  // shield-star is a named badge, not a disc; user-picked at 20 x 20 after the menu-size pass.
+  'shield-star',
   'bell', 'paperclip', 'wifi', 'wifi-info', 'wifi-exclamation',
   'repeat', 'repeat-1',
   'arrow-down-left', 'arrow-down-right', 'arrow-up-left', 'arrow-up-right',

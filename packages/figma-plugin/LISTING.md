@@ -93,8 +93,8 @@ Search 721 icons and drop one on the canvas. No library to publish, no file to d
 Three styles
 
 * Stroke: 721 icons, 2px, round caps and joins
-* Duotone: 586 icons, a 40% plate under the line
-* Fill: 534 icons, solid where the glyph has a region to fill
+* Duotone: 587 icons, a 40% plate under the line
+* Fill: 535 icons, solid where the glyph has a region to fill
 
 Two corner treatments, and every drawing has both. Rounded is the keyline the set was drawn on; sharp takes every corner to a true point and ends each stroke square. Coverage is identical, so switching never costs you a drawing. 2,994 SVGs in total.
 
@@ -395,7 +395,7 @@ Keyline Icons
 
 611 component sets, each with three variant properties, Container, Style and Corners, so you switch between regular, square and circle, between the three styles, and between rounded and sharp, without swapping components. 56 icons carry a square- form and 54 a circle-.
 
-Which styles an icon has is measured rather than chosen: duotone and fill need a fillable region, so an open glyph like bar-chart is stroke-only, and square-bar-chart has all three. That is why the three counts differ: stroke 721, duotone 586, fill 534.
+Which styles an icon has is measured rather than chosen: duotone and fill need a fillable region, so an open glyph like bar-chart is stroke-only, and square-bar-chart has all three. That is why the three counts differ: stroke 721, duotone 587, fill 535.
 
 Every drawing exists in both treatments, so sharp is a switch rather than a second library: 2,994 variants over the same 585 names.
 

@@ -15,7 +15,7 @@
   ],
   "icons": 611,
   "names": 721,
-  "variants": 3682,
+  "variants": 3686,
   "sheets": [
     {
       "file": "actions-1.html",
@@ -87,7 +87,7 @@
       "width": 742,
       "icons": 0,
       "variants": 30,
-      "bytes": 37871
+      "bytes": 37902
     },
     {
       "file": "actions-7.html",
@@ -483,7 +483,7 @@
       "width": 742,
       "icons": 0,
       "variants": 12,
-      "bytes": 9728
+      "bytes": 10020
     },
     {
       "file": "layout-1.html",
@@ -531,7 +531,7 @@
       "width": 742,
       "icons": 0,
       "variants": 46,
-      "bytes": 40958
+      "bytes": 40733
     },
     {
       "file": "layout-5.html",
@@ -542,8 +542,8 @@
       "into": "rows",
       "width": 742,
       "icons": 0,
-      "variants": 62,
-      "bytes": 37992
+      "variants": 60,
+      "bytes": 37237
     },
     {
       "file": "layout-6.html",
@@ -554,8 +554,8 @@
       "into": "rows",
       "width": 742,
       "icons": 0,
-      "variants": 12,
-      "bytes": 9625
+      "variants": 18,
+      "bytes": 13568
     },
     {
       "file": "mail-1.html",
@@ -567,7 +567,7 @@
       "width": 742,
       "icons": 28,
       "variants": 38,
-      "bytes": 38442
+      "bytes": 37981
     },
     {
       "file": "mail-2.html",
@@ -903,7 +903,7 @@
       "width": 742,
       "icons": 0,
       "variants": 60,
-      "bytes": 37681
+      "bytes": 37577
     },
     {
       "file": "time-3.html",
@@ -951,7 +951,7 @@
       "width": 742,
       "icons": 0,
       "variants": 24,
-      "bytes": 29243
+      "bytes": 28711
     },
     {
       "file": "tools-3.html",
@@ -1034,8 +1034,8 @@
       "into": "artboard",
       "width": 742,
       "icons": 9,
-      "variants": 46,
-      "bytes": 42897
+      "variants": 42,
+      "bytes": 40331
     },
     {
       "file": "weather-2.html",
@@ -1046,8 +1046,8 @@
       "into": "rows",
       "width": 742,
       "icons": 0,
-      "variants": 4,
-      "bytes": 2815
+      "variants": 8,
+      "bytes": 5623
     },
     {
       "file": "web-1.html",
@@ -1129,7 +1129,7 @@
       "parts": 1,
       "icons": 0,
       "variants": 14,
-      "bytes": 13002
+      "bytes": 13003
     },
     {
       "file": "changelog.html",
@@ -1139,7 +1139,7 @@
       "parts": 1,
       "icons": 0,
       "variants": 0,
-      "bytes": 661199
+      "bytes": 676067
     }
   ]
 }

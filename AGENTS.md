@@ -70,6 +70,16 @@ and both fail silently, on the icon pages rather than in a check.
 It pins the committer date across the amend, so `history:check` passes straight
 after. Commit an icon by hand and it will not.
 
+## do-tv local preview
+
+Use pnpm and a `file:` dependency for local package linking:
+
+```json
+"@ai0x0/keyline-icons": "file:../../../keyline-icons/packages/react"
+```
+
+After a raw change, run `pnpm install` in do-tv.
+
 ## Where the real documentation is
 
 Long-form reasoning lives next to the thing it explains, not here.
