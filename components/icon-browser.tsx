@@ -6,21 +6,29 @@ import {
   ArrowRight,
   ArrowUTurnLeft,
   BarChart,
+  Bed,
+  Bold,
   Check,
   ChevronDown,
   ChevronLeft,
   ChevronRight,
   Circle,
   Clock,
+  Coffee,
   Cursor,
+  DiagramProject,
+  Eraser,
+  FaceSmile,
   File,
   GitBranch,
   Globe,
+  GraduationCap,
   Lock,
   Mail,
   MapPin,
   Menu,
   Minus,
+  Palette,
   PanelLeft,
   PanelTopCloseDashed,
   Play,
@@ -31,9 +39,12 @@ import {
   SlidersHorizontal,
   Smartphone,
   Square,
-  Trophy,
+  Star,
   Sun,
+  Trophy,
   User,
+  Venus,
+  Wallet,
   Wrench,
 } from "@/components/icons"
 
@@ -58,6 +69,7 @@ import {
 } from "@/components/ui/drawer"
 import {
   artOf,
+  CONTAINERS,
   CORNERS,
   SHARP_BADGE,
   Glyph,
@@ -121,6 +133,11 @@ const CATEGORY_ICONS: Record<
   string,
   React.ComponentType<{ className?: string }>
 > = {
+  // Kept while the shelf is empty. The review row is opened and closed in
+  // `icon-taxonomy.ts` once a batch, and the label comes back with it; dropping
+  // the entry here would make reopening a two-file edit, which is the thing
+  // that row's own comment exists to avoid.
+  New: Star,
   Arrows: ArrowRight,
   "Chevrons & Carets": ChevronRight,
   Git: GitBranch,
@@ -128,22 +145,46 @@ const CATEGORY_ICONS: Record<
   Time: Clock,
   Mail: Mail,
   Commerce: ShoppingCart,
+  // Split off Commerce on 9 Sep 2026. The wallet rather than a currency mark:
+  // the rail is read at 16px and a $ there is a letter, not a picture.
+  Finance: Wallet,
   Maps: MapPin,
+  // Its own bed rather than a house: the rail is read at 16px, and the roof
+  // glyph already stands for Web.
+  Home: Bed,
   Media: Play,
   Charts: BarChart,
+  Diagrams: DiagramProject,
+  Emoji: FaceSmile,
   Devices: Smartphone,
   Pointers: Cursor,
   Layout: PanelLeft,
   Users: User,
+  Gender: Venus,
   Actions: Check,
   // Every label in CATEGORIES needs a row here, including the ones added since:
   // the rail maps before it filters, so a label with a count and no icon renders
   // <undefined /> and takes the whole browser down rather than dropping a row.
   Controls: SlidersHorizontal,
+  // The formatting shelf, added with the batch that created it. Without this row
+  // the rail rendered <undefined /> and /icons answered 500 — which is the
+  // failure the comment above is about, arriving the very next time a label was.
+  Text: Bold,
   Weather: Sun,
   Shapes: Shapes,
+  // A shelf of one, split off Sport on 9 Sep 2026. Its own drawing on the rail
+  // rather than the trophy: the row is the mortarboard and nothing else.
+  Education: GraduationCap,
   Sport: Trophy,
+  // The two shelves the food and art batch opened. The mug and the palette are
+  // the drawings that read at 16px; a cake is candles at that size and a brush
+  // is a stick.
+  "Food & Drink": Coffee,
+  Art: Palette,
   Tools: Wrench,
+  // Opened 11 Sep 2026 beside Tools. Its own drawing on the rail rather than a
+  // borrowed pencil, the same call `Education` made with the mortarboard.
+  Stationery: Eraser,
   Web: Globe,
   [OTHER_CATEGORY]: Circle,
 }
@@ -176,7 +217,21 @@ function pageNumbers(current: number, total: number): (number | "gap")[] {
   return out
 }
 
-const byName = (a: BrowserIcon, b: BrowserIcon) => a.name.localeCompare(b.name)
+/**
+ * Grid order: by base name, then by container.
+ *
+ * Plain `name` order was what this was, and it files a containered name under
+ * its prefix — every `circle-` drawing in the set sat in one block under C,
+ * away from the drawing it is a boxed copy of. The rest of the set does not
+ * read that way: the icon page's container row, the Figma catalogue's cards and
+ * the Paper boards all put `dollar-sign` and `circle-dollar-sign` side by side,
+ * which is also the order someone scanning for a shape wants, since the two are
+ * the same drawing.
+ */
+const byName = (a: BrowserIcon, b: BrowserIcon) =>
+  a.base === b.base
+    ? CONTAINERS.indexOf(a.container) - CONTAINERS.indexOf(b.container)
+    : a.base.localeCompare(b.base)
 
 /**
  * A word reduced to its singular, so a plural finds the family.
@@ -282,14 +337,26 @@ const answers = (haystack: string, words: string[]) => {
  * Still guarded, because `clock-3`, `dice-5` and `bar-chart-2` are real names.
  * A lowercase query keeps its digits and can still reach them.
  *
+ * A trailing `Icon` comes off first, with the digits in front of it. A month of
+ * empty searches carried `Globe02Icon`, `CheckmarkCircle02Icon`, `FileCodeIcon`
+ * and `SparklesIcon`: names pasted out of a set that suffixes every export, and
+ * not one of them found the drawing it named. The first shape has no case
+ * boundary at all, `e0` and `2I`, so it was never an identifier here and kept
+ * its digits; the others split into a word list ending in `icon`, which nothing
+ * carries. The suffix is the third identifier shape, and the strip runs before
+ * the split so the digits never become a word to drop.
+ *
  * Same rule as `wordsOf` in the MCP server, the CLI and the Figma plugin. Four
  * surfaces, one behaviour, and this was the last of them to get it.
  */
 const terms = (query: string) => {
   const identifier =
-    /[a-z][A-Z]/.test(query) || /^[A-Z][A-Za-z]*\d+$/.test(query)
+    /[a-z][A-Z]/.test(query) ||
+    /^[A-Z][A-Za-z]*\d+$/.test(query) ||
+    /^[A-Z][A-Za-z]*\d*Icon$/.test(query)
   const split = identifier
     ? query
+        .replace(/\d*Icon$/, "")
         .replace(/([a-z0-9])([A-Z])/g, "$1 $2")
         .replace(/([a-zA-Z])(\d)/g, "$1 $2")
     : query
@@ -728,6 +795,34 @@ export function IconBrowser({
   )
 
   /**
+   * Drawings this search found that the shape or category filter is hiding.
+   *
+   * `matches` runs before the shape filter, so `file` under Circle has eleven
+   * matches and an empty grid, and the empty state said "No icons match file"
+   * over a set that has every one of them, with `elsewhere` at 0 because that
+   * count only looks at other styles. The category is the same trap one level
+   * up: typing clears it, but a link can arrive carrying both. (The first
+   * write-up of this cited `file` and `move` as the month's most searched
+   * misses; those rows were the `suggestion` export, not typed queries. The
+   * case stands on the code, not on that evidence.)
+   *
+   * So this is the count with both filters off, in the style on show, and the
+   * empty state offers it as one click. Only when the grid is empty and a
+   * filter is on, so the ordinary case costs nothing.
+   */
+  const hiddenByFilter = React.useMemo(() => {
+    if (shown.length > 0) return 0
+    if (shape === "all" && category === "all") return 0
+    const words = terms(query)
+    if (words.length === 0) return 0
+    return icons.filter((i) => {
+      if (!artOf(i, style, corners)) return false
+      if (iconNamedElsewhere(query) === i.base) return true
+      return answers([i.name, ...aliasesFor(i.base)].join(" "), words)
+    }).length
+  }, [icons, query, style, shape, category, corners, shown.length])
+
+  /**
    * A search that found nothing, reported once the typing stops.
    *
    * This is the one number on the site that says what to draw next. An empty
@@ -775,6 +870,7 @@ export function IconBrowser({
         private: onlyPrivate,
         category,
         elsewhere: matchesElsewhere,
+        hidden: hiddenByFilter,
         suggestion,
       })
     }, SEARCH_SETTLE_MS)
@@ -789,6 +885,7 @@ export function IconBrowser({
     onlyPrivate,
     category,
     matchesElsewhere,
+    hiddenByFilter,
     suggestion,
   ])
 
@@ -1591,7 +1688,28 @@ export function IconBrowser({
                   a noun and "10 match in another style" as a verb, and both
                   parse, where the conditional it replaced produced "1 matches".
                 */}
-                {matchesElsewhere > 0 ? (
+                {/*
+                  In the order of how sure each one is. A filter hiding the
+                  drawing is a fact about this grid; another style holding it
+                  is a fact about the set; a spelling is a guess.
+                */}
+                {hiddenByFilter > 0 ? (
+                  <>
+                    {shape !== "all"
+                      ? `Nothing in ${SHAPES.find((s) => s.value === shape)!.label.toLowerCase()}. ${hiddenByFilter} match in another shape.`
+                      : `Nothing under ${category}. ${hiddenByFilter} match on another shelf.`}{" "}
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setShape("all")
+                        setCategory("all")
+                      }}
+                      className="rounded-sm font-medium text-foreground underline underline-offset-4 hover:no-underline"
+                    >
+                      Show all {hiddenByFilter}
+                    </button>
+                  </>
+                ) : matchesElsewhere > 0 ? (
                   `Nothing in ${style}. ${matchesElsewhere} match in another style.`
                 ) : suggestion ? (
                   <>

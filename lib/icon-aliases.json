@@ -2,144 +2,6 @@
   "$comment": "Hand-curated search aliases. Source, not generated: edit this file. Read by lib/icon-taxonomy.ts for the site and by pipeline/build-data.mjs for the packages, which is why it is JSON rather than a TypeScript literal.",
   "aliases": [
     {
-      "match": "-arrow-down$",
-      "terms": [
-        "download",
-        "receive",
-        "incoming"
-      ]
-    },
-    {
-      "match": "-arrow-up$",
-      "terms": [
-        "upload",
-        "send",
-        "outgoing"
-      ]
-    },
-    {
-      "match": "-check$",
-      "terms": [
-        "done",
-        "verified",
-        "approved",
-        "success"
-      ]
-    },
-    {
-      "match": "-dot$",
-      "terms": [
-        "unread",
-        "badge",
-        "new",
-        "notification"
-      ]
-    },
-    {
-      "match": "-exclamation$",
-      "terms": [
-        "warning",
-        "overdue",
-        "attention"
-      ]
-    },
-    {
-      "match": "-info$",
-      "terms": [
-        "details",
-        "about",
-        "status",
-        "learn more"
-      ]
-    },
-    {
-      "match": "-minus$",
-      "terms": [
-        "remove",
-        "subtract"
-      ]
-    },
-    {
-      "match": "-open$",
-      "terms": [
-        "browse",
-        "expanded"
-      ]
-    },
-    {
-      "match": "-plus$",
-      "note": "Modifiers, which compose with whatever they hang off.",
-      "terms": [
-        "add",
-        "new",
-        "create"
-      ]
-    },
-    {
-      "match": "-search$",
-      "terms": [
-        "find",
-        "lookup"
-      ]
-    },
-    {
-      "match": "-x$",
-      "terms": [
-        "remove",
-        "delete",
-        "cancel",
-        "failed"
-      ]
-    },
-    {
-      "match": "^(chevrons-|expand-dashed-|fullscreen$|fullscreen-exit$|git-compare-arrows$|list-collapse|list-sort|refresh-(ccw|cw)$|repeat|reply-all$|shuffle$)",
-      "note": "The plural as a concept: every drawing carrying more than one arrowhead, which is the question `arrows` is asking and the one word the name of each of these does not answer. Counted off the drawings rather than the names: `maximize` and `minimize` are corner brackets with no arrow in them, `fast-forward`, `rewind` and `skip-*` are play heads, and `rotate-ccw` and `rotate-cw` carry exactly one. `arrows` is held apart from `arrow` by the singular rule, which leaves it alone, so the two words stay two questions.",
-      "terms": [
-        "arrows"
-      ]
-    },
-    {
-      "match": "^(full|half|quarter|three-quarter)$",
-      "terms": [
-        "portion",
-        "fraction",
-        "pie",
-        "percentage",
-        "share"
-      ]
-    },
-    {
-      "match": "^(headphones|headset)",
-      "terms": [
-        "audio",
-        "listen",
-        "support",
-        "call",
-        "music"
-      ]
-    },
-    {
-      "match": "^(lock|unlock)$",
-      "terms": [
-        "secure",
-        "private",
-        "password",
-        "protected",
-        "access"
-      ]
-    },
-    {
-      "match": "^(sun|moon)$",
-      "note": "The theme toggle is why anyone reaches for either of these in an app, and neither drawing is named after it.",
-      "terms": [
-        "theme",
-        "dark mode",
-        "light mode",
-        "appearance",
-        "brightness"
-      ]
-    },
-    {
       "match": "^activity$",
       "note": "Families.",
       "terms": [
@@ -171,28 +33,6 @@
       ]
     },
     {
-      "match": "^angle$",
-      "terms": [
-        "angle",
-        "degrees",
-        "rotation angle",
-        "角度",
-        "旋转角度"
-      ]
-    },
-    {
-      "match": "^apple-logo$",
-      "note": "A platform mark, not the fruit: it sits on the download button that hands a Mac its own build.",
-      "terms": [
-        "mac",
-        "macos",
-        "osx",
-        "ios",
-        "iphone",
-        "ipad"
-      ]
-    },
-    {
       "match": "^arrow",
       "terms": [
         "direction",
@@ -201,16 +41,10 @@
       ]
     },
     {
-      "match": "^arrow-right-left$",
+      "match": "^(chevrons-|expand-dashed-|fullscreen$|fullscreen-exit$|git-compare-arrows$|list-collapse|list-sort|refresh-(ccw|cw)$|repeat|reply-all$|shuffle$)",
+      "note": "The plural as a concept: every drawing carrying more than one arrowhead, which is the question `arrows` is asking and the one word the name of each of these does not answer. Counted off the drawings rather than the names: `maximize` and `minimize` are corner brackets with no arrow in them, `fast-forward`, `rewind` and `skip-*` are play heads, and `rotate-ccw` and `rotate-cw` carry exactly one. `arrows` is held apart from `arrow` by the singular rule, which leaves it alone, so the two words stay two questions.",
       "terms": [
-        "swap",
-        "exchange",
-        "transfer",
-        "bidirectional",
-        "two-way",
-        "both ways",
-        "互换",
-        "交换"
+        "arrows"
       ]
     },
     {
@@ -223,15 +57,47 @@
       ]
     },
     {
-      "match": "^article$",
+      "match": "^captions$",
+      "note": "The CC form. `subtitles` is the same idea drawn as caption lines.",
       "terms": [
-        "screenplay",
-        "text",
-        "document",
-        "news",
-        "story",
-        "page",
-        "post"
+        "cc",
+        "closed captions",
+        "subtitles",
+        "text track",
+        "srt"
+      ]
+    },
+    {
+      "match": "^cast$",
+      "terms": [
+        "chromecast",
+        "airplay",
+        "screen mirror",
+        "stream",
+        "broadcast",
+        "tv"
+      ]
+    },
+    {
+      "match": "^copy-plus$",
+      "note": "Named for its base, but it is also the add-to-queue mark.",
+      "terms": [
+        "queue",
+        "add to queue",
+        "library add",
+        "duplicate",
+        "stack",
+        "add copy"
+      ]
+    },
+    {
+      "match": "dashed-panel$",
+      "terms": [
+        "move to",
+        "drop",
+        "boundary",
+        "edge",
+        "snap"
       ]
     },
     {
@@ -255,33 +121,6 @@
         "honour",
         "honor",
         "winner"
-      ]
-    },
-    {
-      "match": "^badge-check$",
-      "terms": [
-        "verified",
-        "review",
-        "approved",
-        "certified",
-        "trusted",
-        "seal",
-        "official"
-      ]
-    },
-    {
-      "match": "^ban$",
-      "note": "Nobody types `ban` for the sign; they type what it means.",
-      "terms": [
-        "no",
-        "block",
-        "blocked",
-        "forbidden",
-        "prohibited",
-        "denied",
-        "cancel",
-        "not allowed",
-        "restricted"
       ]
     },
     {
@@ -318,12 +157,12 @@
       ]
     },
     {
-      "match": "^bin$",
+      "match": "^bookmark$",
       "terms": [
-        "delete",
-        "remove",
-        "trash",
-        "discard"
+        "save",
+        "favourite",
+        "favorite",
+        "read later"
       ]
     },
     {
@@ -337,59 +176,15 @@
       ]
     },
     {
-      "match": "^bold$",
+      "match": "^building$",
       "terms": [
-        "strong",
-        "weight",
-        "heavy",
-        "emphasis"
-      ]
-    },
-    {
-      "match": "^book-open$",
-      "note": "Drawn for the reference surface behind a feature: the manual, the guide, the legend beside a diagram. `book` is on the name already.",
-      "terms": [
-        "read",
-        "reading",
-        "manual",
-        "guide",
-        "documentation",
-        "docs",
-        "legend",
-        "glossary",
-        "handbook",
-        "library"
-      ]
-    },
-    {
-      "match": "^bookmark$",
-      "terms": [
-        "save",
-        "favourite",
-        "favorite",
-        "read later"
-      ]
-    },
-    {
-      "match": "^bot$",
-      "terms": [
-        "robot",
-        "agent",
-        "assistant",
-        "ai",
-        "automation",
-        "chatbot"
-      ]
-    },
-    {
-      "match": "^bounding-box$",
-      "terms": [
-        "canvas",
-        "selection",
-        "handles",
-        "frame",
-        "transform",
-        "artboard"
+        "office",
+        "company",
+        "organisation",
+        "organization",
+        "business",
+        "workplace",
+        "apartment"
       ]
     },
     {
@@ -421,51 +216,6 @@
       ]
     },
     {
-      "match": "^broom$",
-      "terms": [
-        "sweep",
-        "clean",
-        "clear",
-        "tidy",
-        "reset",
-        "wipe"
-      ]
-    },
-    {
-      "match": "^browsers$",
-      "terms": [
-        "tabs",
-        "tab",
-        "windows",
-        "pages",
-        "browser"
-      ]
-    },
-    {
-      "match": "^bug$",
-      "terms": [
-        "issue",
-        "defect",
-        "problem",
-        "error",
-        "report",
-        "debug",
-        "insect"
-      ]
-    },
-    {
-      "match": "^building$",
-      "terms": [
-        "office",
-        "company",
-        "organisation",
-        "organization",
-        "business",
-        "workplace",
-        "apartment"
-      ]
-    },
-    {
       "match": "^calendar",
       "terms": [
         "date",
@@ -476,71 +226,17 @@
       ]
     },
     {
-      "match": "^calendar$",
-      "terms": [
-        "calendars"
-      ]
-    },
-    {
-      "match": "^camera-end$",
-      "terms": [
-        "last frame",
-        "capture last frame",
-        "frame at end",
-        "截取尾帧",
-        "尾帧"
-      ]
-    },
-    {
-      "match": "^camera-start$",
-      "terms": [
-        "first frame",
-        "capture first frame",
-        "frame at start",
-        "截取首帧",
-        "首帧"
-      ]
-    },
-    {
-      "match": "^captions$",
-      "note": "The CC form. `subtitles` is the same idea drawn as caption lines.",
-      "terms": [
-        "cc",
-        "closed captions",
-        "subtitles",
-        "text track",
-        "srt"
-      ]
-    },
-    {
-      "match": "^caret",
-      "terms": [
-        "triangle",
-        "dropdown",
-        "sort",
-        "select"
-      ]
-    },
-    {
-      "match": "^cast$",
-      "terms": [
-        "chromecast",
-        "airplay",
-        "screen mirror",
-        "stream",
-        "broadcast",
-        "tv"
-      ]
-    },
-    {
       "match": "^check$",
       "terms": [
+        "checkmark",
         "done",
         "complete",
         "tick",
         "confirm",
         "success",
-        "approve"
+        "approve",
+        "correct",
+        "right answer"
       ]
     },
     {
@@ -564,14 +260,1342 @@
       ]
     },
     {
-      "match": "^circle-question-mark$",
+      "match": "^clock",
+      "terms": [
+        "time",
+        "hour",
+        "schedule",
+        "timer",
+        "history",
+        "alarm"
+      ]
+    },
+    {
+      "match": "^code",
+      "note": "Both angle-bracket icons, plus the markup words only the second one earns. `terminal` already answers to \"code\", so these join a word the set has.",
+      "terms": [
+        "source",
+        "developer",
+        "programming",
+        "brackets",
+        "syntax"
+      ]
+    },
+    {
+      "match": "^code-xml$",
+      "terms": [
+        "markup",
+        "html",
+        "tag",
+        "element"
+      ]
+    },
+    {
+      "match": "^compass$",
+      "terms": [
+        "direction",
+        "navigate",
+        "explore",
+        "bearing",
+        "discover"
+      ]
+    },
+    {
+      "match": "^copy$",
+      "terms": [
+        "duplicate",
+        "clipboard",
+        "clone",
+        "paste"
+      ]
+    },
+    {
+      "match": "^cursor",
+      "terms": [
+        "pointer",
+        "mouse",
+        "select",
+        "click"
+      ]
+    },
+    {
+      "match": "^cursor-text$",
+      "terms": [
+        "caret",
+        "input",
+        "type",
+        "insert"
+      ]
+    },
+    {
+      "match": "^dashed",
+      "terms": [
+        "placeholder",
+        "empty",
+        "draft",
+        "outline"
+      ]
+    },
+    {
+      "match": "^dice",
+      "terms": [
+        "random",
+        "chance",
+        "game",
+        "roll",
+        "luck"
+      ]
+    },
+    {
+      "match": "^double-check$",
+      "terms": [
+        "read",
+        "delivered",
+        "verified",
+        "seen",
+        "confirm"
+      ]
+    },
+    {
+      "match": "^download$",
+      "terms": [
+        "save",
+        "export",
+        "get",
+        "install"
+      ]
+    },
+    {
+      "match": "^expand-dashed",
+      "terms": [
+        "resize",
+        "fullscreen",
+        "crop",
+        "corner",
+        "scale"
+      ]
+    },
+    {
+      "match": "^fast-forward$",
+      "terms": [
+        "skip",
+        "speed",
+        "seek",
+        "faster"
+      ]
+    },
+    {
+      "match": "^file",
+      "terms": [
+        "document",
+        "page",
+        "paper"
+      ]
+    },
+    {
+      "match": "^file-text$",
+      "terms": [
+        "note",
+        "article",
+        "txt",
+        "readme"
+      ]
+    },
+    {
+      "match": "^file-spreadsheet$",
+      "terms": [
+        "excel",
+        "csv",
+        "table",
+        "sheet",
+        "numbers"
+      ]
+    },
+    {
+      "match": "^flower$",
+      "terms": [
+        "nature",
+        "plant",
+        "bloom",
+        "spring",
+        "rose"
+      ]
+    },
+    {
+      "match": "^folder",
+      "terms": [
+        "directory",
+        "files",
+        "storage"
+      ]
+    },
+    {
+      "match": "^folders$",
+      "terms": [
+        "directories",
+        "library",
+        "workspace"
+      ]
+    },
+    {
+      "match": "^(full|half|quarter|three-quarter)$",
+      "terms": [
+        "portion",
+        "fraction",
+        "pie",
+        "percentage",
+        "share"
+      ]
+    },
+    {
+      "match": "^fullscreen$",
+      "terms": [
+        "expand",
+        "maximize",
+        "full screen",
+        "enlarge",
+        "zoom in"
+      ]
+    },
+    {
+      "match": "^fullscreen-exit$",
+      "terms": [
+        "minimize",
+        "collapse",
+        "shrink",
+        "exit full screen",
+        "zoom out"
+      ]
+    },
+    {
+      "match": "^gallery-",
+      "note": "The family, so every member answers to these.",
+      "terms": [
+        "carousel",
+        "slideshow",
+        "slider",
+        "album",
+        "photos",
+        "frames"
+      ]
+    },
+    {
+      "match": "^gift$",
+      "terms": [
+        "present",
+        "reward",
+        "birthday",
+        "bonus"
+      ]
+    },
+    {
+      "match": "^git-",
+      "terms": [
+        "version control",
+        "repository",
+        "source control",
+        "vcs"
+      ]
+    },
+    {
+      "match": "^git-pull-request",
+      "terms": [
+        "pr",
+        "review",
+        "merge request"
+      ]
+    },
+    {
+      "match": "^git-graph$",
+      "terms": [
+        "history",
+        "log",
+        "timeline"
+      ]
+    },
+    {
+      "match": "^globe",
+      "terms": [
+        "world",
+        "internet",
+        "web",
+        "language",
+        "international"
+      ]
+    },
+    {
+      "match": "^grid-",
+      "terms": [
+        "grid",
+        "layout",
+        "tiles",
+        "cells",
+        "table",
+        "gallery",
+        "matrix",
+        "columns",
+        "rows"
+      ],
+      "note": "Named columns x rows. There is no bare `grid`: the word said nothing about which one, and it reaches the family through the name anyway."
+    },
+    {
+      "match": "^handbag$",
+      "terms": [
+        "purse",
+        "bag",
+        "shopping",
+        "store"
+      ]
+    },
+    {
+      "match": "^(headphones|headset)",
+      "terms": [
+        "audio",
+        "listen",
+        "support",
+        "call",
+        "music"
+      ]
+    },
+    {
+      "match": "^heart-hand$",
+      "terms": [
+        "hand heart",
+        "love",
+        "send love",
+        "donate",
+        "charity",
+        "care",
+        "support",
+        "give",
+        "giving",
+        "volunteer",
+        "kindness",
+        "gratitude"
+      ],
+      "note": "Base-first like every compound here, and `heart` is the base that actually exists. `hand heart` is the word order people arrive with."
+    },
+    {
+      "match": "^home$",
+      "terms": [
+        "house",
+        "dashboard",
+        "start",
+        "main",
+        "roof",
+        "homepage"
+      ]
+    },
+    {
+      "match": "^info$",
+      "terms": [
+        "information",
+        "help",
+        "about",
+        "details"
+      ]
+    },
+    {
+      "match": "^layout-dashboard$",
+      "terms": [
+        "dashboard",
+        "layout",
+        "widgets",
+        "tiles",
+        "overview",
+        "panels",
+        "admin"
+      ]
+    },
+    {
+      "match": "^link$",
+      "terms": [
+        "url",
+        "chain",
+        "hyperlink",
+        "connect",
+        "attach"
+      ]
+    },
+    {
+      "match": "^list",
+      "terms": [
+        "items",
+        "index",
+        "rows",
+        "todo"
+      ]
+    },
+    {
+      "match": "^list-music$",
+      "terms": [
+        "playlist",
+        "queue",
+        "tracks"
+      ]
+    },
+    {
+      "match": "^list-video$",
+      "terms": [
+        "playlist",
+        "queue",
+        "videos",
+        "watch later",
+        "episodes"
+      ]
+    },
+    {
+      "match": "^loader$",
+      "terms": [
+        "spinner",
+        "loading",
+        "busy",
+        "wait",
+        "progress",
+        "throbber"
+      ]
+    },
+    {
+      "match": "^(lock|unlock)$",
+      "terms": [
+        "secure",
+        "private",
+        "password",
+        "protected",
+        "access"
+      ]
+    },
+    {
+      "match": "^mail",
+      "terms": [
+        "email",
+        "envelope",
+        "message",
+        "inbox",
+        "letter"
+      ]
+    },
+    {
+      "match": "^map",
+      "terms": [
+        "location",
+        "place",
+        "address",
+        "gps",
+        "marker",
+        "pin"
+      ]
+    },
+    {
+      "match": "^maximize$",
+      "terms": [
+        "fullscreen",
+        "full screen",
+        "expand",
+        "enlarge",
+        "corners",
+        "resize"
+      ]
+    },
+    {
+      "match": "^megaphone$",
+      "terms": [
+        "bullhorn",
+        "announce",
+        "announcement",
+        "broadcast",
+        "shout",
+        "loudspeaker",
+        "promote",
+        "marketing",
+        "advertisement",
+        "advertising"
+      ]
+    },
+    {
+      "match": "^menu$",
+      "terms": [
+        "hamburger",
+        "nav",
+        "bars",
+        "burger"
+      ]
+    },
+    {
+      "match": "^mic$",
+      "terms": [
+        "microphone",
+        "voice",
+        "record",
+        "speak"
+      ]
+    },
+    {
+      "match": "^minimize$",
+      "terms": [
+        "exit fullscreen",
+        "shrink",
+        "collapse",
+        "restore",
+        "corners",
+        "resize"
+      ]
+    },
+    {
+      "match": "^minus$",
+      "terms": [
+        "remove",
+        "subtract",
+        "less",
+        "collapse",
+        "hide",
+        "minus sign",
+        "sign"
+      ]
+    },
+    {
+      "match": "^monitor",
+      "terms": [
+        "screen",
+        "display",
+        "desktop",
+        "computer",
+        "tv",
+        "workstation"
+      ]
+    },
+    {
+      "match": "^monitor-off$",
+      "terms": [
+        "screen off",
+        "display off",
+        "stop sharing",
+        "no display",
+        "presentation off"
+      ]
+    },
+    {
+      "match": "^more-",
+      "terms": [
+        "ellipsis",
+        "dots",
+        "options",
+        "overflow",
+        "kebab",
+        "meatball"
+      ]
+    },
+    {
+      "match": "^music-note$",
+      "terms": [
+        "song",
+        "track",
+        "audio",
+        "media"
+      ]
+    },
+    {
+      "match": "^navigation$",
+      "terms": [
+        "direction",
+        "gps",
+        "heading",
+        "travel"
+      ]
+    },
+    {
+      "match": "^octagon-alert$",
+      "terms": [
+        "stop",
+        "error",
+        "danger",
+        "critical",
+        "blocked"
+      ]
+    },
+    {
+      "match": "^package$",
+      "terms": [
+        "box",
+        "delivery",
+        "shipping",
+        "parcel",
+        "product"
+      ]
+    },
+    {
+      "match": "^panel",
+      "terms": [
+        "sidebar",
+        "layout",
+        "drawer",
+        "dock",
+        "split"
+      ]
+    },
+    {
+      "match": "^paperclip$",
+      "terms": [
+        "attach",
+        "attachment",
+        "clip"
+      ]
+    },
+    {
+      "match": "^pause$",
+      "terms": [
+        "media",
+        "player",
+        "hold",
+        "suspend"
+      ]
+    },
+    {
+      "match": "^picture-in-picture$",
+      "terms": [
+        "pip",
+        "inset",
+        "mini player",
+        "floating window",
+        "overlay"
+      ]
+    },
+    {
+      "match": "^play$",
+      "terms": [
+        "media",
+        "player",
+        "start",
+        "resume",
+        "video",
+        "audio play",
+        "audio"
+      ]
+    },
+    {
+      "match": "^podcast$",
+      "terms": [
+        "broadcast",
+        "radio",
+        "rss",
+        "episode",
+        "audio show"
+      ]
+    },
+    {
+      "match": "^queue$",
+      "terms": [
+        "up next",
+        "playlist",
+        "play queue",
+        "now playing"
+      ]
+    },
+    {
+      "match": "^repeat",
+      "note": "The family, so repeat-1 answers to these too.",
+      "terms": [
+        "loop",
+        "replay",
+        "again",
+        "cycle"
+      ]
+    },
+    {
+      "match": "^repeat-1$",
+      "terms": [
+        "loop once",
+        "repeat one",
+        "repeat single",
+        "loop track"
+      ]
+    },
+    {
+      "match": "^stop$",
+      "terms": [
+        "media",
+        "player",
+        "halt",
+        "end"
+      ]
+    },
+    {
+      "match": "^record$",
+      "terms": [
+        "media",
+        "capture",
+        "rec",
+        "live"
+      ]
+    },
+    {
+      "match": "^plus$",
+      "terms": [
+        "add",
+        "new",
+        "create",
+        "increase",
+        "more",
+        "plus sign",
+        "sign"
+      ]
+    },
+    {
+      "match": "^podium",
+      "terms": [
+        "ranking",
+        "leaderboard",
+        "places",
+        "standings",
+        "results",
+        "winner",
+        "first second third"
+      ]
+    },
+    {
+      "match": "^progress",
+      "terms": [
+        "loading",
+        "status",
+        "completion",
+        "percent",
+        "ring",
+        "spinner",
+        "loader"
+      ]
+    },
+    {
+      "match": "^question$",
       "terms": [
         "help",
+        "ask",
         "faq",
         "support",
-        "circled question",
-        "帮助",
-        "问号"
+        "unknown",
+        "what"
+      ]
+    },
+    {
+      "match": "^receipt$",
+      "terms": [
+        "invoice",
+        "bill",
+        "order",
+        "payment"
+      ]
+    },
+    {
+      "match": "^rewind$",
+      "terms": [
+        "back",
+        "replay",
+        "seek",
+        "slower"
+      ]
+    },
+    {
+      "match": "^route$",
+      "terms": [
+        "path",
+        "directions",
+        "journey",
+        "trip"
+      ]
+    },
+    {
+      "match": "^scan-face$",
+      "terms": [
+        "face id",
+        "biometric",
+        "recognition",
+        "identity"
+      ]
+    },
+    {
+      "match": "^search$",
+      "terms": [
+        "find",
+        "magnifier",
+        "lookup",
+        "query",
+        "zoom"
+      ]
+    },
+    {
+      "match": "^settings$",
+      "terms": [
+        "gear",
+        "cog",
+        "preferences",
+        "config",
+        "options",
+        "manage",
+        "management",
+        "system",
+        "role",
+        "roles",
+        "admin"
+      ]
+    },
+    {
+      "match": "^shapes",
+      "terms": [
+        "geometry",
+        "objects",
+        "elements",
+        "design"
+      ]
+    },
+    {
+      "match": "^share$",
+      "terms": [
+        "send",
+        "export",
+        "social",
+        "forward"
+      ]
+    },
+    {
+      "match": "^shopping-",
+      "terms": [
+        "buy",
+        "checkout",
+        "ecommerce",
+        "basket",
+        "store",
+        "purchase"
+      ]
+    },
+    {
+      "match": "^shuffle$",
+      "terms": [
+        "random",
+        "mix",
+        "swap",
+        "cross"
+      ]
+    },
+    {
+      "match": "^signal",
+      "terms": [
+        "wifi",
+        "network",
+        "reception",
+        "strength",
+        "cellular"
+      ]
+    },
+    {
+      "match": "^skip-",
+      "terms": [
+        "next",
+        "previous",
+        "track",
+        "media"
+      ]
+    },
+    {
+      "match": "^smartphone",
+      "terms": [
+        "phone",
+        "mobile",
+        "device",
+        "app",
+        "iphone"
+      ]
+    },
+    {
+      "match": "^square$",
+      "terms": [
+        "shape",
+        "box",
+        "rectangle"
+      ]
+    },
+    {
+      "match": "^(sun|moon)$",
+      "note": "The theme toggle is why anyone reaches for either of these in an app, and neither drawing is named after it.",
+      "terms": [
+        "theme",
+        "dark mode",
+        "light mode",
+        "appearance",
+        "brightness"
+      ]
+    },
+    {
+      "match": "^subtitles$",
+      "terms": [
+        "captions",
+        "cc",
+        "closed captions",
+        "text track",
+        "srt"
+      ]
+    },
+    {
+      "match": "^tag",
+      "terms": [
+        "label",
+        "price",
+        "category",
+        "badge"
+      ]
+    },
+    {
+      "match": "^lightbulb",
+      "note": "The bulb is reached for as an idea, not as a lamp.",
+      "terms": [
+        "idea",
+        "tip",
+        "hint",
+        "insight",
+        "suggestion",
+        "learn",
+        "light",
+        "inspiration"
+      ]
+    },
+    {
+      "match": "^lightbulb-on$",
+      "terms": [
+        "bright",
+        "eureka",
+        "shine",
+        "lit",
+        "on"
+      ]
+    },
+    {
+      "match": "^terminal",
+      "terms": [
+        "console",
+        "command line",
+        "shell",
+        "cli",
+        "bash",
+        "code",
+        "computer terminal",
+        "computer"
+      ]
+    },
+    {
+      "match": "^bin$",
+      "terms": [
+        "delete",
+        "remove",
+        "trash",
+        "discard"
+      ]
+    },
+    {
+      "match": "^trending",
+      "terms": [
+        "growth",
+        "decline",
+        "analytics",
+        "stocks",
+        "arrow"
+      ]
+    },
+    {
+      "match": "^trophy$",
+      "terms": [
+        "win",
+        "winner",
+        "champion",
+        "prize",
+        "cup",
+        "first place",
+        "achievement",
+        "victory",
+        "contest",
+        "challenge",
+        "competition"
+      ]
+    },
+    {
+      "match": "^triangle-alert$",
+      "terms": [
+        "warning",
+        "caution",
+        "attention",
+        "error",
+        "danger"
+      ]
+    },
+    {
+      "match": "^truck$",
+      "terms": [
+        "delivery",
+        "shipping",
+        "transport",
+        "logistics"
+      ]
+    },
+    {
+      "match": "^upload$",
+      "terms": [
+        "import",
+        "send",
+        "publish",
+        "cloud"
+      ]
+    },
+    {
+      "match": "^user",
+      "terms": [
+        "person",
+        "profile",
+        "account",
+        "avatar",
+        "member"
+      ]
+    },
+    {
+      "match": "^users$",
+      "terms": [
+        "people",
+        "team",
+        "group",
+        "contacts",
+        "contact"
+      ]
+    },
+    {
+      "match": "^volume",
+      "terms": [
+        "sound",
+        "audio",
+        "speaker",
+        "mute",
+        "loudness"
+      ]
+    },
+    {
+      "match": "^wifi",
+      "terms": [
+        "wireless",
+        "network",
+        "internet",
+        "connection",
+        "hotspot",
+        "signal",
+        "access point",
+        "router"
+      ]
+    },
+    {
+      "match": "^wifi-x$",
+      "terms": [
+        "offline",
+        "disconnected",
+        "no connection"
+      ]
+    },
+    {
+      "match": "^x$",
+      "terms": [
+        "close",
+        "cancel",
+        "dismiss",
+        "exit",
+        "times",
+        "cross",
+        "multiplication sign",
+        "multiplication",
+        "sign"
+      ]
+    },
+    {
+      "match": "-plus$",
+      "note": "Modifiers, which compose with whatever they hang off.",
+      "terms": [
+        "add",
+        "new",
+        "create"
+      ]
+    },
+    {
+      "match": "-minus$",
+      "terms": [
+        "remove",
+        "subtract"
+      ]
+    },
+    {
+      "match": "-check$",
+      "terms": [
+        "done",
+        "verified",
+        "approved",
+        "success"
+      ]
+    },
+    {
+      "match": "-x$",
+      "terms": [
+        "remove",
+        "delete",
+        "cancel",
+        "failed"
+      ]
+    },
+    {
+      "match": "-dot$",
+      "terms": [
+        "unread",
+        "badge",
+        "new",
+        "notification"
+      ]
+    },
+    {
+      "match": "-search$",
+      "terms": [
+        "find",
+        "lookup"
+      ]
+    },
+    {
+      "match": "-info$",
+      "terms": [
+        "details",
+        "about",
+        "status",
+        "learn more"
+      ]
+    },
+    {
+      "match": "-exclamation$",
+      "terms": [
+        "warning",
+        "overdue",
+        "attention"
+      ]
+    },
+    {
+      "match": "-arrow-down$",
+      "terms": [
+        "download",
+        "receive",
+        "incoming"
+      ]
+    },
+    {
+      "match": "-arrow-up$",
+      "terms": [
+        "upload",
+        "send",
+        "outgoing"
+      ]
+    },
+    {
+      "match": "-open$",
+      "terms": [
+        "browse",
+        "expanded"
+      ]
+    },
+    {
+      "match": "^calendar$",
+      "terms": [
+        "calendars",
+        "calendar days",
+        "days",
+        "date"
+      ]
+    },
+    {
+      "match": "^mail$",
+      "terms": [
+        "mails"
+      ]
+    },
+    {
+      "match": "^tag$",
+      "terms": [
+        "tags"
+      ]
+    },
+    {
+      "match": "^octagon-x$",
+      "note": "The error mark, which is what a toast reaches for. `stop` is the sign the shape comes from.",
+      "terms": [
+        "error",
+        "failed",
+        "failure",
+        "stop",
+        "cancel",
+        "abort",
+        "destructive"
+      ]
+    },
+    {
+      "match": "^grip-",
+      "note": "The words for what it does. Nobody types `grip` first.",
+      "terms": [
+        "drag",
+        "drag handle",
+        "handle",
+        "grab",
+        "reorder",
+        "resize",
+        "dots"
+      ]
+    },
+    {
+      "match": "^toolbox$",
+      "note": "The words for what it holds, and the two names other sets use.",
+      "terms": [
+        "tools",
+        "toolkit",
+        "tool box",
+        "kit",
+        "hardware",
+        "build",
+        "repair",
+        "maintenance"
+      ]
+    },
+    {
+      "match": "^wrench$",
+      "note": "`spanner` is what half the world calls it, and nobody types `wrench` looking for settings.",
+      "terms": [
+        "spanner",
+        "tool",
+        "fix",
+        "repair",
+        "adjust",
+        "configure",
+        "maintenance",
+        "service"
+      ]
+    },
+    {
+      "match": "^grid-(circles|squares)(-x|-check)?$",
+      "note": "A grid of shapes reads as a group or a selection long before anyone types its drawing.",
+      "terms": [
+        "group",
+        "select",
+        "selection",
+        "multiple",
+        "batch",
+        "items",
+        "grid",
+        "all"
+      ]
+    },
+    {
+      "match": "^sliders-2-(horizontal|vertical)$",
+      "note": "The knob form, against the plain `sliders-*` equaliser: the thumb is what people are looking for.",
+      "terms": [
+        "range",
+        "knob",
+        "thumb",
+        "adjust",
+        "volume",
+        "settings",
+        "control",
+        "level"
+      ]
+    },
+    {
+      "match": "^power(-off)?$",
+      "terms": [
+        "on",
+        "off",
+        "shutdown",
+        "restart",
+        "standby",
+        "boot",
+        "switch"
+      ]
+    },
+    {
+      "match": "^percent$",
+      "terms": [
+        "percentage",
+        "discount",
+        "sale",
+        "rate",
+        "interest",
+        "tax"
+      ]
+    },
+    {
+      "match": "^ban$",
+      "note": "Nobody types `ban` for the sign; they type what it means.",
+      "terms": [
+        "no",
+        "block",
+        "blocked",
+        "forbidden",
+        "prohibited",
+        "denied",
+        "cancel",
+        "not allowed",
+        "restricted"
+      ]
+    },
+    {
+      "match": "^pencil-ruler$",
+      "note": "Nobody types the compound name; they type what they are doing with it.",
+      "terms": [
+        "design",
+        "draw",
+        "drafting",
+        "measure",
+        "edit",
+        "tools",
+        "ruler",
+        "pencil",
+        "sketch"
+      ]
+    },
+    {
+      "match": "^hammer$",
+      "terms": [
+        "mallet",
+        "claw hammer",
+        "tool",
+        "build",
+        "construct",
+        "nail",
+        "hit",
+        "repair"
+      ]
+    },
+    {
+      "match": "^circles$",
+      "note": "Two rings that cross: the drawing is the overlap, so the words are about the overlap. \"ring\" lives here rather than in the filename, which says circle like the other 73.",
+      "terms": [
+        "ring",
+        "rings",
+        "overlap",
+        "intersect",
+        "venn",
+        "union",
+        "combine",
+        "merge",
+        "group",
+        "diagram"
+      ]
+    },
+    {
+      "match": "^circles-dashed$",
+      "note": "The dashed ring is the one that is not there yet, so the words are about the pending half.",
+      "terms": [
+        "ring",
+        "rings",
+        "overlap",
+        "intersect",
+        "venn",
+        "placeholder",
+        "pending",
+        "draft",
+        "group",
+        "optional"
       ]
     },
     {
@@ -606,35 +1630,687 @@
       ]
     },
     {
-      "match": "^circles$",
-      "note": "Two rings that cross: the drawing is the overlap, so the words are about the overlap. \"ring\" lives here rather than in the filename, which says circle like the other 73.",
+      "match": "^plug$",
+      "note": "The software sense outweighs the wall socket: this is what an integration is drawn with.",
       "terms": [
-        "ring",
-        "rings",
-        "overlap",
-        "intersect",
-        "venn",
-        "union",
-        "combine",
-        "merge",
-        "group",
-        "diagram"
+        "plugin",
+        "integration",
+        "connect",
+        "connection",
+        "socket",
+        "adapter",
+        "extension",
+        "power"
       ]
     },
     {
-      "match": "^circles-dashed$",
-      "note": "The dashed ring is the one that is not there yet, so the words are about the pending half.",
+      "match": "^shield",
+      "note": "The family, so the signs inherit it.",
       "terms": [
-        "ring",
-        "rings",
-        "overlap",
-        "intersect",
-        "venn",
-        "placeholder",
-        "pending",
-        "draft",
-        "group",
-        "optional"
+        "security",
+        "secure",
+        "protected",
+        "protection",
+        "safe",
+        "trust",
+        "privacy",
+        "guard",
+        "antivirus",
+        "insurance"
+      ]
+    },
+    {
+      "match": "^crown$",
+      "terms": [
+        "king",
+        "queen",
+        "royal",
+        "premium",
+        "vip",
+        "winner",
+        "best",
+        "top",
+        "leader",
+        "member",
+        "subscription",
+        "pro"
+      ]
+    },
+    {
+      "match": "^flag$",
+      "note": "The plain flag: a marker, a report and a milestone. The chequered one has its own row.",
+      "terms": [
+        "marker",
+        "report",
+        "milestone",
+        "goal",
+        "country",
+        "banner",
+        "mark"
+      ]
+    },
+    {
+      "match": "^traffic-light$",
+      "terms": [
+        "traffic",
+        "stoplight",
+        "signal",
+        "lights",
+        "stop",
+        "go",
+        "red amber green",
+        "status"
+      ]
+    },
+    {
+      "match": "^bug$",
+      "terms": [
+        "insect",
+        "beetle",
+        "debug",
+        "issue",
+        "defect",
+        "error",
+        "report a bug",
+        "pest",
+        "problem",
+        "report"
+      ]
+    },
+    {
+      "match": "^search(-2)?-plus$",
+      "note": "The magnifier with a plus: zoom in, and add-to-search.",
+      "terms": [
+        "zoom in",
+        "magnify",
+        "enlarge",
+        "add filter",
+        "new search"
+      ]
+    },
+    {
+      "match": "^search(-2)?-minus$",
+      "terms": [
+        "zoom out",
+        "shrink",
+        "reduce",
+        "remove filter",
+        "narrow"
+      ]
+    },
+    {
+      "match": "^search(-2)?-check$",
+      "terms": [
+        "found",
+        "match",
+        "verified result",
+        "search complete",
+        "validated"
+      ]
+    },
+    {
+      "match": "^search(-2)?-x$",
+      "terms": [
+        "no results",
+        "not found",
+        "clear search",
+        "cancel search",
+        "empty state"
+      ]
+    },
+    {
+      "match": "^search(-2)?-list$",
+      "note": "Results, rather than the act of searching.",
+      "terms": [
+        "results",
+        "search results",
+        "matches",
+        "index",
+        "directory",
+        "browse"
+      ]
+    },
+    {
+      "match": "^flag-chequered$",
+      "note": "The finish line, not a country.",
+      "terms": [
+        "checkered",
+        "checkered flag",
+        "finish",
+        "finish line",
+        "race",
+        "racing",
+        "complete",
+        "winner",
+        "lap"
+      ]
+    },
+    {
+      "match": "^cloud-(check|x|plus|minus|alert)$",
+      "note": "The sign is inside the cloud, so these read as the state of a sync rather than of a file.",
+      "terms": [
+        "sync",
+        "backup",
+        "cloud storage",
+        "upload state",
+        "synced"
+      ]
+    },
+    {
+      "match": "^cloud-(x|alert)$",
+      "note": "Only the two that say something went wrong carry the failure words; a synced or added cloud is not an error.",
+      "terms": [
+        "sync error",
+        "warning",
+        "failed",
+        "offline"
+      ]
+    },
+    {
+      "match": "^package-(plus|minus|check|x|alert|arrow-(down|up|left|right))$",
+      "note": "The sign is on the parcel's own corner, so these read as the state of an order rather than of a file.",
+      "terms": [
+        "order",
+        "shipment",
+        "delivery",
+        "parcel",
+        "fulfilment",
+        "stock",
+        "release",
+        "inbound",
+        "outbound",
+        "dispatch",
+        "return",
+        "damaged",
+        "delayed",
+        "exception",
+        "held"
+      ]
+    },
+    {
+      "match": "^app(-|$)",
+      "note": "No bare `app`: the tile is `square`, and only the badged members carry the word.",
+      "terms": [
+        "application",
+        "tile",
+        "install",
+        "uninstall",
+        "software",
+        "launcher",
+        "badge"
+      ]
+    },
+    {
+      "match": "-alert$",
+      "note": "wifi-exclamation is the one icon that spells this mark the other way, so the word it uses has to find the rest.",
+      "terms": [
+        "exclamation",
+        "warning",
+        "attention",
+        "problem",
+        "error",
+        "caution"
+      ]
+    },
+    {
+      "match": "^move$",
+      "terms": [
+        "drag",
+        "reposition",
+        "pan",
+        "handle",
+        "four arrows",
+        "relocate",
+        "translate",
+        "position",
+        "arrows"
+      ]
+    },
+    {
+      "match": "^maximize-2$",
+      "terms": [
+        "expand",
+        "fullscreen",
+        "enlarge",
+        "zoom in",
+        "open"
+      ]
+    },
+    {
+      "match": "^credit-card-2$",
+      "terms": [
+        "payment",
+        "card",
+        "billing",
+        "checkout",
+        "debit"
+      ]
+    },
+    {
+      "match": "^replay$",
+      "terms": [
+        "restart",
+        "again",
+        "rerun",
+        "rewatch",
+        "loop"
+      ]
+    },
+    {
+      "match": "^settings-dot$",
+      "terms": [
+        "update available",
+        "preferences",
+        "attention",
+        "badge",
+        "unread setting"
+      ]
+    },
+    {
+      "match": "^briefcase$",
+      "terms": [
+        "work",
+        "business",
+        "job",
+        "portfolio",
+        "case",
+        "office",
+        "career"
+      ]
+    },
+    {
+      "match": "^umbrella$",
+      "terms": [
+        "insurance",
+        "cover",
+        "protection",
+        "rain",
+        "shelter",
+        "risk"
+      ]
+    },
+    {
+      "match": "^circle-progress-play$",
+      "terms": [
+        "playing",
+        "in progress",
+        "running",
+        "now playing",
+        "live",
+        "under way"
+      ]
+    },
+    {
+      "match": "^umbrella-off$",
+      "terms": [
+        "unprotected",
+        "exposed",
+        "no cover",
+        "uncovered",
+        "unshielded",
+        "no insurance"
+      ]
+    },
+    {
+      "match": "^parasol$",
+      "terms": [
+        "shade",
+        "sunshade",
+        "beach",
+        "terrace",
+        "patio",
+        "sun",
+        "awning"
+      ]
+    },
+    {
+      "match": "^list-check$",
+      "terms": [
+        "survey",
+        "questionnaire",
+        "checklist",
+        "poll"
+      ],
+      "note": "What people type for a form they fill in: 2 empty searches for survey in the first month."
+    },
+    {
+      "match": "^(graduation-cap|book|book-open)$",
+      "terms": [
+        "lesson",
+        "skill",
+        "study",
+        "course",
+        "learn",
+        "training"
+      ],
+      "note": "The words a learner types: lesson, skill and study were empty searches before the shelf existed."
+    },
+    {
+      "match": "^lightbulb$",
+      "terms": [
+        "think",
+        "thought",
+        "brainstorm"
+      ]
+    },
+    {
+      "match": "^(chart-column|chart-bar|chart-line|chart-pie|chart-area|bar-chart)$",
+      "terms": [
+        "analysis",
+        "analytics",
+        "data",
+        "report",
+        "stats"
+      ],
+      "note": "Analysis and analytics are the words for a chart someone has not named yet."
+    },
+    {
+      "match": "^(wallet|dollar-sign|credit-card)$",
+      "terms": [
+        "budget",
+        "asset",
+        "bank",
+        "account",
+        "balance",
+        "funds"
+      ],
+      "note": "Budget, asset, bank and acct all came in empty; money words, not card words."
+    },
+    {
+      "match": "^(database|server)$",
+      "terms": [
+        "drive",
+        "hdd",
+        "disk",
+        "storage",
+        "hard drive"
+      ]
+    },
+    {
+      "match": "^lock$",
+      "terms": [
+        "vault",
+        "safe",
+        "secure storage"
+      ]
+    },
+    {
+      "match": "^(package|archive)$",
+      "terms": [
+        "warehouse",
+        "inventory",
+        "stock",
+        "carton"
+      ]
+    },
+    {
+      "match": "^(headset|headset-2)$",
+      "terms": [
+        "assistance",
+        "service",
+        "service status",
+        "help desk",
+        "customer support"
+      ]
+    },
+    {
+      "match": "^(refresh-cw|refresh-ccw|link)$",
+      "terms": [
+        "reconnect",
+        "retry connection",
+        "re-establish"
+      ]
+    },
+    {
+      "match": "^(coupon|badge-percent|gift|tag-horizontal-start-percent|tag-horizontal-end-percent)$",
+      "terms": [
+        "redeem",
+        "redemption",
+        "reward",
+        "perk",
+        "benefit",
+        "discount coupons",
+        "refer",
+        "earn"
+      ],
+      "note": "Reward and redemption vocabulary: every one of these was an empty search."
+    },
+    {
+      "match": "^(messages|message)$",
+      "terms": [
+        "communication",
+        "records",
+        "correspondence",
+        "transcript"
+      ]
+    },
+    {
+      "match": "^(sparkle|sparkles)$",
+      "terms": [
+        "magic wand",
+        "wand",
+        "llm",
+        "ai assistant",
+        "generate"
+      ]
+    },
+    {
+      "match": "^(file-text|pen-line)$",
+      "terms": [
+        "blog",
+        "article",
+        "post",
+        "essay"
+      ]
+    },
+    {
+      "match": "^(code|code-xml)$",
+      "terms": [
+        "api",
+        "sdk",
+        "endpoint",
+        "script"
+      ]
+    },
+    {
+      "match": "^cpu$",
+      "terms": [
+        "memory",
+        "ram",
+        "processor chip"
+      ]
+    },
+    {
+      "match": "^bell$",
+      "terms": [
+        "subscriptions",
+        "subscribe",
+        "reminder"
+      ]
+    },
+    {
+      "match": "^(qr-code|scan-qr-code)$",
+      "terms": [
+        "qr",
+        "qr code",
+        "pr code",
+        "code scan"
+      ]
+    },
+    {
+      "match": "^(camera|scan|scan-eye)$",
+      "terms": [
+        "ai scan",
+        "capture",
+        "recognise",
+        "recognize"
+      ]
+    },
+    {
+      "match": "^angle$",
+      "terms": [
+        "angle",
+        "degrees",
+        "rotation angle",
+        "角度",
+        "旋转角度"
+      ]
+    },
+    {
+      "match": "^apple-logo$",
+      "note": "A platform mark, not the fruit: it sits on the download button that hands a Mac its own build.",
+      "terms": [
+        "mac",
+        "macos",
+        "osx",
+        "ios",
+        "iphone",
+        "ipad"
+      ]
+    },
+    {
+      "match": "^arrow-right-left$",
+      "terms": [
+        "swap",
+        "exchange",
+        "transfer",
+        "bidirectional",
+        "two-way",
+        "both ways",
+        "互换",
+        "交换"
+      ]
+    },
+    {
+      "match": "^article$",
+      "terms": [
+        "screenplay",
+        "text",
+        "document",
+        "news",
+        "story",
+        "page",
+        "post"
+      ]
+    },
+    {
+      "match": "^badge-check$",
+      "terms": [
+        "verified",
+        "review",
+        "approved",
+        "certified",
+        "trusted",
+        "seal",
+        "official"
+      ]
+    },
+    {
+      "match": "^bold$",
+      "terms": [
+        "strong",
+        "weight",
+        "heavy",
+        "emphasis"
+      ]
+    },
+    {
+      "match": "^book-open$",
+      "note": "Drawn for the reference surface behind a feature: the manual, the guide, the legend beside a diagram. `book` is on the name already.",
+      "terms": [
+        "read",
+        "reading",
+        "manual",
+        "guide",
+        "documentation",
+        "docs",
+        "legend",
+        "glossary",
+        "handbook",
+        "library"
+      ]
+    },
+    {
+      "match": "^bot$",
+      "terms": [
+        "robot",
+        "agent",
+        "assistant",
+        "ai",
+        "automation",
+        "chatbot"
+      ]
+    },
+    {
+      "match": "^bounding-box$",
+      "terms": [
+        "canvas",
+        "selection",
+        "handles",
+        "frame",
+        "transform",
+        "artboard"
+      ]
+    },
+    {
+      "match": "^broom$",
+      "terms": [
+        "sweep",
+        "clean",
+        "clear",
+        "tidy",
+        "reset",
+        "wipe"
+      ]
+    },
+    {
+      "match": "^browsers$",
+      "terms": [
+        "tabs",
+        "tab",
+        "windows",
+        "pages",
+        "browser"
+      ]
+    },
+    {
+      "match": "^camera-end$",
+      "terms": [
+        "last frame",
+        "capture last frame",
+        "frame at end",
+        "截取尾帧",
+        "尾帧"
+      ]
+    },
+    {
+      "match": "^camera-start$",
+      "terms": [
+        "first frame",
+        "capture first frame",
+        "frame at start",
+        "截取首帧",
+        "首帧"
+      ]
+    },
+    {
+      "match": "^caret",
+      "terms": [
+        "triangle",
+        "dropdown",
+        "sort",
+        "select"
+      ]
+    },
+    {
+      "match": "^circle-question-mark$",
+      "terms": [
+        "help",
+        "faq",
+        "support",
+        "circled question",
+        "帮助",
+        "问号"
       ]
     },
     {
@@ -714,37 +2390,6 @@
       ]
     },
     {
-      "match": "^clock",
-      "terms": [
-        "time",
-        "hour",
-        "schedule",
-        "timer",
-        "history",
-        "alarm"
-      ]
-    },
-    {
-      "match": "^code",
-      "note": "Both angle-bracket icons, plus the markup words only the second one earns. `terminal` already answers to \"code\", so these join a word the set has.",
-      "terms": [
-        "source",
-        "developer",
-        "programming",
-        "brackets",
-        "syntax"
-      ]
-    },
-    {
-      "match": "^code-xml$",
-      "terms": [
-        "markup",
-        "html",
-        "tag",
-        "element"
-      ]
-    },
-    {
       "match": "^columns$",
       "terms": [
         "arrange",
@@ -767,25 +2412,6 @@
       ]
     },
     {
-      "match": "^compass$",
-      "terms": [
-        "direction",
-        "navigate",
-        "explore",
-        "bearing",
-        "discover"
-      ]
-    },
-    {
-      "match": "^copy$",
-      "terms": [
-        "duplicate",
-        "clipboard",
-        "clone",
-        "paste"
-      ]
-    },
-    {
       "match": "^copy-check$",
       "terms": [
         "copied",
@@ -793,18 +2419,6 @@
         "copied to clipboard",
         "已复制",
         "复制成功"
-      ]
-    },
-    {
-      "match": "^copy-plus$",
-      "note": "Named for its base, but it is also the add-to-queue mark.",
-      "terms": [
-        "queue",
-        "add to queue",
-        "library add",
-        "duplicate",
-        "stack",
-        "add copy"
       ]
     },
     {
@@ -841,18 +2455,6 @@
       ]
     },
     {
-      "match": "^crown$",
-      "terms": [
-        "vip",
-        "premium",
-        "member",
-        "subscription",
-        "king",
-        "royal",
-        "pro"
-      ]
-    },
-    {
       "match": "^cube$",
       "terms": [
         "model",
@@ -864,33 +2466,6 @@
       ]
     },
     {
-      "match": "^cursor",
-      "terms": [
-        "pointer",
-        "mouse",
-        "select",
-        "click"
-      ]
-    },
-    {
-      "match": "^cursor-text$",
-      "terms": [
-        "caret",
-        "input",
-        "type",
-        "insert"
-      ]
-    },
-    {
-      "match": "^dashed",
-      "terms": [
-        "placeholder",
-        "empty",
-        "draft",
-        "outline"
-      ]
-    },
-    {
       "match": "^diamond-plus$",
       "terms": [
         "add keyframe",
@@ -898,35 +2473,6 @@
         "insert frame",
         "在播放头处加一帧",
         "加关键帧"
-      ]
-    },
-    {
-      "match": "^dice",
-      "terms": [
-        "random",
-        "chance",
-        "game",
-        "roll",
-        "luck"
-      ]
-    },
-    {
-      "match": "^double-check$",
-      "terms": [
-        "read",
-        "delivered",
-        "verified",
-        "seen",
-        "confirm"
-      ]
-    },
-    {
-      "match": "^download$",
-      "terms": [
-        "save",
-        "export",
-        "get",
-        "install"
       ]
     },
     {
@@ -954,16 +2500,6 @@
       ]
     },
     {
-      "match": "^expand-dashed",
-      "terms": [
-        "resize",
-        "fullscreen",
-        "crop",
-        "corner",
-        "scale"
-      ]
-    },
-    {
       "match": "^face$",
       "terms": [
         "portrait",
@@ -986,23 +2522,6 @@
       ]
     },
     {
-      "match": "^fast-forward$",
-      "terms": [
-        "skip",
-        "speed",
-        "seek",
-        "faster"
-      ]
-    },
-    {
-      "match": "^file",
-      "terms": [
-        "document",
-        "page",
-        "paper"
-      ]
-    },
-    {
       "match": "^file-search$",
       "terms": [
         "parse",
@@ -1011,25 +2530,6 @@
         "find",
         "read",
         "extract"
-      ]
-    },
-    {
-      "match": "^file-spreadsheet$",
-      "terms": [
-        "excel",
-        "csv",
-        "table",
-        "sheet",
-        "numbers"
-      ]
-    },
-    {
-      "match": "^file-text$",
-      "terms": [
-        "note",
-        "article",
-        "txt",
-        "readme"
       ]
     },
     {
@@ -1092,32 +2592,6 @@
       ]
     },
     {
-      "match": "^flower$",
-      "terms": [
-        "nature",
-        "plant",
-        "bloom",
-        "spring",
-        "rose"
-      ]
-    },
-    {
-      "match": "^folder",
-      "terms": [
-        "directory",
-        "files",
-        "storage"
-      ]
-    },
-    {
-      "match": "^folders$",
-      "terms": [
-        "directories",
-        "library",
-        "workspace"
-      ]
-    },
-    {
       "match": "^footprints$",
       "terms": [
         "blocking",
@@ -1140,38 +2614,6 @@
       ]
     },
     {
-      "match": "^fullscreen$",
-      "terms": [
-        "expand",
-        "maximize",
-        "full screen",
-        "enlarge",
-        "zoom in"
-      ]
-    },
-    {
-      "match": "^fullscreen-exit$",
-      "terms": [
-        "minimize",
-        "collapse",
-        "shrink",
-        "exit full screen",
-        "zoom out"
-      ]
-    },
-    {
-      "match": "^gallery-",
-      "note": "The family, so every member answers to these.",
-      "terms": [
-        "carousel",
-        "slideshow",
-        "slider",
-        "album",
-        "photos",
-        "frames"
-      ]
-    },
-    {
       "match": "^gauge$",
       "terms": [
         "speed",
@@ -1183,111 +2625,12 @@
       ]
     },
     {
-      "match": "^gift$",
-      "terms": [
-        "present",
-        "reward",
-        "birthday",
-        "bonus"
-      ]
-    },
-    {
-      "match": "^git-",
-      "terms": [
-        "version control",
-        "repository",
-        "source control",
-        "vcs"
-      ]
-    },
-    {
-      "match": "^git-graph$",
-      "terms": [
-        "history",
-        "log",
-        "timeline"
-      ]
-    },
-    {
-      "match": "^git-pull-request",
-      "terms": [
-        "pr",
-        "review",
-        "merge request"
-      ]
-    },
-    {
-      "match": "^globe",
-      "terms": [
-        "world",
-        "internet",
-        "web",
-        "language",
-        "international"
-      ]
-    },
-    {
       "match": "^google-logo$",
       "terms": [
         "google",
         "sign in",
         "oauth",
         "login"
-      ]
-    },
-    {
-      "match": "^grid-",
-      "terms": [
-        "grid",
-        "layout",
-        "tiles",
-        "cells",
-        "table",
-        "gallery",
-        "matrix",
-        "columns",
-        "rows"
-      ],
-      "note": "Named columns x rows. There is no bare `grid`: the word said nothing about which one, and it reaches the family through the name anyway."
-    },
-    {
-      "match": "^grid-(circles|squares)(-x|-check)?$",
-      "note": "A grid of shapes reads as a group or a selection long before anyone types its drawing.",
-      "terms": [
-        "group",
-        "select",
-        "selection",
-        "multiple",
-        "batch",
-        "items",
-        "grid",
-        "all"
-      ]
-    },
-    {
-      "match": "^grip-",
-      "note": "The words for what it does. Nobody types `grip` first.",
-      "terms": [
-        "drag",
-        "drag handle",
-        "handle",
-        "grab",
-        "reorder",
-        "resize",
-        "dots"
-      ]
-    },
-    {
-      "match": "^hammer$",
-      "terms": [
-        "mallet",
-        "claw hammer",
-        "tool",
-        "build",
-        "construct",
-        "nail",
-        "hit",
-        "repair"
       ]
     },
     {
@@ -1303,15 +2646,6 @@
       ]
     },
     {
-      "match": "^handbag$",
-      "terms": [
-        "purse",
-        "bag",
-        "shopping",
-        "store"
-      ]
-    },
-    {
       "match": "^hash$",
       "terms": [
         "guides",
@@ -1322,24 +2656,6 @@
         "pound",
         "hashtag"
       ]
-    },
-    {
-      "match": "^heart-hand$",
-      "terms": [
-        "hand heart",
-        "love",
-        "send love",
-        "donate",
-        "charity",
-        "care",
-        "support",
-        "give",
-        "giving",
-        "volunteer",
-        "kindness",
-        "gratitude"
-      ],
-      "note": "Base-first like every compound here, and `heart` is the base that actually exists. `hand heart` is the word order people arrive with."
     },
     {
       "match": "^high-definition$",
@@ -1366,15 +2682,6 @@
       ]
     },
     {
-      "match": "^home$",
-      "terms": [
-        "house",
-        "dashboard",
-        "start",
-        "main"
-      ]
-    },
-    {
       "match": "^id-card$",
       "terms": [
         "members",
@@ -1393,15 +2700,6 @@
         "retouch",
         "picture edit",
         "画面编辑"
-      ]
-    },
-    {
-      "match": "^info$",
-      "terms": [
-        "information",
-        "help",
-        "about",
-        "details"
       ]
     },
     {
@@ -1485,18 +2783,6 @@
       ]
     },
     {
-      "match": "^layout-dashboard$",
-      "terms": [
-        "dashboard",
-        "layout",
-        "widgets",
-        "tiles",
-        "overview",
-        "panels",
-        "admin"
-      ]
-    },
-    {
       "match": "^layout-tidy$",
       "terms": [
         "tidy",
@@ -1511,55 +2797,12 @@
       ]
     },
     {
-      "match": "^lightbulb",
-      "note": "The bulb is reached for as an idea, not as a lamp.",
-      "terms": [
-        "idea",
-        "tip",
-        "hint",
-        "insight",
-        "suggestion",
-        "learn",
-        "light",
-        "inspiration"
-      ]
-    },
-    {
-      "match": "^lightbulb-on$",
-      "terms": [
-        "bright",
-        "eureka",
-        "shine",
-        "lit",
-        "on"
-      ]
-    },
-    {
-      "match": "^link$",
-      "terms": [
-        "url",
-        "chain",
-        "hyperlink",
-        "connect",
-        "attach"
-      ]
-    },
-    {
       "match": "^linkedin-logo$",
       "terms": [
         "linkedin",
         "share",
         "social",
         "professional"
-      ]
-    },
-    {
-      "match": "^list",
-      "terms": [
-        "items",
-        "index",
-        "rows",
-        "todo"
       ]
     },
     {
@@ -1573,14 +2816,6 @@
       ]
     },
     {
-      "match": "^list-music$",
-      "terms": [
-        "playlist",
-        "queue",
-        "tracks"
-      ]
-    },
-    {
       "match": "^list-ordered$",
       "terms": [
         "numbered",
@@ -1589,27 +2824,6 @@
         "steps",
         "sequence",
         "ranking"
-      ]
-    },
-    {
-      "match": "^list-video$",
-      "terms": [
-        "playlist",
-        "queue",
-        "videos",
-        "watch later",
-        "episodes"
-      ]
-    },
-    {
-      "match": "^loader$",
-      "terms": [
-        "spinner",
-        "loading",
-        "busy",
-        "wait",
-        "progress",
-        "throbber"
       ]
     },
     {
@@ -1632,128 +2846,6 @@
         "stick",
         "align",
         "guide"
-      ]
-    },
-    {
-      "match": "^mail",
-      "terms": [
-        "email",
-        "envelope",
-        "message",
-        "inbox",
-        "letter"
-      ]
-    },
-    {
-      "match": "^mail$",
-      "terms": [
-        "mails"
-      ]
-    },
-    {
-      "match": "^map",
-      "terms": [
-        "location",
-        "place",
-        "address",
-        "gps",
-        "marker",
-        "pin"
-      ]
-    },
-    {
-      "match": "^maximize$",
-      "terms": [
-        "fullscreen",
-        "full screen",
-        "expand",
-        "enlarge",
-        "corners",
-        "resize"
-      ]
-    },
-    {
-      "match": "^megaphone$",
-      "terms": [
-        "bullhorn",
-        "announce",
-        "announcement",
-        "broadcast",
-        "shout",
-        "loudspeaker",
-        "promote",
-        "marketing"
-      ]
-    },
-    {
-      "match": "^menu$",
-      "terms": [
-        "hamburger",
-        "nav",
-        "bars",
-        "burger"
-      ]
-    },
-    {
-      "match": "^mic$",
-      "terms": [
-        "microphone",
-        "voice",
-        "record",
-        "speak"
-      ]
-    },
-    {
-      "match": "^minimize$",
-      "terms": [
-        "exit fullscreen",
-        "shrink",
-        "collapse",
-        "restore",
-        "corners",
-        "resize"
-      ]
-    },
-    {
-      "match": "^minus$",
-      "terms": [
-        "remove",
-        "subtract",
-        "less",
-        "collapse",
-        "hide"
-      ]
-    },
-    {
-      "match": "^monitor",
-      "terms": [
-        "screen",
-        "display",
-        "desktop",
-        "computer",
-        "tv",
-        "workstation"
-      ]
-    },
-    {
-      "match": "^monitor-off$",
-      "terms": [
-        "screen off",
-        "display off",
-        "stop sharing",
-        "no display",
-        "presentation off"
-      ]
-    },
-    {
-      "match": "^more-",
-      "terms": [
-        "ellipsis",
-        "dots",
-        "options",
-        "overflow",
-        "kebab",
-        "meatball"
       ]
     },
     {
@@ -1792,68 +2884,6 @@
       ]
     },
     {
-      "match": "^move$",
-      "terms": [
-        "drag",
-        "pan",
-        "translate",
-        "position",
-        "reposition",
-        "arrows"
-      ]
-    },
-    {
-      "match": "^music-note$",
-      "terms": [
-        "song",
-        "track",
-        "audio",
-        "media"
-      ]
-    },
-    {
-      "match": "^navigation$",
-      "terms": [
-        "direction",
-        "gps",
-        "heading",
-        "travel"
-      ]
-    },
-    {
-      "match": "^octagon-alert$",
-      "terms": [
-        "stop",
-        "error",
-        "danger",
-        "critical",
-        "blocked"
-      ]
-    },
-    {
-      "match": "^octagon-x$",
-      "note": "The error mark, which is what a toast reaches for. `stop` is the sign the shape comes from.",
-      "terms": [
-        "error",
-        "failed",
-        "failure",
-        "stop",
-        "cancel",
-        "abort",
-        "destructive"
-      ]
-    },
-    {
-      "match": "^package$",
-      "terms": [
-        "box",
-        "delivery",
-        "shipping",
-        "parcel",
-        "product"
-      ]
-    },
-    {
       "match": "^paintbrush$",
       "terms": [
         "brush",
@@ -1887,16 +2917,6 @@
       ]
     },
     {
-      "match": "^panel",
-      "terms": [
-        "sidebar",
-        "layout",
-        "drawer",
-        "dock",
-        "split"
-      ]
-    },
-    {
       "match": "^panorama$",
       "terms": [
         "360",
@@ -1905,49 +2925,6 @@
         "spherical",
         "vr",
         "environment"
-      ]
-    },
-    {
-      "match": "^paperclip$",
-      "terms": [
-        "attach",
-        "attachment",
-        "clip"
-      ]
-    },
-    {
-      "match": "^pause$",
-      "terms": [
-        "media",
-        "player",
-        "hold",
-        "suspend"
-      ]
-    },
-    {
-      "match": "^pencil-ruler$",
-      "note": "Nobody types the compound name; they type what they are doing with it.",
-      "terms": [
-        "design",
-        "draw",
-        "drafting",
-        "measure",
-        "edit",
-        "tools",
-        "ruler",
-        "pencil",
-        "sketch"
-      ]
-    },
-    {
-      "match": "^percent$",
-      "terms": [
-        "percentage",
-        "discount",
-        "sale",
-        "rate",
-        "interest",
-        "tax"
       ]
     },
     {
@@ -1987,16 +2964,6 @@
       ]
     },
     {
-      "match": "^picture-in-picture$",
-      "terms": [
-        "pip",
-        "inset",
-        "mini player",
-        "floating window",
-        "overlay"
-      ]
-    },
-    {
       "match": "^pin$",
       "note": "The verb: pinned in place, kept at the top. `map-pin` is the place marker and has its own row.",
       "terms": [
@@ -2018,86 +2985,6 @@
       ]
     },
     {
-      "match": "^play$",
-      "terms": [
-        "media",
-        "player",
-        "start",
-        "resume",
-        "video"
-      ]
-    },
-    {
-      "match": "^plug$",
-      "note": "The software sense outweighs the wall socket: this is what an integration is drawn with.",
-      "terms": [
-        "plugin",
-        "integration",
-        "connect",
-        "connection",
-        "socket",
-        "adapter",
-        "extension",
-        "power"
-      ]
-    },
-    {
-      "match": "^plus$",
-      "terms": [
-        "add",
-        "new",
-        "create",
-        "increase",
-        "more"
-      ]
-    },
-    {
-      "match": "^podcast$",
-      "terms": [
-        "broadcast",
-        "radio",
-        "rss",
-        "episode",
-        "audio show"
-      ]
-    },
-    {
-      "match": "^podium",
-      "terms": [
-        "ranking",
-        "leaderboard",
-        "places",
-        "standings",
-        "results",
-        "winner",
-        "first second third"
-      ]
-    },
-    {
-      "match": "^power(-off)?$",
-      "terms": [
-        "on",
-        "off",
-        "shutdown",
-        "restart",
-        "standby",
-        "boot",
-        "switch"
-      ]
-    },
-    {
-      "match": "^progress",
-      "terms": [
-        "loading",
-        "status",
-        "completion",
-        "percent",
-        "ring",
-        "spinner",
-        "loader"
-      ]
-    },
-    {
       "match": "^puzzle$",
       "terms": [
         "skill",
@@ -2107,44 +2994,6 @@
         "piece",
         "jigsaw",
         "integration"
-      ]
-    },
-    {
-      "match": "^question$",
-      "terms": [
-        "help",
-        "ask",
-        "faq",
-        "support",
-        "unknown",
-        "what"
-      ]
-    },
-    {
-      "match": "^queue$",
-      "terms": [
-        "up next",
-        "playlist",
-        "play queue",
-        "now playing"
-      ]
-    },
-    {
-      "match": "^receipt$",
-      "terms": [
-        "invoice",
-        "bill",
-        "order",
-        "payment"
-      ]
-    },
-    {
-      "match": "^record$",
-      "terms": [
-        "media",
-        "capture",
-        "rec",
-        "live"
       ]
     },
     {
@@ -2162,34 +3011,6 @@
         "share",
         "social",
         "snoo"
-      ]
-    },
-    {
-      "match": "^repeat",
-      "note": "The family, so repeat-1 answers to these too.",
-      "terms": [
-        "loop",
-        "replay",
-        "again",
-        "cycle"
-      ]
-    },
-    {
-      "match": "^repeat-1$",
-      "terms": [
-        "loop once",
-        "repeat one",
-        "repeat single",
-        "loop track"
-      ]
-    },
-    {
-      "match": "^rewind$",
-      "terms": [
-        "back",
-        "replay",
-        "seek",
-        "slower"
       ]
     },
     {
@@ -2230,15 +3051,6 @@
         "transform",
         "旋转与镜像",
         "旋转镜像"
-      ]
-    },
-    {
-      "match": "^route$",
-      "terms": [
-        "path",
-        "directions",
-        "journey",
-        "trip"
       ]
     },
     {
@@ -2292,15 +3104,6 @@
         "focus",
         "volume",
         "model"
-      ]
-    },
-    {
-      "match": "^scan-face$",
-      "terms": [
-        "face id",
-        "biometric",
-        "recognition",
-        "identity"
       ]
     },
     {
@@ -2360,16 +3163,6 @@
       ]
     },
     {
-      "match": "^search$",
-      "terms": [
-        "find",
-        "magnifier",
-        "lookup",
-        "query",
-        "zoom"
-      ]
-    },
-    {
       "match": "^send$",
       "terms": [
         "submit",
@@ -2379,50 +3172,6 @@
         "airplane",
         "dispatch",
         "deliver"
-      ]
-    },
-    {
-      "match": "^settings$",
-      "terms": [
-        "gear",
-        "cog",
-        "preferences",
-        "config",
-        "options"
-      ]
-    },
-    {
-      "match": "^shapes",
-      "terms": [
-        "geometry",
-        "objects",
-        "elements",
-        "design"
-      ]
-    },
-    {
-      "match": "^share$",
-      "terms": [
-        "send",
-        "export",
-        "social",
-        "forward"
-      ]
-    },
-    {
-      "match": "^shield",
-      "note": "The family, so the signs inherit it.",
-      "terms": [
-        "security",
-        "secure",
-        "protected",
-        "protection",
-        "safe",
-        "trust",
-        "privacy",
-        "guard",
-        "antivirus",
-        "insurance"
       ]
     },
     {
@@ -2436,75 +3185,12 @@
       ]
     },
     {
-      "match": "^shopping-",
-      "terms": [
-        "buy",
-        "checkout",
-        "ecommerce",
-        "basket",
-        "store",
-        "purchase"
-      ]
-    },
-    {
-      "match": "^shuffle$",
-      "terms": [
-        "random",
-        "mix",
-        "swap",
-        "cross"
-      ]
-    },
-    {
-      "match": "^signal",
-      "terms": [
-        "wifi",
-        "network",
-        "reception",
-        "strength",
-        "cellular"
-      ]
-    },
-    {
-      "match": "^skip-",
-      "terms": [
-        "next",
-        "previous",
-        "track",
-        "media"
-      ]
-    },
-    {
       "match": "^slash$",
       "terms": [
         "line",
         "straight line",
         "diagonal",
         "直线"
-      ]
-    },
-    {
-      "match": "^sliders-2-(horizontal|vertical)$",
-      "note": "The knob form, against the plain `sliders-*` equaliser: the thumb is what people are looking for.",
-      "terms": [
-        "range",
-        "knob",
-        "thumb",
-        "adjust",
-        "volume",
-        "settings",
-        "control",
-        "level"
-      ]
-    },
-    {
-      "match": "^smartphone",
-      "terms": [
-        "phone",
-        "mobile",
-        "device",
-        "app",
-        "iphone"
       ]
     },
     {
@@ -2538,14 +3224,6 @@
         "cut",
         "separate",
         "halves"
-      ]
-    },
-    {
-      "match": "^square$",
-      "terms": [
-        "shape",
-        "box",
-        "rectangle"
       ]
     },
     {
@@ -2603,15 +3281,6 @@
       ]
     },
     {
-      "match": "^stop$",
-      "terms": [
-        "media",
-        "player",
-        "halt",
-        "end"
-      ]
-    },
-    {
       "match": "^storyboard$",
       "terms": [
         "shots",
@@ -2620,16 +3289,6 @@
         "frames",
         "scene board",
         "分镜"
-      ]
-    },
-    {
-      "match": "^subtitles$",
-      "terms": [
-        "captions",
-        "cc",
-        "closed captions",
-        "text track",
-        "srt"
       ]
     },
     {
@@ -2653,38 +3312,12 @@
       ]
     },
     {
-      "match": "^tag",
-      "terms": [
-        "label",
-        "price",
-        "category",
-        "badge"
-      ]
-    },
-    {
-      "match": "^tag$",
-      "terms": [
-        "tags"
-      ]
-    },
-    {
       "match": "^telegram-logo$",
       "terms": [
         "telegram",
         "share",
         "social",
         "messenger"
-      ]
-    },
-    {
-      "match": "^terminal",
-      "terms": [
-        "console",
-        "command line",
-        "shell",
-        "cli",
-        "bash",
-        "code"
       ]
     },
     {
@@ -2708,68 +3341,12 @@
       ]
     },
     {
-      "match": "^toolbox$",
-      "note": "The words for what it holds, and the two names other sets use.",
-      "terms": [
-        "tools",
-        "toolkit",
-        "tool box",
-        "kit",
-        "hardware",
-        "build",
-        "repair",
-        "maintenance"
-      ]
-    },
-    {
       "match": "^transition$",
       "terms": [
         "transition",
         "cross dissolve",
         "overlap clips",
         "转场"
-      ]
-    },
-    {
-      "match": "^trending",
-      "terms": [
-        "growth",
-        "decline",
-        "analytics",
-        "stocks",
-        "arrow"
-      ]
-    },
-    {
-      "match": "^triangle-alert$",
-      "terms": [
-        "warning",
-        "caution",
-        "attention",
-        "error",
-        "danger"
-      ]
-    },
-    {
-      "match": "^trophy$",
-      "terms": [
-        "win",
-        "winner",
-        "champion",
-        "prize",
-        "cup",
-        "first place",
-        "achievement",
-        "victory"
-      ]
-    },
-    {
-      "match": "^truck$",
-      "terms": [
-        "delivery",
-        "shipping",
-        "transport",
-        "logistics"
       ]
     },
     {
@@ -2781,25 +3358,6 @@
         "letter",
         "label",
         "caption"
-      ]
-    },
-    {
-      "match": "^upload$",
-      "terms": [
-        "import",
-        "send",
-        "publish",
-        "cloud"
-      ]
-    },
-    {
-      "match": "^user",
-      "terms": [
-        "person",
-        "profile",
-        "account",
-        "avatar",
-        "member"
       ]
     },
     {
@@ -2854,16 +3412,6 @@
       ]
     },
     {
-      "match": "^users$",
-      "terms": [
-        "people",
-        "team",
-        "group",
-        "contacts",
-        "contact"
-      ]
-    },
-    {
       "match": "^video$",
       "terms": [
         "camera",
@@ -2892,16 +3440,6 @@
         "add shot",
         "record",
         "capture"
-      ]
-    },
-    {
-      "match": "^volume",
-      "terms": [
-        "sound",
-        "audio",
-        "speaker",
-        "mute",
-        "loudness"
       ]
     },
     {
@@ -2936,25 +3474,6 @@
       ]
     },
     {
-      "match": "^wifi",
-      "terms": [
-        "wireless",
-        "network",
-        "internet",
-        "connection",
-        "hotspot",
-        "signal"
-      ]
-    },
-    {
-      "match": "^wifi-x$",
-      "terms": [
-        "offline",
-        "disconnected",
-        "no connection"
-      ]
-    },
-    {
       "match": "^windows-logo$",
       "note": "The other half of the download pair.",
       "terms": [
@@ -2985,31 +3504,6 @@
         "edges off",
         "connections hidden",
         "no wires"
-      ]
-    },
-    {
-      "match": "^wrench$",
-      "note": "`spanner` is what half the world calls it, and nobody types `wrench` looking for settings.",
-      "terms": [
-        "spanner",
-        "tool",
-        "fix",
-        "repair",
-        "adjust",
-        "configure",
-        "maintenance",
-        "service"
-      ]
-    },
-    {
-      "match": "^x$",
-      "terms": [
-        "close",
-        "cancel",
-        "dismiss",
-        "exit",
-        "times",
-        "cross"
       ]
     },
     {
@@ -3054,27 +3548,119 @@
         "further",
         "reduce"
       ]
-    },
-    {
-      "match": "dashed-panel$",
-      "terms": [
-        "move to",
-        "drop",
-        "boundary",
-        "edge",
-        "snap"
-      ]
     }
   ],
   "names": {
     "activity": [
       "heart-pulse"
     ],
-    "angle": [
-      "angle-degrees"
+    "captions": [
+      "captions-off",
+      "closed-caption"
     ],
-    "apple-logo": [
-      "apple"
+    "audio-lines": [
+      "audio-lines-off",
+      "audio-lines-x"
+    ],
+    "bookmark": [
+      "bookmark-check",
+      "bookmark-minus",
+      "bookmark-off",
+      "bookmark-plus",
+      "bookmark-x"
+    ],
+    "bluetooth": [
+      "bluetooth-connected",
+      "bluetooth-off",
+      "bluetooth-searching"
+    ],
+    "building": [
+      "building-2"
+    ],
+    "check": [
+      "check-line",
+      "circle-check-big",
+      "square-check-big"
+    ],
+    "copy": [
+      "copy-check",
+      "copy-minus",
+      "copy-slash",
+      "copy-x"
+    ],
+    "flower": [
+      "flower-2"
+    ],
+    "link": [
+      "link-2"
+    ],
+    "loader": [
+      "loader-2",
+      "loader-circle",
+      "loader-pinwheel"
+    ],
+    "maximize": [
+      "maximize-2"
+    ],
+    "megaphone": [
+      "megaphone-off"
+    ],
+    "mic": [
+      "mic-audio-lines",
+      "mic-signal",
+      "mic-vocal"
+    ],
+    "minimize": [
+      "minimize-2"
+    ],
+    "navigation": [
+      "navigation-2",
+      "navigation-2-off"
+    ],
+    "package": [
+      "package-2",
+      "package-check",
+      "package-minus",
+      "package-open",
+      "package-plus",
+      "package-search",
+      "package-x"
+    ],
+    "picture-in-picture": [
+      "picture-in-picture-2"
+    ],
+    "question": [
+      "circle-question-mark"
+    ],
+    "receipt": [
+      "receipt-cent",
+      "receipt-euro",
+      "receipt-indian-rupee",
+      "receipt-japanese-yen",
+      "receipt-pound-sterling",
+      "receipt-russian-ruble",
+      "receipt-swiss-franc",
+      "receipt-text",
+      "receipt-turkish-lira"
+    ],
+    "search": [
+      "search-alert",
+      "search-check",
+      "search-code",
+      "search-slash",
+      "search-x"
+    ],
+    "settings": [
+      "settings-2"
+    ],
+    "share": [
+      "share-2"
+    ],
+    "truck": [
+      "truck-electric"
+    ],
+    "x": [
+      "x-line-top"
     ],
     "archive": [
       "archive-restore",
@@ -3092,14 +3678,6 @@
       "arrow-down-to-line",
       "arrow-down-z-a"
     ],
-    "arrow-down-left": [
-      "circle-arrow-out-down-left",
-      "square-arrow-out-down-left"
-    ],
-    "arrow-down-right": [
-      "circle-arrow-out-down-right",
-      "square-arrow-out-down-right"
-    ],
     "arrow-left": [
       "arrow-big-left",
       "arrow-big-left-dash",
@@ -3114,12 +3692,6 @@
       "square-arrow-right-enter",
       "square-arrow-right-exit"
     ],
-    "arrow-right-left": [
-      "arrows-left-right",
-      "arrows-right-left",
-      "switch-horizontal",
-      "swap-horizontal"
-    ],
     "arrow-up": [
       "a-arrow-up",
       "arrow-big-up",
@@ -3133,34 +3705,11 @@
       "arrow-up-z-a",
       "arrows-up-from-line"
     ],
-    "arrow-up-left": [
-      "circle-arrow-out-up-left",
-      "square-arrow-out-up-left"
-    ],
-    "arrow-up-right": [
-      "circle-arrow-out-up-right",
-      "square-arrow-out-up-right"
-    ],
-    "article": [
-      "newspaper"
-    ],
-    "at": [
-      "at-sign"
-    ],
-    "audio-lines": [
-      "audio-lines-off",
-      "audio-lines-x"
-    ],
-    "badge-check": [
-      "seal-check"
-    ],
     "bar-chart": [
       "chart-bar-big",
       "chart-bar-decreasing",
       "chart-bar-increasing",
-      "chart-bar-stacked",
-      "chart-column",
-      "chart-line"
+      "chart-bar-stacked"
     ],
     "battery": [
       "battery-charging",
@@ -3169,27 +3718,6 @@
     ],
     "bell": [
       "bell-electric"
-    ],
-    "bluetooth": [
-      "bluetooth-connected",
-      "bluetooth-off",
-      "bluetooth-searching"
-    ],
-    "bold": [
-      "text-b"
-    ],
-    "bookmark": [
-      "bookmark-check",
-      "bookmark-minus",
-      "bookmark-off",
-      "bookmark-plus",
-      "bookmark-x"
-    ],
-    "bot": [
-      "robot"
-    ],
-    "building": [
-      "building-2"
     ],
     "calendar": [
       "calendar-1",
@@ -3214,23 +3742,6 @@
     "calendar-x": [
       "calendar-x-2"
     ],
-    "camera-end": [
-      "camera-last",
-      "camera-last-frame"
-    ],
-    "camera-start": [
-      "camera-first",
-      "camera-first-frame"
-    ],
-    "captions": [
-      "captions-off",
-      "closed-caption"
-    ],
-    "check": [
-      "check-line",
-      "circle-check-big",
-      "square-check-big"
-    ],
     "chevrons-left": [
       "chevron-first"
     ],
@@ -3239,28 +3750,6 @@
     ],
     "chevrons-right": [
       "chevron-last"
-    ],
-    "circle-question-mark": [
-      "circle-help",
-      "help-circle",
-      "question-circle",
-      "circle-question",
-      "question"
-    ],
-    "clapperboard": [
-      "film-slate"
-    ],
-    "clip-continue": [
-      "video-extend",
-      "clip-extend"
-    ],
-    "clip-refresh": [
-      "clip-regenerate",
-      "video-refresh",
-      "retake"
-    ],
-    "clipboard": [
-      "clipboard-text"
     ],
     "clock": [
       "clock-alert",
@@ -3284,26 +3773,6 @@
       "cloud-rain-wind",
       "cloud-sun-rain"
     ],
-    "columns-2": [
-      "square-split-horizontal",
-      "split-pane"
-    ],
-    "copy": [
-      "copy-check",
-      "copy-minus",
-      "copy-slash",
-      "copy-x"
-    ],
-    "copy-check": [
-      "copy-success",
-      "copy-done"
-    ],
-    "crosshair": [
-      "locate-fixed"
-    ],
-    "crown": [
-      "crown-simple"
-    ],
     "database": [
       "database-arrow-down",
       "database-arrow-up",
@@ -3315,24 +3784,9 @@
       "database-x",
       "database-zap"
     ],
-    "diamond-plus": [
-      "keyframe-plus"
-    ],
-    "eraser-sparkle": [
-      "magic-eraser",
-      "eraser-magic"
-    ],
     "eye": [
       "eye-closed",
       "eye-dashed"
-    ],
-    "face": [
-      "face-outline",
-      "head",
-      "portrait"
-    ],
-    "facebook-logo": [
-      "facebook"
     ],
     "file": [
       "file-archive",
@@ -3386,21 +3840,8 @@
     "file-plus": [
       "file-plus-corner"
     ],
-    "file-search": [
-      "file-magnifying-glass"
-    ],
     "file-x": [
       "file-x-corner"
-    ],
-    "film": [
-      "film-strip"
-    ],
-    "fingers-move": [
-      "trackpad-pan",
-      "two-finger-move"
-    ],
-    "flower": [
-      "flower-2"
     ],
     "folder": [
       "folder-archive",
@@ -3429,25 +3870,10 @@
     "folder-open": [
       "folder-open-dot"
     ],
-    "frame-corners": [
-      "aspect-ratio"
-    ],
-    "gauge": [
-      "speedometer"
-    ],
-    "globe": [
-      "globe-lock"
-    ],
-    "google-logo": [
-      "google"
-    ],
     "grid-2x2": [
       "grid-2x2-check",
       "grid-2x2-plus",
       "grid-2x2-x"
-    ],
-    "hash": [
-      "hash-straight"
     ],
     "headphones-off": [
       "headphone-off"
@@ -3459,53 +3885,16 @@
       "heart-plus",
       "heart-x"
     ],
-    "high-definition": [
-      "hd"
-    ],
-    "id-card": [
-      "identification-card"
-    ],
     "image": [
       "image-off",
       "image-play",
       "image-upscale"
     ],
-    "image-pen": [
-      "image-edit",
-      "photo-edit"
-    ],
-    "italic": [
-      "text-italic"
-    ],
-    "keyframes": [
-      "timeline-keyframes",
-      "animation-timeline",
-      "keyframe"
-    ],
-    "languages": [
-      "translate"
-    ],
-    "layers": [
-      "stack-simple",
-      "stack"
-    ],
-    "link": [
-      "link-2"
-    ],
-    "link-off": [
-      "link-2-off"
-    ],
-    "linkedin-logo": [
-      "linkedin"
-    ],
-    "list": [
-      "list-bullets"
+    "link-2-off": [
+      "link-off"
     ],
     "list-check": [
       "list-checks"
-    ],
-    "list-ordered": [
-      "list-numbers"
     ],
     "list-plus": [
       "list-filter-plus"
@@ -3514,17 +3903,9 @@
       "list-sort-ascending",
       "list-sort-descending"
     ],
-    "loader": [
-      "loader-2",
-      "loader-circle",
-      "loader-pinwheel"
-    ],
     "lock": [
       "lock-keyhole",
       "lock-keyhole-open"
-    ],
-    "log-out": [
-      "sign-out"
     ],
     "mail": [
       "mail-question-mark",
@@ -3550,12 +3931,6 @@
     "map-pin-x": [
       "map-pin-x-inside"
     ],
-    "maximize": [
-      "maximize-2"
-    ],
-    "megaphone": [
-      "megaphone-off"
-    ],
     "message": [
       "message-circle",
       "message-circle-code",
@@ -3564,8 +3939,18 @@
       "message-circle-more",
       "message-circle-question-mark",
       "message-circle-reply",
-      "message-circle-warning",
-      "message-square",
+      "message-circle-warning"
+    ],
+    "message-check": [
+      "message-circle-check"
+    ],
+    "message-off": [
+      "message-circle-off"
+    ],
+    "message-plus": [
+      "message-circle-plus"
+    ],
+    "message-square": [
       "message-square-code",
       "message-square-dashed",
       "message-square-diff",
@@ -3575,38 +3960,13 @@
       "message-square-quote",
       "message-square-reply",
       "message-square-share",
-      "message-square-text",
       "message-square-warning"
     ],
-    "message-check": [
-      "message-circle-check",
-      "message-square-check"
-    ],
-    "message-dot": [
-      "message-square-dot"
-    ],
-    "message-off": [
-      "message-circle-off",
-      "message-square-off"
-    ],
-    "message-plus": [
-      "message-circle-plus",
-      "message-square-plus"
+    "message-square-lines": [
+      "message-square-text"
     ],
     "message-x": [
-      "message-circle-x",
-      "message-square-x"
-    ],
-    "messages": [
-      "messages-square"
-    ],
-    "mic": [
-      "mic-audio-lines",
-      "mic-signal",
-      "mic-vocal"
-    ],
-    "minimize": [
-      "minimize-2"
+      "message-circle-x"
     ],
     "monitor": [
       "monitor-check",
@@ -3620,42 +3980,6 @@
       "monitor-speaker",
       "monitor-up",
       "monitor-x"
-    ],
-    "mouse": [
-      "mouse-scroll",
-      "mouse-wheel"
-    ],
-    "mouse-drag": [
-      "mouse-pan"
-    ],
-    "mouse-left": [
-      "mouse-left-click"
-    ],
-    "mouse-move": [
-      "mouse-drag"
-    ],
-    "move": [
-      "arrows-out-cardinal"
-    ],
-    "navigation": [
-      "navigation-2",
-      "navigation-2-off"
-    ],
-    "package": [
-      "package-2",
-      "package-check",
-      "package-minus",
-      "package-open",
-      "package-plus",
-      "package-search",
-      "package-x"
-    ],
-    "paintbrush": [
-      "paint-brush"
-    ],
-    "paintbrush-sparkle": [
-      "paintbrush-magic",
-      "magic-brush"
     ],
     "panel-bottom": [
       "panel-bottom-open"
@@ -3676,34 +4000,6 @@
     "pen": [
       "pen-tool"
     ],
-    "perspective-video": [
-      "stage-camera",
-      "director-desk"
-    ],
-    "picture-in-picture": [
-      "picture-in-picture-2"
-    ],
-    "pinch": [
-      "trackpad-zoom",
-      "pinch-zoom"
-    ],
-    "question": [
-      "circle-question-mark"
-    ],
-    "receipt": [
-      "receipt-cent",
-      "receipt-euro",
-      "receipt-indian-rupee",
-      "receipt-japanese-yen",
-      "receipt-pound-sterling",
-      "receipt-russian-ruble",
-      "receipt-swiss-franc",
-      "receipt-text",
-      "receipt-turkish-lira"
-    ],
-    "reddit-logo": [
-      "reddit"
-    ],
     "refresh-ccw": [
       "refresh-ccw-dot"
     ],
@@ -3719,68 +4015,9 @@
       "rotate-ccw-key",
       "rotate-ccw-square"
     ],
-    "rotate-ccw-square": [
-      "rotate-square-left"
-    ],
-    "rotate-corner-bottom-left": [
-      "rotate-cursor-bottom-left"
-    ],
-    "rotate-corner-bottom-right": [
-      "rotate-cursor-bottom-right"
-    ],
-    "rotate-corner-top-left": [
-      "rotate-cursor-top-left"
-    ],
-    "rotate-corner-top-right": [
-      "rotate-cursor-top-right"
-    ],
     "rotate-cw": [
       "rotate-cw-fading-clock",
       "rotate-cw-square"
-    ],
-    "rotate-cw-square": [
-      "rotate-square-right"
-    ],
-    "rotate-mirror": [
-      "rotate-flip",
-      "transform"
-    ],
-    "save": [
-      "floppy-disk"
-    ],
-    "scale-frame": [
-      "scale",
-      "resize-corner"
-    ],
-    "scaling": [
-      "resize"
-    ],
-    "scan-cube": [
-      "cube-focus"
-    ],
-    "scan-text": [
-      "text-scan",
-      "ocr"
-    ],
-    "scissors-sparkle": [
-      "scissors-magic",
-      "scissors-ai"
-    ],
-    "scribble": [
-      "squiggle",
-      "pencil-line"
-    ],
-    "search": [
-      "search-alert",
-      "search-check",
-      "search-code",
-      "search-slash",
-      "search-x"
-    ],
-    "send": [
-      "paper-plane-right",
-      "paper-plane",
-      "send-horizontal"
     ],
     "server": [
       "server-cog",
@@ -3788,21 +4025,12 @@
       "server-off",
       "server-plus"
     ],
-    "settings": [
-      "settings-2"
-    ],
-    "share": [
-      "share-2"
-    ],
     "signal": [
       "signal-zero"
     ],
     "smartphone": [
       "smartphone-charging",
       "smartphone-nfc"
-    ],
-    "smile": [
-      "smiley"
     ],
     "square-dashed": [
       "square-dashed-bottom",
@@ -3812,18 +4040,6 @@
       "square-dashed-text",
       "square-dashed-top-solid"
     ],
-    "square-dashed-plus": [
-      "selection-plus"
-    ],
-    "square-dashed-slash": [
-      "selection-slash"
-    ],
-    "square-dashed-square": [
-      "selection-foreground"
-    ],
-    "squares-unite": [
-      "unite-square"
-    ],
     "star": [
       "star-check",
       "star-half",
@@ -3831,10 +4047,6 @@
       "star-off",
       "star-plus",
       "star-x"
-    ],
-    "subtitles-off": [
-      "subtitles-slash",
-      "captions-off"
     ],
     "sun": [
       "sun-dim",
@@ -3845,22 +4057,6 @@
     "tag": [
       "tag-plus",
       "tag-x"
-    ],
-    "telegram-logo": [
-      "telegram"
-    ],
-    "threads-logo": [
-      "threads"
-    ],
-    "transition": [
-      "clips-overlap",
-      "cross-dissolve"
-    ],
-    "truck": [
-      "truck-electric"
-    ],
-    "type": [
-      "text-t"
     ],
     "unlock": [
       "lock-open"
@@ -3884,52 +4080,21 @@
       "user-star",
       "users-round"
     ],
-    "user-arrow-up": [
-      "user-gear"
-    ],
     "user-check": [
       "user-round-check"
     ],
     "user-minus": [
       "user-round-minus"
     ],
-    "user-pen": [
-      "user-edit",
-      "user-round-pen"
-    ],
     "user-plus": [
       "user-round-plus"
-    ],
-    "user-switch": [
-      "user-swap",
-      "user-arrow-right-left"
     ],
     "user-x": [
       "user-round-x"
     ],
-    "video": [
-      "video-camera"
-    ],
-    "video-audio-lines": [
-      "video-audio",
-      "film-audio-lines"
-    ],
-    "video-plus": [
-      "camera-plus"
-    ],
     "volume": [
       "volume-1",
       "volume-2"
-    ],
-    "wand-sparkles": [
-      "magic-wand",
-      "wand"
-    ],
-    "wechat-logo": [
-      "wechat"
-    ],
-    "whatsapp-logo": [
-      "whatsapp"
     ],
     "wifi": [
       "wifi-cog",
@@ -3937,26 +4102,27 @@
       "wifi-sync",
       "wifi-zero"
     ],
-    "windows-logo": [
-      "windows"
+    "at": [
+      "at-sign"
     ],
-    "x": [
-      "x-line-top"
+    "globe": [
+      "globe-lock"
     ],
-    "x-logo": [
-      "twitter"
+    "arrow-up-left": [
+      "circle-arrow-out-up-left",
+      "square-arrow-out-up-left"
     ],
-    "zap": [
-      "lightning",
-      "bolt"
+    "arrow-down-left": [
+      "circle-arrow-out-down-left",
+      "square-arrow-out-down-left"
     ],
-    "zoom-in": [
-      "magnifying-glass-plus",
-      "search-plus"
+    "arrow-down-right": [
+      "circle-arrow-out-down-right",
+      "square-arrow-out-down-right"
     ],
-    "zoom-out": [
-      "magnifying-glass-minus",
-      "search-minus"
+    "arrow-up-right": [
+      "circle-arrow-out-up-right",
+      "square-arrow-out-up-right"
     ]
   },
   "$names": "Names other sets use for a drawing here, keyed by the drawing. Matched against the whole query, never split into words: these are names, not keywords, and folding `message-square` into a keyword list makes a search for `square` return every message icon."

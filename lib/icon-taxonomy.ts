@@ -36,16 +36,30 @@ const FIGMA_KEYWORDS = (keywords as { keywords: Record<string, string[]> })
  * families of exactly one.
  */
 export const CATEGORIES = [
-  // `refresh` and `rotate` are here because they are arrow glyphs, whatever they
-  // are used for. The anchor is what keeps `git-refresh` in Git below.
+  // The review shelf is empty, which is its resting state. It is opened by
+  // adding a row here that matches the batch by name and sits FIRST, so it
+  // beats each icon's real shelf; every name in it is also listed in its real
+  // category below, so deleting the row files the whole batch at once with no
+  // second edit to forget. That deletion is what "reviewed" means.
+  //
+  // Last closed on 9 Sep 2026, when Zafar passed the twenty-three of v0.6.0:
+  // flame, store, buildings, cpu, graduation-cap, the six books, the wallet,
+  // the card's four signs and the seven currency marks with their circled
+  // halves. `refresh` and `rotate` sit in Arrows because they are arrow glyphs,
+  // whatever they are used for. The anchor is what keeps `git-refresh` in Git.
+  //
+  // Opened 10 Sep 2026 for the fourteen of v0.7.0: the square bubble and its
+  // eight companions, and qr-code, scan, scissors and hourglass; then the first
   {
     label: "Arrows",
-    match: /^(arrow|bracket-arrow|expand|refresh|rotate)/,
+    match: /^(arrow|bracket-arrow|expand|refresh|rotate|move$)/,
     blurb:
       "Direction, movement and resizing, with the brackets, u-turns and dashed panels.",
   },
   // Split out of Arrows on 29 Aug 2026: the sharp matrix doubled every catalog
-  // card, and 104 rows stopped being one readable shelf.
+  // card's cells, and 104 rows, one per name on a card of 60 sets, stopped
+  // being one readable shelf. Media, the next-largest card that day, stood at
+  // 62 names and was left whole; that count is the bar a new shelf clears.
   {
     label: "Chevrons & Carets",
     match: /^(caret|chevron)/,
@@ -65,16 +79,16 @@ export const CATEGORIES = [
     label: "Files",
     // `pen` carries a lookahead so `pencil-*` falls through to Tools below:
     // a pencil-and-ruler is a drawing instrument, not a document.
-    // `book` carries a lookahead too: `bookmark` is a web-scoped action and
-    // belongs in Web below, and an unguarded `book` here would claim it first.
+    // `book` carries a lookahead of its own: `bookmark` is a web-scoped action
+    // and is claimed by Web below, which this category is evaluated before.
     match:
-      /^(file|folder|copy|clipboard|paperclip|bin|archive|pen(?!cil)|(square|circle)-pen|book(?!mark)|save|article)/,
-    blurb: "Documents, folders, copies, the clipboard, the paperclip and the bin.",
+      /^(file|folder|copy|clipboard|paperclip|bin|archive|book(?!mark)|pen(?!cil)|(square|circle)-pen|save|article)/,
+    blurb: "Documents, folders, books, copies, the paperclip and the bin.",
   },
   {
     label: "Time",
-    match: /^(calendar|clock)/,
-    blurb: "Calendars and clocks, with the signs that act on them.",
+    match: /^(calendar|clock|hourglass)/,
+    blurb: "Calendars, clocks and the hourglass, with the signs that act on them.",
   },
   // `at` is anchored inside the group because the bare symbol is the whole
   // name: an unanchored `at` would hand this category every future name that
@@ -82,25 +96,59 @@ export const CATEGORIES = [
   // compounds each is being drawn towards land here too.
   {
     label: "Mail",
-    match: /^(mail|message|bell|inbox|reply|forward|send|at$)/,
-    blurb: "Envelopes, messages, bells and the marks that badge them.",
+    // `send` is here with `forward` and `reply` rather than in Actions: a
+    // paper plane is the verb a message takes, and the family it reads against
+    // is the one it is sent from.
+    match: /^(message-square|messages-square|mail|message|bell|inbox|reply|forward|send|at$)/,
+    blurb: "Envelopes, messages, bells, the paper plane and the marks that badge them.",
+  },
+  {
+    // Money, and what carries it. Split out of Commerce on 9 Sep 2026, when
+    // Zafar asked why a currency mark was filed under shopping. The seven marks
+    // went there on the argument that a shelf of seven reads as a gap beside
+    // Media's 63, and that argument is dead: a drawing sits where it belongs
+    // whatever the count. So the line is what the drawing IS. A euro, a card
+    // and a wallet are money; a cart, a receipt and a parcel are a purchase.
+    //
+    // Evaluated before Commerce, which would otherwise take `credit-card` and
+    // `wallet` on prefixes of its own.
+    label: "Finance",
+    match:
+      /^(badge-)?(dollar-sign|euro|pound-sterling|japanese-yen|indian-rupee|swiss-franc|bitcoin|credit-card|wallet|coins)/,
+    blurb: "The currency marks, the payment cards and the wallet.",
   },
   {
     // `percent` is here rather than with the marks in Actions: the batch that
     // drew it drew the percent tags with it, and a bare `%` reads as a discount
     // next to `coupon` and `tag`, not as a verb. Its containered forms go to
     // Shapes on their prefix like every other contained glyph.
+    //
+    // `briefcase` is filed as the third bag, beside `handbag` and
+    // `shopping-bag`, not because business is commerce: Files is documents,
+    // and one name does not earn a row.
     label: "Commerce",
     match:
-      /^(shopping-|handbag|receipt|credit-card|tag|package|truck|gift|coupon|percent)/,
-    blurb: "Carts, bags, receipts, cards, shipping and the discount marks.",
+      /^(shopping-|handbag|briefcase|receipt|tag|package|truck|gift|coupon|(badge-)?percent|store)/,
+    blurb:
+      "Carts, bags, receipts, shipping, the shopfront, the tags and the discount marks.",
   },
   {
+    // `flag` and `traffic-light` are both road furniture: a marker you plant
+    // and the lights at the junction, next to the routes they sit on.
     label: "Maps",
     // `crosshair` is a locating mark, and the person looking for one is looking
     // where `map-pin` and `compass` are.
-    match: /^(map|compass|building|route|crosshair)/,
-    blurb: "Pins, maps, compasses and routes.",
+    match: /^(map|compass|building|route|flag$|traffic-light|crosshair)/,
+    blurb: "Pins, maps, compasses, routes, flags and the lights at the junction.",
+  },
+  // Opened 11 Sep 2026 with the seven of batch C, the first time the set has
+  // drawn the inside of a building rather than its outline. The `home` icon
+  // stays in Web: that drawing is a navigation glyph, the roof that means "take
+  // me back", where this shelf is the furniture and the fabric.
+  {
+    label: "Home",
+    match: /^(bed|sofa|door|brick-wall)/,
+    blurb: "Beds, seating, doors and the wall behind them.",
   },
   {
     // Ahead of Layout, whose `list` prefix would otherwise claim `list-music`.
@@ -118,7 +166,7 @@ export const CATEGORIES = [
     // wherever the two disagree — the same call the taxonomy makes for `wifi`.
     label: "Media",
     match:
-      /^(storyboard|clip-continue|clip-refresh|keyframes|clip-split|clip-trim|transition|play|pause|stop|record|skip-|fast-forward|rewind|repeat|volume|audio-lines|mic|megaphone|headphones|headset|shuffle|music-note|list-music|list-video|camera|image|cast|subtitles|captions|picture-in-picture|gallery-|podcast|queue|high-definition|clapperboard|film|perspective|video|panorama)/,
+      /^(storyboard|clip-continue|clip-refresh|keyframes|clip-split|clip-trim|transition|play|pause|stop|record|skip-|fast-forward|rewind|repeat|replay|volume|audio-lines|mic|megaphone|headphones|headset|shuffle|music-note|list-music|list-video|camera|image|cast|subtitles|captions|picture-in-picture|gallery-|podcast|queue|film|high-definition|clapperboard|perspective|video|panorama)/,
     blurb:
       "Playback, volume, capture, casting and the sound and image marks.",
   },
@@ -126,18 +174,38 @@ export const CATEGORIES = [
   // bar charts and the signal bars, which is where the design file files it too.
   {
     label: "Charts",
-    match: /^(bar-chart|trending|signal|progress|loader|activity|gauge)/,
-    blurb: "Trends, bar charts, signal strength and activity markers.",
+    match: /^(bar-chart|bars-progress|chart-|trending|signal|progress|loader|activity|gauge)/,
+    blurb: "Trends, bar and column charts, a pyramid, a treemap, signal strength, progress and activity markers.",
   },
-  // `code` sits with `terminal` rather than on a shelf of its own: the label is
-  // the developer surface, and two names do not earn a row in a rail of 18.
+  // Boxes on wires. A diagram says how things relate, where a chart says how
+  // much, so the four of them are their own shelf rather than the tail of
+  // Charts; `chart-diagram` stays with the charts because it is named as one.
   {
+    label: "Diagrams",
+    match: /^diagram-/,
+    blurb: "Boxes on wires: a project, a subtask, and what comes before and after.",
+  },
+  // `code`, `terminal`, `bug` and the `app-*` tiles are the developer surface
+  // of the devices around them, eleven sets today, and they stay here until
+  // this card reaches the count that split Chevrons & Carets out of Arrows.
+  // `app-*` is the tile on a phone's home screen with its badge, so it files
+  // beside `smartphone-check`; the bare tile is `square`, in Shapes, and only
+  // the badged members carry the word. The prefix is anchored for the reason
+  // `at$` gives under Mail: unanchored, `app` would take every future
+  // `apple` or `approve`.
+  {
+    // `bug` is the software bug, so it sits with `code` rather than in a
+    // shelf of creatures the set does not have.
+    // The peripherals joined on 11 Sep 2026 with batch A: a printer, a keyboard,
+    // the USB trident and the drive it plugs in are the same kind of thing as
+    // `plug` and `battery`, which were already here. `calculator` is here for
+    // the same reason and not in Finance: the shelf files by what the drawing
+    // IS, and it is a desk device, not money. `usb` is a prefix, so `usb-drive`
+    // and anything else on that port lands beside it.
     label: "Devices",
-    // `keyboard` is hardware too, and files beside `monitor`: the shelf is
-    // what plugs into the machine, not only the machine.
     match:
-      /^(smartphone|monitor|terminal|database|server|battery|bluetooth|code|plug|keyboard|apple-logo|windows-logo)/,
-    blurb: "Phones, servers, databases, terminals, code and what plugs into them.",
+      /^(smartphone|phone|monitor|terminal|database|server|battery|bluetooth|code|plug|bug|cpu|printer|keyboard|usb|calculator|qr-code|scan(?!-face)|app(?=-|$)|apple-logo|windows-logo)/,
+    blurb: "Phones, handsets, printers, keyboards, servers, databases, terminals, code, processors, bugs, the app tiles, the QR code and the scan frame with what it reads.",
   },
   {
     label: "Pointers",
@@ -147,20 +215,47 @@ export const CATEGORIES = [
     blurb: "Cursors and the states they carry.",
   },
   {
+    // Ahead of Layout, which owns the `align-offset-*` family: those nudge an
+    // object, these set a paragraph. The four alignment names are spelled out
+    // rather than matched on a bare `align`, or the offsets follow them here.
+    // `quote` and its three siblings are here rather than in Mail with the
+    // speech bubbles: a quotation mark is a typographic mark, and the bubble is
+    // the thing it goes inside. `language` is here for the same reason and it is
+    // the one that could have gone to Web — it is an A beside a CJK glyph, so it
+    // is letterforms first and internationalisation second.
+    label: "Text",
+    match:
+      /^(bold|italic|underline|strikethrough|heading|pilcrow|indent|letter-|line-height|text-|type$|quote|language|slash$|align-(?:left|center|right|justify)$)/,
+    blurb: "The quotation marks, the formatting marks, the slash, the alignment stack and what sets a paragraph.",
+  },
+  {
     label: "Layout",
     // `fullscreen` and `fullscreen-exit` sit here with `maximize` and
     // `minimize` for the reason given under Media: brackets and diagonals
     // framing a viewport read as layout, whatever they are used to resize.
-    // Text marks sit with alignment: bold, italic, the type tool and the two
-    // list styles are all ways of laying text out, and the shelf already holds
-    // `align-*` for the same reason.
-    match: /^(panel|layout|grid|list|align|menu|maximize|minimize|fullscreen|columns|rows|browsers|bounding-box|split|type|scan-text|bold|italic|languages|crop|frame-corners)/,
-    blurb: "Panels, lists, alignment, the menu marks and the fullscreen corners.",
+    match:
+      /^(panel|layout|layers|grid|list|align|menu|maximize|minimize|fullscreen|columns|rows|browsers|bounding-box|split|crop|frame-corners)/,
+    blurb: "Panels, layers, lists, alignment, the menu marks and the fullscreen corners.",
   },
   {
     label: "Users",
     match: /^(user|face$|scan-face|id-card|badge-check|person|smile|bot$|footprints)/,
     blurb: "People, accounts and the signs that badge them.",
+  },
+  // Two marks, opened 11 Sep 2026. NOT Users: a Mars glyph is not a person, it
+  // is the sign for one, and a shelf holds what the drawing is. Anchored on
+  // purpose, so it takes a third gender mark and nothing else.
+  {
+    label: "Gender",
+    match: /^(mars|venus)$/,
+    blurb: "The Mars and Venus marks.",
+  },
+  // The faces and the two thumbs. Ahead of Actions so the thumbs are reactions
+  // rather than verbs; a face is not a person and a thumb is not a verb.
+  {
+    label: "Emoji",
+    match: /^(face-|thumbs-)/,
+    blurb: "Faces and the reactions that go with them.",
   },
   {
     // Ahead of Shapes so `triangle-alert`, `octagon-alert` and `info` read as
@@ -168,8 +263,11 @@ export const CATEGORIES = [
     // `star` and `heart` read as marks you set on a thing rather than as the two
     // outlines they happen to be. `eye` is the show/hide operation, next to lock.
     label: "Actions",
+    // `zap` sits here for the reason `lightbulb` does: it is an energy mark you
+    // set on a thing — instant, fast, powered — not a control you operate, and
+    // not the weather. The storm belongs to a cloud, and this bolt has none.
     match:
-      /^(check|double-check|plus|minus|x|more|lock|unlock|shield|download|upload|filter|eye|star|heart|alert|octagon|triangle-alert|info|question|circle-question-mark|lightbulb|ban|pin|thumbs|zap|move|scaling|scale-frame|angle|log-out|bug|flip|sparkle|hash)/,
+      /^(check|double-check|plus|minus|x|more|lock|unlock|key(?:-round|-square)?$|shield|badge|download|upload|filter|eye|star|heart|alert|octagon|triangle-alert|info|question|circle-question-mark|lightbulb|zap|flame|sparkle|ban|pin|move|scaling|scale-frame|angle|log-out|flip|hash)/,
     blurb: "Checks, crosses, pluses, the everyday verbs and the marks that guard a thing.",
   },
   {
@@ -182,9 +280,39 @@ export const CATEGORIES = [
     blurb: "Toggles, sliders and the drag handle.",
   },
   {
+    // A shelf of one, and that is fine: Zafar's rule is that a drawing sits on
+    // the shelf it belongs to whatever the count, so a shelf waits for its
+    // second name rather than the name waiting for a shelf. The mortarboard
+    // spent the v0.6.0 batch in Sport, on the reading that a qualification is
+    // an achievement and belongs beside a trophy; it is a school, and that is
+    // what someone types looking for it.
+    label: "Education",
+    match: /^graduation-cap/,
+    blurb: "The mortarboard.",
+  },
+  {
+    // `crown` is what a winner gets, so it sits with the trophy rather than
+    // with the marks in Actions.
     label: "Sport",
-    match: /^(trophy|award|podium|medal|crown)/,
-    blurb: "Trophies, awards and the places on the podium.",
+    match: /^(trophy|award|podium|medal|crown|flag-chequered)/,
+    blurb: "Trophies, awards, crowns and the places on the podium.",
+  },
+  {
+    // The four of them are the objects, not the act of eating: a mug, a cake, a
+    // bowl and a bottle. `coffee` is filed here rather than beside `store` for
+    // the reason `graduation-cap` left Sport — the line is what the drawing IS.
+    label: "Food & Drink",
+    match: /^(coffee|cake|soup|bottle)/,
+    blurb: "The mug, the cake, the bowl and the bottle.",
+  },
+  {
+    // Ahead of Tools, which would otherwise be the shelf a brush and a roller
+    // fall towards: these make a picture, where a hammer makes a repair. The
+    // roller comes with them rather than with the tools for the same reason a
+    // gallery comes with the images — the thing, not the drawing.
+    label: "Art",
+    match: /^(paint|palette|easel)/,
+    blurb: "The brush, the roller, the palette and the easel.",
   },
   {
     // The shelf follows what the thing is, not what the drawing is made of: a
@@ -193,13 +321,26 @@ export const CATEGORIES = [
     // Prefixes, so the family this is being drawn towards lands here too: a
     // `screwdriver`, a `wrench-plus`.
     label: "Tools",
-    match: /^(toolbox|wrench|hammer|pencil-ruler|screwdriver|pliers|saw|ruler|eraser|broom|magnet|scissors|palette|wand|paintbrush|highlighter|lamp)/,
-    blurb: "The toolbox and what comes out of it.",
+    match:
+      /^(toolbox|wrench|hammer|pencil-ruler|screwdriver|pliers|saw|ruler|scissors|broom|magnet|wand|highlighter|lamp)/,
+    blurb: "The toolbox, the broom and what comes out of them.",
+  },
+  {
+    // Opened 11 Sep 2026 for the two of batch A that no shelf could take. Tools
+    // is "the toolbox and what comes out of it" and neither of these comes out
+    // of one: an eraser and a roll of sticky tape are the desk drawer, which is
+    // where a stapler, a pin, a notebook and a pencil would join them. A shelf
+    // of two is a shelf. `scissors` and `pencil-ruler` are stationery as much
+    // as they are tools and are candidates to move here, which is Zafar's call
+    // rather than one this row makes on its way in.
+    label: "Stationery",
+    match: /^(eraser|tape|stapler|notebook|sticky-note)/,
+    blurb: "The desk drawer: the eraser and the roll of tape.",
   },
   {
     label: "Shapes",
     match:
-      /^(circle|square|rectangle|slash$|scribble|diamond|triangle|shapes|dashed|dice|flower|full|half|quarter|three-quarter|puzzle|cube|scan-cube|squares-unite|layers)/,
+      /^(circle|square|rectangle|scribble|diamond|triangle|shapes|dashed|dice|flower|full|half|quarter|three-quarter|puzzle|cube|scan-cube|squares-unite)/,
     blurb: "Squares, circles, dashes and the progress states drawn from them.",
   },
   {
@@ -208,17 +349,23 @@ export const CATEGORIES = [
     // and a fan of arcs reads as connectivity next to `globe` and `link`, while
     // signal's bars read as a chart. Same reasoning that keeps `activity` out of
     // Media.
+    //
+    // The badged clouds and `cloud-off` are here rather than in Weather, which
+    // follows: the sign is inside the cloud, so they read as the state of a
+    // sync, and the person looking for one is looking where `globe-check` and
+    // `wifi-x` are. `cloud` and `cloud-rain` stay weather.
     label: "Web",
-    // The brand marks file here: every one of them is a place to sign in with
-    // or share to, which is the web-scoped action this shelf holds.
-    match: /^(globe|link|share|navigation|home|search|settings|bookmark|wifi|zoom|google-logo|facebook-logo|linkedin-logo|reddit-logo|telegram-logo|threads-logo|wechat-logo|whatsapp-logo|x-logo)/,
-    blurb: "Globes, links, connectivity and web-scoped actions.",
+    match:
+      // The brand marks file here: every one of them is a place to sign in with
+      // or share to, which is the web-scoped action this shelf holds.
+      /^(globe|link|unlink|share|navigation|home|search|settings|bookmark|wifi|zoom|cloud-(?:check|x|plus|minus|alert|dot|off|arrow|backup|cog)|google-logo|facebook-logo|linkedin-logo|reddit-logo|telegram-logo|threads-logo|wechat-logo|whatsapp-logo|x-logo)/,
+    blurb: "Globes, links, connectivity, sync states and web-scoped actions.",
   },
   {
     // Prefixes rather than exact names, so the compounds this family is being
     // drawn towards land here too: `cloud-rain`, `sunrise`, `moon-star`.
     label: "Weather",
-    match: /^(sun|moon|cloud)/,
+    match: /^(sun|moon|cloud|umbrella|parasol)/,
     blurb: "Sun, moon, cloud and the states between them.",
   },
 ] as const

@@ -1,3 +1,7 @@
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<<<<<<< HEAD
 <path d="M12 1L12 21.7302M21.7071 12.2929L12 22L2.2929 12.2929" stroke="black" stroke-width="2" stroke-linecap="butt" stroke-linejoin="round"/>
+=======
+<path d="M4.7008 11.8289L12 19L19.2992 11.8289M12 4L12 18.7302" stroke="black" stroke-width="2" stroke-linecap="butt" stroke-linejoin="round"/>
+>>>>>>> upstream/main
 </svg>

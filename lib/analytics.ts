@@ -66,10 +66,16 @@ export type Events = {
    * A search that matched nothing, once the typing stopped.
    *
    * `elsewhere` is how many icons the same words would have found in another
-   * style, and `suggestion` the spelling correction offered. Both separate the
+   * style, `hidden` how many the shape or category filter kept off the grid,
+   * and `suggestion` the spelling correction offered. All three separate the
    * two ways this event happens: the set has the drawing and the filters hid
    * it, or the set does not have the drawing at all. Only the second is a
    * request for work.
+   *
+   * `hidden` was added after the first month's export, when a search under
+   * a shape filter was found to report `elsewhere: 0` over drawings the set
+   * has, because that count only looks across styles. Without it the list of
+   * what to draw next is padded with drawings the set already has.
    */
   search_empty: {
     query: string
@@ -79,27 +85,38 @@ export type Events = {
     private: boolean
     category: string
     elsewhere: number
+    hidden: number
     suggestion: string | null
   }
   /**
-   * The share menu was opened.
+   * The share dialog was opened.
    *
    * Counted separately from the click, because the two answer different
    * questions: how many readers reach for it at all, against how many follow
-   * through once they see the five networks. A menu opened and abandoned is the
-   * more common outcome and the one a click-only count cannot see.
+   * through once they see the five networks. A dialog opened and abandoned is
+   * the more common outcome and the one a click-only count cannot see.
    */
   share_open: { page: string }
   /**
-   * A share row was followed out to a network's composer.
+   * A network was followed out to its composer.
    *
    * `network` is the target's own id, so the counts line up with
    * `SHARE_TARGETS` rather than with a label someone may reword. `page` is
-   * where the reader was when they shared, not what they shared: every row
-   * posts the site's front door whatever page it is opened from, so the
-   * pathname says which page persuaded them.
+   * where the reader was when they shared, not what they shared: every network
+   * is handed the site's front door whatever page the dialog is opened from, so
+   * the pathname says which page persuaded them.
    */
   share_click: { network: string; page: string }
+  /**
+   * The link went to the clipboard from the share dialog.
+   *
+   * A sixth outcome beside the five networks, and the one that cannot be seen
+   * anywhere else: a link pasted into a group chat leaves no referrer worth
+   * reading, so without this the share dialog looks abandoned every time it
+   * worked. `page` only, for the reason `share_click` carries it, and nothing
+   * about what was copied, because what was copied is a constant.
+   */
+  share_copy: { page: string }
   /** An install command was copied, from the install page or the landing one. */
   install_copy: {
     manager: PackageManager

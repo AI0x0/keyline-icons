@@ -772,6 +772,33 @@ function catalogSheet(icons, totals, release) {
 const esc = (t) =>
   t.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
 
+/**
+ * Whether a release entry draws its strips on this board, or only names them.
+ *
+ * Only the newest release does, since 10 Sep 2026. Paper puts a ceiling on a
+ * file, and the day v0.7.0 was cut the file answered every call, reads
+ * included, with "Your file is too large. Further changes will result in data
+ * loss. Please start a new file." The changelog sheet had grown to 445KB with
+ * the 73 drawings of that release on top of every earlier one, and the file
+ * was carrying 3.7MB of boards. Zafar's call, against starting a new file:
+ * *"we can drop the icons from other releases except for the last one"*.
+ *
+ * So an older entry keeps its heading, its date, its note and its counts, and
+ * its sentence ends in a full stop instead of leading into a strip. Nothing is
+ * deleted from the record: `/changelog` and the Figma page go on showing every
+ * drawing of every release, and this board says where. The cut moves forward
+ * on its own, because `current` is whichever entry is newest when the sheet is
+ * built.
+ */
+const drawn = (entry) => entry.current
+
+/** The counts sentence, ended as a lead-in where strips follow and closed where they do not. */
+const strip = (entry, sentence) =>
+  drawn(entry) || entry.initial
+    ? sentence
+    : sentence.replace(/:$/, ".") +
+      ` Every drawing of this release is on ${SITE_LABEL}/changelog.`
+
 function changelogSheet(icons, release) {
   /* "1 drawing", not "1 drawings". The board said the second for years, and a
      release that adds one icon is the common case rather than an edge. */
@@ -857,27 +884,59 @@ function changelogSheet(icons, release) {
    *
    * Same size, same ink, same ground for both halves: the difference between
    * them is the only thing that should differ.
+   *
+   * A sharp pair says so under the name, as `/changelog` does. Two squared-off
+   * drawings captioned with the bare name read as the rounded drawing having
+   * been squared off, and a release spent entirely in the sharp half would be
+   * published as corrections to drawings nobody touched. Rounded carries no
+   * marker: it is what a pair is unless it says otherwise.
    */
-  const redraws = (updated) =>
+  /* The cut moves a diagonal end by 0.414 of a unit and these are drawn at 24,
+     so past the first few the board repeats one picture: 303 pairs whose files
+     differ and whose drawings do not. Six is a row, which reads as a sample.
+     Rounded pairs are never capped — those are corrections that can be seen.
+     It is also what keeps this sheet inside one write: uncapped it reached
+     824KB and 899 drawings against a BUDGET of 40KB, and Paper kept 469 of
+     them without saying so. */
+  const SHARP_SHOWN = 6
+  const redraws = (updated) => {
+    const cornersOf = (r) => r.corners ?? "regular"
+    const sharp = updated.filter((r) => cornersOf(r) === "sharp")
+    const shown = [
+      ...updated.filter((r) => cornersOf(r) !== "sharp"),
+      ...sharp.slice(0, SHARP_SHOWN),
+    ]
+    return (
     `<div style="display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0">` +
-      updated
+      shown
         .map((redraw) => {
+          /* Older copies of `lib/icon-history.json` predate the field, and
+             every pair in them is a rounded one. */
+          const corners = redraw.corners ?? "regular"
+          const style = redraw.style ?? "stroke"
           const face = (art, label) =>
             art
               ? `<div style="display:flex;flex-direction:column;align-items:center;gap:6px">` +
                   `<svg width="${SIZE}" height="${SIZE}" xmlns="http://www.w3.org/2000/svg" ` +
-                  `role="img" aria-label="${redraw.name} ${label}" data-icon="${redraw.name}" ` +
-                  `data-style="${redraw.style ?? "stroke"}" data-corners="regular" ` +
+                  /* The treatment is in the layer name for the reason
+                     `layerName` gives: on the name alone, a sharp cell holding
+                     a rounded drawing is unreportable. */
+                  `role="img" aria-label="${layerName(redraw.name, style, corners)} ${label}" ` +
+                  `data-icon="${redraw.name}" ` +
+                  `data-style="${style}" data-corners="${corners}" ` +
                   `${art.attrs}>${art.body}</svg>` +
                   `<span style="font-size:10px;line-height:1;color:${MUTED}">${label}</span>` +
                 `</div>`
               : ""
           const before = redraw.before ? parse(redraw.before) : null
           /* A drawing committed without visibly moving carries no pair, and
-             what it still has is today's drawing. */
+             what it still has is today's drawing — in this redraw's own
+             treatment, or the caption would say sharp over a rounded tile. */
           const after = redraw.after
             ? parse(redraw.after)
-            : icons.get(redraw.name)?.art?.stroke ?? null
+            : (corners === "sharp"
+                ? icons.get(redraw.name)?.sharp?.stroke
+                : icons.get(redraw.name)?.art?.stroke) ?? null
           return (
             `<div style="display:flex;flex-direction:column;align-items:center;gap:8px;` +
               `width:148px;padding:12px 4px;box-sizing:border-box;border-radius:10px;` +
@@ -890,12 +949,24 @@ function changelogSheet(icons, release) {
                 face(after, "After") +
               `</div>` +
               `<span style="font-size:11px;line-height:1.2;color:${MUTED};` +
-                `text-align:center">${redraw.name}</span>` +
+                `text-align:center">${redraw.name}` +
+                (corners === "sharp" ? ` &middot; sharp` : "") +
+              `</span>` +
             `</div>`
           )
         })
         .join("") +
-    `</div>`
+    `</div>` +
+    /* The count is every sharp correction rather than the remainder behind the
+       cut, for the reason the sharp preview above gives. */
+    (sharp.length > SHARP_SHOWN
+      ? `<p style="margin:12px 0 0;font-size:14px;line-height:1.7">` +
+          `<span style="font-weight:500;text-decoration:underline;` +
+            `text-underline-offset:4px">See all ${sharp.length} in sharp</span>` +
+        `</p>`
+      : "")
+    )
+  }
 
   return (
     `<section style="box-sizing:border-box;width:768px;background:${BG};color:${INK};` +
@@ -908,9 +979,7 @@ function changelogSheet(icons, release) {
         `<div>` +
           `<h1 style="margin:0;font-size:36px;font-weight:600;letter-spacing:-0.8px;color:${HEAD_INK}">Changelog</h1>` +
           `<p style="margin:10px 0 0;font-size:15px;color:${HEAD_MUTED}">` +
-            `Releases, new drawings and announcements, newest first. A drawing ` +
-            `carries a New badge for its first ${NEW_FOR_DAYS} days, whatever ` +
-            `ships in between.` +
+            `Releases, new drawings and announcements, newest first.` +
           `</p>` +
         `</div>` +
         `<div style="display:flex;flex-direction:column;gap:8px;flex-shrink:0">` +
@@ -973,10 +1042,12 @@ function changelogSheet(icons, release) {
             : "") +
           /* Pinned to the release that introduced the treatment rather than to
              whatever carries a note, and it stays there: a changelog only
-             grows, so that entry goes on showing what it announced. */
-          (entry.version === SHARP_RELEASE ? sharpPreview() : "") +
+             grows, so that entry goes on showing what it announced. On this
+             board it is subject to the same cut as every other strip below:
+             see `drawn`. */
+          (entry.version === SHARP_RELEASE && entry.current ? sharpPreview() : "") +
           `<p style="margin:16px 0 0;font-size:14px;line-height:1.7;color:${MUTED}">` +
-            (entry.initial
+            strip(entry, entry.initial
               ? `The first cut of the set: ${entry.count} drawings on one 24 × 24 grid, ` +
                 `at a 2px keyline, built for shadcn/ui and free under the MIT licence, ` +
                 `shipping as SVGs, JSX snippets and React components.`
@@ -1011,8 +1082,8 @@ function changelogSheet(icons, release) {
                   `${entry.previous}, bringing the set to ${entry.count}, and ` +
                   `${entry.updatedNames.length} redrawn:`) +
           `</p>` +
-          (entry.initial || !entry.names.length ? "" : tiles(entry.names)) +
-          (entry.initial || !redrawnIn(entry).length
+          (entry.initial || !entry.names.length || !drawn(entry) ? "" : tiles(entry.names)) +
+          (entry.initial || !redrawnIn(entry).length || !drawn(entry)
             ? ""
             : redraws(redrawnIn(entry)))
         ))
@@ -1233,6 +1304,7 @@ files.set(
          it: one artboard per sheet, in this order, `write_html` with the file's
          contents. Paper's MCP server is local and needs the desktop app open. */
       how: [
+        "The set is split across two Paper files, because Paper's size ceiling is on a whole file and not on a page. SET_PAPER_FILES in lib/site-chrome.ts names them and says which shelves each holds; pipeline/lib/paper-files.mjs turns that into a board-to-file answer. Write a board only into the file it belongs in.",
         "Open the target file in Paper Desktop so its MCP server is listening.",
         "First import: for each sheet in order, create_artboard named `artboard`, then write_html with the file's contents.",
         "Re-import of a board that already exists: do NOT delete it. get_children on the artboard, then write_html with mode: 'replace' targeting its single child. The artboard keeps its id, its name and its canvas position; delete + create_artboard loses the position, and nothing records it.",

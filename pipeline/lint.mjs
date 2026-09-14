@@ -77,6 +77,9 @@ const SHAPE_SIZES = { circle: [22, 22], square: [20, 20], horizontal: [22, null]
  * here to record which drawings are allowed the 16, and why.
  */
 const NARROW = new Set([
+  // A traffic light is a narrow housing: at 18 wide its three lamps float in a
+  // box that reads as a domino.
+  'traffic-light',
   'mic', 'smartphone', 'smartphone-horizontal',
   'smartphone-arrow-down', 'smartphone-arrow-down-left', 'smartphone-arrow-in-down-right',
   'smartphone-arrow-in-right', 'smartphone-arrow-in-up', 'smartphone-arrow-in-up-right',
@@ -210,6 +213,17 @@ const NARROW = new Set([
  *   antenna's ball; stretching the head itself to 22 leaves no room for the ears
  *   to stand off the face, and a ring pressed into the face's own stroke reads
  *   as a solid lump. (2026-09-05.)
+ *
+ * - **`chart-pie`, whose slices are pulled apart.** An exploded pie has no
+ *   slice reaching the rim in every direction, so its box is not the circle's.
+ *   Its three slices of 90, 60 and 210 degrees each slide out along their own
+ *   bisector by `2 / sin(half their own angle)`, which is the only set of
+ *   offsets that puts the house 2 on all three cuts at once; measured off the
+ *   painted silhouette they come to 2.000, 2.000 and 2.000. That fixes the ink
+ *   at `2r + 7.464` wide by `1.866r + 6` tall, so 22 wide caps the radius at
+ *   7.27 and it ships at r = 7: **21.46 by 19.06, centred on its own box.**
+ *   There is no radius that reaches 22 by 18, and no uniform offset that holds
+ *   2 on every cut. The width is the geometry's answer rather than a miss.
  */
 const SIZE_KNOWN = new Set([
   'caret-down', 'caret-left', 'caret-right', 'caret-up', 'check', 'double-check',
@@ -218,12 +232,26 @@ const SIZE_KNOWN = new Set([
   'pause', 'skip-back', 'skip-forward', 'stop',
   'git-commit-horizontal', 'git-commit-vertical',
   'terminal', 'terminal-asterisk',
-  'credit-card', 'octagon-alert', 'octagon-x', 'package', 'settings', 'user', 'x', 'cube', 'x-logo', 'apple-logo', 'reddit-logo',
+  'octagon-alert', 'octagon-x', 'package', 'package-check', 'settings', 'user', 'x',
+  'cube', 'x-logo', 'apple-logo', 'reddit-logo',
   // shield-star is a named badge, not a disc; user-picked at 20 x 20 after the menu-size pass.
   'shield-star',
   'bell', 'paperclip', 'wifi', 'wifi-info', 'wifi-exclamation',
   'repeat', 'repeat-1',
   'arrow-down-left', 'arrow-down-right', 'arrow-up-left', 'arrow-up-right',
+  'chart-pie',
+  // The slash is what sets an `-off` box, not the drawing: it runs corner to
+  // corner and paints 1..23 whatever it negates. `pen-off` reads as a square
+  // only because the pen went full-bleed on the diagonal on 8 Sep and now puts
+  // ink near all four corners — before that the two spare corners were empty
+  // and it fell through to the band. The base is 22 x 22 and the slash is 22
+  // long; there is no 20 available to either of them.
+  'pen-off',
+  // The square bubble is 20 x 20 and its `-off` form paints 1..23 like every
+  // other slashed drawing; the sharp slash's butt corners put ink in all four
+  // corners, so the sharp half classifies as a square where the rounded half
+  // falls through. Same drawing, same box, same reason as `pen-off`.
+  'message-square-off',
 ]);
 const MIN_PAD = 1;
 
@@ -248,7 +276,15 @@ const MIN_PAD = 1;
  * and the allowance cannot grow to cover one.
  */
 const CAP_CORNER = (2 / 2) * (Math.SQRT2 - 1);
-const padFloor = (corners) => (corners === 'sharp' ? MIN_PAD - CAP_CORNER : MIN_PAD);
+// PADDING asks the full unit of sharp again since 5 Sep 2026: every sharp
+// diagonal free end is cut back to its round cap's box (sharp-cap-cut.mjs), so
+// no sharp drawing paints outside its rounded sibling and a padding under 1 is
+// a regression, not the cap being itself. The allowance stays where it was
+// derived for the interior corners below. A hundredth of slack is the
+// converter's four decimals: bookmark, play and triangle-alert carry sharp
+// plates a ten-thousandth inside 1.00, and 0.99 catches every real breach
+// (the shipped overshoot padded 0.586).
+const padFloor = (corners) => (corners === 'sharp' ? MIN_PAD - 0.01 : MIN_PAD);
 /**
  * Allowed difference between opposing paddings.
  *
@@ -267,10 +303,40 @@ const MAX_SKEW = 1;
  *
  * Two are answered: `bell-*` and `user-*` are the documented cases where a
  * narrow body cannot reach its own ink corner, so the modifier sits outside it,
- * and `user`'s body geometry forces H = W/2 + 2 — an odd 19. The rest —
- * `git-graph`, `git-pull-request-arrow`, `terminal-cursor`, `signal-*` and
- * `circle-navigation` — predate the rule and have not been adjudicated. They are
- * silenced, not blessed; see *A fractional extent is almost always a defect*.
+ * and `user`'s body geometry forces H = W/2 + 2 — an odd 19. `git-graph`,
+ * `terminal-cursor` and `signal-*` predate the rule and have not been
+ * adjudicated. They are silenced, not blessed; see *A fractional extent is
+ * almost always a defect*.
+ *
+ * `settings-dot` is NOT here any more, and how it left is the useful part. Its
+ * badge still cannot be inscribed — `app-dot` puts one at (18,6) and `mail-dot`
+ * at (19,17), both inside the base's box, and the gear cannot because of the
+ * hub: a badge clearing the hub's ink by the guide's 2 must sit 2.5 + 1 + 2 + 4
+ * = 9.5 from (12,12), a badge whose ink stays inside 2..22 must sit at (18,6)
+ * or nearer, which is 8.485 away, and at (18,6) it lands 0.985 from the hub.
+ * All true, and all beside the point: the drawing did not need a different
+ * badge, it needed moving. Its extent is 21, so on integer coordinates the
+ * spare 3 units fall 1 and 2 — which is what Zafar reported, 1 at the top and 2
+ * at the bottom. Moved half a unit, it is 1.5 on all four sides and centred.
+ * **An odd extent is not a defence; 21 centres perfectly well on half-units**,
+ * which is what the tier below already said. The bell is a different case and
+ * stays: an inscribed badge at (16,6) sits 2.24 from the dome's shoulder where
+ * it needs 7, which is through the bell rather than beside it, and the bells
+ * are 16 wide against the gear's 20, so they have room to sit off-centre in a
+ * way the gear does not.
+ *
+ * `git-pull-request-arrow` is adjudicated the same day and is NOT a placement
+ * error. Its shaft stands on x=18 and its head is a 2-unit chevron, both the
+ * Git family's standard — `git-return`, `git-compare-arrows` and
+ * `git-pull-request-create-arrow` use the same two. Its right edge falls a unit
+ * short of `git-pull-request`'s only because an arrowhead is 6 units of ink
+ * where a circle is 8. Reaching 22 would mean widening the head past the
+ * family's or shifting the shaft off the family's column, so the extent stays.
+ *
+ * `package-*` joins the answered half on 4 Sep 2026, for the bell-and-user
+ * reason exactly: the parcel's ink stops at 22 and its seam runs down x=12, so
+ * a six-unit sign clearing the seam by 2 cannot start before 15 and cannot end
+ * before 23. One unit outside the body, and no arrangement inside it.
  *
  * `bin` used to be listed here at 18 x 21 with 2/1 padding. It was adjudicated
  * on 16 Aug 2026 and is now 18 x 22 with 3/3/1/1 — the vertical size, centred
@@ -278,7 +344,9 @@ const MAX_SKEW = 1;
  */
 const SKEW_KNOWN = new Set([
   'bell-check', 'bell-dot', 'bell-minus', 'bell-plus', 'bell-x',
-  'circle-navigation', 'git-graph', 'git-pull-request-arrow',
+  'git-graph', 'git-pull-request-arrow',
+  'package-arrow-down', 'package-arrow-left', 'package-arrow-right', 'package-arrow-up',
+  'package-check', 'package-minus', 'package-plus', 'package-x',
   'signal-high', 'signal-low', 'signal-medium', 'terminal-cursor',
   'user', 'user-check', 'user-minus', 'user-plus', 'user-x', 'users',
 ]);
@@ -290,6 +358,30 @@ const SKEW_KNOWN = new Set([
  * carries a muted fill under its own stroke.
  */
 const MIN_ELEMENT_GAP = 2;
+
+/**
+ * The circled currencies, whose letter clears the ring by 1 rather than 2.
+ *
+ * Two units is the daylight between two ELEMENTS, so that a reader can tell
+ * them apart. A container is not a neighbour, it is the frame the drawing sits
+ * in, and the two are never in danger of being read as one thing. Held off by
+ * two, a letterform comes out at about half the well and reads as a mistake
+ * rather than as spacing — which is exactly what Zafar called it on 9 Sep, and
+ * this is his exception, taken deliberately and only for these six.
+ *
+ * The eighteen shipped `circle-` icons that stop at 7 of ink are not evidence
+ * against it: their glyphs are marks — a slash, a chevron, three dots — and a
+ * mark has no counters to keep open. A letter does.
+ */
+const RING_CLEARANCE = new Set([
+  'circle-dollar-sign', 'circle-euro', 'circle-pound-sterling',
+  'circle-japanese-yen', 'circle-indian-rupee', 'circle-swiss-franc',
+  // The badge is a frame too, and its well is 8.06 at the notches against the
+  // circle's 9: the dollar is the one circled mark that clears it by the
+  // letterform's 1 (1.51); the euro (0.79), pound, yen, rupee and franc fall
+  // short and are not drawn. 10 Sep 2026.
+  'badge-dollar-sign',
+]);
 const COINCIDENT = 0.1;
 /** Slack for the spacing measurement itself. Distance is taken between chords
  *  standing in for curves, so an exact 2-unit gap measures a shade under it. */
@@ -471,10 +563,13 @@ const CHEVRON = /^chevrons?-(?:up|down|left|right)(?:-(?:down|right))?$/;
  * - CONSISTENCY assumes a fill is the outline filled to its own edge, which
  *   holds only when the outline already encloses the shape. A solid built from
  *   an open arc has to close it, so it covers more ground than the outline.
- * - CENTERING measures padding on all four sides. On the open side the box
- *   stops where the outline stops rather than where the container would be, so
- *   it reports the gap as a glyph pushed to one side. `circle-navigation` reads
- *   as centred because the eye completes the arc; the box cannot.
+ * CENTERING used to be exempted here too, on the argument that the eye
+ * completes the arc where the box cannot. That was wrong twice over: the box is
+ * what sits in a row of neighbours, and `square-navigation` was even all along,
+ * so the exemption only ever covered `circle-navigation` being 22 wide and 20
+ * tall. Zafar called it on 6 Sep 2026 and the drawing moved a unit down, which
+ * is all it needed — 1 2 23 22, even on both axes. CENTERING now applies here
+ * like anywhere else.
  *
  * Named explicitly so nothing else inherits either exemption by accident. The
  * failures these rules exist to catch — a *smaller* fill, a glyph genuinely
@@ -524,6 +619,46 @@ const DASHED_LEVEL = /^(?:circle|square)-dashed-(?:full|half|quarter|three-quart
  * `circle-check` does with its mark.
  */
 const COUNTER = new Set(['at', 'percent']);
+
+/**
+ * Drawings whose fillable region is closed by another of the icon's own
+ * strokes rather than by a closed subpath.
+ *
+ * `flag` is one continuous run — up the pole, along the top wave, down the tip,
+ * back along the bottom — so the pole IS the flag's left edge and the region it
+ * encloses never appears as a closed subpath. Spelling that edge a second time
+ * to close the outline would paint it twice, which is the thing the single run
+ * was drawn to avoid. `podium` reaches the same place from the other side: it
+ * closes its stairs along their own foot, under the ground bar, and so needs no
+ * entry here. Add a name only when the closing edge is genuinely painted by
+ * another part of the same drawing.
+ *
+ * `flag-chequered` is the same drawing with a grid on it, and it joined the list
+ * on 5 Sep 2026 when it was rebuilt on that banner. It had not needed an entry
+ * before because it was built on an older flag whose outline was a closed
+ * subpath and whose pole was drawn separately — which is exactly how the two
+ * came to be different sizes.
+ */
+// `app-*` is the same measurement problem `inheritedFill` fixes for every other
+// corner-sign family, with nowhere to inherit from: the tile they are drawn on
+// is `square`, and a bare `app` would be the first drawing this set ships under
+// two names, and there are none today in either corner style. The form is plainly
+// closed and its fill paints a solid tile, so the measurement is what is wrong.
+// `buildings` joins them for the same reason `flag` did: its outline is one
+// open stroke that runs the ground line twice, once for the low block and once
+// for the tower's own bottom-left corner, so the pair's region is closed by the
+// drawing without any subpath closing.
+//
+// The `book` family closes the same way and for a nicer reason. A book's spine
+// is drawn as a ROLL — a half turn at the foot of the left edge — and that arc
+// passes exactly through the point the outline starts at, so the cover is shut
+// with nothing drawn twice and no `Z`. Opening the path is what buys the roll;
+// a closed subpath would have to repeat the corner it replaces.
+const CLOSED_BY_STROKE = new Set([
+  'flag', 'flag-chequered', 'buildings',
+  'book', 'book-plus', 'book-minus', 'book-check', 'book-x',
+  'app-check', 'app-minus', 'app-plus', 'app-x',
+]);
 
 /**
  * A compound's fillability comes from its base.
@@ -729,7 +864,7 @@ async function main() {
       const floor = padFloor(corners);
       if (g.minPad < floor - EPS)
         add('error', 'PADDING', id, `padding ${g.minPad.toFixed(2)} < ${floor.toFixed(2)} (geometry too close to the edge)`);
-      if (g.skew > MAX_SKEW + EPS && !isLevel(name) && !OPEN_CONTAINER.test(name))
+      if (g.skew > MAX_SKEW + EPS && !isLevel(name))
         add('warn', 'CENTERING', id, `off-centre by ${g.skew.toFixed(3)} units`);
 
       // MAX_SKEW's unit of slack exists for extents that are genuinely odd, and
@@ -749,7 +884,7 @@ async function main() {
       // known rounding artefact and fillet tangents quantise at a similar
       // scale. A real placement error is a whole unit, so nothing is missed in
       // between.
-      if (!isLevel(name) && !OPEN_CONTAINER.test(name) && !SKEW_KNOWN.has(name)) {
+      if (!isLevel(name) && !SKEW_KNOWN.has(name)) {
         for (const [axis, a, b] of [
           ['horizontally', g.pads.left, g.pads.right],
           ['vertically', g.pads.top, g.pads.bottom],
@@ -792,7 +927,11 @@ async function main() {
             add('warn', 'OPTICAL', id,
               `${got.toFixed(2)} units ${axis} — a ${shape} icon is drawn ${want}` +
               (NARROW.has(name) ? ' (narrow: 16 on the short axis)' : ''));
-      } else if (spread < band[0] - EPS)
+      } else if (spread < band[0] - EPS - (corners === 'sharp' ? 2 * (1 - CAP_CORNER) : 0))
+        // A sharp diagonal end is cut back to its disc box, so its chisel face
+        // sits 1 - 0.414 short of where the disc's tip reached along the arm;
+        // a drawing read along its diagonal (`x`) spans up to 1.17 less than
+        // its rounded sibling while painting the same box.
         add('warn', 'OPTICAL', id, `spans ${spread.toFixed(2)} units — below the ${band[0]} floor for ${container(name)} icons`);
       else if (size > band[1] + EPS)
         add('warn', 'OPTICAL', id, `${size.toFixed(2)} units wide — above the ${band[1]} ceiling for ${container(name)} icons`);
@@ -832,11 +971,12 @@ async function main() {
       };
 
       const overlap = closest(els, (g) => g < -EPS);
-      const gap = closest(parts, (g) => g >= -EPS && g < MIN_ELEMENT_GAP - GAP_TOL);
+      const wantGap = RING_CLEARANCE.has(name) ? 1 : MIN_ELEMENT_GAP;
+      const gap = closest(parts, (g) => g >= -EPS && g < wantGap - GAP_TOL);
       if (overlap !== null)
         add('warn', 'SPACING', id, `elements overlap by ${(-overlap).toFixed(2)} units`);
       else if (gap !== null)
-        add('warn', 'SPACING', id, `${gap.toFixed(2)} units between elements — the guide asks for ${MIN_ELEMENT_GAP}`);
+        add('warn', 'SPACING', id, `${gap.toFixed(2)} units between elements — the guide asks for ${wantGap}`);
 
       const offLadder = new Set();
       for (const m of src.matchAll(/<path d="([^"]+)"/g))
@@ -847,6 +987,22 @@ async function main() {
           // drawn: the ladder measures decisions, and this one is a
           // consequence. (2026-08-30, the family re-run.)
           if (style !== 'stroke' && (isLevel(name) || DASHED_LEVEL.test(name)) && Math.abs(radius - 2.5) <= RADIUS_TOL)
+            continue;
+          // A badged drawing's plate turns around the badge on the clearance
+          // circle, whose radius is arithmetic and not a corner: the badge's
+          // ink is 4 across the radius and the guide asks 2 between elements,
+          // so the plate keeps 6. On the rounded treatment that arc meets the
+          // caps' own r=1 arcs and reads as arc-to-arc; on sharp it meets two
+          // butt-cap LINES tangentially, which is the exact shape of a filleted
+          // corner and is measured as one. Derived, like the level solids
+          // above. (2026-09-06, settings-dot's butt-cap cut.)
+          if (style !== 'stroke' && corners === 'sharp' && /-dot$/.test(name) && Math.abs(radius - 6) <= RADIUS_TOL)
+            continue;
+          // `buildings` puts its low block on r=1.5 and the tower on r=2, so
+          // the smaller mass reads lighter. Its plate is that contour offset a
+          // unit, which lands the low corners on 2.5 — the level solids' number
+          // and the level solids' reason. (2026-09-09, his redrawn skyline.)
+          if (style !== 'stroke' && name === 'buildings' && Math.abs(radius - 2.5) <= RADIUS_TOL)
             continue;
           const near = CORNER_RADII.reduce((a, b) => (Math.abs(b - radius) < Math.abs(a - radius) ? b : a));
           if (Math.abs(near - radius) > RADIUS_TOL) offLadder.add(radius.toFixed(2));
@@ -859,8 +1015,18 @@ async function main() {
       // A mark drawn as a short diagonal run measures its own box: squared, the
       // signal family's 2-unit mark spans 2√2. Same allowance, same reason.
       const dotTol = DOT_TOL + (corners === 'sharp' ? 2 * CAP_CORNER : 0);
-      for (const d of dotSizes(src))
+      for (const d of dotSizes(src)) {
+        // A stacked chart's fill voids the SMALLER of the two segments its
+        // rule divides the body's interior into, rather than painting the rule
+        // over a solid where it would be black on black. Those voids come out 2
+        // by 2, 2 by 3 and 3 by 2; only the square one is compact enough to be
+        // read as a dot, and it measures 2√2 across its own box. It is a
+        // segment of a bar, not a dot anybody placed — derived, like the level
+        // solids above. (2026-09-10, his picture of what a stacked fill is.)
+        if (style !== 'stroke' && /^chart-(column|bar)-stacked$/.test(name)
+            && Math.abs(d - 2 * Math.SQRT2) <= dotTol) continue;
         if (!DOT_SIZES.some((s) => Math.abs(s - d) <= dotTol)) offDot.add(d.toFixed(2));
+      }
       if (offDot.size)
         add('warn', 'DOT', id,
           `dot ${[...offDot].sort().join(', ')} units across — the ladder is 2 (mark) or 3 (bead), ` +
@@ -913,7 +1079,7 @@ async function main() {
     // against another, which is only meaningful when the glyph has separable
     // parts (double-check greys one tick). That is a drawing judgement, so a
     // duotone here is accepted rather than required.
-    if (!info.fillable && info.styles.has('fill') && !inheritedFill(set, key))
+    if (!info.fillable && !CLOSED_BY_STROKE.has(name) && info.styles.has('fill') && !inheritedFill(set, key))
       add('warn', 'COVERAGE', key, 'open-stroke glyph has a fill — nothing to fill; fills should come from a container');
 
     // Every style of an icon must occupy the same visual bounds. A solid is the

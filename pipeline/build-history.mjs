@@ -80,8 +80,28 @@ const git = (...args) =>
     maxBuffer: 64 << 20,
   })
 
-/** The style folders, in the order a redraw is looked for. */
+/** The style folders. */
 const STYLES = ["stroke", "duotone", "fill"]
+
+/**
+ * Every file one name has, in the order a redraw is looked for.
+ *
+ * Six of them, not three: a drawing owes the same styles in both corner
+ * treatments, and `icons/sharp/` is as much the icon as `icons/stroke/` is.
+ * A redraw that a reader can see is a redraw whatever folder it happened in.
+ *
+ * **Rounded first, and the order is the whole of the labelling.** `redrawn`
+ * stops at the first file that genuinely differs, so a correction that moved
+ * both treatments shows the rounded pair — the drawing the set is named for
+ * and the one a reader recognises — and sharp is reached only where the three
+ * rounded files are identical across the window. Which is exactly the case
+ * this list was widened for: a change confined to the sharp treatment, whose
+ * pair is the only pair there is.
+ */
+const DRAWINGS = [
+  ...STYLES.map((style) => ({ corners: "regular", style, dir: `icons/${style}` })),
+  ...STYLES.map((style) => ({ corners: "sharp", style, dir: `icons/sharp/${style}` })),
+]
 
 /**
  * One file as a given ref had it, or null where that ref did not carry it.
@@ -164,11 +184,18 @@ const drawings = (ref) =>
  * `to` is null for the unreleased window, whose "after" is the working tree,
  * because that is what has actually been drawn and what the site renders.
  *
- * The style is the first one whose file genuinely differs across the window.
- * A drawing can be committed without changing — a rename, a reformat, a change
- * confined to one style — and printing two identical tiles under "before" and
- * "after" reads as a broken page rather than as a small change. Where nothing
- * differs, the pair is left null and the surfaces fall back to naming it.
+ * The pair is the first of the six files in `DRAWINGS` that genuinely differs
+ * across the window, and `corners` with `style` say which one it is. A drawing
+ * can be committed without changing — a rename, a reformat, a change confined
+ * to one style — and printing two identical tiles under "before" and "after"
+ * reads as a broken page rather than as a small change. Where nothing differs,
+ * the pair is left null and the surfaces fall back to naming it.
+ *
+ * **`corners` is not decoration.** A sharp pair drawn without it reads as a
+ * correction to the rounded drawing, which for the 315 names the diagonal end
+ * cut moved is the opposite of what happened: the rounded drawings are
+ * untouched and the whole change is in the treatment. Every surface that
+ * prints a pair prints the treatment with it.
  *
  * **Null means the window did not open with this drawing**, which makes it an
  * addition rather than a redraw however its dates read. `megaphone` is the
@@ -179,8 +206,8 @@ const drawings = (ref) =>
  */
 const redrawn = (name, from, to) => {
   let existed = false
-  for (const style of STYLES) {
-    const path = `icons/${style}/${name}.svg`
+  for (const { corners, style, dir } of DRAWINGS) {
+    const path = `${dir}/${name}.svg`
     const before = fileAt(from, path)
     if (!before) continue
     existed = true
@@ -194,10 +221,72 @@ const redrawn = (name, from, to) => {
           }
         })()
     if (!after || before === after) continue
-    return { name, style, before: before.trim(), after: after.trim() }
+    return { name, style, corners, before: before.trim(), after: after.trim() }
   }
-  return existed ? { name, style: null, before: null, after: null } : null
+  /* Unreachable from `changedBetween`, which nominates modifications only and
+     so hands this nothing it cannot pair. Kept because it is the honest answer
+     to the question — a drawing the window opened with that did not move — and
+     because the surfaces already draw it, so the day something else nominates
+     a candidate this stays a caption rather than a crash. */
+  return existed
+    ? { name, style: null, corners: null, before: null, after: null }
+    : null
 }
+
+/**
+ * The drawings whose files differ between two refs.
+ *
+ * Candidates used to be nominated from each icon's `updated` date, the window
+ * its *latest* commit falls in. That reads the past wrong the second time a
+ * drawing is corrected: redrawing `credit-card` on 4 September 2026 moved its
+ * date out of v0.3.0's window, so the entry v0.3.0 had already published came
+ * back one redraw shorter and the guard below stopped the build. A date
+ * answers "when was this last touched"; the question here is "what changed
+ * between these two trees", which git answers exactly, once per release, for
+ * about what the heuristic was buying. The same lesson as reading release
+ * membership off `ls-tree` rather than off dates, one level down.
+ *
+ * `to` is null for the unreleased window, and the diff then runs against the
+ * working tree — which is where `redrawn` takes that window's "after" from, so
+ * the two are asking one question. Nominating it off dates instead was the gap
+ * that let a release confined to `icons/sharp/` announce nothing: an icon's
+ * `updated` is read off a log filtered to the three rounded folders, so a
+ * sharp-only commit never moved it and never nominated the name.
+ */
+const changedBetween = (from, to) =>
+  new Set(
+    git(
+      "diff",
+      "--name-only",
+      /*
+       * Modifications only, which is what makes it safe to nominate from all
+       * six folders.
+       *
+       * An added file is not a redraw and has no "before" to put beside the
+       * "after". v0.3.0 *added* a sharp drawing for every name in the set, so
+       * an unfiltered diff over `icons/sharp/` nominates all 629 of them and
+       * `redrawn` finds no pair for the 581 whose rounded files never moved —
+       * every one named with nothing to look at, which is the failure this
+       * function was narrowed to avoid.
+       *
+       * `M` is exactly "both trees carry this file and it differs", which is
+       * the definition of a redraw the entries are built on. Nominating from
+       * it means every candidate has a pair before `redrawn` is even called.
+       */
+      "--diff-filter=M",
+      from,
+      ...(to ? [to] : []),
+      "--",
+      /* Exactly the paths `redrawn` reads, and no others: nominate from what
+         will be compared. */
+      ...DRAWINGS.map((d) => d.dir)
+    )
+      .split("\n")
+      /* The name is the leaf either way — `icons/stroke/bell.svg` is three
+         segments and `icons/sharp/stroke/bell.svg` is four. */
+      .map((path) => path.match(/^icons\/.+\/([^/]+)\.svg$/)?.[1])
+      .filter(Boolean)
+  )
 
 /** The redraws of a window, sorted, with anything the window did not carry dropped. */
 const redraws = (candidates, from, to) =>
@@ -337,6 +426,84 @@ const live = new Set(
     .filter((f) => f.endsWith(".svg"))
     .map((f) => f.slice(0, -4))
 )
+
+/**
+ * The list a container prefix does not make a container.
+ *
+ * The same file `containerOf` in `lib/icons.ts` reads, and every pipeline
+ * script that resolves a base reads it too, so all of them count the set the
+ * same way. `square-full` is a filled square, not a boxed `full`.
+ */
+const NOT_CONTAINERS = new Set(
+  JSON.parse(
+    readFileSync(join(ROOT, "lib", "icon-not-containers.json"), "utf8")
+  ).names
+)
+
+/** `regular` first, then the two boxes, which is the order every surface uses. */
+const CONTAINER_ORDER = ["regular", "square", "circle"]
+
+const containerOf = (name) => {
+  if (NOT_CONTAINERS.has(name)) return "regular"
+  const m = /^(square|circle)-(.+)$/.exec(name)
+  return m && live.has(m[2]) ? m[1] : "regular"
+}
+
+/**
+ * The order each release lists its drawings in, where the design file states one.
+ *
+ * The Figma Changelog page is hand-built, and some of its entries are ordered by
+ * family rather than by name: 0.6.0 opens on the singles and then walks the money
+ * through each base and its circled half. Deriving that is not possible, and the
+ * three surfaces disagreeing about the order of one list is exactly the drift the
+ * generated changelog exists to prevent, so the sequence is read off the design
+ * file and pinned in `lib/icon-release-order.json`.
+ *
+ * Nothing is ever dropped by it. A name the list does not mention is appended in
+ * the derived order and reported, so the entry can only ever gain a drawing from
+ * a stale list, never lose one.
+ */
+const ORDER = JSON.parse(
+  readFileSync(join(ROOT, "lib", "icon-release-order.json"), "utf8")
+).releases
+
+const inFigmaOrder = (version, names) => {
+  const want = ORDER[version]
+  if (!want) return names
+  const have = new Set(names)
+  const out = want.filter((n) => have.has(n))
+  const rest = names.filter((n) => !want.includes(n))
+  if (rest.length) {
+    console.log(
+      `  ${c(33, "!")} ${version}: ${rest.join(", ")} not in lib/icon-release-order.json,` +
+        ` appended. Re-read the Figma entry.`
+    )
+  }
+  return [...out, ...rest]
+}
+
+/**
+ * How a release lists its drawings: by base name, then by container.
+ *
+ * Plain alphabetical order was what this used to be, and it files a containered
+ * name under its prefix — `circle-dollar-sign` lands between `buildings` and
+ * `cpu`, six rows from the `dollar-sign` it is a boxed copy of. Every other
+ * surface keeps the two together: the icon page's container row, the Paper
+ * category boards and the Figma catalogue's cards all read
+ * `dollar-sign, circle-dollar-sign`, and Figma's own changelog entry for v0.6.0
+ * lists each circled half directly under its letter. The changelog was the one
+ * place a container stood on its own, and it is the surface where a reader is
+ * being shown what a release added, which is where the pairing says the most.
+ */
+const byFiling = (a, b) => {
+  const ca = containerOf(a)
+  const cb = containerOf(b)
+  const ba = ca === "regular" ? a : a.slice(ca.length + 1)
+  const bb = cb === "regular" ? b : b.slice(cb.length + 1)
+  return ba === bb
+    ? CONTAINER_ORDER.indexOf(ca) - CONTAINER_ORDER.indexOf(cb)
+    : ba.localeCompare(bb)
+}
 
 /**
  * Everyone who has touched a drawing, once each, with the icons pointing at
@@ -534,11 +701,10 @@ const out =
            * as "0 drawings added", which is true and tells the reader nothing
            * about what they are being asked to upgrade for.
            *
-           * The dates only nominate candidates here, cheaply: a redraw is a
-           * drawing both tags carry whose file differs between them, and
-           * `redrawn` is what settles it. Running it over all 547 names would
-           * be 1,600 subprocesses to answer what two dates rule out in one
-           * pass.
+           * `changedBetween` nominates candidates here: a redraw is a drawing
+           * both tags carry whose file differs between them, and `redrawn` is
+           * what settles it. Running `redrawn` over all 629 names would be
+           * 3,800 subprocesses to answer what one `git diff` rules out.
            */
           /*
            * Nominated off every commit that touched the drawing, not off its
@@ -567,9 +733,10 @@ const out =
           /* Named only where the drawing still exists, since the surfaces draw
              it; `count` below is the whole tree, retired drawings included,
              because that is what the release actually shipped. */
-          const names = [...now]
-            .filter((name) => !was.has(name) && live.has(name))
-            .sort((a, b) => a.localeCompare(b))
+          const names = inFigmaOrder(
+            r.version,
+            [...now].filter((name) => !was.has(name) && live.has(name)).sort(byFiling)
+          )
           return {
             version: r.version,
             date: r.date,
@@ -616,19 +783,31 @@ const out =
         const since = releases.at(-1)
         const was = since ? inventory.get(since.version) : new Set()
         /* "After" is the working tree here rather than a tag, because nothing
-           has tagged it yet. */
+           has tagged it yet — so `changedBetween` diffs the tag against the
+           working tree, and nominates the same window `redrawn` then reads.
+           It used to nominate off `updated` dates, and that column is built
+           from a log filtered to the three rounded folders: a stretch of work
+           spent entirely in `icons/sharp/` moved nobody's date, so the section
+           listed eleven rounded corrections under a note announcing that every
+           sharp diagonal end in the set had been cut back. */
         const updated = redraws(
-          Object.entries(icons)
-            .filter(
-              ([name, h]) => since && was.has(name) && h.updated > since.date
-            )
-            .map(([name]) => name),
+          since
+            ? [...changedBetween(since.tag, null)].filter(
+                (name) => was.has(name) && live.has(name)
+              )
+            : [],
           since?.tag,
           null
         )
-        const names = Object.keys(icons)
-          .filter((name) => !was.has(name))
-          .sort((a, b) => a.localeCompare(b))
+        /* Pinned to the Figma entry the same way a released one is, keyed by
+           the version this work is heading for: the design file lists a batch
+           by family and the other two surfaces ran alphabetical against it. */
+        const names = inFigmaOrder(
+          current,
+          Object.keys(icons)
+            .filter((name) => !was.has(name))
+            .sort(byFiling)
+        )
         /* A note keeps the section alive on its own. Work that adds an axis
            rather than a drawing leaves both lists empty, and returning null
            there would drop the announcement along with them. */

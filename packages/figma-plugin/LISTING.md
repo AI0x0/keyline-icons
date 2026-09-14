@@ -67,14 +67,14 @@ Keyline Icons
 ## Tagline
 
 ```
-585 icons, three styles, rounded or sharp corners. Searchable in Figma and FigJam.
+911 icons, three styles, rounded or sharp corners. Searchable in Figma and FigJam.
 ```
 
 Capped at 100 characters. The line above is 81, so there is still room. A
 shorter alternative if it ever needs one:
 
 ```
-721 icons in three styles, cut rounded or sharp.
+911 icons in three styles, cut rounded or sharp.
 ```
 
 ## Description
@@ -88,19 +88,19 @@ which only ever shows the newest entry. Someone deciding whether to install
 wants to see the set is maintained, and that is what a history says.
 
 ```
-Search 721 icons and drop one on the canvas. No library to publish, no file to duplicate, no plan requirement.
+Search 911 icons and drop one on the canvas. No library to publish, no file to duplicate, no plan requirement.
 
 Three styles
 
-* Stroke: 721 icons, 2px, round caps and joins
-* Duotone: 587 icons, a 40% plate under the line
-* Fill: 535 icons, solid where the glyph has a region to fill
+* Stroke: 911 icons, 2px, round caps and joins
+* Duotone: 739 icons, a 40% plate under the line
+* Fill: 686 icons, solid where the glyph has a region to fill
 
-Two corner treatments, and every drawing has both. Rounded is the keyline the set was drawn on; sharp takes every corner to a true point and ends each stroke square. Coverage is identical, so switching never costs you a drawing. 2,994 SVGs in total.
+Two corner treatments, and every drawing has both. Rounded is the keyline the set was drawn on; sharp takes every corner to a true point and ends each stroke square. Coverage is identical, so switching never costs you a drawing. 4,672 SVGs in total.
 
-56 icons also come in a square- form and 54 in a circle- form, so a container is a search away rather than a second drawing.
+57 icons also come in a square- form and 61 in a circle- form, so a container is a search away rather than a second drawing.
 
-Search knows more than the file names. 601 icons carry curated words, so "south" finds arrow-down, "hamburger" finds menu and "trash" finds bin. Paste a component name straight out of your code and it resolves: CheckCircle2 finds circle-check.
+Search knows more than the file names. 792 icons carry curated words, so "south" finds arrow-down, "hamburger" finds menu and "trash" finds bin. Paste a component name straight out of your code and it resolves: CheckCircle2 finds circle-check.
 
 In a design file an insert arrives as a 24 × 24 frame, which is what makes a row of icons line up. In FigJam it arrives as a group, so FigJam's colour control reaches the drawing instead of painting a box around it. Double-click into one and every path takes its own colour, which is how a gift gets a red box and a yellow bow, and how duotone keeps both of its tones.
 
@@ -112,6 +112,62 @@ keylineicons.com
 github.com/keyline-icons/keyline-icons
 
 Changelog
+
+0.8.0 — 11 September 2026
+33 new drawings, taking the set to 798 names and 4,094 SVGs, and five new shelves. Every one of them came off a month of empty searches on the site: the words people typed and got nothing back for.
+
+* Desk: a printer, a keyboard, a calculator, a USB connector and a drive
+* Files: file-code, file-zip and folder-search
+* Home: three beds, a sofa, both doors and a brick wall
+* Table: coffee, cake, soup and a bottle
+* Art: a brush, a roller, a palette and an easel
+* Others: the Mars and Venus marks, three keys, a stack of coins, a strip of film, an eraser, a roll of tape and a broom
+* Home, Gender, Food & Drink, Art and Stationery opened as shelves of their own, taking categories from 26 to 31
+* The calendar and the phone were redrawn, and the phone's negation slash moved to the other diagonal with it
+
+0.7.0 — 10 September 2026
+71 new drawings, taking the set to 765 names and 3,896 SVGs, and two new shelves. The message family drawn again on a square body, with every sign, badge and slash where the round bubble already puts them; a scan frame with six things to read inside it; twenty-six charts and four diagrams of boxes on wires; seven faces, two thumbs and a badge that carries nine signs.
+
+* Mail: message-square and messages-square, with plus, minus, check, x, lines, dot and off
+* Devices: scan, with line, text, barcode, qr-code, search and eye, and qr-code on its own
+* Charts: twenty-six, sixteen of them on one axis, from column and bar to candlestick, pyramid, waterfall and tree map
+* Diagrams: successor, predecessor, project and subtask, and a progress bar
+* Emoji: seven faces and the two thumbs
+* Badge: the eight-bump badge, carrying check, x, plus, minus, alert, info, question, percent and the dollar
+* Singles: scissors in both bodies, an hourglass, a slash in three bodies and search-slash
+* Emoji and Diagrams opened as shelves of their own, taking categories from 24 to 26
+
+0.6.0 — 9 September 2026
+23 new drawings, taking the set to 692 names and 3,538 SVGs, and two new shelves. The seven currency marks arrive, six of them with a circled half, and those clear the ring by 1 unit rather than the 2 the set asks between elements: a container is the frame a drawing sits in, not a neighbour it has to be told apart from, and at 2 a letterform comes out at about half the well.
+
+* Money: the dollar, euro, pound, yen, rupee, franc and bitcoin marks, six with a circled half
+* Payment: a wallet, and the card with plus, minus, check and x
+* Books: book, with open, plus, minus, check and x
+* Others: a flame, a shopfront, a skyline, a processor and a mortarboard
+* Finance and Education opened as shelves of their own, taking categories from 22 to 24
+
+0.5.0 — 8 September 2026
+35 new drawings, taking the set to 663 names and 3,392 SVGs, and two names put the right way round. link and link-2 had been on each other's drawings since the first release: link is the interlocked diagonal chain now and link-2 the horizontal one with the bar, which is the naming the rest of the set already follows. link-off drew the horizontal chain, which makes it the negated form of link-2, so it is link-2-off — and link-off still finds it in search.
+
+* Text: bold, italic, underline and strikethrough, the four-way alignment stack, the double and single quotation marks in both hands, text-quote and language
+* Links: link-2, link-2-off and unlink, the diagonal chain come apart
+* Messages: phone and phone-off, message-lines, bell-ring, and send with send-horizontal
+* Brightness: sun-dim and sun-medium
+* Others: layers, list, list-ordered, share-2, sparkle, sparkles, zap, zap-off, fullscreen-2 and fullscreen-exit-2
+
+Also redrawn in both treatments: the pen family, the same drawing scaled 10/9 with its band moved from the nib to the cap; clock, now exactly clock-3 with both names kept; and the two sliders, whose rails break at the knob.
+
+0.4.0 — 6 September 2026
+44 new drawings, taking the set to 629 names and 3,250 SVGs, and every sharp diagonal end cut back onto its rounded twin's box. A butt cap on a diagonal reaches further than the round cap it replaces, so 329 icons painted up to 0.414 of a unit wide of where the rounded drawing ends; they sit on the same box now, and the rounded drawings are untouched.
+
+* Search: search and search-2, each with check, list, minus, plus and x
+* Cloud: cloud with alert, check, minus, plus and x
+* Package: package with alert, check, minus, plus, x, and an arrow for each direction
+* App: app with check, dot, minus, plus and x
+* Weather: umbrella, umbrella-off and parasol
+* Others: briefcase, bug, crown, flag, flag-chequered, traffic-light, settings-dot, credit-card-2, move, maximize-2, replay and circle-progress-play
+
+Also redrawn in both treatments: the seven bells, which carry their plate offset into the fills, plus circle-navigation, credit-card, database, git-merge and package.
 
 0.3.0 — 31 August 2026
 Sharp corners, across the whole set. Every drawing gained a squared-off twin, taking the set from 1,497 SVGs to 2,994 over the same 585 names, and the plugin gained a second row to switch between them. Coverage matches rounded exactly, so switching never leaves you without an icon. 48 drawings redrawn in both treatments, mostly the -off family and the level indicators.
@@ -186,7 +242,7 @@ expectation for an icon set. `free icons` overlaps `open source`, and page four
 marks the plugin Free natively.
 
 That leaves the five that actually distinguish it: FigJam support is rare among
-icon plugins, 480 duotone drawings are rare among icon sets, a set that ships
+icon plugins, 739 duotone drawings are rare among icon sets, a set that ships
 every drawing rounded *and* sharp is rarer still, and the rest name the audience
 rather than the artefact.
 
@@ -212,6 +268,113 @@ without a plugin update or a review cycle. A republish is only required when the
 plugin's own code changes, or when the listing copy goes stale, which it does
 every time the counts move. jsDelivr serves the repository, so the drawings have
 to be **pushed** before any of this is true for anyone but you.
+
+### 0.8.0
+
+```
+33 new drawings, taking the set to 798 names and 4,094 SVGs. Every one came off
+a month of empty searches on the site, which is the list of what people typed
+and did not find: a printer, a keyboard and a calculator at the top of it, then
+file types, furniture, food, art tools and keys.
+
+Five shelves opened with them, taking categories from 26 to 31: Home, Gender,
+Food & Drink, Art and Stationery.
+
+The calendar and the phone were redrawn. The calendar's body is a unit taller,
+so its two posts cross the top edge symmetrically rather than standing three
+above it and one inside. The phone is turned over to read earpiece first at the
+top left, and its negation slash turns to the other diagonal with it, because
+the handset now lies along the one that slash used to take.
+```
+
+**A republish is required for the listing**, whose counts moved: the tagline,
+the style bullets, the totals and the category count all changed with the set.
+The plugin's own code did not change.
+
+### 0.7.0
+
+```
+71 new drawings, taking the set to 765 names and 3,896 SVGs. The message family
+drawn again on a square body, with every sign, badge and slash where the round
+bubble already puts them, a scan frame with six things to read inside it,
+twenty-six charts and four diagrams, seven faces, two thumbs and a badge that
+carries nine signs, and a handful of singles: a QR code, scissors in both
+bodies, an hourglass and a slash.
+
+The badge is eight bumps on a radius of 5.5, peaks on the four cardinals, and
+it is a container: it carries the circle's signs verbatim, which is why only
+the dollar of the currency marks clears its well and the others were not
+drawn. Every box in the diagrams takes one corner radius, whatever its width.
+
+Two shelves opened with the batch: Emoji, for the faces and the thumbs, and
+Diagrams. Categories went from 24 to 26.
+```
+
+**A republish is required for the listing**, whose counts moved: the tagline,
+the style bullets, the totals and the category count all changed with the set.
+The plugin's own code did not change.
+
+### 0.6.0
+
+```
+23 new drawings, taking the set to 692 names and 3,538 SVGs. The seven currency
+marks, six of them with a circled half, a wallet and four signs for the payment
+card, six books, and five singles: a flame, a shopfront, a skyline, a processor
+and a mortarboard.
+
+The circled currencies hold 1 unit of daylight against the ring rather than the
+2 the set asks between elements. A container is the frame a drawing sits in, not
+a neighbour it has to be told apart from, and at 2 a letterform comes out at
+about half the well. Bitcoin has no circled half: its four stubs stand outside
+the letter at both ends, and solving them shrinks the B until its own bowls
+carry 1 unit of white instead of 2.
+
+Two shelves opened with the batch: Finance, for the currency marks, the payment
+cards and the wallet, and Education. Categories went from 22 to 24.
+```
+
+**A republish is required for the listing**, whose counts moved: the tagline,
+the style bullets, the totals and the category count all changed with the set.
+The plugin's own code did not change.
+
+### 0.5.0
+
+```
+35 new drawings, taking the set to 663 names and 3,392 SVGs. The formatting
+marks moved onto a Text shelf of their own, with the quotation marks, the
+alignment stack and what sets a paragraph.
+
+Two names changed hands: the diagonal chain is link now and the horizontal one
+link-2, which is the naming the rest of the set already follows, and link-off
+became link-2-off with it. An import of either wants updating.
+
+7 drawings were redrawn in both treatments. Four sharp drawings that painted
+outside their rounded siblings were re-solved rather than exempted.
+```
+
+**A republish is required for the listing** and not for the drawings, which
+reach every user from jsDelivr on their own.
+
+### 0.4.0
+
+```
+44 new drawings, taking the set to 629 names and 3,250 SVGs. Two search
+families, the cloud and package families with the five signs the app tiles
+carry, and the badged icons.
+
+Every sharp diagonal end is cut back onto its rounded twin's box. A butt cap on
+a diagonal reaches further than the round cap it replaces, so 329 icons painted
+up to 0.414 of a unit wide of where the rounded drawing ends; they sit on the
+same box now. The rounded drawings are untouched.
+
+12 drawings were redrawn in both treatments: the seven bells, circle-navigation,
+credit-card, database, git-merge and package.
+```
+
+**No republish is required for the drawings**, which reach every user from
+jsDelivr on their own. It is required for the listing, whose counts moved: the
+tagline, the style bullets and the totals all changed with the set. The plugin's
+own code did not change this time.
 
 ### 0.3.0
 
@@ -391,21 +554,136 @@ Keyline Icons
 ### Description
 
 ```
-721 icons on a 24×24 grid, in three styles and two corner treatments: stroke, duotone and fill, cut rounded or sharp. MIT licensed, free for commercial work, no attribution required.
+911 icons on a 24×24 grid, in three styles and two corner treatments: stroke, duotone and fill, cut rounded or sharp. MIT licensed, free for commercial work, no attribution required.
 
-611 component sets, each with three variant properties, Container, Style and Corners, so you switch between regular, square and circle, between the three styles, and between rounded and sharp, without swapping components. 56 icons carry a square- form and 54 a circle-.
+793 component sets, each with three variant properties, Container, Style and Corners, so you switch between regular, square and circle, between the three styles, and between rounded and sharp, without swapping components. 57 icons carry a square- form and 61 a circle-.
 
-Which styles an icon has is measured rather than chosen: duotone and fill need a fillable region, so an open glyph like bar-chart is stroke-only, and square-bar-chart has all three. That is why the three counts differ: stroke 721, duotone 587, fill 535.
+Which styles an icon has is measured rather than chosen: duotone and fill need a fillable region, so an open glyph like bar-chart is stroke-only, and square-bar-chart has all three. That is why the three counts differ: stroke 911, duotone 739, fill 686.
 
-Every drawing exists in both treatments, so sharp is a switch rather than a second library: 2,994 variants over the same 585 names.
+Every drawing exists in both treatments, so sharp is a switch rather than a second library: 4,672 variants over the same 911 names.
 
-The Catalog page files every icon under one of 21 categories, each card laid out as a matrix so a name's rounded and sharp forms sit side by side, and the Changelog page records what landed in each version, so the file says what is in it without anyone having to count.
+The Catalog page files every icon under one of 31 categories, each card laid out as a matrix so a name's rounded and sharp forms sit side by side, and the Changelog page records what landed in each version, so the file says what is in it without anyone having to count.
 
 Also available as React components, a shadcn registry, an MCP server for agents, a CLI, and a Figma plugin that searches the set and drops an icon straight onto the canvas.
 
 keylineicons.com
 github.com/keyline-icons/keyline-icons
+
+v0.8.0
+33 new drawings, and five new shelves. The set is 798 names now, 681 component sets and 4,094 variants, up from 765 and 3,896. Nothing was renamed and no component was replaced, so instances already placed in your files keep their link.
+
+* Desk: a printer, a keyboard, a calculator, a USB connector and a drive
+* Files: file-code, file-zip and folder-search
+* Home: three beds, a sofa, both doors and a brick wall
+* Table: coffee, cake, soup and a bottle
+* Art: a brush, a roller, a palette and an easel
+* Singles: the Mars and Venus marks, three keys, a stack of coins, a strip of film, an eraser, a roll of tape and a broom
+* Categories went from 26 to 31: Home, Gender, Food & Drink, Art and Stationery took the new drawings that had nowhere honest to sit
+
+Also redrawn: the calendar with its nine compounds, and phone and phone-off. The phone is mirrored so the earpiece reads first at the top left, and its negation slash moved to the other diagonal, because the handset now lies along the one it used to take.
+
+v0.7.0
+71 new drawings under 73 names, and two new shelves. The set is 765 names now, 648 component sets and 3,896 variants, up from 692 and 3,538. Nothing was renamed and no component was replaced, so instances already placed in your files keep their link.
+
+* Mail: the message family on a square body, message-square and messages-square with plus, minus, check, x, lines, dot and off
+* Devices: scan with line, text, barcode, qr-code, search and eye, and a QR code on its own
+* Charts: twenty-six, sixteen of them on one axis, from column and bar to candlestick, pyramid, waterfall and tree map
+* Diagrams: successor, predecessor, project and subtask, and a progress bar
+* Emoji: seven faces and the two thumbs
+* The badge: eight bumps on a radius of 5.5, a container that carries the circle's signs verbatim, check, x, plus, minus, alert, info, question, percent and the dollar
+* Singles: scissors in both bodies, an hourglass, a slash in three bodies and search-slash
+* Categories went from 24 to 26: Emoji took the faces and the thumbs, Diagrams took the boxes on wires off Charts
+
+v0.6.0
+23 new drawings under 29 names, and two new shelves. The set is 692 names now, 577 component sets and 3,538 variants, up from 663 and 3,392. Nothing was renamed and no component was replaced, so instances already placed in your files keep their link.
+
+* The seven currency marks: dollar, euro, pound, yen, rupee, franc and bitcoin, six of them with a circled half
+* Money: a wallet, and the payment card with plus, minus, check and x
+* Books: book, with open, plus, minus, check and x
+* Singles: a flame, a shopfront, a skyline, a processor and a mortarboard
+* The circled currencies clear the ring by 1 rather than the 2 the set asks between elements: a container is a frame, not a neighbour, and at 2 a letterform comes out at about half the well
+* Categories went from 22 to 24: Finance took the currency marks, the payment cards and the wallet off Commerce, and Education took the mortarboard off Sport
+
+v0.5.0
+35 new drawings, and two names put the right way round. The set is 663 names now, 554 component sets and 3,392 variants, up from 629 and 3,250.
+
+* link and link-2 were on each other's drawings and have swapped: link is the interlocked diagonal chain, link-2 the horizontal one with the bar, which is the naming the rest of the set already follows. link-off drew the horizontal chain, which makes it the negated form of link-2, so it is link-2-off now
+* No component was replaced. Every set kept its id through the swap and the rename, so instances already placed in your files keep their link; the two chains now render each other's drawing, and the renamed set shows its new name
+* Text: a shelf of its own, and the file's 22nd category. bold, italic, underline and strikethrough, the four-way alignment stack, the double and single quotation marks in both hands, text-quote and language
+* Links: link-2, link-2-off and unlink, the diagonal chain come apart
+* Messages: phone and phone-off, message-lines, bell-ring, and send with send-horizontal
+* Brightness: sun-dim and sun-medium
+* Others: layers, list, list-ordered, share-2, sparkle, sparkles, zap, zap-off, fullscreen-2 and fullscreen-exit-2
+
+Also redrawn, in both treatments: 7 drawings. The pen family is the same drawing scaled 10/9 with its band moved from the nib to the cap, clock is now exactly clock-3 with both names kept, and the two sliders break their rails at the knob.
+
+v0.4.0
+44 new drawings, and every sharp end squared. The set is 629 names now, 520 component sets and 3,250 variants, up from 585 and 2,994. Nothing was renamed and no component was replaced, so instances already placed in your files keep their link.
+
+* Every sharp diagonal end is cut back onto its rounded twin's box. A butt cap on a diagonal reaches further than the round cap it replaces, so 329 icons painted up to 0.414 of a unit wide of where the rounded drawing ends
+* The rounded drawings are untouched: no rounded file was changed by the cut
+* Search: search and search-2, each with check, list, minus, plus and x
+* Cloud and package: both families take the five signs the app tiles carry, and package adds an arrow for each direction
+* App: check, dot, minus, plus and x
+* Weather: umbrella, umbrella-off and parasol
+* Others: briefcase, bug, crown, flag, flag-chequered, traffic-light, settings-dot, credit-card-2, move, maximize-2, replay and circle-progress-play
+
+Also redrawn, in both treatments: 12 drawings. The seven bells carry their plate offset into the fills, and circle-navigation, credit-card, database, git-merge and package are redrawn with them.
+
+v0.3.0
+Sharp corners, across the whole set. Every drawing now has a squared-off twin, so the file went from 1,497 variants to 2,994 over the same 585 names. Nothing was renamed and no component was replaced, so instances already placed in your files keep their link and pick the new property up.
+
+* Every component set gained a third variant property, Corners, with a regular and a sharp value
+* Sharp takes every corner to a true point and ends each stroke square; coverage matches rounded exactly, so switching a variant never leaves an empty frame
+* The Catalog page is rebuilt as a matrix: one row per name, the three styles under Regular and again under Sharp
+* Categories went from 20 to 21 when the carets and chevrons took a shelf of their own
+
+Also redrawn, in both treatments: 48 drawings, mostly the -off family and the level indicators.
+
+v0.2.0
+39 new drawings, and one rename: tag-horizontal is now tag-horizontal-start, because the batch drew its mirror and neither form is the other's variant. That breaks the React import, which is why this is 0.2.0 and not 0.1.5.
+
+* Security: shield, with check, plus, minus and x
+* Tools: toolbox, wrench, hammer and pencil-ruler
+* Controls: power and power-off, grip-horizontal and grip-vertical, sliders-2-horizontal and sliders-2-vertical
+* Layout: grid-circles and grid-squares, each with a check and an x
+* Shapes: circles and circles-dashed, circle-square and circle-square-dashed
+* Commerce: percent, with circle- and square- forms, and the horizontal tag as tag-horizontal-start and tag-horizontal-end with a percent form of each
+* Others: plug, lightbulb, lightbulb-on, ban, octagon-x, cursor-off and megaphone
+
+Also redrawn: pause in bare, circle and square forms, and play in its circle and square.
+
+v0.1.4
+No drawing changes. The CLI and MCP packages were shipping 527 icons while the React package shipped 547, so all three are reissued together: 0.1.4 is the same set in every package.
+
+v0.1.3
+Two corrections: queue redrawn to 22×18, the horizontal size the set uses for a plate with rules beneath it; repeat-1's numeral given two more units of stem.
+
+v0.1.2
+20 new drawings:
+
+* Playback: repeat, repeat-1, queue, podcast and cast
+* Captions: captions and subtitles, the double-C and the ruled plate
+* Video: list-video, picture-in-picture, and six galleries, horizontal and vertical with a -start and an -end for each
+* Screen: fullscreen, fullscreen-exit, maximize and minimize
+* Files: copy-plus
+
+Also redrawn: shuffle, cut where its strands cross.
+
+v0.1.1
+24 new drawings:
+
+* Sport: trophy, award, and podium with 1, 2 and 3 place variants
+* Devices: monitor, monitor-off, bluetooth, and battery at four levels
+* Layout: layout-dashboard, and grid in 2x2, 2x3, 3x2 and 3x3
+* Others: alert, in bare, circle and square forms; building; loader; heart-hand
 ```
+
+**The version history is part of this description**, the way it is in the
+plugin's. The published text carried it and this file did not, so the copy here
+was short of what is actually on the page and `check-readmes` was policing an
+incomplete text. Three times in a row a request for "the full list with
+changelogs" was answered with the header alone.
 
 **One line per paragraph, and that is not a style choice.** Figma's Description
 field preserves newlines rather than reflowing, so a block wrapped for a text
@@ -425,6 +703,30 @@ It is a different image from the plugin's `plugin-cover.png` and the two are
 regenerated together; re-upload whichever modal you are in.
 
 ### What changed, for the final details page
+
+```
+44 new drawings, and every sharp end squared.
+
+The set is 629 names now, 520 component sets and 3,250 variants, up from 585
+and 2,994. Nothing was renamed and no component was replaced, so instances
+already placed in your files keep their link.
+
+A butt cap on a diagonal reaches further than the round cap it replaces, so
+329 icons painted up to 0.414 of a unit outside their rounded twin. Every one
+of those ends is cut back along its own axis, and the rounded drawings are
+untouched.
+
+Two search families join the set, the cloud and package families take the five
+signs the app tiles do, and the badged icons, briefcase, crown, flag, umbrella
+and parasol land with them.
+
+12 drawings were redrawn in both treatments: the seven bells, which carry their
+plate offset into the fills, plus circle-navigation, credit-card, database,
+git-merge and package.
+```
+
+The 0.3.0 entry this replaced, kept because a listing's history is worth
+reading back:
 
 ```
 Sharp corners, across the whole set.

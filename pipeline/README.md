@@ -200,7 +200,14 @@ nudged off the grid rather than a decision.
 
 Only corners where two straight edges meet through a fillet are measured. A
 curve arriving into a fillet is a dome or a lozenge, whose radius is the drawing
-itself rather than a corner treatment.
+itself rather than a corner treatment. And an open run of exactly three
+segments, a curve between two straight runs of at most a unit, is a sharp free
+arc with its two stubs rather than a corner: a free arc end takes a unit of
+tangent so its butt cap paints where the round cap's disc reached, and a lone
+quarter arc between two such stubs would otherwise read as a corner of the
+arc's own radius (`circle-progress-quarter` at 10). Closed rings are not
+exempted, because the flats between `settings`' gear teeth are under a unit
+and are real fillet edges.
 
 **The ladder is not closed under the +1 an outline adds.** A duotone plate or a
 solid is the stroke drawing outlined by one unit, and outlining raises every
@@ -308,6 +315,13 @@ any two points — because that is how big a glyph reads. A diagonal arrow drawn
 at 14x14 spans 19 units along its own axis, and diagonal glyphs are deliberately
 drawn smaller so they do not look oversized next to axis-aligned ones. Measuring
 their bounding box punishes exactly that compensation.
+
+**A sharp drawing may span `2 × (1 − 0.414)` less than the floor asks.** A
+sharp diagonal free end is cut back so its butt corners land on the round cap's
+box, which puts its chisel face 0.586 short of where the disc's tip reached
+along the arm; a drawing read along its diagonal, `x`, spans 1.17 less than its
+rounded sibling while painting exactly the same box. The floor measures the
+hull, so it allows that much on sharp and no more.
 
 The ceiling still measures the bounding box, since overflowing the canvas is a
 question about the box rather than about how the glyph reads.
@@ -746,15 +760,22 @@ pnpm paper:verify --json
 Not in `icons:ci`, for the reason `icons:figma` and `brand:check` are not: it
 needs an application CI does not have. Unlike `icons:figma` it is one step
 rather than two, because Paper's MCP server is local HTTP with no auth, so the
-script talks to it directly instead of emitting a snippet to paste. The file it
-checks is the one `SET_PAPER_URL` points at, read out of `lib/site-chrome.ts`;
-`--file <id>` overrides it and `PAPER_MCP` overrides the endpoint.
+script talks to it directly instead of emitting a snippet to paste.
 
-Six findings, and the distinction between them is the useful part:
+**It checks every file the set is in, which is two.** `SET_PAPER_FILES` in
+`lib/site-chrome.ts` names them and says where each one starts; the set outgrew
+one Paper file, whose ceiling is on the file rather than on a page.
+`pipeline/lib/paper-files.mjs` turns that into a board-to-file answer, and every
+board is looked for in both files and then judged on whether it turned up in
+the right one. `--file <id>` narrows the run to one file and `PAPER_MCP`
+overrides the endpoint.
+
+Seven findings, and the distinction between them is the useful part:
 
 | | |
 | --- | --- |
-| `MISSING` | a sheet's artboard is not in the file |
+| `MISSING` | a sheet's artboard is in neither file |
+| `STRAY` | the board is in the other file, or in both |
 | `ORPHAN` | an artboard no sheet builds |
 | `STALE` | the board holds a different number of drawings than its sheet |
 | `DRIFT` | same count, different icons, reported with the first disagreement |
@@ -772,7 +793,15 @@ compares geometry, this compares inventory.
 Categories come from `lib/icon-taxonomy.ts`, parsed rather than copied, and the
 parse asserts it read a pattern for every label. Without that check a regex
 written across two lines hands its whole category to `Other`, which looks like a
-grouping decision rather than a broken read.
+grouping decision rather than a broken read. `paper-files.mjs` reads
+`lib/site-chrome.ts` the same way and asserts the same kind of thing, with one
+extra trap: a comment stripper that treats every `//` as a comment takes each
+URL in that array down to `https:`.
+
+**A `STRAY` is two steps and only the first is an import.** Write the board into
+the file it belongs in with `--create`, then delete the copy it left behind by
+hand. Neither script deletes a board on a name match, for the same reason
+neither touches an `ORPHAN`: a name is not evidence about what is in a board.
 
 ## What `import-paper` writes
 
@@ -884,6 +913,13 @@ difficulty.
 a release is a tag plus a rebuild, and bumping the React package is what decides
 what the next version is called.
 
+**Any new icon moves the second number.** 0.3.0 plus 44 new drawings is 0.4.0,
+never 0.3.1; the third number is only for a release that adds no icons. The tag
+list is not precedent for this — 0.1.1 through 0.1.4 each carried new drawings
+and should have moved the second number, which is a mistake this file is
+recording rather than repeating. `lib/icon-history.json`'s `unreleased.names`
+answers it: non-empty means the second number moves.
+
 ```bash
 git checkout main && git pull
 git tag v0.1.1 && git push origin v0.1.1
@@ -970,11 +1006,30 @@ same size, same ink, same ground.
 `unreleased`, out of the two refs that bound the window — the previous tag and
 this one, or the newest tag and the working tree. Both sides come off the refs,
 never off disk for a released entry, so redrawing the same icon again does not
-rewrite what an older entry was published showing. The style shown is the first
-one that genuinely differs across the window; where nothing differs, the pair is
-null and the surfaces fall back to naming the icon. Where the window did not
-open with the drawing at all, it is an addition rather than a redraw, whatever
-its dates say — `megaphone` was drawn, retired and drawn again across v0.1.4.
+rewrite what an older entry was published showing. The pair shown is the first
+of a name's **six** files that genuinely differs across the window — stroke,
+duotone and fill, rounded first and then sharp — and `updated` carries both
+`style` and `corners` to say which. Where nothing differs, the pair is null and
+the surfaces fall back to naming the icon. Where the window did not open with
+the drawing at all, it is an addition rather than a redraw, whatever its dates
+say — `megaphone` was drawn, retired and drawn again across v0.1.4.
+
+**A sharp pair is labelled sharp, on every surface.** Rounded first is what
+makes the label mean something: a correction that moved both treatments shows
+the rounded drawing, the one a reader recognises, and sharp is reached only
+where the rounded files are identical across the window — a change confined to
+the treatment, whose pair is the only pair there is. Shown unlabelled, those
+read as corrections to drawings nobody touched, which is what the diagonal end
+cut would have published across 304 names.
+
+**Candidates are nominated by `git diff --diff-filter=M` over exactly those six
+folders, and the filter is load-bearing.** A redraw is a file both trees carry
+whose content differs, and `M` is that sentence: nominating from it means every
+candidate has a pair before `redrawn` is called, which is what keeps the rule
+that a changelog never names a redraw it cannot show. Drop the filter and
+v0.3.0 — which *added* a sharp drawing for every name — nominates 585 names
+against the 48 it published, 537 of them with nothing to look at, and rewrites
+an entry that has already shipped.
 
 **A release's membership is a fact about its tree, not about dates.** The same
 `megaphone` decides this one too, and it was wrong on every generated surface
