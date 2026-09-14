@@ -3427,7 +3427,7 @@ export function FullscreenExit2(props: IconProps) {
 export function FullscreenExit(props: IconProps) {
   return (
     <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="butt" strokeLinejoin="round" {...props}>
-      <path d="M23 10L14 10L14 1M14.1757 9.8243L22.2072 1.7928M1 14L10 14L10 23M9.8243 14.1757L1.7928 22.2072" />
+      <path d="M22 10.2L13.8 10.2L13.8 2M13.9757 10.0243L21.2072 2.7928M2 13.8L10.2 13.8L10.2 22M10.0243 13.9757L2.7928 21.2072" />
     </Icon>
   )
 }
@@ -3435,7 +3435,7 @@ export function FullscreenExit(props: IconProps) {
 export function Fullscreen(props: IconProps) {
   return (
     <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="butt" strokeLinejoin="round" {...props}>
-      <path d="M13 2L22 2L22 11M13.2929 10.7071L21.8243 2.1757M11 22L2 22L2 13M10.7071 13.2929L2.1757 21.8243" />
+      <path d="M12.8 3L21 3L21 11.2M13.0929 10.9071L20.8843 3.1157M11.2 21L3 21L3 12.8M10.9071 13.0929L3.1157 20.8843" />
     </Icon>
   )
 }
