@@ -386,6 +386,7 @@
     "image-check": "A picture with a tick, for a photo approved, verified or selected.",
     "image-minus": "A picture with a minus, for removing and detaching a photo.",
     "image-plus": "A picture with a plus, for adding, uploading and inserting a photo.",
+    "image-refresh": "A picture with a circular arrow, for reshooting a shot and generating another take.",
     "image-x": "A picture with a cross, for a failed upload, a broken image and a removed photo.",
     "images": "Stacked pictures, for a gallery, an album and a media library.",
     "inbox": "A tray, for an inbox, incoming items and anything waiting to be handled.",

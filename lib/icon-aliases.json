@@ -2703,6 +2703,19 @@
       ]
     },
     {
+      "match": "^image-refresh$",
+      "terms": [
+        "reshoot",
+        "retake",
+        "shoot again",
+        "regenerate image",
+        "another take",
+        "重拍",
+        "重新拍摄",
+        "换个拍法"
+      ]
+    },
+    {
       "match": "^italic$",
       "terms": [
         "oblique",
@@ -3869,6 +3882,12 @@
       "image-off",
       "image-play",
       "image-upscale"
+    ],
+    "image-refresh": [
+      "image-retake",
+      "image-rotate",
+      "photo-refresh",
+      "retake"
     ],
     "link-2-off": [
       "link-off"

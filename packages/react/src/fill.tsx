@@ -3125,6 +3125,15 @@ export function ImagePlus(props: IconProps) {
   )
 }
 
+export function ImageRefresh(props: IconProps) {
+  return (
+    <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <path d="M9 2L5 2C2.7909 2 1 3.7909 1 6L1 18C1 20.2091 2.7909 22 5 22L17 22C19.2091 22 21 20.2091 21 18L21 15.5C21 14.9477 20.5523 14.5 20 14.5L13 14.5C11.3431 14.5 10 13.1569 10 11.5L10 3C10 2.4477 9.5523 2 9 2ZM3 17L6.9393 13.0607C7.5251 12.4749 8.4749 12.4749 9.0607 13.0607L11.0801 15.0801C11.6079 15.6079 12.4436 15.6673 13.0408 15.2194L14.9592 13.7806C15.5564 13.3327 16.3921 13.3921 16.9199 13.9199L19 16L19 18C19 19.1046 18.1046 20 17 20L5 20C3.8954 20 3 19.1046 3 18ZM8.5 7.5C8.5 6.6716 7.8284 6 7 6C6.1716 6 5.5 6.6716 5.5 7.5C5.5 8.3284 6.1716 9 7 9C7.8284 9 8.5 8.3284 8.5 7.5Z" fill="currentColor" fillRule="evenodd" clipRule="evenodd" stroke="none" />
+      <path d="M17.9 9.2C16.2431 9.2 14.9 7.8569 14.9 6.2C14.9 4.5431 16.2431 3.2 17.9 3.2C19.5569 3.2 20.9 4.5431 20.9 6.2M19.8393 5.1393L20.9 6.2L21.9607 5.1393" />
+    </Icon>
+  )
+}
+
 export function ImageX(props: IconProps) {
   return (
     <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" {...props}>
