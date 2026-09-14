@@ -791,8 +791,6 @@
     "windows-logo": "Four panes in perspective, for Windows builds, the PC download and anything Windows-only.",
     "workflow": "Two nodes on one elbow connector, for the wires between canvas nodes and the toggle hiding them.",
     "workflow-off": "Two nodes with their connector cut by a slash, for hiding the wires between nodes on a canvas.",
-    "x-logo": "The X mark with one broken stroke, for sharing to X.",
-    "zoom-in": "A magnifier with a plus, for zooming in and enlarging a view.",
-    "zoom-out": "A magnifier with a minus, for zooming out and shrinking a view."
+    "x-logo": "The X mark with one broken stroke, for sharing to X."
   }
 }

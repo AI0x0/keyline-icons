@@ -4437,8 +4437,8 @@ export function SearchX(props: IconProps) {
 export function Search(props: IconProps) {
   return (
     <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" {...props}>
-      <path d="M19 10C19 14.9707 14.9707 19 10 19C5.0293 19 1 14.9707 1 10C1 5.0293 5.0293 1 10 1C14.9707 1 19 5.0293 19 10Z" fill="currentColor" stroke="none" />
-      <path d="M15.6569 15.6569L22 22" />
+      <path d="M10 2C14.4184 2 18 5.5816 18 10C18 14.4184 14.4184 18 10 18C5.5816 18 2 14.4184 2 10C2 5.5816 5.5816 2 10 2Z" fill="currentColor" stroke="none" />
+      <path d="M15 15L21 21" />
     </Icon>
   )
 }
@@ -5860,24 +5860,6 @@ export function Zap(props: IconProps) {
   return (
     <Icon fill="none" {...props}>
       <path d="M13.6403 2.8206L12.2477 9.0011L18.9224 9.0011C20.6998 9.0011 21.7725 10.7529 20.8098 12.0833L13.4263 22.2866C12.4189 23.6788 9.9937 22.8032 10.3597 21.1794L11.7523 14.9989L5.0776 14.9989C3.3002 14.9989 2.2275 13.2471 3.1902 11.9167L10.5737 1.7134C11.5811 0.3212 14.0063 1.1968 13.6403 2.8206Z" fill="currentColor" />
-    </Icon>
-  )
-}
-
-export function ZoomIn(props: IconProps) {
-  return (
-    <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" {...props}>
-      <path d="M19 10C19 14.9707 14.9707 19 10 19C5.0293 19 1 14.9707 1 10C1 5.0293 5.0293 1 10 1C14.9707 1 19 5.0293 19 10ZM9 6C9 5.4477 9.4477 5 10 5C10.5523 5 11 5.4477 11 6L11 9L14 9C14.5523 9 15 9.4477 15 10C15 10.5523 14.5523 11 14 11L11 11L11 14C11 14.5523 10.5523 15 10 15C9.4477 15 9 14.5523 9 14L9 11L6 11C5.4477 11 5 10.5523 5 10C5 9.4477 5.4477 9 6 9L9 9Z" fill="currentColor" fillRule="evenodd" clipRule="evenodd" stroke="none" />
-      <path d="M15.6569 15.6569L22 22" />
-    </Icon>
-  )
-}
-
-export function ZoomOut(props: IconProps) {
-  return (
-    <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" {...props}>
-      <path d="M19 10C19 14.9707 14.9707 19 10 19C5.0293 19 1 14.9707 1 10C1 5.0293 5.0293 1 10 1C14.9707 1 19 5.0293 19 10ZM6 9L14 9C14.5523 9 15 9.4477 15 10C15 10.5523 14.5523 11 14 11L6 11C5.4477 11 5 10.5523 5 10C5 9.4477 5.4477 9 6 9Z" fill="currentColor" fillRule="evenodd" clipRule="evenodd" stroke="none" />
-      <path d="M15.6569 15.6569L22 22" />
     </Icon>
   )
 }

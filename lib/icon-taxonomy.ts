@@ -358,7 +358,7 @@ export const CATEGORIES = [
     match:
       // The brand marks file here: every one of them is a place to sign in with
       // or share to, which is the web-scoped action this shelf holds.
-      /^(globe|link|unlink|share|navigation|home|search|settings|bookmark|wifi|zoom|cloud-(?:check|x|plus|minus|alert|dot|off|arrow|backup|cog)|google-logo|facebook-logo|linkedin-logo|reddit-logo|telegram-logo|threads-logo|wechat-logo|whatsapp-logo|x-logo)/,
+      /^(globe|link|unlink|share|navigation|home|search|settings|bookmark|wifi|cloud-(?:check|x|plus|minus|alert|dot|off|arrow|backup|cog)|google-logo|facebook-logo|linkedin-logo|reddit-logo|telegram-logo|threads-logo|wechat-logo|whatsapp-logo|x-logo)/,
     blurb: "Globes, links, connectivity, sync states and web-scoped actions.",
   },
   {

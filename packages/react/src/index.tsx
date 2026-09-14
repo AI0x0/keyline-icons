@@ -5783,7 +5783,7 @@ export function SearchX(props: IconProps) {
 export function Search(props: IconProps) {
   return (
     <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" {...props}>
-      <path d="M18 10C18 14.4184 14.4184 18 10 18C5.5816 18 2 14.4184 2 10C2 5.5816 5.5816 2 10 2C14.4184 2 18 5.5816 18 10ZM15.6569 15.6569L22 22" />
+      <path d="M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10ZM15 15L21 21" />
     </Icon>
   )
 }
@@ -7532,22 +7532,6 @@ export function Zap(props: IconProps) {
   return (
     <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" {...props}>
       <path d="M12.548 2.6204L11.1337 8.8033C10.9921 9.4222 11.5318 10 12.2515 10L19.0294 10C19.9318 10 20.4764 10.8762 19.9876 11.5416L12.4901 21.7487C12.149 22.213 11.3282 21.921 11.452 21.3796L12.8663 15.1967C13.0079 14.5778 12.4682 14 11.7485 14L4.9706 14C4.0682 14 3.5236 13.1238 4.0124 12.4584L11.5099 2.2513C11.851 1.787 12.6718 2.079 12.548 2.6204Z" />
-    </Icon>
-  )
-}
-
-export function ZoomIn(props: IconProps) {
-  return (
-    <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" {...props}>
-      <path d="M18 10C18 14.4184 14.4184 18 10 18C5.5816 18 2 14.4184 2 10C2 5.5816 5.5816 2 10 2C14.4184 2 18 5.5816 18 10ZM15.6569 15.6569L22 22M10 6L10 14M6 10L14 10" />
-    </Icon>
-  )
-}
-
-export function ZoomOut(props: IconProps) {
-  return (
-    <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" {...props}>
-      <path d="M18 10C18 14.4184 14.4184 18 10 18C5.5816 18 2 14.4184 2 10C2 5.5816 5.5816 2 10 2C14.4184 2 18 5.5816 18 10ZM15.6569 15.6569L22 22M6 10L14 10" />
     </Icon>
   )
 }

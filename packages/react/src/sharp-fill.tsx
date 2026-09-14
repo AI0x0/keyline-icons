@@ -4440,8 +4440,8 @@ export function SearchX(props: IconProps) {
 export function Search(props: IconProps) {
   return (
     <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="butt" strokeLinejoin="round" {...props}>
-      <path d="M19 10C19 14.9707 14.9707 19 10 19C5.0293 19 1 14.9707 1 10C1 5.0293 5.0293 1 10 1C14.9707 1 19 5.0293 19 10Z" fill="currentColor" stroke="none" />
-      <path d="M14.9497 14.9497L22.2071 22.2071" />
+      <path d="M18 10C18 14.2802 14.2802 18 10 18C5.7198 18 2 14.2802 2 10C2 5.7198 5.7198 2 10 2C14.2802 2 18 5.7198 18 10Z" fill="currentColor" stroke="none" />
+      <path d="M14.2929 14.2929L21.2929 21.2929" />
     </Icon>
   )
 }
@@ -5863,24 +5863,6 @@ export function Zap(props: IconProps) {
   return (
     <Icon fill="none" {...props}>
       <path d="M14.2149 2.2467L12.3157 9.0013L20.994 9.0013C21.9204 9.0013 22.4492 9.9417 21.8934 10.6006L11.7751 22.5955C11.0392 23.4679 9.4876 22.8113 9.7851 21.7533L11.6843 14.9987L3.006 14.9987C2.0796 14.9987 1.5508 14.0583 2.1066 13.3994L12.2249 1.4045C12.9608 0.5321 14.5124 1.1887 14.2149 2.2467Z" fill="currentColor" />
-    </Icon>
-  )
-}
-
-export function ZoomIn(props: IconProps) {
-  return (
-    <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="butt" strokeLinejoin="round" {...props}>
-      <path d="M19 10C19 14.9707 14.9707 19 10 19C5.0293 19 1 14.9707 1 10C1 5.0293 5.0293 1 10 1C14.9707 1 19 5.0293 19 10ZM9 5L11 5L11 9L15 9L15 11L11 11L11 15L9 15L9 11L5 11L5 9L9 9Z" fill="currentColor" fillRule="evenodd" clipRule="evenodd" stroke="none" />
-      <path d="M14.9497 14.9497L22.2071 22.2071" />
-    </Icon>
-  )
-}
-
-export function ZoomOut(props: IconProps) {
-  return (
-    <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="butt" strokeLinejoin="round" {...props}>
-      <path d="M19 10C19 14.9707 14.9707 19 10 19C5.0293 19 1 14.9707 1 10C1 5.0293 5.0293 1 10 1C14.9707 1 19 5.0293 19 10ZM5 9L15 9L15 11L5 11Z" fill="currentColor" fillRule="evenodd" clipRule="evenodd" stroke="none" />
-      <path d="M14.9497 14.9497L22.2071 22.2071" />
     </Icon>
   )
 }

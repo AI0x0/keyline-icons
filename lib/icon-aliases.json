@@ -3528,26 +3528,6 @@
         "fast",
         "boost"
       ]
-    },
-    {
-      "match": "^zoom-in$",
-      "terms": [
-        "zoom",
-        "magnify",
-        "enlarge",
-        "bigger",
-        "closer"
-      ]
-    },
-    {
-      "match": "^zoom-out$",
-      "terms": [
-        "zoom",
-        "shrink",
-        "smaller",
-        "further",
-        "reduce"
-      ]
     }
   ],
   "names": {
