@@ -5870,8 +5870,8 @@ export function Zap(props: IconProps) {
 export function ZoomIn(props: IconProps) {
   return (
     <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="butt" strokeLinejoin="round" {...props}>
-      <path d="M18 10C18 14.4183 14.4183 18 10 18C5.5817 18 2 14.4183 2 10C2 5.5817 5.5817 2 10 2C14.4183 2 18 5.5817 18 10ZM9 5L11 5L11 9L15 9L15 11L11 11L11 15L9 15L9 11L5 11L5 9L9 9Z" fill="currentColor" fillRule="evenodd" clipRule="evenodd" stroke="none" />
-      <path d="M14.2929 14.2929L21.7071 21.7071" />
+      <path d="M19 10C19 14.9707 14.9707 19 10 19C5.0293 19 1 14.9707 1 10C1 5.0293 5.0293 1 10 1C14.9707 1 19 5.0293 19 10ZM9 5L11 5L11 9L15 9L15 11L11 11L11 15L9 15L9 11L5 11L5 9L9 9Z" fill="currentColor" fillRule="evenodd" clipRule="evenodd" stroke="none" />
+      <path d="M14.9497 14.9497L22.2071 22.2071" />
     </Icon>
   )
 }
@@ -5879,8 +5879,8 @@ export function ZoomIn(props: IconProps) {
 export function ZoomOut(props: IconProps) {
   return (
     <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="butt" strokeLinejoin="round" {...props}>
-      <path d="M18 10C18 14.4183 14.4183 18 10 18C5.5817 18 2 14.4183 2 10C2 5.5817 5.5817 2 10 2C14.4183 2 18 5.5817 18 10ZM6 9L14 9L14 11L6 11Z" fill="currentColor" fillRule="evenodd" clipRule="evenodd" stroke="none" />
-      <path d="M14.2929 14.2929L21.7071 21.7071" />
+      <path d="M19 10C19 14.9707 14.9707 19 10 19C5.0293 19 1 14.9707 1 10C1 5.0293 5.0293 1 10 1C14.9707 1 19 5.0293 19 10ZM5 9L15 9L15 11L5 11Z" fill="currentColor" fillRule="evenodd" clipRule="evenodd" stroke="none" />
+      <path d="M14.9497 14.9497L22.2071 22.2071" />
     </Icon>
   )
 }

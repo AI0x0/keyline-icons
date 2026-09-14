@@ -5867,8 +5867,8 @@ export function Zap(props: IconProps) {
 export function ZoomIn(props: IconProps) {
   return (
     <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" {...props}>
-      <path d="M18 10C18 14.4183 14.4183 18 10 18C5.5817 18 2 14.4183 2 10C2 5.5817 5.5817 2 10 2C14.4183 2 18 5.5817 18 10ZM9 6C9 5.4477 9.4477 5 10 5C10.5523 5 11 5.4477 11 6L11 9L14 9C14.5523 9 15 9.4477 15 10C15 10.5523 14.5523 11 14 11L11 11L11 14C11 14.5523 10.5523 15 10 15C9.4477 15 9 14.5523 9 14L9 11L6 11C5.4477 11 5 10.5523 5 10C5 9.4477 5.4477 9 6 9L9 9Z" fill="currentColor" fillRule="evenodd" clipRule="evenodd" stroke="none" />
-      <path d="M15 15L21 21" />
+      <path d="M19 10C19 14.9707 14.9707 19 10 19C5.0293 19 1 14.9707 1 10C1 5.0293 5.0293 1 10 1C14.9707 1 19 5.0293 19 10ZM9 6C9 5.4477 9.4477 5 10 5C10.5523 5 11 5.4477 11 6L11 9L14 9C14.5523 9 15 9.4477 15 10C15 10.5523 14.5523 11 14 11L11 11L11 14C11 14.5523 10.5523 15 10 15C9.4477 15 9 14.5523 9 14L9 11L6 11C5.4477 11 5 10.5523 5 10C5 9.4477 5.4477 9 6 9L9 9Z" fill="currentColor" fillRule="evenodd" clipRule="evenodd" stroke="none" />
+      <path d="M15.6569 15.6569L22 22" />
     </Icon>
   )
 }
@@ -5876,8 +5876,8 @@ export function ZoomIn(props: IconProps) {
 export function ZoomOut(props: IconProps) {
   return (
     <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" {...props}>
-      <path d="M18 10C18 14.4183 14.4183 18 10 18C5.5817 18 2 14.4183 2 10C2 5.5817 5.5817 2 10 2C14.4183 2 18 5.5817 18 10ZM7 9L13 9C13.5523 9 14 9.4477 14 10C14 10.5523 13.5523 11 13 11L7 11C6.4477 11 6 10.5523 6 10C6 9.4477 6.4477 9 7 9Z" fill="currentColor" fillRule="evenodd" clipRule="evenodd" stroke="none" />
-      <path d="M15 15L21 21" />
+      <path d="M19 10C19 14.9707 14.9707 19 10 19C5.0293 19 1 14.9707 1 10C1 5.0293 5.0293 1 10 1C14.9707 1 19 5.0293 19 10ZM6 9L14 9C14.5523 9 15 9.4477 15 10C15 10.5523 14.5523 11 14 11L6 11C5.4477 11 5 10.5523 5 10C5 9.4477 5.4477 9 6 9Z" fill="currentColor" fillRule="evenodd" clipRule="evenodd" stroke="none" />
+      <path d="M15.6569 15.6569L22 22" />
     </Icon>
   )
 }
