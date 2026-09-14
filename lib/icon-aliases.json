@@ -2443,6 +2443,20 @@
       ]
     },
     {
+      "match": "^crop-rotate$",
+      "terms": [
+        "crop and rotate",
+        "straighten",
+        "rotate image",
+        "mirror",
+        "flip",
+        "裁剪",
+        "旋转与裁剪",
+        "旋转与镜像",
+        "转正"
+      ]
+    },
+    {
       "match": "^crosshair$",
       "terms": [
         "locate",
@@ -3580,6 +3594,11 @@
       "copy-minus",
       "copy-slash",
       "copy-x"
+    ],
+    "crop-rotate": [
+      "crop-and-rotate",
+      "straighten",
+      "rotate-crop"
     ],
     "flower": [
       "flower-2"

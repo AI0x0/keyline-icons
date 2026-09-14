@@ -704,6 +704,7 @@
     "columns-2": "A frame split down the middle, for two-column layouts, split panes and side-by-side views.",
     "copy-check": "Two sheets with a check on the front one, for a copy that succeeded and text on the clipboard.",
     "crop": "Two overlapping corner marks, for cropping a picture and trimming its edges.",
+    "crop-rotate": "Crop marks with a circular arrow in the cut corner, for cropping, rotating and mirroring.",
     "crosshair": "A ring with a centre dot and four ticks, for locating a node and picking from a canvas.",
     "cube": "An isometric cube, for models, 3D objects and the model picker.",
     "diamond-plus": "A keyframe diamond with a plus inside, for adding a keyframe where the playhead stands.",

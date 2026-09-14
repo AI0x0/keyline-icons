@@ -2600,6 +2600,14 @@ export function CreditCard(props: IconProps) {
   )
 }
 
+export function CropRotate(props: IconProps) {
+  return (
+    <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <path d="M6 2L6 16C6 17.1046 6.8954 18 8 18L22 18M18 22L18 12.5M10.7 6L2 6M17.7 8.5C16.0431 8.5 14.7 7.1569 14.7 5.5C14.7 3.8431 16.0431 2.5 17.7 2.5C19.3569 2.5 20.7 3.8431 20.7 5.5M19.6393 4.4393L20.7 5.5L21.7607 4.4393" />
+    </Icon>
+  )
+}
+
 export function Crop(props: IconProps) {
   return (
     <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" {...props}>

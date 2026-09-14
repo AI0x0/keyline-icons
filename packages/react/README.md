@@ -1,6 +1,6 @@
 # @ai0x0/keyline-icons
 
-910 icons on one 24×24 grid, as React components. Built for shadcn/ui, free
+911 icons on one 24×24 grid, as React components. Built for shadcn/ui, free
 under MIT.
 
 [keylineicons.com](https://keylineicons.com) to browse the full set.
@@ -41,7 +41,7 @@ scope. There is no provider, no context and no theme object.
 **Three weights, three entry points.**
 
 ```tsx
-import { Bell } from "@ai0x0/keyline-icons"          // stroke,  910 icons
+import { Bell } from "@ai0x0/keyline-icons"          // stroke,  911 icons
 import { Bell } from "@ai0x0/keyline-icons/duotone"  // duotone, 738 icons
 import { Bell } from "@ai0x0/keyline-icons/fill"     // fill,    685 icons
 ```
