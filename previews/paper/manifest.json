@@ -1191,8 +1191,8 @@
       "into": "artboard",
       "width": 742,
       "icons": 17,
-      "variants": 44,
-      "bytes": 41336
+      "variants": 38,
+      "bytes": 38847
     },
     {
       "file": "text-2.html",
@@ -1203,8 +1203,8 @@
       "into": "rows",
       "width": 742,
       "icons": 0,
-      "variants": 28,
-      "bytes": 21173
+      "variants": 34,
+      "bytes": 27355
     },
     {
       "file": "time-1.html",
@@ -1360,7 +1360,7 @@
       "width": 742,
       "icons": 0,
       "variants": 26,
-      "bytes": 22442
+      "bytes": 22946
     },
     {
       "file": "web-1.html",
@@ -1432,7 +1432,7 @@
       "width": 742,
       "icons": 0,
       "variants": 24,
-      "bytes": 35173
+      "bytes": 35219
     },
     {
       "file": "web-7.html",
@@ -1488,7 +1488,7 @@
       "parts": 1,
       "icons": 0,
       "variants": 0,
-      "bytes": 280991
+      "bytes": 281572
     }
   ]
 }
