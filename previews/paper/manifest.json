@@ -112,7 +112,7 @@
       "width": 742,
       "icons": 0,
       "variants": 24,
-      "bytes": 33865
+      "bytes": 33831
     },
     {
       "file": "actions-9.html",
@@ -616,7 +616,7 @@
       "width": 742,
       "icons": 0,
       "variants": 46,
-      "bytes": 36570
+      "bytes": 37856
     },
     {
       "file": "files-6.html",
@@ -1488,7 +1488,7 @@
       "parts": 1,
       "icons": 0,
       "variants": 0,
-      "bytes": 283112
+      "bytes": 189154
     }
   ]
 }
