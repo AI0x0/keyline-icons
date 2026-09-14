@@ -796,7 +796,7 @@
       "width": 742,
       "icons": 0,
       "variants": 46,
-      "bytes": 40745
+      "bytes": 40733
     },
     {
       "file": "layout-5.html",
@@ -1024,7 +1024,7 @@
       "width": 742,
       "icons": 0,
       "variants": 56,
-      "bytes": 37885
+      "bytes": 37897
     },
     {
       "file": "media-10.html",
@@ -1060,7 +1060,7 @@
       "width": 742,
       "icons": 0,
       "variants": 48,
-      "bytes": 38245
+      "bytes": 38243
     },
     {
       "file": "pointers-3.html",
@@ -1132,7 +1132,7 @@
       "width": 742,
       "icons": 0,
       "variants": 40,
-      "bytes": 38540
+      "bytes": 38525
     },
     {
       "file": "shapes-6.html",
@@ -1264,7 +1264,7 @@
       "width": 742,
       "icons": 14,
       "variants": 36,
-      "bytes": 40455
+      "bytes": 40451
     },
     {
       "file": "tools-2.html",
