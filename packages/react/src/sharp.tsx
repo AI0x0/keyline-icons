@@ -4767,7 +4767,7 @@ export function Minimize(props: IconProps) {
 export function Minus(props: IconProps) {
   return (
     <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="butt" strokeLinejoin="round" {...props}>
-      <path d="M1 12L23 12" />
+      <path d="M2 12L22 12" />
     </Icon>
   )
 }
@@ -5243,7 +5243,7 @@ export function Plug(props: IconProps) {
 export function Plus(props: IconProps) {
   return (
     <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="butt" strokeLinejoin="round" {...props}>
-      <path d="M1 12L23 12M12 1L12 23" />
+      <path d="M2 12L22 12M12 2L12 22" />
     </Icon>
   )
 }
