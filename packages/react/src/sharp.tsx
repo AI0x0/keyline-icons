@@ -3408,6 +3408,15 @@ export function FrameCorners(props: IconProps) {
   )
 }
 
+export function FramesTriangle(props: IconProps) {
+  return (
+    <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="butt" strokeLinejoin="round" {...props}>
+      <path d="M17 5.5L2 5.5L2 15.5M6 9.5L22 9.5L22 20.5L6 20.5Z" />
+      <path d="M19 2.5L19 6.5L22.5 4.5Z" fill="currentColor" stroke="none" />
+    </Icon>
+  )
+}
+
 export function Fullscreen2(props: IconProps) {
   return (
     <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="butt" strokeLinejoin="round" {...props}>
@@ -4078,6 +4087,15 @@ export function ImageRefresh(props: IconProps) {
     <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="butt" strokeLinejoin="round" {...props}>
       <path d="M10 3L2 3L2 21L20 21L20 14.5M2 18L8 12L12 16L16 13L20 17M17.9 9.2C16.2431 9.2 14.9 7.8569 14.9 6.2C14.9 4.5431 16.2431 3.2 17.9 3.2C19.5569 3.2 20.9 4.5431 20.9 6.2M19.8393 5.1393L20.9 6.2L21.9607 5.1393" />
       <path d="M8.5 7.5C8.5 8.3284 7.8284 9 7 9C6.1716 9 5.5 8.3284 5.5 7.5C5.5 6.6716 6.1716 6 7 6C7.8284 6 8.5 6.6716 8.5 7.5Z" fill="currentColor" stroke="none" />
+    </Icon>
+  )
+}
+
+export function ImageSparkle(props: IconProps) {
+  return (
+    <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="butt" strokeLinejoin="round" {...props}>
+      <path d="M12 3L3 3L3 21L21 21L21 12M3 18L9 12L13 16L17 13L21 17" />
+      <path d="M9.5 7.5C9.5 8.3284 8.8284 9 8 9C7.1716 9 6.5 8.3284 6.5 7.5C6.5 6.6716 7.1716 6 8 6C8.8284 6 9.5 6.6716 9.5 7.5ZM17.6876 2.4L18.3124 2.4C20.4067 6.6938 17.3062 3.5933 21.6 5.6876L21.6 6.3124C17.3062 8.4067 20.4067 5.3062 18.3124 9.6L17.6876 9.6C15.5933 5.3062 18.6938 8.4067 14.4 6.3124L14.4 5.6876C18.6938 3.5933 15.5933 6.6938 17.6876 2.4Z" fill="currentColor" stroke="none" />
     </Icon>
   )
 }
@@ -6787,6 +6805,15 @@ export function SquareSlash(props: IconProps) {
   )
 }
 
+export function SquareSparkle(props: IconProps) {
+  return (
+    <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="butt" strokeLinejoin="round" {...props}>
+      <path d="M12 3L3 3L3 21L21 21L21 12" />
+      <path d="M17.6876 2.4L18.3124 2.4C20.4067 6.6938 17.3062 3.5933 21.6 5.6876L21.6 6.3124C17.3062 8.4067 20.4067 5.3062 18.3124 9.6L17.6876 9.6C15.5933 5.3062 18.6938 8.4067 14.4 6.3124L14.4 5.6876C18.6938 3.5933 15.5933 6.6938 17.6876 2.4Z" fill="currentColor" stroke="none" />
+    </Icon>
+  )
+}
+
 export function SquareStop(props: IconProps) {
   return (
     <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="butt" strokeLinejoin="round" {...props}>
@@ -6836,6 +6863,14 @@ export function SquareTrendingUp(props: IconProps) {
     <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="butt" strokeLinejoin="round" {...props}>
       <path d="M3 3L21 3L21 21L3 21L3 3Z" />
       <path d="M6.7071 14.7929L10.2 11.3L12.7 13.8L16.8828 9.6172M13 9.5L17 9.5L17 13.5" />
+    </Icon>
+  )
+}
+
+export function SquareType(props: IconProps) {
+  return (
+    <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="butt" strokeLinejoin="round" {...props}>
+      <path d="M3 3L21 3L21 21L3 21ZM7 8L17 8M12 8L12 17" />
     </Icon>
   )
 }

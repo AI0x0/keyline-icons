@@ -166,7 +166,7 @@ export const CATEGORIES = [
     // wherever the two disagree — the same call the taxonomy makes for `wifi`.
     label: "Media",
     match:
-      /^(storyboard|clip-continue|clip-refresh|keyframes|clip-split|clip-trim|transition|play|pause|stop|record|skip-|fast-forward|rewind|repeat|replay|volume|audio-lines|mic|megaphone|headphones|headset|shuffle|music-note|list-music|list-video|camera|image|cast|subtitles|captions|picture-in-picture|gallery-|podcast|queue|film|high-definition|clapperboard|perspective|video|panorama)/,
+      /^(storyboard|clip-continue|clip-refresh|keyframes|frames-triangle|clip-split|clip-trim|transition|play|pause|stop|record|skip-|fast-forward|rewind|repeat|replay|volume|audio-lines|mic|megaphone|headphones|headset|shuffle|music-note|list-music|list-video|camera|image|cast|subtitles|captions|picture-in-picture|gallery-|podcast|queue|film|high-definition|clapperboard|perspective|video|panorama)/,
     blurb:
       "Playback, volume, capture, casting and the sound and image marks.",
   },

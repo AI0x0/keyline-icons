@@ -91,6 +91,26 @@
       ]
     },
     {
+      "match": "^frames-triangle$",
+      "terms": [
+        "first and last frame",
+        "start and end frame",
+        "首尾帧",
+        "首帧",
+        "尾帧"
+      ]
+    },
+    {
+      "match": "^image-sparkle$",
+      "terms": [
+        "reference image",
+        "image reference",
+        "图片参考",
+        "参考图",
+        "图生视频"
+      ]
+    },
+    {
       "match": "dashed-panel$",
       "terms": [
         "move to",
@@ -4141,6 +4161,13 @@
     "arrow-up-right": [
       "circle-arrow-out-up-right",
       "square-arrow-out-up-right"
+    ],
+    "frames-triangle": [
+      "frame-triangle"
+    ],
+    "image-sparkle": [
+      "sparkle-image",
+      "image-magic"
     ]
   },
   "$names": "Names other sets use for a drawing here, keyed by the drawing. Matched against the whole query, never split into words: these are names, not keywords, and folding `message-square` into a keyword list makes a search for `square` return every message icon."
