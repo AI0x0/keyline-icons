@@ -6361,6 +6361,16 @@ export function TerminalCursor(props: IconProps) {
   )
 }
 
+export function TextSparkle(props: IconProps) {
+  return (
+    <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="butt" strokeLinejoin="round" {...props}>
+      <path d="M11 2L3 2C2.4477 2 2 2.4477 2 3L2 21C2 21.5523 2.4477 22 3 22L21 22C21.5523 22 22 21.5523 22 21L22 13C22 12.4477 21.5523 12 21 12L12 12L12 3C12 2.4477 11.5523 2 11 2ZM17.6876 2.4L18.3124 2.4C20.4067 6.6938 17.3062 3.5933 21.6 5.6876L21.6 6.3124C17.3062 8.4067 20.4067 5.3062 18.3124 9.6L17.6876 9.6C15.5933 5.3062 18.6938 8.4067 14.4 6.3124L14.4 5.6876C18.6938 3.5933 15.5933 6.6938 17.6876 2.4Z" fill="currentColor" fillOpacity={0.4} stroke="none" />
+      <path d="M12 3L3 3L3 21L21 21L21 12M7 8.8L12.5 8.8M7 12.8L15.5 12.8M7 16.8L17.8 16.8" />
+      <path d="M17.6876 2.4L18.3124 2.4C20.4067 6.6938 17.3062 3.5933 21.6 5.6876L21.6 6.3124C17.3062 8.4067 20.4067 5.3062 18.3124 9.6L17.6876 9.6C15.5933 5.3062 18.6938 8.4067 14.4 6.3124L14.4 5.6876C18.6938 3.5933 15.5933 6.6938 17.6876 2.4Z" fill="currentColor" stroke="none" />
+    </Icon>
+  )
+}
+
 export function ThumbsDown(props: IconProps) {
   return (
     <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="butt" strokeLinejoin="round" {...props}>

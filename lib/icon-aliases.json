@@ -111,6 +111,17 @@
       ]
     },
     {
+      "match": "^text-sparkle$",
+      "terms": [
+        "prompt",
+        "rewrite",
+        "polish",
+        "improve prompt",
+        "优化提示词",
+        "润色"
+      ]
+    },
+    {
       "match": "dashed-panel$",
       "terms": [
         "move to",
@@ -4168,6 +4179,10 @@
     "image-sparkle": [
       "sparkle-image",
       "image-magic"
+    ],
+    "text-sparkle": [
+      "prompt-sparkle",
+      "text-magic"
     ]
   },
   "$names": "Names other sets use for a drawing here, keyed by the drawing. Matched against the whole query, never split into words: these are names, not keywords, and folding `message-square` into a keyword list makes a search for `square` return every message icon."

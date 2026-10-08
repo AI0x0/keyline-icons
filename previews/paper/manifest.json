@@ -14,9 +14,9 @@
     "The drawings to rename are the createdNodes with component === 'SVG'. Do not match on the name or on /svg/i — the nested paths come back as SVGVisualElement and a loose filter catches those too, which is 18 candidates on the catalogue sheet where there are 7 drawings.",
     "rename_nodes takes updates: [{ nodeId, name }] — nodeId singular here, unlike update_styles, which takes nodeIds as an array. The two are inconsistent and each rejects the other's shape."
   ],
-  "icons": 795,
-  "names": 915,
-  "variants": 4692,
+  "icons": 796,
+  "names": 916,
+  "variants": 4698,
   "sheets": [
     {
       "file": "actions-1.html",
@@ -28,7 +28,7 @@
       "width": 742,
       "icons": 58,
       "variants": 34,
-      "bytes": 36790
+      "bytes": 36579
     },
     {
       "file": "actions-2.html",
@@ -52,7 +52,7 @@
       "width": 742,
       "icons": 0,
       "variants": 48,
-      "bytes": 39857
+      "bytes": 39646
     },
     {
       "file": "actions-4.html",
@@ -100,7 +100,7 @@
       "width": 742,
       "icons": 0,
       "variants": 38,
-      "bytes": 36550
+      "bytes": 36339
     },
     {
       "file": "actions-8.html",
@@ -196,7 +196,7 @@
       "width": 742,
       "icons": 0,
       "variants": 44,
-      "bytes": 40578
+      "bytes": 39523
     },
     {
       "file": "arrows-6.html",
@@ -208,7 +208,7 @@
       "width": 742,
       "icons": 0,
       "variants": 4,
-      "bytes": 4026
+      "bytes": 3604
     },
     {
       "file": "art-1.html",
@@ -220,7 +220,7 @@
       "width": 742,
       "icons": 5,
       "variants": 24,
-      "bytes": 27055
+      "bytes": 26844
     },
     {
       "file": "art-2.html",
@@ -472,7 +472,7 @@
       "width": 742,
       "icons": 0,
       "variants": 40,
-      "bytes": 38851
+      "bytes": 38640
     },
     {
       "file": "devices-6.html",
@@ -568,7 +568,7 @@
       "width": 742,
       "icons": 0,
       "variants": 54,
-      "bytes": 38005
+      "bytes": 37794
     },
     {
       "file": "files-3.html",
@@ -915,8 +915,8 @@
       "into": "artboard",
       "width": 742,
       "icons": 81,
-      "variants": 40,
-      "bytes": 38307
+      "variants": 46,
+      "bytes": 43001
     },
     {
       "file": "media-2.html",
@@ -928,7 +928,7 @@
       "width": 742,
       "icons": 0,
       "variants": 48,
-      "bytes": 38851
+      "bytes": 37985
     },
     {
       "file": "media-3.html",
@@ -940,7 +940,7 @@
       "width": 742,
       "icons": 0,
       "variants": 54,
-      "bytes": 37155
+      "bytes": 37411
     },
     {
       "file": "media-4.html",
@@ -952,7 +952,7 @@
       "width": 742,
       "icons": 0,
       "variants": 42,
-      "bytes": 38114
+      "bytes": 38284
     },
     {
       "file": "media-5.html",
@@ -963,8 +963,8 @@
       "into": "rows",
       "width": 742,
       "icons": 0,
-      "variants": 42,
-      "bytes": 40517
+      "variants": 36,
+      "bytes": 34575
     },
     {
       "file": "media-6.html",
@@ -976,7 +976,7 @@
       "width": 742,
       "icons": 0,
       "variants": 42,
-      "bytes": 38290
+      "bytes": 38079
     },
     {
       "file": "media-7.html",
@@ -1000,7 +1000,7 @@
       "width": 742,
       "icons": 0,
       "variants": 56,
-      "bytes": 38411
+      "bytes": 38200
     },
     {
       "file": "media-9.html",
@@ -1024,7 +1024,7 @@
       "width": 742,
       "icons": 0,
       "variants": 50,
-      "bytes": 40103
+      "bytes": 39681
     },
     {
       "file": "media-11.html",
@@ -1043,7 +1043,7 @@
       "artboard": "Pointers",
       "category": "Pointers",
       "part": 1,
-      "parts": 3,
+      "parts": 2,
       "into": "artboard",
       "width": 742,
       "icons": 15,
@@ -1055,24 +1055,12 @@
       "artboard": "Pointers",
       "category": "Pointers",
       "part": 2,
-      "parts": 3,
+      "parts": 2,
       "into": "rows",
       "width": 742,
       "icons": 0,
-      "variants": 48,
-      "bytes": 38032
-    },
-    {
-      "file": "pointers-3.html",
-      "artboard": "Pointers",
-      "category": "Pointers",
-      "part": 3,
-      "parts": 3,
-      "into": "rows",
-      "width": 742,
-      "icons": 0,
-      "variants": 4,
-      "bytes": 3787
+      "variants": 52,
+      "bytes": 40552
     },
     {
       "file": "shapes-1.html",
@@ -1108,7 +1096,7 @@
       "width": 742,
       "icons": 0,
       "variants": 48,
-      "bytes": 39980
+      "bytes": 39769
     },
     {
       "file": "shapes-4.html",
@@ -1131,8 +1119,8 @@
       "into": "rows",
       "width": 742,
       "icons": 0,
-      "variants": 40,
-      "bytes": 38314
+      "variants": 44,
+      "bytes": 40895
     },
     {
       "file": "shapes-6.html",
@@ -1143,8 +1131,8 @@
       "into": "rows",
       "width": 742,
       "icons": 0,
-      "variants": 54,
-      "bytes": 37153
+      "variants": 56,
+      "bytes": 37967
     },
     {
       "file": "shapes-7.html",
@@ -1155,8 +1143,8 @@
       "into": "rows",
       "width": 742,
       "icons": 0,
-      "variants": 12,
-      "bytes": 7612
+      "variants": 6,
+      "bytes": 3795
     },
     {
       "file": "sport.html",
@@ -1180,7 +1168,7 @@
       "width": 742,
       "icons": 3,
       "variants": 18,
-      "bytes": 20556
+      "bytes": 20345
     },
     {
       "file": "text-1.html",
@@ -1190,7 +1178,7 @@
       "parts": 2,
       "into": "artboard",
       "width": 742,
-      "icons": 17,
+      "icons": 18,
       "variants": 38,
       "bytes": 38214
     },
@@ -1203,8 +1191,8 @@
       "into": "rows",
       "width": 742,
       "icons": 0,
-      "variants": 40,
-      "bytes": 30721
+      "variants": 46,
+      "bytes": 37121
     },
     {
       "file": "time-1.html",
@@ -1300,7 +1288,7 @@
       "width": 742,
       "icons": 19,
       "variants": 18,
-      "bytes": 38363
+      "bytes": 38152
     },
     {
       "file": "users-2.html",
@@ -1324,7 +1312,7 @@
       "width": 742,
       "icons": 0,
       "variants": 48,
-      "bytes": 40273
+      "bytes": 39851
     },
     {
       "file": "users-4.html",
@@ -1488,7 +1476,7 @@
       "parts": 1,
       "icons": 0,
       "variants": 0,
-      "bytes": 22452
+      "bytes": 21804
     }
   ]
 }
