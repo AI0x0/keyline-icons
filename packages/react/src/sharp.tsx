@@ -5906,7 +5906,7 @@ export function ShapesOverlap(props: IconProps) {
   return (
     <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="butt" strokeLinejoin="round" {...props}>
       <path d="M7.5 2.5L14.5 20L2 20Z" />
-      <path d="M10.93 11.07A5.8 5.8 0 1 1 14.05 18.89" />
+      <path d="M9.88 8.43A6.6 6.6 0 1 1 13.88 18.45" />
     </Icon>
   )
 }
