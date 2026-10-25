@@ -36,6 +36,15 @@ export function Activity(props: IconProps) {
   )
 }
 
+export function AgentFace(props: IconProps) {
+  return (
+    <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <path d="M2.5 3.5H16.5A5 5 0 0 1 21.5 8.5V15.5A5 5 0 0 1 16.5 20.5H5A2.5 2.5 0 0 1 2.5 18V6.5" strokeWidth={2.2} />
+      <path d="M8.6 9.4H11.3V12.1H8.6ZM13.3 9.4H16V12.1H13.3Z" fill="currentColor" stroke="none" />
+    </Icon>
+  )
+}
+
 export function Alert(props: IconProps) {
   return (
     <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" {...props}>
@@ -5868,6 +5877,15 @@ export function Shapes2(props: IconProps) {
   return (
     <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" {...props}>
       <path d="M10.2117 4.106 C10.9487 2.6313 13.0529 2.6313 13.7898 4.106 L15.288 7.104 C15.9526 8.4338 14.9856 9.998 13.499 9.998 L10.5026 9.998 C9.016 9.998 8.049 8.4338 8.7135 7.104 L10.2117 4.106 ZM10 17.5C10 19.433 8.433 21 6.5 21C4.567 21 3 19.433 3 17.5C3 15.567 4.567 14 6.5 14C8.433 14 10 15.567 10 17.5ZM16 14H19C20.1046 14 21 14.8954 21 16V19C21 20.1046 20.1046 21 19 21H16C14.8954 21 14 20.1046 14 19V16C14 14.8954 14.8954 14 16 14Z" />
+    </Icon>
+  )
+}
+
+export function ShapesOverlap(props: IconProps) {
+  return (
+    <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <path d="M7.5 2.5L14.5 20L2 20Z" />
+      <path d="M10.93 11.07A5.8 5.8 0 1 1 14.05 18.89" />
     </Icon>
   )
 }

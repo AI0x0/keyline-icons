@@ -28,6 +28,14 @@ function Icon({ size = 24, ...props }: IconProps & { children?: ReactNode }) {
   )
 }
 
+export function AgentFace(props: IconProps) {
+  return (
+    <Icon fill="none" {...props}>
+      <path d="M1.4 2.4H16.5A6.1 6.1 0 0 1 22.6 8.5V15.5A6.1 6.1 0 0 1 16.5 21.6H5A3.6 3.6 0 0 1 1.4 18V7.6ZM8.6 9.4H11.3V12.1H8.6ZM13.3 9.4H16V12.1H13.3Z" fill="currentColor" fillRule="evenodd" clipRule="evenodd" />
+    </Icon>
+  )
+}
+
 export function AppCheck(props: IconProps) {
   return (
     <Icon fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" {...props}>
@@ -4514,6 +4522,14 @@ export function Shapes2(props: IconProps) {
   return (
     <Icon fill="none" {...props}>
       <path d="M9.3182 3.6589 C10.4236 1.447 13.5801 1.447 14.6854 3.6589 L16.1835 6.657 C17.1798 8.6515 15.7295 10.9978 13.4999 10.9978 L10.5038 10.9978 C8.274 10.9978 6.8236 8.6516 7.8202 6.657 L9.3182 3.6589 ZM6.5 13C8.9853 13 11 15.0147 11 17.5C11 19.9853 8.9853 22 6.5 22C4.0147 22 2 19.9853 2 17.5C2 15.0147 4.0147 13 6.5 13ZM19 13C20.6569 13 22 14.3431 22 16L22 19C22 20.6569 20.6569 22 19 22L16 22C14.3431 22 13 20.6569 13 19L13 16C13 14.3431 14.3431 13 16 13L19 13Z" fill="currentColor" />
+    </Icon>
+  )
+}
+
+export function ShapesOverlap(props: IconProps) {
+  return (
+    <Icon fill="none" {...props}>
+      <path d="M6.55 2.2L7.5 1.5L8.43 2.13L15.43 19.63L15.5 20L14.5 21L2 21L1 20L1.05 19.7ZM10.93 11.07A5.8 5.8 0 1 1 14.05 18.89Z" fill="currentColor" />
     </Icon>
   )
 }
