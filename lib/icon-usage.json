@@ -2,6 +2,7 @@
   "$comment": "Hand-written per-icon copy: what the drawing is for, in one line. Source, not generated — there is nothing to generate it from, since the Figma descriptions are search terms rather than prose. Keyed by BASE name, so one drawing boxed three ways shares a line and lib/icon-pages.ts adds the container clause. Every line has to fit USAGE_LIMIT in lib/icon-usage.ts; pipeline/check-usage.mjs measures the real descriptions and lists anything missing.",
   "usage": {
     "activity": "A pulse line, for health readouts, live monitors and anything reporting a heartbeat.",
+    "agent-face": "A rounded face with two square eyes, for AI agents and the assistant answering in a chat.",
     "alert": "Warnings, failed validation and the confirm step in front of something destructive.",
     "align-center": "Lines centred on one axis, for centred text and captions balanced about the middle.",
     "align-justify": "Lines flush at both edges, for justified text and evenly filled columns.",
@@ -764,6 +765,7 @@
     "scale-frame": "A frame with a smaller corner nested inside it, for scaling and resizing in proportion.",
     "scaling": "A frame with an arrow to its far corner, for scaling an object and the resize handle.",
     "scan-cube": "A cube inside focus corners, for depth capture, multi-angle renders and 3D scans.",
+    "shapes-overlap": "A triangle and a circle crossing, for overlapping layers, collisions and boolean operations.",
     "scissors-line-dashed": "Scissors at the head of a dashed line, for cutting where you say and splitting a track by hand.",
     "scissors-sparkle": "Scissors with a sparkle, for automatic cuts and splitting a track by its lyrics and beats.",
     "scribble": "One free wavy stroke, for freehand drawing and a hand-drawn path.",

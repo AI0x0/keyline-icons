@@ -238,8 +238,9 @@ export const CATEGORIES = [
     blurb: "Panels, layers, lists, alignment, the menu marks and the fullscreen corners.",
   },
   {
+    // `agent-face` sits with `bot`: an AI agent's face is the account that acts, not an emoji reaction.
     label: "Users",
-    match: /^(user|face$|scan-face|id-card|badge-check|person|smile|bot$|footprints)/,
+    match: /^(user|face$|scan-face|id-card|badge-check|person|smile|bot$|agent-face|footprints)/,
     blurb: "People, accounts and the signs that badge them.",
   },
   // Two marks, opened 11 Sep 2026. NOT Users: a Mars glyph is not a person, it
