@@ -1,6 +1,6 @@
 {
   "name": "@ai0x0/keyline-icons",
-  "version": "0.14.1",
+  "version": "0.14.2",
   "description": "Icons on one 24×24 grid, as React components in three weights: stroke, duotone and fill, each in rounded or sharp corners. Built for shadcn/ui.",
   "license": "MIT",
   "publishConfig": {
@@ -27,32 +27,81 @@
   "sideEffects": false,
   "exports": {
     ".": {
+      "react-native": {
+        "types": "./dist/native.d.ts",
+        "default": "./dist/native.js"
+      },
       "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
     },
+    "./native": {
+      "types": "./dist/native.d.ts",
+      "default": "./dist/native.js"
+    },
     "./duotone": {
+      "react-native": {
+        "types": "./dist/native-duotone.d.ts",
+        "default": "./dist/native-duotone.js"
+      },
       "types": "./dist/duotone.d.ts",
       "default": "./dist/duotone.js"
     },
+    "./native/duotone": {
+      "types": "./dist/native-duotone.d.ts",
+      "default": "./dist/native-duotone.js"
+    },
     "./fill": {
+      "react-native": {
+        "types": "./dist/native-fill.d.ts",
+        "default": "./dist/native-fill.js"
+      },
       "types": "./dist/fill.d.ts",
       "default": "./dist/fill.js"
     },
+    "./native/fill": {
+      "types": "./dist/native-fill.d.ts",
+      "default": "./dist/native-fill.js"
+    },
     "./sharp": {
+      "react-native": {
+        "types": "./dist/native-sharp.d.ts",
+        "default": "./dist/native-sharp.js"
+      },
       "types": "./dist/sharp.d.ts",
       "default": "./dist/sharp.js"
     },
+    "./native/sharp": {
+      "types": "./dist/native-sharp.d.ts",
+      "default": "./dist/native-sharp.js"
+    },
     "./sharp/duotone": {
+      "react-native": {
+        "types": "./dist/native-sharp-duotone.d.ts",
+        "default": "./dist/native-sharp-duotone.js"
+      },
       "types": "./dist/sharp-duotone.d.ts",
       "default": "./dist/sharp-duotone.js"
     },
+    "./native/sharp/duotone": {
+      "types": "./dist/native-sharp-duotone.d.ts",
+      "default": "./dist/native-sharp-duotone.js"
+    },
     "./sharp/fill": {
+      "react-native": {
+        "types": "./dist/native-sharp-fill.d.ts",
+        "default": "./dist/native-sharp-fill.js"
+      },
       "types": "./dist/sharp-fill.d.ts",
       "default": "./dist/sharp-fill.js"
+    },
+    "./native/sharp/fill": {
+      "types": "./dist/native-sharp-fill.d.ts",
+      "default": "./dist/native-sharp-fill.js"
     },
     "./package.json": "./package.json"
   },
   "types": "./dist/index.d.ts",
+  "react-native": "./dist/native.js",
   "main": "./dist/index.js",
   "files": [
     "dist",
@@ -62,7 +111,17 @@
     "node": ">=20.9.0"
   },
   "peerDependencies": {
-    "react": ">=18"
+    "react": ">=18",
+    "react-native": ">=0.72",
+    "react-native-svg": ">=13"
+  },
+  "peerDependenciesMeta": {
+    "react-native": {
+      "optional": true
+    },
+    "react-native-svg": {
+      "optional": true
+    }
   },
   "scripts": {
     "build": "tsc -p tsconfig.json",

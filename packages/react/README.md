@@ -36,6 +36,26 @@ Every icon takes the standard `SVGProps<SVGSVGElement>` plus `size`:
 Colour comes from `currentColor`, so the icons inherit whatever `text-*` is in
 scope. There is no provider, no context and no theme object.
 
+## React Native
+
+The package has a `react-native` export condition. Install `react-native-svg`
+alongside it and the same imports resolve to native components:
+
+```bash
+npm i @ai0x0/keyline-icons react-native-svg
+```
+
+```tsx
+import { ArrowUpRight, Check } from "@ai0x0/keyline-icons"
+
+<Check size={20} color="#0F766E" />
+```
+
+The explicit native entry points are also available for bundlers that do not
+read export conditions: `@ai0x0/keyline-icons/native`,
+`/native/duotone`, `/native/fill`, `/native/sharp`, `/native/sharp/duotone`
+and `/native/sharp/fill`.
+
 ## Notes
 
 **Three weights, three entry points.**
